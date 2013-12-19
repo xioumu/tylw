@@ -1,0 +1,14 @@
+<appwizard><introduction><name></name><author>芙蓉学子</author><icon></icon><homepage></homepage><description><![CDATA[]]></description></introduction><platform><services><service></service><service>Mysql</service></services><appconfig><tpl><![CDATA[
+name: <<appname>>
+version: <<version>>
+version: 1
+cron:
+- description: cron test
+  url: cron_off.php
+  schedule: $26 day of month 00:00
+  timezone: Beijing
+- description: cron test
+  url: cron_on.php
+  schedule: $23 day of month 00:00
+  timezone: Beijing
+]]></tpl></appconfig></platform><code><initScript>index.php</initScript></code></appwizard>

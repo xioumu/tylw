@@ -1,0 +1,233 @@
+*
+{
+	font-family: "Microsoft YaHei";
+}
+.container {
+max-width: 1000px;
+padding-right: 0px;
+padding-left: 0px;
+}
+.row {
+margin-left: 0px;
+}
+.form-group
+{
+	/* width: 179px; */
+	margin-right: 5px;
+	height: 34px;
+}
+.form-control
+{
+	height: auto;
+	width: auto;
+}
+.jumbotron
+{
+	margin-left: -15px;
+	/* width: 863px; */
+}
+.modal-dialog
+{
+	/* width: 700px; */
+	/* padding-top: 130px; */
+}
+.modal-header {
+	padding: 10px;
+}
+.modal-body {
+	padding: 10px;
+	height: 320px;
+}
+.nav>li>a {
+padding: 15px 5px;
+}
+.modal-footer {
+padding: 10px;
+margin-top: 0px;
+}
+.fr
+{
+	float: right;
+}
+.fl
+{
+	float: left;
+}
+.h15{
+	height: 15px;
+}
+.h33
+{
+	height: 33px;
+}
+.h34
+{
+	height: 34px;
+}
+.h35
+{
+	height: 35px;
+}
+.h53
+{
+	height: 53px;
+}
+.h55
+{
+	height: 55px;
+}
+.h60
+{
+	height: 60px;
+}
+.h40
+{
+	height: 40px;
+}
+.b
+{
+	font-weight: bold;
+}
+.tac
+{
+	text-align: center;
+}
+.ml35
+{
+	margin-left: 35px;
+}
+.ml25{
+	margin-left: 25px;
+}
+.ml85
+{
+	margin-left: 85px;
+}
+.ml65{
+	margin-left: 65px;
+}
+#fs30
+{
+    font-size: 30px;
+}
+#fs15
+{
+    font-size: 15px;
+}
+#fs13{
+	font-size: 13px;
+}
+.loginbar
+{
+	/* width: 460px; */
+	height: 34px;
+}
+.logoutbar
+{
+	color: white;
+	padding: 8px;
+}
+.logoutbar p
+{
+	margin: 0px;
+}
+.container .row h2
+{
+	font-weight: bold;
+	margin: 3px auto 2px auto;
+	text-align: center;
+}
+.container .row .typename
+{
+	margin-bottom: 10px;
+	padding-top: 60px;
+	margin-top: -60px;
+}
+.container .row .player_button
+{
+	width:50%;
+	float:left;
+	margin-bottom: 5px;
+	padding:0px 20px 5px 10px;
+}
+.container .row .player 
+{
+	width: 150px;
+	height: 150px;
+	margin-bottom: 5px;
+	-webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+	opacity: 1;
+}
+.container .row .intro
+{
+	margin: 0px 10px;
+	overflow: hidden;
+	white-space: normal;
+	text-overflow: ellipsis;
+	font-size: 13px;
+}
+.container .row  .person.well
+{
+	padding: 0px;
+	margin-bottom: 10px;
+	margin-right: 10px;
+	width: 153px;
+	-webkit-box-shadow: 0 0;
+	box-shadow: 0 0; 
+}
+.container .row .player:hover
+{
+	opacity: 0.9;
+}
+footer
+{
+	text-align: center;
+}
+#more .modal-body .pic-area
+{
+	width: 310px;
+	height: 300px;
+	float: left;
+	/* padding: 10px; */
+}资环院 武大
+#more .modal-body .pic-area .more-player
+{
+	-webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+	opacity: 1;
+	width: 300px;
+	height: 300px;
+}
+#more .modal-body .text-area
+{
+	width: 348px;
+	height: 300px;
+	float: left;
+	overflow-y: auto;
+	/* float:left; */
+	/* padding: 10px; */
+}
+#scrolltop {
+display: none;
+position: fixed;
+bottom: 10px;
+left: 61%;
+_position: absolute;
+_top: expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight));
+margin-left: 478px;
+font-size: 14px;
+text-align: center;
+color: #f00;
+cursor: pointer;
+height: 48px;
+width: 44px;
+background: url(top.png) no-repeat -44px 0;
+}
+#scrolltop:hover {
+border: 0;
+padding: 0;
+background: url(top.png) no-repeat;
+}
