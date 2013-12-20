@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php 
+    header("Content-Type: text/html;charset=utf-8");
+?>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -34,7 +37,7 @@
 
 	<!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
 	<!--[if lt IE 9]>
-	  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	  <script src="js/html5.js"></script>
 	<![endif]-->
 
 	<!-- The fav icon -->
@@ -43,58 +46,26 @@
 </head>
 
 <body>
-		<!-- topbar starts -->
-	<div class="navbar MainHead">
-		<div class="navbar-inner">
-			<div class="container-fluid">
-                <span class="brand title" >武汉体育学院学位管理系统</span>
-				<!-- user dropdown starts -->
-				<div class="btn-group pull-right" >
-					<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-						<i class="icon-user"></i><span class="hidden-phone"> 用户名</span>
-						<span class="caret"></span>
-					</a>
-					<ul class="dropdown-menu">
-						<li><a href="login.html">注销</a></li>
-					</ul>
-				</div>
-				<!-- user dropdown ends -->
-			</div>
-		</div>
-	</div>
+	<!-- topbar starts -->
+	<?php
+		include('header.php');
+	?>	
 	<!-- topbar ends -->
 		<div class="container-fluid">
 		<div class="row-fluid">
 			<!-- left menu starts -->
-			<div class="span2 main-menu-span">
-				<div class="well nav-collapse sidebar-nav">
-					<ul class="nav nav-tabs nav-stacked main-menu">
-						<li class="nav-header hidden-tablet">菜单</li>
-						<li><a class="ajax-link" href="index.html"><span class="hidden-tablet">个人信息</span></a></li>
-						<li><a class="ajax-link" href="ui.html"><span class="hidden-tablet">提交论文</span></a></li>
-						<li><a class="ajax-link" href="form.html"><span class="hidden-tablet">查看结果</span></a></li>
-                        <li><a class="ajax-link" href="form.html"><span class="hidden-tablet">修改密码</span></a></li>
-					</ul>
-				</div><!--/.well -->
-			</div><!--/span-->
+				<?php include('student-left.php');?>	
 			<!-- left menu ends -->
-
-            <noscript>
-                <div class="alert alert-block span10">
-                    <h4 class="alert-heading">Warning!</h4>
-                    <p>您需要启用JavaScript来获得更好的体验</p>
-                </div>
-            </noscript>
 
             <div id="content" class="span10">
             <!-- content starts -->
             <div>
                 <ul class="breadcrumb">
                     <li>
-                        <a href="#">主页</a> <span class="divider">/</span>
+                        <a href="#">学生</a> <span class="divider">/</span>
                     </li>
                     <li>
-                        <a href="#">提交论文</a>
+                        <a href="#">个人信息</a>
                     </li>
                 </ul>
             </div>
