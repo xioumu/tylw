@@ -81,7 +81,7 @@
                             <fieldset>
 								<table class="table table-striped table-bordered bootstrap-datatable datatable">
                                     <thead>
-                                        <th>年级</th>
+                                        <th>评审年份</th>
 									    <th>姓名</th>	
 									    <th>学号</th>	
 									    <th>类别</th>	
@@ -90,26 +90,28 @@
                                         <th>操作</th>    
                                     </thead>
                                     <thead>
-										<th><input type="text" class="input-small" value=""></th>
-										<th><input type="text" class="input-small" value=""></th>
-										<th><input type="text" class="input-small" value=""></th>
-                                        <th><select type="text">
+                                        <th><input type="text" class="input-mini" value=""></th>
+										<th><input type="text" class="input-mini" value=""></th>
+										<th><input type="text" class="input-mini" value=""></th>
+                                        <th><select type="text" class="input-small">
                                             <option>硕士研究生</option>
                                             <option>博士研究生</option>
                                             <option>体育研究生</option> 
                                             <option selected="selected">全部</option>         
 										</select></th>
-										<th><input type="text" class="input-small" value></th>
+										<th><input type="text" class="input-mini" value=""></th>
                                         <th><select type="text" class="input-small">
                                             <option>还未评审</option>
                                             <option>已经评审</option>
                                             <option>全部</option>
                                         </select></th>
-                                        <th><button type="submit" class="btn btn-primary">搜索</button>
+                                        <th>
+											<button type="submit" class="btn btn-primary btn-small">搜索</button>
+											<button type="submit" class="btn btn-success btn-small">导出信息</button>
                                          </th>
                                     </thead>
 	                                <tr>
-										<td>2011级</td>
+                                        <td>2011</td>
 										<td>张三</td>
 										<td>123455678</td>
                                         <td>硕士研究生</td>
@@ -120,7 +122,7 @@
                                          </td>
                                     </tr>
                                     <tr>
-										<td>2011级</td>
+										<td>2011</td>
 										<td>王五</td>
 										<td>12455678</td>
                                         <td>博士研究生</td>
@@ -133,7 +135,7 @@
 								</table>
                             </fieldset>
                         </form>
-
+						
                     </div>
                 </div><!--/span-->
 
