@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<?php header("Content-Type: text/html;charset=utf-8");?>
+<?php 
+    header("Content-Type: text/html;charset=utf-8");
+?>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -45,12 +47,14 @@
 
 <body>
 	<!-- topbar starts -->
-	<?php //include('header.php');?>	
+	<?php
+		include('header.php');
+	?>	
 	<!-- topbar ends -->
 		<div class="container-fluid">
 		<div class="row-fluid">
 			<!-- left menu starts -->
-				<?php //include('student-left.php');?>	
+				<?php include('out-teacher-left.php');?>	
 			<!-- left menu ends -->
 
             <div id="content" class="span10">
@@ -58,39 +62,75 @@
             <div>
                 <ul class="breadcrumb">
                     <li>
-                        <a href="#">学生</a> <span class="divider">/</span>
+                        <a href="#">校外专家</a> <span class="divider">/</span>
                     </li>
                     <li>
-                        <a href="#">提交论文</a>
+                        <a href="#">论文评审</a>
                     </li>
                 </ul>
             </div>
             <!-- path -->
-			
+
             <div class="row-fluid sortable">
                 <div class="box span12">
                     <div class="box-header well" data-original-title>
-                        <h2>提交论文</h2>
+                        <h2>查看论文</h2>
                     </div>
                     <div class="box-content">
                         <form class="form-horizontal">
                             <fieldset>
-                                <div class="control-group">
-                                    <label class="control-label">截止时间</label>
-                                    <div class="controls">
-                                        <input class="input-xlarge disabled" id="name" type="text" value="2013年12月20日23点" disabled="">
-                                    </div>
-                                </div>
-                                
-								<div class="control-group">
-									<label class="control-label" for="fileInput">提交论文</label>
-									<div class="controls">
-										<input class="input-xlarge  input-file btn-group" id="fileInput" type="file">
-									</div>
-								</div>    
-                                <div class="form-actions">
-                                    <button type="submit" class="btn btn-primary">提交</button>
-                                </div>
+								<table class="table table-striped table-bordered bootstrap-datatable datatable">
+                                    <thead>
+                                        <th>年级</th>
+									    <th>姓名</th>	
+									    <th>学号</th>	
+									    <th>类别</th>	
+									    <th>专业</th>	
+                                        <th>是否已评</th>
+                                        <th>操作</th>    
+                                    </thead>
+                                    <thead>
+										<th><input type="text" class="input-small" value=""></th>
+										<th><input type="text" class="input-small" value=""></th>
+										<th><input type="text" class="input-small" value=""></th>
+                                        <th><select type="text">
+                                            <option>硕士研究生</option>
+                                            <option>博士研究生</option>
+                                            <option>体育研究生</option> 
+                                            <option selected="selected">全部</option>         
+										</select></th>
+										<th><input type="text" class="input-small" value></th>
+                                        <th><select type="text" class="input-small">
+                                            <option>还未评审</option>
+                                            <option>已经评审</option>
+                                            <option>全部</option>
+                                        </select></th>
+                                        <th><button type="submit" class="btn btn-primary">搜索</button>
+                                         </th>
+                                    </thead>
+	                                <tr>
+										<td>2011级</td>
+										<td>张三</td>
+										<td>123455678</td>
+                                        <td>硕士研究生</td>
+										<td>竞技体育</td>
+                                        <td><span class="label label-success">已经评审</span></td>
+                                        <td>
+                                            <button type="submit" class="btn btn-info">评审/修改</button>
+                                         </td>
+                                    </tr>
+                                    <tr>
+										<td>2011级</td>
+										<td>王五</td>
+										<td>12455678</td>
+                                        <td>博士研究生</td>
+										<td>运动学</td>
+                                        <td><span class="label label-important">还未评审</span></td>
+                                        <td>
+                                            <button type="submit" class="btn btn-info">评审/修改</button>
+                                         </td>
+									</tr>
+								</table>
                             </fieldset>
                         </form>
 
