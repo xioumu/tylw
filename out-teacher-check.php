@@ -78,7 +78,6 @@
                     </div>
                     <div class="box-content">
                         <form class="form-horizontal">
-                            <fieldset>
 								<table class="table table-striped table-bordered bootstrap-datatable datatable">
                                     <thead>
                                         <th>评审年份</th>
@@ -118,7 +117,7 @@
 										<td>竞技体育</td>
                                         <td><span class="label label-success">已经评审</span></td>
                                         <td>
-                                            <button type="submit" class="btn btn-info">评审/修改</button>
+                                            <a href="#myBox1" class="btn btn-info btn-setting" data-toggle="modal" >评审/修改</a>
                                          </td>
                                     </tr>
                                     <tr>
@@ -129,11 +128,10 @@
 										<td>运动学</td>
                                         <td><span class="label label-important">还未评审</span></td>
                                         <td>
-                                            <button type="submit" class="btn btn-info">评审/修改</button>
+                                             <a href="#myBox2" class="btn btn-info btn-setting" data-toggle="modal" >评审/修改</a>
                                          </td>
 									</tr>
 								</table>
-                            </fieldset>
                         </form>
 						
                     </div>
@@ -144,12 +142,268 @@
             <!-- content ends -->
             </div><!--/#content.span10-->
         </div><!--/fluid-row-->
-
         </div>
         </div>
 		
 	</div><!--/.fluid-container-->
 
+	<!-- box -->
+	<div class="mybox modal hide fade" id="myBox1">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal">×</button>
+			<h3>评审</h3>
+		</div>
+		<form>
+		<div class="modal-body table-striped">
+			<table class="table table-bordered">
+                       <tr>
+                            <th class="boxContent title">学号</th>
+							<td class="boxContent">105222010bs010</td>	
+							<th class="boxContent">姓名</th>	
+							<td class="boxContent">张四三二</td>	
+							<th class="boxContent">专业</th>	
+                            <td class="boxContent">体育教育训练学</td>  
+                        </tr>
+						<tr>
+                            <th class="boxContent">论文下载</th>
+							<td colspan="5"><a class="btn btn-success">下载</a></td>
+						</tr>
+						<tr>
+							<th class="boxContent">评价指标
+							<p>（权重）</p>
+							</th class="boxContent">
+							<th colspan="3" class="boxContent">评价内容</th>
+							<th colspan="2" class="boxContent">评分</th>
+						</tr>
+						<tr>
+							<th class="boxContent"><p>论文选题与综述</p>
+							<p>（15%）</p>
+							</th class="boxContent">
+							<th colspan="3">接触学科前沿，理论或实际意义；<br>阅读量、综合分析能力，了解本专业学术动态程度</th>
+							<th colspan="2">
+								<div class="control-group">
+								<div class="controls">
+								  <label class="radio">
+									<input type="radio" name="box1" id="A" value="A">优秀
+								  </label>
+								  <label class="radio">
+									<input type="radio" name="box1" id="B" value="B">良好
+								  </label>
+								  <label class="radio">
+									<input type="radio" name="box1" id="C" value="C">合格
+								  </label>
+								  <label class="radio">
+									<input type="radio" name="box1" id="D" value="D">不合格
+								  </label>
+								</div>
+							  </div>
+							</th>
+						</tr>
+						<tr>
+							<th class="boxContent"><p>研究思路与方法</p>
+							<p>（30%）</p>
+							</th class="boxContent">
+							<th colspan="3">研究思路清晰，调查研究与分析方法（如测量工具、统计分析方法）先进、科学，结论正确</th>
+							<th colspan="2">
+								<div class="control-group">
+								<div class="controls">
+								  <label class="radio">
+									<input type="radio" name="box2" id="A" value="A">优秀
+								  </label>
+								  <label class="radio">
+									<input type="radio" name="box2" id="B" value="B">良好
+								  </label>
+								  <label class="radio">
+									<input type="radio" name="box2" id="C" value="C">合格
+								  </label>
+								  <label class="radio">
+									<input type="radio" name="box2" id="D" value="D">不合格
+								  </label>
+								</div>
+							  </div>
+							</th>
+						</tr>
+						<tr>
+							<th class="boxContent"><p>研究结果与结论</p>
+							<p>（25%）</p>
+							</th class="boxContent">
+							<th colspan="3">结果准确、真实；结论恰当，有一定的社会效益或学术贡献</th>
+							<th colspan="2">
+								<div class="control-group">
+								<div class="controls">
+								  <label class="radio">
+									<input type="radio" name="box3" id="A" value="A">优秀
+								  </label>
+								  <label class="radio">
+									<input type="radio" name="box3" id="B" value="B">良好
+								  </label>
+								  <label class="radio">
+									<input type="radio" name="box3" id="C" value="C">合格
+								  </label>
+								  <label class="radio">
+									<input type="radio" name="box3" id="D" value="D">不合格
+								  </label>
+								</div>
+							  </div>
+							</th>
+						</tr>
+						<tr>
+							<th class="boxContent"><p>论文格式与写作</p>
+							<p>（10%）</p>
+							</th class="boxContent">
+							<th colspan="3">条理清楚，层次分明，文笔流畅；书写格式、图表规范；外文摘要语句无错</th>
+							<th colspan="2">
+								<div class="control-group">
+								<div class="controls">
+								  <label class="radio">
+									<input type="radio" name="box4" id="A" value="A">优秀
+								  </label>
+								  <label class="radio">
+									<input type="radio" name="box4" id="B" value="B">良好
+								  </label>
+								  <label class="radio">
+									<input type="radio" name="box4" id="C" value="C">合格
+								  </label>
+								  <label class="radio">
+									<input type="radio" name="box4" id="D" value="D">不合格
+								  </label>
+								</div>
+							  </div>
+							</th>
+						</tr>
+						<tr>
+							<th class="boxContent"><p>论文工作量</p>
+							<p>（5%）</p>
+							</th class="boxContent">
+							<th colspan="3">字数不得少于5万字</th>
+							<th colspan="2">
+								<div class="control-group">
+								<div class="controls">
+								  <label class="radio">
+									<input type="radio" name="box5" id="A" value="A">优秀
+								  </label>
+								  <label class="radio">
+									<input type="radio" name="box5" id="B" value="B">良好
+								  </label>
+								  <label class="radio">
+									<input type="radio" name="box5" id="C" value="C">合格
+								  </label>
+								  <label class="radio">
+									<input type="radio" name="box5" id="D" value="D">不合格
+								  </label>
+								</div>
+							  </div>
+							</th>
+						</tr>
+						<tr>
+							<th class="boxContent"><p>论文报告与答辩</p>
+							<p>（10%）</p>
+							</th class="boxContent">
+							<th colspan="3">能流利、清晰地报告论文的主要内容；能准确回答各种问题</th>
+							<th colspan="2">
+								<div class="control-group">
+								<div class="controls">
+								  <label class="radio">
+									<input type="radio" name="box6" id="A" value="A">优秀
+								  </label>
+								  <label class="radio">
+									<input type="radio" name="box6" id="B" value="B">良好
+								  </label>
+								  <label class="radio">
+									<input type="radio" name="box6" id="C" value="C">合格
+								  </label>
+								  <label class="radio">
+									<input type="radio" name="box6" id="D" value="D">不合格
+								  </label>
+								</div>
+							  </div>
+							</th>
+						</tr>
+						<tr>
+							<th class="boxContent"><p>参考文献</p>
+							<p>（5%）</p>
+							</th class="boxContent">
+							<th colspan="3">参考文献的总量；外文文献的数量；参考文献的质量等</th>
+							<th colspan="2">
+								<div class="control-group">
+								<div class="controls">
+								  <label class="radio">
+									<input type="radio" name="box7" id="A" value="A">优秀
+								  </label>
+								  <label class="radio">
+									<input type="radio" name="box7" id="B" value="B">良好
+								  </label>
+								  <label class="radio">
+									<input type="radio" name="box7" id="C" value="C">合格
+								  </label>
+								  <label class="radio">
+									<input type="radio" name="box7" id="D" value="D">不合格
+								  </label>
+								</div>
+							  </div>
+							</th>
+						</tr>
+						<tr>
+							<th class="boxContent">总体评价</th>
+							<td colspan="5">
+								<div class="control-group">
+								<div class="controls">
+								  <label class="radio">
+									<input type="radio" name="box8" id="A" value="A">优秀
+								  </label>
+								  <label class="radio">
+									<input type="radio" name="box8" id="B" value="B">良好
+								  </label>
+								  <label class="radio">
+									<input type="radio" name="box8" id="C" value="C">合格
+								  </label>
+								  <label class="radio">
+									<input type="radio" name="box8" id="D" value="D">不合格
+								  </label>
+								</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th class="boxContent">表决意见</th>
+							<td colspan="5">
+								<div class="control-group">
+								<div class="controls">
+								  <label class="radio">
+									<input type="radio" name="box9" id="A" value="A">建议立即授予学位
+								  </label>
+								  <label class="radio">
+									<input type="radio" name="box9" id="B" value="B">建议论文修改后授予学位
+								  </label>
+								  <label class="radio">
+									<input type="radio" name="box" id="C" value="C">建议不授予学位
+								  </label>
+								</div>
+								</div>
+							</td>
+						</tr>
+			</table>	
+		</div>
+		<div class="modal-footer">
+			<a href="#" class="btn" data-dismiss="modal">关闭</a>
+			<button type="submit" class="btn btn-primary">保存</button>
+		</div>
+		</form>
+	</div>
+	
+	<div class="modal hide fade" id="myBox2">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal">×</button>
+			<h3>评审</h3>
+		</div>
+		<div class="modal-body">
+			<p>这是2</p>
+		</div>
+		<div class="modal-footer">
+			<a href="#" class="btn" data-dismiss="modal">关闭</a>
+			<a href="#" class="btn btn-primary">保存</a>
+		</div>
+	</div>
 	<!-- external javascript
 	================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
