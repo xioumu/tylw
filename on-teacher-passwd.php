@@ -50,7 +50,7 @@
 	<!-- topbar starts -->
 	<?php include('header.php');?>	
 	<!-- topbar ends -->
-		<div class="container-fluid">
+	<div class="container-fluid">
 		<div class="row-fluid">
 			<!-- left menu starts -->
 				<?php include('on-teacher-left.php');?>	
@@ -58,20 +58,12 @@
 
             <div id="content" class="span10">
             <!-- content starts -->
-            <div>
-                <ul class="breadcrumb">
-                    <li>
-                        <a href="#">校内专家</a> <span class="divider">/</span>
-                    </li>
-                    <li>
-                        <a href="#">修改密码</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- path -->
 			
             <div class="row-fluid sortable">
                 <div class="box span12">
+					<div class="box-header well" data-original-title>
+                        <h2>修改密码</h2>
+                    </div>
                     <div class="box-content">
                         <form class="form-horizontal">
                             <fieldset>
@@ -107,10 +99,6 @@
             <!-- content ends -->
             </div><!--/#content.span10-->
         </div><!--/fluid-row-->
-
-        </div>
-        </div>
-		
 	</div><!--/.fluid-container-->
 
 	<!-- external javascript

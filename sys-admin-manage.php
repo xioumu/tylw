@@ -59,7 +59,6 @@
 
             <div id="content" class="span10">
             <!-- content starts -->
-            <!-- path -->
 
             <div class="row-fluid sortable">
                 <div class="box span12">

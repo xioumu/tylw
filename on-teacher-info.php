@@ -59,17 +59,6 @@
 
             <div id="content" class="span10">
             <!-- content starts -->
-            <div>
-                <ul class="breadcrumb">
-                    <li>
-                        <a href="#">校内专家</a> <span class="divider">/</span>
-                    </li>
-                    <li>
-                        <a href="#">个人信息</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- path -->
 
             <div class="row-fluid sortable">
                 <div class="box span12">

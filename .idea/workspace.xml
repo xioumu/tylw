@@ -26,7 +26,25 @@
       <file leaf-file-name="my.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/my.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="8" selection-start="8" selection-end="8" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="584">
+            <state line="2" column="1" selection-start="87" selection-end="87" vertical-scroll-proportion="0.032534245" vertical-offset="19" max-vertical-offset="722">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bootstrap-cerulean.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/bootstrap-cerulean.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3835" column="0" selection-start="83031" selection-end="83031" vertical-scroll-proportion="0.0" vertical-offset="72105" max-vertical-offset="84721">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="student-info.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/student-info.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="100" column="52" selection-start="4231" selection-end="4231" vertical-scroll-proportion="0.0" vertical-offset="993" max-vertical-offset="4256">
               <folding />
             </state>
           </provider>
@@ -35,19 +53,10 @@
       <file leaf-file-name="charisma.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/charisma.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="119" column="40" selection-start="3405" selection-end="3405" vertical-scroll-proportion="-3.7692308" vertical-offset="2065" max-vertical-offset="13490">
+            <state line="119" column="40" selection-start="3405" selection-end="3405" vertical-scroll-proportion="0.0" vertical-offset="2065" max-vertical-offset="13490">
               <folding>
                 <marker date="1387528997356" expanded="true" signature="14563:14589" placeholder="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="student-submit.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/student-submit.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="87" column="88" selection-start="3193" selection-end="3202" vertical-scroll-proportion="-10.178572" vertical-offset="1368" max-vertical-offset="3667">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -80,14 +89,38 @@
         <option value="$PROJECT_DIR$/js/charisma.js" />
         <option value="$PROJECT_DIR$/student-submit.html" />
         <option value="$PROJECT_DIR$/css/my.css" />
+        <option value="$PROJECT_DIR$/css/bootstrap-cerulean.css" />
+        <option value="$PROJECT_DIR$/web-admin-student-manage.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="-15" />
+    <option name="y" value="-2" />
     <option name="width" value="1382" />
     <option name="height" value="744" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>General</id>
+          </State>
+          <State>
+            <id>XPath</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>CoffeeScript</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -115,6 +148,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -135,13 +169,12 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="settings.github" />
+    <property name="options.lastSelected" value="preferences.pluginManager" />
     <property name="FullScreen" value="false" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -212,17 +245,17 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-15" y="-2" width="1382" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24963397" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.095168374" sideWeight="0.67058825" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.095168374" sideWeight="0.6710311" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289689" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -246,13 +279,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/student-info.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="105" column="28" selection-start="3745" selection-end="3745" vertical-scroll-proportion="0.0" vertical-offset="1995" max-vertical-offset="5016">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="49" column="8" selection-start="1583" selection-end="1583" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3458" />
@@ -299,53 +325,52 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/demo/charisma/form.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="232" column="38" selection-start="10425" selection-end="10425" vertical-scroll-proportion="-0.6785714" vertical-offset="4389" max-vertical-offset="11305">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/student-info.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="105" column="28" selection-start="3745" selection-end="3745" vertical-scroll-proportion="-0.0" vertical-offset="1995" max-vertical-offset="5016">
-          <folding />
-        </state>
+        <state line="232" column="38" selection-start="10425" selection-end="10425" vertical-scroll-proportion="-0.6785714" vertical-offset="4389" max-vertical-offset="11305" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/student-submit.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-4.489726" vertical-offset="2622" max-vertical-offset="3724">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-4.489726" vertical-offset="2622" max-vertical-offset="3724" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/demo/charisma/js/charisma.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="119" column="4" selection-start="3366" selection-end="3366" vertical-scroll-proportion="0.36842105" vertical-offset="2065" max-vertical-offset="13452">
-          <folding>
-            <marker date="1387528522709" expanded="false" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/student-submit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="88" selection-start="3193" selection-end="3202" vertical-scroll-proportion="-10.178572" vertical-offset="1368" max-vertical-offset="3667">
-          <folding />
-        </state>
+        <state line="119" column="4" selection-start="3366" selection-end="3366" vertical-scroll-proportion="0.36842105" vertical-offset="2065" max-vertical-offset="13452" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/charisma.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="119" column="40" selection-start="3405" selection-end="3405" vertical-scroll-proportion="-3.7692308" vertical-offset="2065" max-vertical-offset="13490">
+        <state line="119" column="40" selection-start="3405" selection-end="3405" vertical-scroll-proportion="0.0" vertical-offset="2065" max-vertical-offset="13490">
           <folding>
             <marker date="1387528997356" expanded="true" signature="14563:14589" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/student-info.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="100" column="52" selection-start="4231" selection-end="4231" vertical-scroll-proportion="0.0" vertical-offset="993" max-vertical-offset="4256">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/bootstrap-cerulean.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3835" column="0" selection-start="83031" selection-end="83031" vertical-scroll-proportion="0.0" vertical-offset="72105" max-vertical-offset="84721">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-admin-student-manage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="231" column="18" selection-start="9700" selection-end="9700" vertical-scroll-proportion="0.64028776" vertical-offset="4033" max-vertical-offset="6023">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/css/my.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="8" selection-start="8" selection-end="8" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="584">
+        <state line="2" column="1" selection-start="87" selection-end="87" vertical-scroll-proportion="0.032534245" vertical-offset="19" max-vertical-offset="722">
           <folding />
         </state>
       </provider>
