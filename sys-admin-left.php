@@ -8,8 +8,8 @@
 				<div class="well nav-collapse sidebar-nav">
 					<ul class="nav nav-tabs nav-stacked main-menu">
 						<li class="nav-header hidden-tablet">菜单</li>
-                        <li><a class="ajax-link" href="out-teacher-check.php"><span class="hidden-tablet">管理网络管理员</span></a></li>
-                        <li><a class="ajax-link" href="out-teacher-passwd.php"><span class="hidden-tablet">修改密码</span></a></li>
+                        <li><a class="ajax-link" href="sys-admin-manage.php"><span class="hidden-tablet">管理网络管理员</span></a></li>
+                        <li><a class="ajax-link" href="sys-admin-passwd.php"><span class="hidden-tablet">修改密码</span></a></li>
 					</ul>
 				</div><!--/.well -->
 			</div><!--/span-->

@@ -1,5 +1,17 @@
+.controls > .radio:first-child, .controls > .checkbox:first-child {
+padding-top: 0px;
+}
+.modal {
+top: 0;
+margin: 70px 0 0 -400px;
+}
+.modal.fade.in {
+top: 0;
+}
+/*jnknlkjnlnjl*/
 .mybox{
 	width: 800px;
+	/* height: 100 */
 }	
 
 .mybox .title{
