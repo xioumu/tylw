@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<?php 
-    header("Content-Type: text/html;charset=utf-8");
-?>
+<?php header("Content-Type: text/html;charset=utf-8");?>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -14,6 +12,9 @@
 	  }
 	  .sidebar-nav {
 		padding: 9px 0;
+	  }
+	  #fileInput{
+		
 	  }
 	</style>
 	<link href="css/bootstrap-responsive.css" rel="stylesheet">
@@ -45,61 +46,51 @@
 		
 </head>
 
-<body class="">
+<body>
 	<!-- topbar starts -->
-	<?php
-		include('header.php');
-	?>	
+	<?php include('header.php');?>	
 	<!-- topbar ends -->
 		<div class="container-fluid">
 		<div class="row-fluid">
 			<!-- left menu starts -->
-				<?php include('web-admin-left.php');?>	
+				<?php include('web-admin-left.php');?>
 			<!-- left menu ends -->
 
             <div id="content" class="span10">
             <!-- content starts -->
-
+			
             <div class="row-fluid sortable">
                 <div class="box span12">
                     <div class="box-header well" data-original-title>
-                        <h2>管理校内专家账号</h2>
-						<div class="box-icon">
-							<button type="submit" class="btn btn-success left">导入校外专家账户</button>
-							<button type="submit" class="btn btn-primary left">导出校外专家账户</button>
-							<button type="submit" class="btn btn-danger left">删除全部校外专家账户</button>
-						</div>
+                        <h2>设置截止日期</h2>
                     </div>
                     <div class="box-content">
                         <form class="form-horizontal">
-								<table class="table table-striped table-bordered bootstrap-datatable datatable">
-                                    <thead>
-									    <th>账号</th>
-                                        <th>评审截止日期</th>
-                                        <th>状态</th>
-                                        <th>操作</th> 					
-                                    </thead>
-	                                <tr>
-										<td>teacher1</td>
-										<td>2013/12/27</td>
-                                        <td><span class="label label-important">还未评测完毕</span></td>
-                                        <td>
-                                            <a href="#myBox1" class="btn btn-info btn-setting" data-toggle="modal" >修改信息</a>
-											<a href="" class="btn btn-info btn-danger">删除</a>
-                                         </td>
-                                    </tr>
-                                    <tr>
-										<td>teacher2</td>
-										<td>2013/12/29</td>
-                                        <td><span class="label label-success">已经全部评测完毕</span></td>
-                                        <td>
-                                             <a href="#myBox1" class="btn btn-info btn-setting" data-toggle="modal" >修改信息</a>
-											 <a href="" class="btn btn-info btn-danger"  >删除</a>
-                                         </td>
-									</tr>
-								</table>
+                            <fieldset>
+                                <div class="control-group">
+                                    <label class="control-label" for="date01">学生提交论文截止日期</label>
+                                    <div class="controls">
+                                        <input type="text" class="input-medium datepicker" id="date01" value="12/27/2013">
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="date02">校内专家评审截止日期</label>
+                                    <div class="controls">
+                                        <input type="text" class="input-medium datepicker" id="date02" value="01/10/2014">
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="date03">校外专家评审截止日期</label>
+                                    <div class="controls">
+                                        <input type="text" class="input-medium datepicker" id="date03" value="01/20/2014">
+                                    </div>
+                                </div>
+                                <div class="form-actions">
+                                    <button type="submit" class="btn btn-primary ">保存</button>
+                                </div>
+                            </fieldset>
                         </form>
-						
+
                     </div>
                 </div><!--/span-->
 
@@ -108,49 +99,11 @@
             <!-- content ends -->
             </div><!--/#content.span10-->
         </div><!--/fluid-row-->
+
         </div>
         </div>
 		
 	</div><!--/.fluid-container-->
-
-	<!-- box -->
-	<div class="modal hide fade" id="myBox1">
-		<div class="modal-header">
-			<button type="button" class="close" data-dismiss="modal">×</button>
-			<h3>修改校内专家信息</h3>
-		</div>
-		<div class="modal-body table-striped form-horizontal">
-            <div class="">
-                <fieldset>
-                    <div class="control-group">
-                        <label class="control-label">账号</label>
-                        <div class="controls">
-                            <input class="input-medium disabled" id="name" type="text" value="teacher1" disabled="">
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <label class="control-label" for="date01">评审截止日期</label>
-                        <div class="controls">
-                            <input type="text" class="input-medium datepicker" id="date01" value="12/27/13">
-                        </div>
-                    </div>
-
-                    <div class="control-group">
-                        <label class="control-label  " for="state">状态</label>
-                        <div class="controls">
-                            <select id="state" class="input-medium" disabled>
-                                <option>已经全部评测完毕</option>
-                                <option selected>还未评测完毕</option>
-                            </select>
-                        </div>
-                    </div>
-                </fieldset>
-		    </div>
-            <div class="modal-footer">
-			    <a href="#" class="btn" data-dismiss="modal">关闭</a>
-			    <button type="submit" class="btn btn-primary">保存</button>
-		    </div>
-	</div>
 
 	<!-- external javascript
 	================================================== -->

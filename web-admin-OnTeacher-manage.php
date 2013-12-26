@@ -65,9 +65,9 @@
                     <div class="box-header well" data-original-title>
                         <h2>管理校内专家账号</h2>
 						<div class="box-icon">
-							<button type="submit" class="btn btn-success left">导入学生账户</button>
-							<button type="submit" class="btn btn-primary left">导出学生账户</button>
-							<button type="submit" class="btn btn-danger left">删除全部学生账户</button>
+							<button type="submit" class="btn btn-success left">导入校内专家账户</button>
+							<button type="submit" class="btn btn-primary left">导出校内专家账户</button>
+							<button type="submit" class="btn btn-danger left">删除校内专家账户</button>
 						</div>
                     </div>
                     <div class="box-content">
