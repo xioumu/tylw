@@ -65,7 +65,7 @@
                     <div class="box-header well" data-original-title>
                         <h2>管理当前评审信息</h2>
                         <div class="box-icon">
-                            <button href="#myBox1" class="btn btn-info btn-primary" data-toggle="modal" >添加评审</button>
+                            <button href="#myBox1" class="btn btn-info btn-success" data-toggle="modal" >添加评审</button>
                         </div>
                     </div>
                     <div class="box-content">
@@ -76,15 +76,17 @@
 									    <th>学生姓名</th>
                                         <th>专业</th>
 									    <th>评审专家账号</th>
+                                        <th>评审专家姓名</th>
 									    <th>评审专家类别</th>
-                                        <th>操作</th>
                                         <th>状态</th>
+                                        <th>操作</th>
                                     </thead>
 	                                <tr>
                                         <td>2011302580362</td>
 										<td>张三</td>
                                         <td>竞技体育教学</td>
 										<td>87872123</td>
+                                        <td>郭德纲</td>
                                         <td>校内专家</td>
                                         <td><span class="label label-important">还未评审</span></td>
                                         <td>
@@ -97,6 +99,7 @@
                                         <td>王五</td>
                                         <td>竞技体育教学</td>
                                         <td>87872123</td>
+                                        <td></td>
                                         <td>校外专家</td>
                                         <td><span class="label label-success">已经评审-建议立即授予学位</span></td>
                                         <td>
@@ -109,6 +112,7 @@
                                         <td>张三</td>
                                         <td>竞技体育教学</td>
                                         <td>87872123</td>
+                                        <td>大玩家</td>
                                         <td>校内专家</td>
                                         <td><span class="label label-warning">已经评审-建议论文修改后授予学位</span></td>
                                         <td>
@@ -121,6 +125,7 @@
                                         <td>张三</td>
                                         <td>竞技体育教学</td>
                                         <td>87872123</td>
+                                        <td>郭富城</td>
                                         <td>校内专家</td>
                                         <td><span class="label label-inverse">已经评审-建议不授予学位</span></td>
                                         <td>

@@ -35,16 +35,7 @@
       <file leaf-file-name="form.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demo/charisma/form.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="477" column="35" selection-start="20428" selection-end="20428" vertical-scroll-proportion="0.0" vertical-offset="9044" max-vertical-offset="11305">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bootstrap-cerulean.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/bootstrap-cerulean.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3968" column="23" selection-start="88036" selection-end="88036" vertical-scroll-proportion="0.0" vertical-offset="75373" max-vertical-offset="84721">
+            <state line="392" column="103" selection-start="16830" selection-end="16830" vertical-scroll-proportion="-14.25" vertical-offset="7049" max-vertical-offset="11305">
               <folding />
             </state>
           </provider>
@@ -59,10 +50,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="web-admin-judge-manage.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="web-admin-judge-manage.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web-admin-judge-manage.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="147" column="20" selection-start="6228" selection-end="6233" vertical-scroll-proportion="0.45189002" vertical-offset="2530" max-vertical-offset="5605">
+            <state line="141" column="29" selection-start="6290" selection-end="6290" vertical-scroll-proportion="-4.857143" vertical-offset="1042" max-vertical-offset="4199">
+              <folding>
+                <element signature="tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="web-admin-finish-info.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web-admin-finish-info.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="258" column="35" selection-start="11823" selection-end="11823" vertical-scroll-proportion="0.32474226" vertical-offset="1825" max-vertical-offset="5795">
+              <folding>
+                <element signature="tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#1;tag#div#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#2;tag#div#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="web-admin-left.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web-admin-left.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="117" selection-start="1229" selection-end="1236" vertical-scroll-proportion="-9.5" vertical-offset="38" max-vertical-offset="684">
               <folding />
             </state>
           </provider>
@@ -102,7 +117,10 @@
         <option value="$PROJECT_DIR$/student-info.php" />
         <option value="$PROJECT_DIR$/web-admin-judge-manage.html" />
         <option value="$PROJECT_DIR$/css/my.css" />
+        <option value="$PROJECT_DIR$/web-admin-finish-info.php.php" />
+        <option value="$PROJECT_DIR$/web-admin-student-manage.php" />
         <option value="$PROJECT_DIR$/web-admin-judge-manage.php" />
+        <option value="$PROJECT_DIR$/web-admin-finish-info.php" />
       </list>
     </option>
   </component>
@@ -227,7 +245,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -298,7 +316,9 @@
     <entry file="file://$PROJECT_DIR$/web-admin-judge-manage.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="52" selection-start="75" selection-end="75" vertical-scroll-proportion="0.0" vertical-offset="228" max-vertical-offset="5871">
-          <folding />
+          <folding>
+            <element signature="tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -395,13 +415,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo/charisma/form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="477" column="35" selection-start="20428" selection-end="20428" vertical-scroll-proportion="0.0" vertical-offset="9044" max-vertical-offset="11305">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/charisma.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="119" column="40" selection-start="3405" selection-end="3405" vertical-scroll-proportion="0.0" vertical-offset="2065" max-vertical-offset="13490">
@@ -425,10 +438,65 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/out-teacher-left.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="610">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-admin-student-manage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="33" selection-start="2053" selection-end="2059" vertical-scroll-proportion="-9.5" vertical-offset="969" max-vertical-offset="6023">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-admin-OnTeacher-manage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="114" column="29" selection-start="1881" selection-end="4302" vertical-scroll-proportion="-7.571429" vertical-offset="966" max-vertical-offset="4237">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/charisma/form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="392" column="103" selection-start="16830" selection-end="16830" vertical-scroll-proportion="-14.25" vertical-offset="7049" max-vertical-offset="11305">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-admin-OutTeacher-manage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="105" column="29" selection-start="1881" selection-end="3993" vertical-scroll-proportion="-9.428572" vertical-offset="914" max-vertical-offset="3686">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-admin-left.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="117" selection-start="1229" selection-end="1236" vertical-scroll-proportion="-9.5" vertical-offset="38" max-vertical-offset="684">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web-admin-judge-manage.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="147" column="20" selection-start="6228" selection-end="6233" vertical-scroll-proportion="0.45189002" vertical-offset="2530" max-vertical-offset="5605">
-          <folding />
+        <state line="141" column="29" selection-start="6290" selection-end="6290" vertical-scroll-proportion="-4.857143" vertical-offset="1042" max-vertical-offset="4199">
+          <folding>
+            <element signature="tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-admin-finish-info.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="258" column="35" selection-start="11823" selection-end="11823" vertical-scroll-proportion="0.32474226" vertical-offset="1825" max-vertical-offset="5795">
+          <folding>
+            <element signature="tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#1;tag#div#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#2;tag#div#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
