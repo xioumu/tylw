@@ -15,6 +15,7 @@
                         <li><a class="ajax-link" href="web-admin-deadline.php"><span class="hidden-tablet">设置截止日期</span></a></li>
                         <li><a class="ajax-link" href="web-admin-finish.php"><span class="hidden-tablet">结束评测并归档</span></a></li>
                         <li><a class="ajax-link" href="web-admin-finish-info.php"><span class="hidden-tablet">查看归档的信息</span></a></li>
+                        <li><a class="ajax-link" href="web-admin-type-manage.php"><span class="hidden-tablet">管理类别</span></a></li>
                         <li><a class="ajax-link" href="web-admin-passwd.php"><span class="hidden-tablet">修改密码</span></a></li>
 					</ul>
 				</div><!--/.well -->

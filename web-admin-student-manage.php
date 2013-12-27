@@ -153,7 +153,7 @@
 	</div><!--/.fluid-container-->
 
 	<!-- box -->
-	<div class="modal hide fade" id="myBox1">
+	<div class="modal hide" id="myBox1">
 		<div class="modal-header">
 			<button type="button" class="close" data-dismiss="modal">×</button>
 			<h3>修改学生信息</h3>

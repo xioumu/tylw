@@ -69,9 +69,7 @@
 						</div>
                     </div>
                     <div class="box-content">
-					
                         <form class="form-horizontal">
-								
 								<table class="table table-striped table-bordered bootstrap-datatable datatable">
                                     <thead>
                                         <th>用户名</th>

@@ -3,6 +3,7 @@
     header("Content-Type: text/html;charset=utf-8");
 ?>
 <html lang="en">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <head>
     <meta charset="utf-8">
 	<title>武汉体育学院学位管理系统</title>
@@ -227,14 +228,14 @@
                         <form class="form-horizontal">
                             <table class="table table-striped table-bordered bootstrap-datatable datatable">
                                 <thead>
-                                <th>评审年份</th>
-                                <th>学生学号</th>
-                                <th>学生姓名</th>
-                                <th>专业</th>
-                                <th>评审专家账号</th>
-                                <th>评审专家姓名</th>
-                                <th>评审专家类别</th>
-                                <th>状态</th>
+                                    <th>评审年份</th>
+                                    <th>学生学号</th>
+                                    <th>学生姓名</th>
+                                    <th>专业</th>
+                                    <th>评审专家账号</th>
+                                    <th>评审专家姓名</th>
+                                    <th>评审专家类别</th>
+                                    <th>状态</th>
                                 </thead>
                                 <tr>
                                     <td>2013</td>
@@ -291,7 +292,7 @@
 	</div><!--/.fluid-container-->
 
 	<!-- box -->
-	<div class="modal hide fade" id="student1">
+	<div class="modal hide" id="student1">
 		<div class="modal-header">
 			<button type="button" class="close" data-dismiss="modal">×</button>
 			<h3>查看学生信息</h3>
