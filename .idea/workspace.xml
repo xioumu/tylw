@@ -26,7 +26,7 @@
       <file leaf-file-name="my.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/my.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="67" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="722">
+            <state line="4" column="0" selection-start="97" selection-end="97" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="741">
               <folding />
             </state>
           </provider>
@@ -35,26 +35,16 @@
       <file leaf-file-name="form.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demo/charisma/form.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="477" column="36" selection-start="20266" selection-end="20429" vertical-scroll-proportion="-3.825" vertical-offset="7332" max-vertical-offset="9880">
-              <folding>
-                <element signature="tag#div#0;tag#div#0;tag#div#3;tag#div#1;tag#div#0;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
-                <element signature="tag#div#0;tag#fieldset#0;tag#form#0;tag#div#1;tag#div#0;tag#div#3;tag#div#1;tag#div#0;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
-                <element signature="tag#div#1;tag#fieldset#0;tag#form#0;tag#div#1;tag#div#0;tag#div#3;tag#div#1;tag#div#0;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
-                <element signature="tag#div#2;tag#fieldset#0;tag#form#0;tag#div#1;tag#div#0;tag#div#3;tag#div#1;tag#div#0;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
-                <element signature="tag#div#3;tag#fieldset#0;tag#form#0;tag#div#1;tag#div#0;tag#div#3;tag#div#1;tag#div#0;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
-                <element signature="tag#div#4;tag#fieldset#0;tag#form#0;tag#div#1;tag#div#0;tag#div#3;tag#div#1;tag#div#0;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
-                <element signature="tag#div#5;tag#fieldset#0;tag#form#0;tag#div#1;tag#div#0;tag#div#3;tag#div#1;tag#div#0;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
-                <element signature="tag#div#6;tag#fieldset#0;tag#form#0;tag#div#1;tag#div#0;tag#div#3;tag#div#1;tag#div#0;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
-                <element signature="tag#div#7;tag#fieldset#0;tag#form#0;tag#div#1;tag#div#0;tag#div#3;tag#div#1;tag#div#0;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
-              </folding>
+            <state line="477" column="35" selection-start="20428" selection-end="20428" vertical-scroll-proportion="0.0" vertical-offset="9044" max-vertical-offset="11305">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bootstrap-cerulean.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="bootstrap-cerulean.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/bootstrap-cerulean.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3835" column="0" selection-start="83031" selection-end="83031" vertical-scroll-proportion="1.3309983" vertical-offset="72105" max-vertical-offset="84721">
+            <state line="3968" column="23" selection-start="88036" selection-end="88036" vertical-scroll-proportion="0.0" vertical-offset="75373" max-vertical-offset="84721">
               <folding />
             </state>
           </provider>
@@ -63,19 +53,17 @@
       <file leaf-file-name="student-info.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/student-info.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="100" column="52" selection-start="4231" selection-end="4231" vertical-scroll-proportion="0.0" vertical-offset="993" max-vertical-offset="4256">
+            <state line="76" column="59" selection-start="2678" selection-end="2678" vertical-scroll-proportion="-0.6785714" vertical-offset="1425" max-vertical-offset="4256">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="charisma.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/charisma.js">
+      <file leaf-file-name="web-admin-judge-manage.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web-admin-judge-manage.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="119" column="40" selection-start="3405" selection-end="3405" vertical-scroll-proportion="0.0" vertical-offset="2065" max-vertical-offset="13490">
-              <folding>
-                <marker date="1387528997356" expanded="true" signature="14563:14589" placeholder="..." />
-              </folding>
+            <state line="67" column="118" selection-start="2232" selection-end="2232" vertical-scroll-proportion="0.28865978" vertical-offset="1105" max-vertical-offset="5605">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -107,17 +95,21 @@
         <option value="$PROJECT_DIR$/demo/charisma/js/charisma.js" />
         <option value="$PROJECT_DIR$/js/charisma.js" />
         <option value="$PROJECT_DIR$/student-submit.html" />
-        <option value="$PROJECT_DIR$/css/my.css" />
         <option value="$PROJECT_DIR$/css/bootstrap-cerulean.css" />
         <option value="$PROJECT_DIR$/web-admin-student-manage.html" />
         <option value="$PROJECT_DIR$/web-admin-OnTheacher-manage.html" />
         <option value="$PROJECT_DIR$/web-admin-deadline.html" />
+        <option value="$PROJECT_DIR$/student-info.php" />
+        <option value="$PROJECT_DIR$/web-admin-judge-manage.html" />
+        <option value="$PROJECT_DIR$/css/my.css" />
+        <option value="$PROJECT_DIR$/web-admin-judge-manage.php" />
       </list>
     </option>
   </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="Unnamed" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-15" />
-    <option name="y" value="-2" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
@@ -157,7 +149,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+    <navigator proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -168,76 +160,44 @@
       <autoscrollFromSource />
       <sortByType />
     </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tylw" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tylw" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tylw" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="preferences.pluginManager" />
+    <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="preferences.keymap" />
     <property name="FullScreen" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="name" value="Dart" />
-      <option name="saveOutputToFile" value="false" />
-      <option name="showConsoleOnStdErr" value="false" />
-      <option name="showConsoleOnStdOut" value="false" />
+  <component name="RunManager" selected="JavaScript Debug.web-admin-judge-manage.html">
+    <configuration default="false" name="web-admin-judge-manage.html" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true" temporary="true" uri="http://localhost:64461/tylw/web-admin-judge-manage.html">
+      <RunnerSettings RunnerId="JavascriptDebugRunner" />
+      <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
       <method />
     </configuration>
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
       <method />
     </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
-      <setting name="configLocationType" value="CONFIG_FILE" />
-      <setting name="settingsFile" value="" />
-      <setting name="serverType" value="INTERNAL" />
-      <setting name="preferredDebugBrowser" value="CHROME" />
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
       <method />
     </configuration>
-    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
-      <browser start="false" url="" with-js-debugger="false" />
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
-    <list size="0" />
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.web-admin-judge-manage.html" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.web-admin-judge-manage.html" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
@@ -266,27 +226,34 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-15" y="-2" width="1382" height="744" extended-state="1" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24963397" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.095168374" sideWeight="0.6710311" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39934534" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289689" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USERS">
+      <collection />
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -300,6 +267,80 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/css/my.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="7" selection-start="95" selection-end="95" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="722">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/charisma/form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="477" column="35" selection-start="20428" selection-end="20428" vertical-scroll-proportion="0.0" vertical-offset="9044" max-vertical-offset="11305">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/bootstrap-cerulean.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3968" column="23" selection-start="88036" selection-end="88036" vertical-scroll-proportion="0.0" vertical-offset="75373" max-vertical-offset="84721">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student-info.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="76" column="59" selection-start="2678" selection-end="2678" vertical-scroll-proportion="0.0" vertical-offset="1425" max-vertical-offset="4256">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-admin-judge-manage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="52" selection-start="75" selection-end="75" vertical-scroll-proportion="0.0" vertical-offset="228" max-vertical-offset="5871">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/charisma.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="119" column="40" selection-start="3405" selection-end="3405" vertical-scroll-proportion="0.0" vertical-offset="2065" max-vertical-offset="13490">
+          <folding>
+            <marker date="1387528997356" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/my.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="7" selection-start="95" selection-end="95" vertical-scroll-proportion="0.0" vertical-offset="57" max-vertical-offset="722">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/charisma/form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="477" column="35" selection-start="20428" selection-end="20428" vertical-scroll-proportion="0.0" vertical-offset="9044" max-vertical-offset="11305">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/bootstrap-cerulean.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3968" column="23" selection-start="88036" selection-end="88036" vertical-scroll-proportion="0.0" vertical-offset="75373" max-vertical-offset="84721">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/charisma.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="119" column="40" selection-start="3405" selection-end="3405" vertical-scroll-proportion="0.0" vertical-offset="2065" max-vertical-offset="13490">
+          <folding>
+            <marker date="1387528997356" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="49" column="8" selection-start="1583" selection-end="1583" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3458" />
@@ -327,13 +368,6 @@
         <state line="10" column="0" selection-start="221" selection-end="221" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3211" />
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/web-forms.rnc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="18" selection-start="551" selection-end="574" vertical-scroll-proportion="0.0" vertical-offset="167" max-vertical-offset="11324">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="43" column="21" selection-start="1413" selection-end="1413" vertical-scroll-proportion="-1.1960431" vertical-offset="1482" max-vertical-offset="3458" />
@@ -354,49 +388,46 @@
         <state line="119" column="4" selection-start="3366" selection-end="3366" vertical-scroll-proportion="0.36842105" vertical-offset="2065" max-vertical-offset="13452" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/charisma.js">
+    <entry file="file://$PROJECT_DIR$/css/bootstrap-cerulean.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="119" column="40" selection-start="3405" selection-end="3405" vertical-scroll-proportion="0.0" vertical-offset="2065" max-vertical-offset="13490">
-          <folding>
-            <marker date="1387528997356" expanded="true" signature="14563:14589" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/student-info.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="52" selection-start="4231" selection-end="4231" vertical-scroll-proportion="0.0" vertical-offset="993" max-vertical-offset="4256">
+        <state line="3968" column="23" selection-start="88036" selection-end="88036" vertical-scroll-proportion="0.0" vertical-offset="75373" max-vertical-offset="84721">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/demo/charisma/form.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="477" column="36" selection-start="20266" selection-end="20429" vertical-scroll-proportion="-3.825" vertical-offset="7332" max-vertical-offset="9880">
+        <state line="477" column="35" selection-start="20428" selection-end="20428" vertical-scroll-proportion="0.0" vertical-offset="9044" max-vertical-offset="11305">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/charisma.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="119" column="40" selection-start="3405" selection-end="3405" vertical-scroll-proportion="0.0" vertical-offset="2065" max-vertical-offset="13490">
           <folding>
-            <element signature="tag#div#0;tag#div#0;tag#div#3;tag#div#1;tag#div#0;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="tag#div#0;tag#fieldset#0;tag#form#0;tag#div#1;tag#div#0;tag#div#3;tag#div#1;tag#div#0;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="tag#div#1;tag#fieldset#0;tag#form#0;tag#div#1;tag#div#0;tag#div#3;tag#div#1;tag#div#0;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="tag#div#2;tag#fieldset#0;tag#form#0;tag#div#1;tag#div#0;tag#div#3;tag#div#1;tag#div#0;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="tag#div#3;tag#fieldset#0;tag#form#0;tag#div#1;tag#div#0;tag#div#3;tag#div#1;tag#div#0;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="tag#div#4;tag#fieldset#0;tag#form#0;tag#div#1;tag#div#0;tag#div#3;tag#div#1;tag#div#0;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="tag#div#5;tag#fieldset#0;tag#form#0;tag#div#1;tag#div#0;tag#div#3;tag#div#1;tag#div#0;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="tag#div#6;tag#fieldset#0;tag#form#0;tag#div#1;tag#div#0;tag#div#3;tag#div#1;tag#div#0;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="tag#div#7;tag#fieldset#0;tag#form#0;tag#div#1;tag#div#0;tag#div#3;tag#div#1;tag#div#0;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
+            <marker date="1387528997356" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/my.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="67" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="722">
+        <state line="4" column="0" selection-start="97" selection-end="97" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="741">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/bootstrap-cerulean.css">
+    <entry file="file://$PROJECT_DIR$/student-info.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3835" column="0" selection-start="83031" selection-end="83031" vertical-scroll-proportion="1.3309983" vertical-offset="72105" max-vertical-offset="84721">
+        <state line="76" column="59" selection-start="2678" selection-end="2678" vertical-scroll-proportion="-0.6785714" vertical-offset="1425" max-vertical-offset="4256">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-admin-judge-manage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="118" selection-start="2232" selection-end="2232" vertical-scroll-proportion="0.28865978" vertical-offset="1105" max-vertical-offset="5605">
           <folding />
         </state>
       </provider>
