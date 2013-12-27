@@ -64,13 +64,15 @@
                 <div class="box span12">
                     <div class="box-header well" data-original-title>
                         <h2>查看论文</h2>
-                    </div>
+                        <div class="box-icon">
+                            <h3>评审截止时间：2013/12/28 23:00</h3>
+                        </div>
+                     </div>
                     <div class="box-content">
                         <form class="form-horizontal">
 								<table class="table table-striped table-bordered bootstrap-datatable datatable">
                                     <thead>
-                                        <th>评审年份</th>
-									    <th>姓名</th>	
+									    <th>姓名</th>
 									    <th>学号</th>	
 									    <th>类别</th>	
 									    <th>专业</th>	
@@ -78,7 +80,6 @@
                                         <th>操作</th>    
                                     </thead>
                                     <thead>
-                                        <th><input type="text" class="input-mini" value=""></th>
 										<th><input type="text" class="input-mini" value=""></th>
 										<th><input type="text" class="input-mini" value=""></th>
                                         <th><select type="text" class="input-small">
@@ -99,7 +100,6 @@
                                          </th>
                                     </thead>
 	                                <tr>
-                                        <td>2011</td>
 										<td>张三</td>
 										<td>123455678</td>
                                         <td>硕士研究生</td>
@@ -110,7 +110,6 @@
                                          </td>
                                     </tr>
                                     <tr>
-										<td>2011</td>
 										<td>王五</td>
 										<td>12455678</td>
                                         <td>博士研究生</td>

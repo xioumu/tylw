@@ -1,20 +1,24 @@
 <!DOCTYPE html>
-<?php header("Content-Type: text/html;charset=utf-8");?>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
+	<meta charset="utf-8">
 	<title>武汉体育学院学位管理系统</title>
+
 	<!-- The styles -->
 	<link id="bs-css" href="css/bootstrap-cerulean.css" rel="stylesheet">
 	<style type="text/css">
 	  body {
 		padding-bottom: 40px;
-	  }
+      }
+      #yzm{
+          width: 70px;
+      }
+      .head{
+          color:Linen;
+
+      }
 	  .sidebar-nav {
 		padding: 9px 0;
-	  }
-	  #fileInput{
-		
 	  }
 	</style>
 	<link href="css/bootstrap-responsive.css" rel="stylesheet">
@@ -38,7 +42,7 @@
 
 	<!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
 	<!--[if lt IE 9]>
-	  <script src="js/html5.js"></script>
+	  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 
 	<!-- The fav icon -->
@@ -46,59 +50,34 @@
 		
 </head>
 
-<body>
-	<!-- topbar starts -->
-	<?php include('header.php');?>	
-	<!-- topbar ends -->
-	<div class="container-fluid">
+<body background="img/bg_index_new.png">
+		<div class="container-fluid">
 		<div class="row-fluid">
-			<!-- left menu starts -->
-				<?php include('sys-admin-left.php');?>	
-			<!-- left menu ends -->
-
-            <div id="content" class="span10">
-            <!-- content starts -->
+			<div class="row-fluid">
+				<div class="span12 center login-header">
+					<h2 class="head" >武汉体育学院学位管理系统</h2>
+				</div><!--/span-->
+			</div><!--/row-->
 			
-            <div class="row-fluid sortable">
-                <div class="box span12">
-					<div class="box-header well" data-original-title>
-                        <h2>修改密码</h2>
-                    </div>
-                    <div class="box-content">
-                        <form class="form-horizontal">
-                            <fieldset>
-                                <div class="control-group">
-                                    <label class="control-label" for="oldpasswd">账号</label>
-                                    <div class="controls">
-                                        <input class="input-xlarge" type="text" id="oldpasswd" value="201320">
-                                    </div>
-                                </div>
-								<div class="control-group">
-                                    <label class="control-label" for="newpasswd">新密码</label>
-                                    <div class="controls">
-                                        <input class="input-xlarge" type="password" id="newpasswd" value="">
-                                    </div>
-                                </div>
-								<div class="control-group">
-                                    <label class="control-label" for="newpasswd2">新密码确认</label>
-                                    <div class="controls">
-                                        <input class="input-xlarge" type="password" id="newpasswd2" value="">
-                                    </div>
-                                </div>
-                                <div class="form-actions">
-                                    <button type="submit" class="btn btn-primary">提交</button>
-                                </div>
-                            </fieldset>
-                        </form>
-
-                    </div>
-                </div><!--/span-->
-
-            </div><!--/row-->
-
-            <!-- content ends -->
-            </div><!--/#content.span10-->
-        </div><!--/fluid-row-->
+			<div class="row-fluid">
+				<div class="well span5 center login-box">
+					<form class="form-horizontal" action="index.html" method="post">
+						<fieldset>
+							<p class="center span5">
+							    <a href="login.html" type="submit" class="btn btn-primary">登陆界面</a>
+                                <a href="student-info.php" type="submit" class="btn btn-primary">学生界面</a>
+                                <a href="on-teacher-info.php" type="submit" class="btn btn-primary">校内专家界面</a>
+                                <a href="out-teacher-check.php" type="submit" class="btn btn-primary">校外专家界面</a>
+                                <a href="web-admin-student-manage.php" type="submit" class="btn btn-primary">网站管理员界面</a>
+                                <a href="sys-admin-manage.php" type="submit" class="btn btn-primary">系统管理员界面</a>
+							</p>
+                            <div class="clearfix"></div>
+						</fieldset>
+					</form>
+				</div><!--/span-->
+			</div><!--/row-->
+				</div><!--/fluid-row-->
+		
 	</div><!--/.fluid-container-->
 
 	<!-- external javascript

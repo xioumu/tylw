@@ -66,6 +66,7 @@
                         <h2>管理当前评审信息</h2>
                         <div class="box-icon">
                             <button href="#myBox1" class="btn btn-info btn-success" data-toggle="modal" >添加评审</button>
+                            <button href="" class="btn btn-info btn-info" data-toggle="modal" >分配评审</button>
                         </div>
                     </div>
                     <div class="box-content">
