@@ -1,4 +1,4 @@
-/* .controls > .radio:first-child, .controls > .checkbox:first-child {
+.controls > .radio:first-child, .controls > .checkbox:first-child {
 padding-top: 0px;
 }
 .modal {
@@ -9,7 +9,6 @@ margin: 70px 0 0 -400px;
 .modal.fade.in {
 top: 0;
 }
- */
 /*my css*/
 .mybox{
 	width: 800px;

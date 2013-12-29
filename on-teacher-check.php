@@ -136,7 +136,7 @@
 	</div><!--/.fluid-container-->
 
 	<!-- box -->
-	<div class="mybox modal hide fade" id="myBox1">
+	<div class="mybox modal hide" id="myBox1">
 		<div class="modal-header">
 			<button type="button" class="close" data-dismiss="modal">×</button>
 			<h3>评审</h3>
