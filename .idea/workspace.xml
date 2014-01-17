@@ -4,7 +4,13 @@
     <bookmark url="file://$PROJECT_DIR$/on-teacher-check.php" line="67" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="34d18521-e249-4fc3-bdb9-27c44b4484ba" name="Default" comment="" />
+    <list default="true" id="34d18521-e249-4fc3-bdb9-27c44b4484ba" name="Default" comment="">
+      <change type="DELETED" beforePath="E:\www\tylw\login.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/database.docx" afterPath="$PROJECT_DIR$/doc/database.docx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/header.php" afterPath="$PROJECT_DIR$/header.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="tylw.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,6 +23,9 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
+  <component name="Cvs2Configuration">
+    <option name="SHOW_CORRUPTED_PROJECT_FILES" value="2" />
+  </component>
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
   </component>
@@ -26,82 +35,60 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="my.css" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/css/my.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="722">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="form.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demo/charisma/form.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="370" column="42" selection-start="16062" selection-end="16062" vertical-scroll-proportion="0.0" vertical-offset="7011" max-vertical-offset="11305">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="out-teacher-check.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/out-teacher-check.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="94" column="52" selection-start="3634" selection-end="3634" vertical-scroll-proportion="0.0" vertical-offset="1216" max-vertical-offset="13414">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="web-admin-judge-manage.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web-admin-judge-manage.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="31" selection-start="2879" selection-end="2880" vertical-scroll-proportion="-0.6785714" vertical-offset="1007" max-vertical-offset="5719">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="33" selection-start="2016" selection-end="2016" vertical-scroll-proportion="-7.464286" vertical-offset="1007" max-vertical-offset="3192">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/login.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="26" selection-start="2014" selection-end="2014" vertical-scroll-proportion="-7.464286" vertical-offset="1026" max-vertical-offset="3458">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="on-teacher-check.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/on-teacher-check.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="92" column="65" selection-start="3513" selection-end="3513" vertical-scroll-proportion="0.0" vertical-offset="1729" max-vertical-offset="13414">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="web-admin-passwd.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web-admin-passwd.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="40" selection-start="1960" selection-end="1960" vertical-scroll-proportion="0.0" vertical-offset="1159" max-vertical-offset="3534">
+            <state line="75" column="59" selection-start="2660" selection-end="2660" vertical-scroll-proportion="-0.6785714" vertical-offset="1406" max-vertical-offset="3534">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sys-admin-manage.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sys-admin-manage.php">
+      <file leaf-file-name="secretary-student-manage.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/secretary-student-manage.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="46" selection-start="2084" selection-end="2084" vertical-scroll-proportion="0.0" vertical-offset="1026" max-vertical-offset="3572">
+            <state line="7" column="30" selection-start="157" selection-end="157" vertical-scroll-proportion="0.0" vertical-offset="133" max-vertical-offset="5890">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/header.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="53" selection-start="621" selection-end="621" vertical-scroll-proportion="0.0" vertical-offset="19" max-vertical-offset="608">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="secretary-left.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/secretary-left.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="24" selection-start="424" selection-end="424" vertical-scroll-proportion="0.0" vertical-offset="209" max-vertical-offset="551">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/login.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="39" selection-start="712" selection-end="712" vertical-scroll-proportion="-12.214286" vertical-offset="0" max-vertical-offset="1672">
+              <folding>
+                <marker date="1389983647046" expanded="true" signature="1087:1166" placeholder="..." />
+                <marker date="1389983647046" expanded="true" signature="1094:1166" placeholder="..." />
+                <marker date="1389983647046" expanded="true" signature="1230:3195" placeholder="..." />
+                <marker date="1389983647046" expanded="true" signature="1262:3152" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="73" column="114" selection-start="2685" selection-end="2685" vertical-scroll-proportion="0.5223368" vertical-offset="1083" max-vertical-offset="3211">
               <folding />
             </state>
           </provider>
@@ -115,6 +102,7 @@
     </FindUsagesManager>
   </component>
   <component name="Git.Settings">
+    <option name="SYNC_SETTING" value="DONT" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitLogSettings">
@@ -125,7 +113,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/login.html" />
         <option value="G:/Github/tylw/demo/frxz/index.html" />
         <option value="$PROJECT_DIR$/student.html" />
         <option value="$PROJECT_DIR$/student-info.html" />
@@ -137,7 +124,6 @@
         <option value="$PROJECT_DIR$/web-admin-student-manage.html" />
         <option value="$PROJECT_DIR$/web-admin-OnTheacher-manage.html" />
         <option value="$PROJECT_DIR$/web-admin-deadline.html" />
-        <option value="$PROJECT_DIR$/student-info.php" />
         <option value="$PROJECT_DIR$/web-admin-judge-manage.html" />
         <option value="$PROJECT_DIR$/web-admin-finish-info.php.php" />
         <option value="$PROJECT_DIR$/web-admin-student-manage.php" />
@@ -148,8 +134,15 @@
         <option value="$PROJECT_DIR$/on-teacher-check.php" />
         <option value="$PROJECT_DIR$/web-admin-passwd.php" />
         <option value="$PROJECT_DIR$/web-admin-judge-manage.php" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/css/my.css" />
+        <option value="$PROJECT_DIR$/secretary-left.php" />
+        <option value="$PROJECT_DIR$/header.php" />
+        <option value="$PROJECT_DIR$/login.html" />
+        <option value="$PROJECT_DIR$/secretary-student-manage.php" />
+        <option value="$PROJECT_DIR$/test.php" />
+        <option value="$PROJECT_DIR$/student-info.php" />
+        <option value="$PROJECT_DIR$/login.php" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -182,11 +175,11 @@
       </profile-state>
     </entry>
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
-    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="false" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
     <ConfirmationsSetting value="0" id="Add" />
@@ -213,10 +206,27 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="preferences.keymap" />
+    <property name="options.lastSelected" value="vcs.Git" />
     <property name="FullScreen" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="165" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="164" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="168" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="839" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="167" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="158" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="170" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="841" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
+    <property name="last_opened_file_path" value="C:/Program Files (x86)/Git/cmd/git.exe" />
   </component>
   <component name="RunManager" selected="JavaScript Debug.web-admin-judge-manage.html">
     <configuration default="false" name="web-admin-judge-manage.html" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true" temporary="true" uri="http://localhost:64461/tylw/web-admin-judge-manage.html">
@@ -273,7 +283,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -284,17 +294,17 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.095168374" sideWeight="0.6710311" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39934534" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32810047" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -309,18 +319,30 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <option name="PERFORM_UPDATE_IN_BACKGROUND" value="false" />
+    <option name="PERFORM_COMMIT_IN_BACKGROUND" value="false" />
+    <option name="PERFORM_EDIT_IN_BACKGROUND" value="false" />
+    <option name="PERFORM_CHECKOUT_IN_BACKGROUND" value="false" />
+    <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="false" />
+    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="false" />
+    <option name="LIMIT_HISTORY" value="false" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="tylw" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="tylw" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+      </PATH_ELEMENT>
+    </PATH>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web-admin-passwd.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="40" selection-start="1960" selection-end="1960" vertical-scroll-proportion="0.0" vertical-offset="1159" max-vertical-offset="3534">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sys-admin-manage.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="66" column="46" selection-start="2084" selection-end="2084" vertical-scroll-proportion="0.0" vertical-offset="1026" max-vertical-offset="3572">
@@ -328,17 +350,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/my.css">
+    <entry file="file://$PROJECT_DIR$/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="100" selection-end="100" vertical-scroll-proportion="0.0" vertical-offset="76" max-vertical-offset="741">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo/charisma/form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="392" column="103" selection-start="16830" selection-end="16830" vertical-scroll-proportion="0.0" vertical-offset="7049" max-vertical-offset="11305">
-          <folding />
+        <state line="80" column="34" selection-start="2967" selection-end="2967" vertical-scroll-proportion="0.0" vertical-offset="1520" max-vertical-offset="3458">
+          <folding>
+            <marker date="1389983647046" expanded="true" signature="1087:1166" placeholder="..." />
+            <marker date="1389983647046" expanded="true" signature="1094:1166" placeholder="..." />
+            <marker date="1389983647046" expanded="true" signature="1230:3195" placeholder="..." />
+            <marker date="1389983647046" expanded="true" signature="1262:3152" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -349,9 +369,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web-admin-judge-manage.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="141" column="29" selection-start="6290" selection-end="6290" vertical-scroll-proportion="0.0" vertical-offset="2679" max-vertical-offset="5700">
-          <folding />
-        </state>
+        <state line="141" column="29" selection-start="6290" selection-end="6290" vertical-scroll-proportion="0.0" vertical-offset="2679" max-vertical-offset="5700" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web-admin-finish-info.php">
@@ -373,9 +391,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/demo/charisma/form.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="392" column="103" selection-start="16830" selection-end="16830" vertical-scroll-proportion="0.0" vertical-offset="7049" max-vertical-offset="11305">
-          <folding />
-        </state>
+        <state line="392" column="103" selection-start="16830" selection-end="16830" vertical-scroll-proportion="0.0" vertical-offset="7049" max-vertical-offset="11305" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/student-info.php">
@@ -385,9 +401,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web-admin-judge-manage.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="141" column="29" selection-start="6290" selection-end="6290" vertical-scroll-proportion="0.0" vertical-offset="2679" max-vertical-offset="5700">
-          <folding />
-        </state>
+        <state line="141" column="29" selection-start="6290" selection-end="6290" vertical-scroll-proportion="0.0" vertical-offset="2679" max-vertical-offset="5700" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web-admin-finish-info.php">
@@ -409,9 +423,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/demo/charisma/form.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="477" column="35" selection-start="20428" selection-end="20428" vertical-scroll-proportion="0.0" vertical-offset="9044" max-vertical-offset="11305">
-          <folding />
-        </state>
+        <state line="477" column="35" selection-start="20428" selection-end="20428" vertical-scroll-proportion="0.0" vertical-offset="9044" max-vertical-offset="11305" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/bootstrap-cerulean.css">
@@ -428,9 +440,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web-admin-judge-manage.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="52" selection-start="75" selection-end="75" vertical-scroll-proportion="0.0" vertical-offset="228" max-vertical-offset="5871">
-          <folding />
-        </state>
+        <state line="2" column="52" selection-start="75" selection-end="75" vertical-scroll-proportion="0.0" vertical-offset="228" max-vertical-offset="5871" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/charisma.js">
@@ -447,9 +457,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/demo/charisma/form.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="477" column="35" selection-start="20428" selection-end="20428" vertical-scroll-proportion="0.0" vertical-offset="9044" max-vertical-offset="11305">
-          <folding />
-        </state>
+        <state line="477" column="35" selection-start="20428" selection-end="20428" vertical-scroll-proportion="0.0" vertical-offset="9044" max-vertical-offset="11305" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/bootstrap-cerulean.css">
@@ -464,31 +472,11 @@
         <state line="119" column="40" selection-start="3405" selection-end="3405" vertical-scroll-proportion="0.0" vertical-offset="2065" max-vertical-offset="13490" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="8" selection-start="1583" selection-end="1583" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3458" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/my.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="19" selection-start="88" selection-end="88" vertical-scroll-proportion="0.0" vertical-offset="95" max-vertical-offset="228">
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="91" selection-start="2462" selection-end="2462" vertical-scroll-proportion="0.0" vertical-offset="1387" max-vertical-offset="3458" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="16" selection-start="32" selection-end="32" vertical-scroll-proportion="0.0" vertical-offset="19" max-vertical-offset="3268" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="221" selection-end="221" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3211" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/demo/frxz/index.html">
@@ -553,70 +541,113 @@
         <state line="130" column="26" selection-start="4994" selection-end="4994" vertical-scroll-proportion="-16.964285" vertical-offset="1995" max-vertical-offset="4465" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/student-info.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="58" selection-start="2277" selection-end="2277" vertical-scroll-proportion="0.42439863" vertical-offset="1083" max-vertical-offset="4256" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/demo/charisma/form.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="370" column="42" selection-start="16062" selection-end="16062" vertical-scroll-proportion="0.0" vertical-offset="7011" max-vertical-offset="11305">
-          <folding />
-        </state>
+        <state line="370" column="42" selection-start="16062" selection-end="16062" vertical-scroll-proportion="0.0" vertical-offset="7011" max-vertical-offset="11305" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/out-teacher-check.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="52" selection-start="3634" selection-end="3634" vertical-scroll-proportion="0.0" vertical-offset="1216" max-vertical-offset="13414">
-          <folding />
-        </state>
+        <state line="94" column="52" selection-start="3634" selection-end="3634" vertical-scroll-proportion="0.0" vertical-offset="1216" max-vertical-offset="13414" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/on-teacher-check.php">
+    <entry file="file://$PROJECT_DIR$/css/my.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="65" selection-start="3513" selection-end="3513" vertical-scroll-proportion="0.0" vertical-offset="1729" max-vertical-offset="13414">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web-admin-passwd.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="40" selection-start="1960" selection-end="1960" vertical-scroll-proportion="0.0" vertical-offset="1159" max-vertical-offset="3534">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sys-admin-manage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="46" selection-start="2084" selection-end="2084" vertical-scroll-proportion="0.0" vertical-offset="1026" max-vertical-offset="3572">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="722">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web-admin-judge-manage.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="31" selection-start="2879" selection-end="2880" vertical-scroll-proportion="-0.6785714" vertical-offset="1007" max-vertical-offset="5719">
+        <state line="54" column="31" selection-start="2879" selection-end="2880" vertical-scroll-proportion="-0.6785714" vertical-offset="1007" max-vertical-offset="5719" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/on-teacher-check.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="92" column="65" selection-start="3513" selection-end="3513" vertical-scroll-proportion="0.033568904" vertical-offset="1729" max-vertical-offset="13414">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/login.html">
+    <entry file="file://$PROJECT_DIR$/sys-admin-manage.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="26" selection-start="2014" selection-end="2014" vertical-scroll-proportion="-7.464286" vertical-offset="1026" max-vertical-offset="3458">
+        <state line="66" column="46" selection-start="2084" selection-end="2084" vertical-scroll-proportion="0.0" vertical-offset="1254" max-vertical-offset="3572">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/secretary-left.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="24" selection-start="424" selection-end="424" vertical-scroll-proportion="0.0" vertical-offset="209" max-vertical-offset="551">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/secretary-student-manage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="30" selection-start="157" selection-end="157" vertical-scroll-proportion="0.0" vertical-offset="133" max-vertical-offset="5890">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="53" selection-start="621" selection-end="621" vertical-scroll-proportion="0.0" vertical-offset="19" max-vertical-offset="608">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-admin-passwd.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="59" selection-start="2660" selection-end="2660" vertical-scroll-proportion="-0.6785714" vertical-offset="1406" max-vertical-offset="3534">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="12" selection-start="126" selection-end="126" vertical-scroll-proportion="8.142858" vertical-offset="285" max-vertical-offset="931">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/verification/showimg.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="22" selection-start="400" selection-end="400" vertical-scroll-proportion="-7.464286" vertical-offset="0" max-vertical-offset="988">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student-info.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="58" selection-start="2277" selection-end="2277" vertical-scroll-proportion="0.42439863" vertical-offset="1083" max-vertical-offset="4256">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="39" selection-start="712" selection-end="712" vertical-scroll-proportion="-12.214286" vertical-offset="0" max-vertical-offset="1672">
+          <folding>
+            <marker date="1389983647046" expanded="true" signature="1087:1166" placeholder="..." />
+            <marker date="1389983647046" expanded="true" signature="1094:1166" placeholder="..." />
+            <marker date="1389983647046" expanded="true" signature="1230:3195" placeholder="..." />
+            <marker date="1389983647046" expanded="true" signature="1262:3152" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="24" selection-start="42" selection-end="42" vertical-scroll-proportion="0.0652921" vertical-offset="0" max-vertical-offset="582">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="33" selection-start="2016" selection-end="2016" vertical-scroll-proportion="-7.464286" vertical-offset="1007" max-vertical-offset="3192">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/my.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="722">
+        <state line="73" column="114" selection-start="2685" selection-end="2685" vertical-scroll-proportion="0.5223368" vertical-offset="1083" max-vertical-offset="3211">
           <folding />
         </state>
       </provider>
