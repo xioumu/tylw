@@ -5,10 +5,81 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34d18521-e249-4fc3-bdb9-27c44b4484ba" name="Default" comment="">
-      <change type="DELETED" beforePath="E:\www\tylw\login.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/database.docx" afterPath="$PROJECT_DIR$/doc/database.docx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/header.php" afterPath="$PROJECT_DIR$/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/bootstrap/.csslintrc" afterPath="$PROJECT_DIR$/demo/bootstrap/.csslintrc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/bootstrap/.editorconfig" afterPath="$PROJECT_DIR$/demo/bootstrap/.editorconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/bootstrap/.gitattributes" afterPath="$PROJECT_DIR$/demo/bootstrap/.gitattributes" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/bootstrap/.gitignore" afterPath="$PROJECT_DIR$/demo/bootstrap/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/bootstrap/js/.jshintrc" afterPath="$PROJECT_DIR$/demo/bootstrap/js/.jshintrc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/bootstrap/CNAME" afterPath="$PROJECT_DIR$/demo/bootstrap/CNAME" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/bootstrap/DOCS-LICENSE" afterPath="$PROJECT_DIR$/demo/bootstrap/DOCS-LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/bootstrap/LICENSE-MIT" afterPath="$PROJECT_DIR$/demo/bootstrap/LICENSE-MIT" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/bootstrap/LICENSE" afterPath="$PROJECT_DIR$/demo/bootstrap/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/bootstrap-alert.js" afterPath="$PROJECT_DIR$/js/bootstrap-alert.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/bootstrap-button.js" afterPath="$PROJECT_DIR$/js/bootstrap-button.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/bootstrap-carousel.js" afterPath="$PROJECT_DIR$/js/bootstrap-carousel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/bootstrap-cerulean.css" afterPath="$PROJECT_DIR$/css/bootstrap-cerulean.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/bootstrap-classic.css" afterPath="$PROJECT_DIR$/css/bootstrap-classic.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/bootstrap-classic.min.css" afterPath="$PROJECT_DIR$/css/bootstrap-classic.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/bootstrap-collapse.js" afterPath="$PROJECT_DIR$/js/bootstrap-collapse.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/bootstrap-cyborg.css" afterPath="$PROJECT_DIR$/css/bootstrap-cyborg.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/bootstrap-dropdown.js" afterPath="$PROJECT_DIR$/js/bootstrap-dropdown.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/bootstrap-journal.css" afterPath="$PROJECT_DIR$/css/bootstrap-journal.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/bootstrap-modal.js" afterPath="$PROJECT_DIR$/js/bootstrap-modal.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/bootstrap-popover.js" afterPath="$PROJECT_DIR$/js/bootstrap-popover.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/bootstrap-redy.css" afterPath="$PROJECT_DIR$/css/bootstrap-redy.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/bootstrap-responsive.css" afterPath="$PROJECT_DIR$/css/bootstrap-responsive.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/bootstrap-responsive.min.css" afterPath="$PROJECT_DIR$/css/bootstrap-responsive.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/bootstrap-scrollspy.js" afterPath="$PROJECT_DIR$/js/bootstrap-scrollspy.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/bootstrap-simplex.css" afterPath="$PROJECT_DIR$/css/bootstrap-simplex.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/bootstrap-slate.css" afterPath="$PROJECT_DIR$/css/bootstrap-slate.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/bootstrap-spacelab.css" afterPath="$PROJECT_DIR$/css/bootstrap-spacelab.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/bootstrap-tab.js" afterPath="$PROJECT_DIR$/js/bootstrap-tab.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/bootstrap-toggle.js" afterPath="$PROJECT_DIR$/js/bootstrap-toggle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/bootstrap-tooltip.js" afterPath="$PROJECT_DIR$/js/bootstrap-tooltip.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/bootstrap-tour.js" afterPath="$PROJECT_DIR$/js/bootstrap-tour.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/bootstrap-transition.js" afterPath="$PROJECT_DIR$/js/bootstrap-transition.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/bootstrap-typeahead.js" afterPath="$PROJECT_DIR$/js/bootstrap-typeahead.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/bootstrap-united.css" afterPath="$PROJECT_DIR$/css/bootstrap-united.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/chosen.css" afterPath="$PROJECT_DIR$/css/chosen.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/colorbox.css" afterPath="$PROJECT_DIR$/css/colorbox.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/elfinder.min.css" afterPath="$PROJECT_DIR$/css/elfinder.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/elfinder.theme.css" afterPath="$PROJECT_DIR$/css/elfinder.theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/excanvas.js" afterPath="$PROJECT_DIR$/js/excanvas.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/fullcalendar.css" afterPath="$PROJECT_DIR$/css/fullcalendar.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/fullcalendar.min.js" afterPath="$PROJECT_DIR$/js/fullcalendar.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/fullcalendar.print.css" afterPath="$PROJECT_DIR$/css/fullcalendar.print.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/bootstrap/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/demo/bootstrap/fonts/glyphicons-halflings-regular.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/html5.js" afterPath="$PROJECT_DIR$/js/html5.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jquery-1.7.2.min.js" afterPath="$PROJECT_DIR$/js/jquery-1.7.2.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/jquery-ui-1.8.21.custom.css" afterPath="$PROJECT_DIR$/css/jquery-ui-1.8.21.custom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jquery-ui-1.8.21.custom.min.js" afterPath="$PROJECT_DIR$/js/jquery-ui-1.8.21.custom.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jquery.autogrow-textarea.js" afterPath="$PROJECT_DIR$/js/jquery.autogrow-textarea.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jquery.chosen.min.js" afterPath="$PROJECT_DIR$/js/jquery.chosen.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/jquery.cleditor.css" afterPath="$PROJECT_DIR$/css/jquery.cleditor.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jquery.cleditor.min.js" afterPath="$PROJECT_DIR$/js/jquery.cleditor.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jquery.colorbox.min.js" afterPath="$PROJECT_DIR$/js/jquery.colorbox.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jquery.cookie.js" afterPath="$PROJECT_DIR$/js/jquery.cookie.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jquery.dataTables.min.js" afterPath="$PROJECT_DIR$/js/jquery.dataTables.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jquery.elfinder.min.js" afterPath="$PROJECT_DIR$/js/jquery.elfinder.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jquery.flot.min.js" afterPath="$PROJECT_DIR$/js/jquery.flot.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jquery.flot.pie.min.js" afterPath="$PROJECT_DIR$/js/jquery.flot.pie.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jquery.flot.stack.js" afterPath="$PROJECT_DIR$/js/jquery.flot.stack.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/jquery.iphone.toggle.css" afterPath="$PROJECT_DIR$/css/jquery.iphone.toggle.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jquery.iphone.toggle.js" afterPath="$PROJECT_DIR$/js/jquery.iphone.toggle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jquery.js" afterPath="$PROJECT_DIR$/js/jquery.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/jquery.noty.css" afterPath="$PROJECT_DIR$/css/jquery.noty.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jquery.noty.js" afterPath="$PROJECT_DIR$/js/jquery.noty.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jquery.raty.min.js" afterPath="$PROJECT_DIR$/js/jquery.raty.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jquery.uploadify-3.1.min.js" afterPath="$PROJECT_DIR$/js/jquery.uploadify-3.1.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login.php" afterPath="$PROJECT_DIR$/login.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/noty_theme_default.css" afterPath="$PROJECT_DIR$/css/noty_theme_default.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/opa-icons.css" afterPath="$PROJECT_DIR$/css/opa-icons.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/light_grey/light_grey/readme.txt" afterPath="$PROJECT_DIR$/demo/light_grey/light_grey/readme.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/bootstrap/test-infra/requirements.txt" afterPath="$PROJECT_DIR$/demo/bootstrap/test-infra/requirements.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/bootstrap/test-infra/s3_cache.py" afterPath="$PROJECT_DIR$/demo/bootstrap/test-infra/s3_cache.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/verification/showimg.php" afterPath="$PROJECT_DIR$/verification/showimg.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/uniform.default.css" afterPath="$PROJECT_DIR$/css/uniform.default.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/uploadify.css" afterPath="$PROJECT_DIR$/css/uploadify.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="tylw.iws" />
@@ -38,7 +109,7 @@
       <file leaf-file-name="web-admin-passwd.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web-admin-passwd.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="59" selection-start="2660" selection-end="2660" vertical-scroll-proportion="-0.6785714" vertical-offset="1406" max-vertical-offset="3534">
+            <state line="75" column="59" selection-start="2660" selection-end="2660" vertical-scroll-proportion="0.0" vertical-offset="1406" max-vertical-offset="3534">
               <folding />
             </state>
           </provider>
@@ -56,7 +127,7 @@
       <file leaf-file-name="header.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="53" selection-start="621" selection-end="621" vertical-scroll-proportion="0.0" vertical-offset="19" max-vertical-offset="608">
+            <state line="17" column="53" selection-start="621" selection-end="621" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="608">
               <folding />
             </state>
           </provider>
@@ -71,24 +142,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="login.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="39" selection-start="712" selection-end="712" vertical-scroll-proportion="-12.214286" vertical-offset="0" max-vertical-offset="1672">
+            <state line="41" column="31" selection-start="1501" selection-end="1501" vertical-scroll-proportion="0.84879726" vertical-offset="285" max-vertical-offset="2356">
               <folding>
-                <marker date="1389983647046" expanded="true" signature="1087:1166" placeholder="..." />
-                <marker date="1389983647046" expanded="true" signature="1094:1166" placeholder="..." />
-                <marker date="1389983647046" expanded="true" signature="1230:3195" placeholder="..." />
-                <marker date="1389983647046" expanded="true" signature="1262:3152" placeholder="..." />
+                <marker date="1390058761170" expanded="true" signature="147:192" placeholder="SELECT * FRO..user..." />
+                <marker date="1390058761170" expanded="true" signature="439:484" placeholder="SELECT * FRO..user..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="showimg.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/verification/showimg.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="22" selection-start="401" selection-end="401" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="1102">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="114" selection-start="2685" selection-end="2685" vertical-scroll-proportion="0.5223368" vertical-offset="1083" max-vertical-offset="3211">
+            <state line="61" column="33" selection-start="1877" selection-end="1877" vertical-scroll-proportion="0.0" vertical-offset="1083" max-vertical-offset="3211">
               <folding />
             </state>
           </provider>
@@ -141,8 +219,9 @@
         <option value="$PROJECT_DIR$/secretary-student-manage.php" />
         <option value="$PROJECT_DIR$/test.php" />
         <option value="$PROJECT_DIR$/student-info.php" />
-        <option value="$PROJECT_DIR$/login.php" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/verification/showimg.php" />
+        <option value="$PROJECT_DIR$/login.php" />
       </list>
     </option>
   </component>
@@ -206,7 +285,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="vcs.Git" />
+    <property name="options.lastSelected" value="preferences.sourceCode.PHP" />
     <property name="FullScreen" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
@@ -227,6 +306,7 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="841" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="last_opened_file_path" value="C:/Program Files (x86)/Git/cmd/git.exe" />
+    <property name="LayoutCode.rearrangeEntriesPHP" value="false" />
   </component>
   <component name="RunManager" selected="JavaScript Debug.web-admin-judge-manage.html">
     <configuration default="false" name="web-admin-judge-manage.html" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true" temporary="true" uri="http://localhost:64461/tylw/web-admin-judge-manage.html">
@@ -345,19 +425,15 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/sys-admin-manage.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="46" selection-start="2084" selection-end="2084" vertical-scroll-proportion="0.0" vertical-offset="1026" max-vertical-offset="3572">
-          <folding />
-        </state>
+        <state line="66" column="46" selection-start="2084" selection-end="2084" vertical-scroll-proportion="0.0" vertical-offset="1026" max-vertical-offset="3572" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="80" column="34" selection-start="2967" selection-end="2967" vertical-scroll-proportion="0.0" vertical-offset="1520" max-vertical-offset="3458">
           <folding>
-            <marker date="1389983647046" expanded="true" signature="1087:1166" placeholder="..." />
-            <marker date="1389983647046" expanded="true" signature="1094:1166" placeholder="..." />
-            <marker date="1389983647046" expanded="true" signature="1230:3195" placeholder="..." />
-            <marker date="1389983647046" expanded="true" signature="1262:3152" placeholder="..." />
+            <marker date="1390058761170" expanded="true" signature="147:192" placeholder="SELECT * FRO..user..." />
+            <marker date="1390058761170" expanded="true" signature="439:484" placeholder="SELECT * FRO..user..." />
           </folding>
         </state>
       </provider>
@@ -384,9 +460,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/my.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="97" selection-end="97" vertical-scroll-proportion="0.0" vertical-offset="76" max-vertical-offset="741">
-          <folding />
-        </state>
+        <state line="4" column="0" selection-start="97" selection-end="97" vertical-scroll-proportion="0.0" vertical-offset="76" max-vertical-offset="741" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/demo/charisma/form.html">
@@ -416,9 +490,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/my.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="7" selection-start="95" selection-end="95" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="722">
-          <folding />
-        </state>
+        <state line="3" column="7" selection-start="95" selection-end="95" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="722" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/demo/charisma/form.html">
@@ -428,9 +500,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/bootstrap-cerulean.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3968" column="23" selection-start="88036" selection-end="88036" vertical-scroll-proportion="0.0" vertical-offset="75373" max-vertical-offset="84721">
-          <folding />
-        </state>
+        <state line="3968" column="23" selection-start="88036" selection-end="88036" vertical-scroll-proportion="0.0" vertical-offset="75373" max-vertical-offset="84721" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/student-info.php">
@@ -450,9 +520,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/my.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="7" selection-start="95" selection-end="95" vertical-scroll-proportion="0.0" vertical-offset="57" max-vertical-offset="722">
-          <folding />
-        </state>
+        <state line="3" column="7" selection-start="95" selection-end="95" vertical-scroll-proportion="0.0" vertical-offset="57" max-vertical-offset="722" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/demo/charisma/form.html">
@@ -462,9 +530,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/bootstrap-cerulean.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3968" column="23" selection-start="88036" selection-end="88036" vertical-scroll-proportion="0.0" vertical-offset="75373" max-vertical-offset="84721">
-          <folding />
-        </state>
+        <state line="3968" column="23" selection-start="88036" selection-end="88036" vertical-scroll-proportion="0.0" vertical-offset="75373" max-vertical-offset="84721" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/charisma.js">
@@ -474,9 +540,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/my.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="19" selection-start="88" selection-end="88" vertical-scroll-proportion="0.0" vertical-offset="95" max-vertical-offset="228">
-          <folding />
-        </state>
+        <state line="5" column="19" selection-start="88" selection-end="88" vertical-scroll-proportion="0.0" vertical-offset="95" max-vertical-offset="228" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/demo/frxz/index.html">
@@ -496,9 +560,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/bootstrap-cerulean.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3968" column="23" selection-start="88036" selection-end="88036" vertical-scroll-proportion="0.0" vertical-offset="75373" max-vertical-offset="84721">
-          <folding />
-        </state>
+        <state line="3968" column="23" selection-start="88036" selection-end="88036" vertical-scroll-proportion="0.0" vertical-offset="75373" max-vertical-offset="84721" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/charisma.js">
@@ -553,9 +615,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/my.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="722">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="722" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web-admin-judge-manage.php">
@@ -572,9 +632,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sys-admin-manage.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="46" selection-start="2084" selection-end="2084" vertical-scroll-proportion="0.0" vertical-offset="1254" max-vertical-offset="3572">
-          <folding />
-        </state>
+        <state line="66" column="46" selection-start="2084" selection-end="2084" vertical-scroll-proportion="0.0" vertical-offset="1254" max-vertical-offset="3572" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/secretary-left.php">
@@ -600,55 +658,47 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web-admin-passwd.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="59" selection-start="2660" selection-end="2660" vertical-scroll-proportion="-0.6785714" vertical-offset="1406" max-vertical-offset="3534">
+        <state line="75" column="59" selection-start="2660" selection-end="2660" vertical-scroll-proportion="0.0" vertical-offset="1406" max-vertical-offset="3534">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="12" selection-start="126" selection-end="126" vertical-scroll-proportion="8.142858" vertical-offset="285" max-vertical-offset="931">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/verification/showimg.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="22" selection-start="400" selection-end="400" vertical-scroll-proportion="-7.464286" vertical-offset="0" max-vertical-offset="988">
-          <folding />
-        </state>
+        <state line="3" column="12" selection-start="126" selection-end="126" vertical-scroll-proportion="8.142858" vertical-offset="285" max-vertical-offset="931" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/student-info.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="58" selection-start="2277" selection-end="2277" vertical-scroll-proportion="0.42439863" vertical-offset="1083" max-vertical-offset="4256">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="39" selection-start="712" selection-end="712" vertical-scroll-proportion="-12.214286" vertical-offset="0" max-vertical-offset="1672">
-          <folding>
-            <marker date="1389983647046" expanded="true" signature="1087:1166" placeholder="..." />
-            <marker date="1389983647046" expanded="true" signature="1094:1166" placeholder="..." />
-            <marker date="1389983647046" expanded="true" signature="1230:3195" placeholder="..." />
-            <marker date="1389983647046" expanded="true" signature="1262:3152" placeholder="..." />
-          </folding>
-        </state>
+        <state line="70" column="58" selection-start="2277" selection-end="2277" vertical-scroll-proportion="0.42439863" vertical-offset="1083" max-vertical-offset="4256" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="24" selection-start="42" selection-end="42" vertical-scroll-proportion="0.0652921" vertical-offset="0" max-vertical-offset="582">
+        <state line="2" column="24" selection-start="42" selection-end="42" vertical-scroll-proportion="0.0652921" vertical-offset="0" max-vertical-offset="582" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/verification/showimg.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="22" selection-start="401" selection-end="401" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="1102">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="114" selection-start="2685" selection-end="2685" vertical-scroll-proportion="0.5223368" vertical-offset="1083" max-vertical-offset="3211">
+        <state line="61" column="33" selection-start="1877" selection-end="1877" vertical-scroll-proportion="0.0" vertical-offset="1083" max-vertical-offset="3211">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="31" selection-start="1501" selection-end="1501" vertical-scroll-proportion="0.84879726" vertical-offset="285" max-vertical-offset="2356">
+          <folding>
+            <marker date="1390058761170" expanded="true" signature="147:192" placeholder="SELECT * FRO..user..." />
+            <marker date="1390058761170" expanded="true" signature="439:484" placeholder="SELECT * FRO..user..." />
+          </folding>
         </state>
       </provider>
     </entry>

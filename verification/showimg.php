@@ -7,7 +7,6 @@
     *   Date:   2007.03
     *   技术支持： www.17php.com
     */
-
    //随机生成一个4位数的数字验证码
     $num="";
     for($i=0;$i<4;$i++){
@@ -15,7 +14,7 @@
     }
    //4位验证码也可以用rand(1000,9999)直接生成
    //将生成的验证码写入session，备验证页面使用
-    Session_start();
+ //   Session_start();
     $_SESSION["Checknum"] = $num;
    //创建图片，定义颜色值
     Header("Content-type: image/PNG");
