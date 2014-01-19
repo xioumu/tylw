@@ -71,16 +71,13 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jquery.noty.js" afterPath="$PROJECT_DIR$/js/jquery.noty.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jquery.raty.min.js" afterPath="$PROJECT_DIR$/js/jquery.raty.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jquery.uploadify-3.1.min.js" afterPath="$PROJECT_DIR$/js/jquery.uploadify-3.1.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login.php" afterPath="$PROJECT_DIR$/login.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/noty_theme_default.css" afterPath="$PROJECT_DIR$/css/noty_theme_default.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/opa-icons.css" afterPath="$PROJECT_DIR$/css/opa-icons.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/light_grey/light_grey/readme.txt" afterPath="$PROJECT_DIR$/demo/light_grey/light_grey/readme.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/bootstrap/test-infra/requirements.txt" afterPath="$PROJECT_DIR$/demo/bootstrap/test-infra/requirements.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/bootstrap/test-infra/s3_cache.py" afterPath="$PROJECT_DIR$/demo/bootstrap/test-infra/s3_cache.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/verification/showimg.php" afterPath="$PROJECT_DIR$/verification/showimg.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/uniform.default.css" afterPath="$PROJECT_DIR$/css/uniform.default.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/uploadify.css" afterPath="$PROJECT_DIR$/css/uploadify.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="tylw.iws" />
     <ignored path=".idea/workspace.xml" />
