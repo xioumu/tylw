@@ -46,11 +46,11 @@
 		
 </head>
 
-<body>
+<body class="index">
 	<!-- topbar starts -->
 	<?php include('header.php');?>	
 	<!-- topbar ends -->
-	<div class="container-fluid">
+	<div class="container-fluid ">
 		<div class="row-fluid">
 			<!-- left menu starts -->
 				<?php include('sys-admin-left.php');?>	

@@ -1,182 +1,135 @@
 <!DOCTYPE html>
-<?php 
-    header("Content-Type: text/html;charset=utf-8");
+<?php
+header("Content-Type: text/html;charset=utf-8");
+include("config.php");
 ?>
 <html lang="en">
 <head>
     <meta charset="utf-8">
-	<title>武汉体育学院学位管理系统</title>
-	<!-- The styles -->
-	<link id="bs-css" href="css/bootstrap-cerulean.css" rel="stylesheet">
-	<style type="text/css">
-	  body {
-		padding-bottom: 40px;
-	  }
-	  .sidebar-nav {
-		padding: 9px 0;
-	  }
-	</style>
-	<link href="css/bootstrap-responsive.css" rel="stylesheet">
-	<link href="css/charisma-app.css" rel="stylesheet">
-	<link href="css/jquery-ui-1.8.21.custom.css" rel="stylesheet">
-	<link href='css/fullcalendar.css' rel='stylesheet'>
-	<link href='css/fullcalendar.print.css' rel='stylesheet'  media='print'>
-	<link href='css/chosen.css' rel='stylesheet'>
-	<link href='css/uniform.default.css' rel='stylesheet'>
-	<link href='css/colorbox.css' rel='stylesheet'>
-	<link href='css/jquery.cleditor.css' rel='stylesheet'>
-	<link href='css/jquery.noty.css' rel='stylesheet'>
-	<link href='css/noty_theme_default.css' rel='stylesheet'>
-	<link href='css/elfinder.min.css' rel='stylesheet'>
-	<link href='css/elfinder.theme.css' rel='stylesheet'>
-	<link href='css/jquery.iphone.toggle.css' rel='stylesheet'>
-	<link href='css/opa-icons.css' rel='stylesheet'>
-	<link href='css/uploadify.css' rel='stylesheet'>
+    <title>武汉体育学院学位管理系统</title>
+    <?php include('css.php'); ?>
 
-    <link href='css/my.css' rel='stylesheet'>
-
-	<!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
-	<!--[if lt IE 9]>
-	  <script src="js/html5.js"></script>
-	<![endif]-->
-
-	<!-- The fav icon -->
-	<link rel="shortcut icon" href="img/favicon.ico">
-		
 </head>
-
-<body>
-	<!-- topbar starts -->
-	<?php
-		include('header.php');
-	?>	
-	<!-- topbar ends -->
-	<div class="container-fluid">
-		<div class="row-fluid">
-			<!-- left menu starts -->
-				<?php include('sys-admin-left.php');?>	
-			<!-- left menu ends -->
-
-            <div id="content" class="span10">
+<body class="index">
+<!-- topbar starts -->
+<?php include('header.php'); ?>
+<!-- topbar ends -->
+<div class="container-fluid">
+    <div class="row-fluid">
+        <!-- left menu starts -->
+        <?php include('sys-admin-left.php'); ?>
+        <!-- left menu ends -->
+        <div id="content" class="span10">
             <!-- content starts -->
-
             <div class="row-fluid sortable">
                 <div class="box span12">
                     <div class="box-header well" data-original-title>
-                        <h2>管理网络管理员</h2>
-						<div class="box-icon">
-							<button type="submit" class="btn btn-success left">添加网站管理员</button>
-						</div>
+                        <h2>管理网站管理员</h2>
+
+                        <div class="box-icon">
+                            <button type="submit" class="btn btn-success left">添加网站管理员</button>
+                        </div>
                     </div>
                     <div class="box-content">
                         <form class="form-horizontal">
-								<table class="table table-striped table-bordered bootstrap-datatable datatable">
-                                    <thead>
-                                        <th>用户名</th>
-                                        <th>操作</th>    
-                                    </thead>
-	                                <tr>
-                                        <td>webadmin1</td>
-                                        <td>
-                                            <a href="" class="btn btn-info btn-setting" data-toggle="modal" >修改密码</a>
-											<a href="" class="btn btn-info btn-danger" data-toggle="modal" >删除用户</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-										<td>webadmin2</td>
-                                        <td>
-                                            <a href="" class="btn btn-info btn-setting" data-toggle="modal" >修改密码</a>
-											<a href="" class="btn btn-info btn-danger" data-toggle="modal" >删除用户</a>
-                                        </td>
-									</tr>
-								</table>
+                            <table class="table table-striped table-bordered bootstrap-datatable datatable">
+                                <thead>
+                                <th>用户名</th>
+                                <th>操作</th>
+                                </thead>
+                                <?php
+                                $result = mysql_query("SELECT * FROM user WHERE uType = 'web' ");
+                                while ($row = mysql_fetch_array($result)) {
+                                    echo '<tr>';
+                                    echo '<td>' . $row['user'] . '</td>';
+                                    echo '<td><a href="#changePasswd-modal" class="btn btn-info" data-toggle="modal" onclick=changePasswd("' . $row['user'] . '") id="' . $row['user'] . '" data-toggle="modal">修改密码</a>' . "\n";
+                                    echo '<a href="" class="btn btn-danger" data-toggle="modal" onclick = delWebUser(' . $row['user'] . ') id="' . $row['user'] . '">删除账号</a></td>';
+                                    echo '</tr>';
+                                }
+                                ?>
+                            </table>
                         </form>
-						
                     </div>
-                </div><!--/span-->
-
-            </div><!--/row-->
-
+                </div>
+                <!--/span-->
+            </div>
+            <!--/row-->
             <!-- content ends -->
-            </div><!--/#content.span10-->
-        </div><!--/fluid-row-->
-		
-	</div><!--/.fluid-container-->
-	
-	<!-- external javascript
-	================================================== -->
-	<!-- Placed at the end of the document so the pages load faster -->
+        </div>
+        <!--/#content.span10-->
+    </div>
+    <!--/fluid-row-->
+</div>
+<!-- modal -->
+<div class="modal hide" id="changePasswd-modal">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">×</button>
+        <h3>修改密码</h3>
+    </div>
+    <div class="modal-body table-striped form-horizontal">
+        <fieldset>
+            <div class="control-group">
+                <label class="control-label">用户名</label>
 
-	<!-- jQuery -->
-	<script src="js/jquery-1.7.2.min.js"></script>
-	<!-- jQuery UI -->
-	<script src="js/jquery-ui-1.8.21.custom.min.js"></script>
-	<!-- transition / effect library -->
-	<script src="js/bootstrap-transition.js"></script>
-	<!-- alert enhancer library -->
-	<script src="js/bootstrap-alert.js"></script>
-	<!-- modal / dialog library -->
-	<script src="js/bootstrap-modal.js"></script>
-	<!-- custom dropdown library -->
-	<script src="js/bootstrap-dropdown.js"></script>
-	<!-- scrolspy library -->
-	<script src="js/bootstrap-scrollspy.js"></script>
-	<!-- library for creating tabs -->
-	<script src="js/bootstrap-tab.js"></script>
-	<!-- library for advanced tooltip -->
-	<script src="js/bootstrap-tooltip.js"></script>
-	<!-- popover effect library -->
-	<script src="js/bootstrap-popover.js"></script>
-	<!-- button enhancer library -->
-	<script src="js/bootstrap-button.js"></script>
-	<!-- accordion library (optional, not used in demo) -->
-	<script src="js/bootstrap-collapse.js"></script>
-	<!-- carousel slideshow library (optional, not used in demo) -->
-	<script src="js/bootstrap-carousel.js"></script>
-	<!-- autocomplete library -->
-	<script src="js/bootstrap-typeahead.js"></script>
-	<!-- tour library -->
-	<script src="js/bootstrap-tour.js"></script>
-	<!-- library for cookie management -->
-	<script src="js/jquery.cookie.js"></script>
-	<!-- calander plugin -->
-	<script src='js/fullcalendar.min.js'></script>
-	<!-- data table plugin -->
-	<script src='js/jquery.dataTables.min.js'></script>
+                <div class="controls">
+                    <input class="input-medium disabled" id="name" type="text" value="test1" disabled="">
+                </div>
+            </div>
+        </fieldset>
+        <div class="control-group">
+            <label class="control-label" for="newpasswd">新密码</label>
 
-	<!-- chart libraries start -->
-	<script src="js/excanvas.js"></script>
-	<script src="js/jquery.flot.min.js"></script>
-	<script src="js/jquery.flot.pie.min.js"></script>
-	<script src="js/jquery.flot.stack.js"></script>
-	<script src="js/jquery.flot.resize.min.js"></script>
-	<!-- chart libraries end -->
+            <div class="controls">
+                <input class="input-xlarge" type="password" id="newpasswd1" value="">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="newpasswd2">新密码确认</label>
 
-	<!-- select or dropdown enhancer -->
-	<script src="js/jquery.chosen.min.js"></script>
-	<!-- checkbox, radio, and file input styler -->
-	<script src="js/jquery.uniform.min.js"></script>
-	<!-- plugin for gallery image view -->
-	<script src="js/jquery.colorbox.min.js"></script>
-	<!-- rich text editor library -->
-	<script src="js/jquery.cleditor.min.js"></script>
-	<!-- notification plugin -->
-	<script src="js/jquery.noty.js"></script>
-	<!-- file manager library -->
-	<script src="js/jquery.elfinder.min.js"></script>
-	<!-- star rating plugin -->
-	<script src="js/jquery.raty.min.js"></script>
-	<!-- for iOS style toggle switch -->
-	<script src="js/jquery.iphone.toggle.js"></script>
-	<!-- autogrowing textarea plugin -->
-	<script src="js/jquery.autogrow-textarea.js"></script>
-	<!-- multiple file upload plugin -->
-	<script src="js/jquery.uploadify-3.1.min.js"></script>
-	<!-- history.js for cross-browser state change on ajax -->
-	<script src="js/jquery.history.js"></script>
-	<!-- application script for Charisma demo -->
-	<script src="js/charisma.js"></script>
-	
-		
+            <div class="controls">
+                <input class="input-xlarge" type="password" id="newpasswd2" value="">
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a href="#" class="btn" data-dismiss="modal">关闭</a>
+        <button type="submit" class="btn btn-primary" id="modal-sub">保存</button>
+    </div>
+</div>
+<!--/.fluid-container-->
+<!-- external javascript
+================================================== -->
+<?php include('script.php'); ?>
+<script>
+    function changePasswd(user) {
+        $('#changePasswd-modal').find('#name').val(user);
+    }
+    $("#modal-sub").click(function () {
+        var user = $('#changePasswd-modal').find('#name').val();
+        var newpasswd1 = $('#changePasswd-modal').find('#newpasswd1').val();
+        var newpasswd2 = $('#changePasswd-modal').find('#newpasswd2').val();
+        if (newpasswd1 != newpasswd2) {
+            alert("两次输入的密码不同，请重新输入!");
+            $('#changePasswd-modal').find('#newpasswd1').val("");
+            $('#changePasswd-modal').find('#newpasswd2').val("");
+        }
+        else if (newpasswd1 === "") {
+            alert("密码不能为空！");
+        }
+        else {
+            $.post("changePasswd,",
+                {
+                    user: user,
+                    passwd: newpasswd1
+                },
+                function (data, status) {
+                    alert(data + ":test:" + status);
+                }
+            )
+        }
+    });
+</script>
+<!-- Placed at the end of the document so the pages load faster -->
+
 </body>
 </html>

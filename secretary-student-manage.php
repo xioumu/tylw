@@ -67,7 +67,6 @@
                         <form class="form-horizontal">
 								<table class="table table-striped table-bordered bootstrap-datatable datatable">
                                     <thead>
-									
                                         <th>年级</th>
 									    <th>姓名</th>	
 									    <th>学号</th>	
