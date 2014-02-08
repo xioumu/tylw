@@ -20,7 +20,6 @@ include("config.php");
         <!-- left menu starts -->
         <?php include('sys-admin-left.php'); ?>
         <!-- left menu ends -->
-
         <div id="content" class="span10">
             <!-- road -->
             <div>
@@ -39,9 +38,8 @@ include("config.php");
                 <div class="box span12">
                     <div class="box-header well" data-original-title>
                         <h2>管理网站管理员</h2>
-
                         <div class="box-icon">
-                            <button type="submit" class="btn btn-success left">添加网站管理员</button>
+                            <button href="#addUser-modal" class="btn btn-success" data-toggle="modal">添加网站管理员</button>
                         </div>
                     </div>
                     <div class="box-content">
@@ -54,10 +52,10 @@ include("config.php");
                                 <?php
                                 $result = mysql_query("SELECT * FROM user WHERE uType = 'web' ");
                                 while ($row = mysql_fetch_array($result)) {
-                                    echo '<tr>';
+                                    echo '<tr id="' . $row['user'] . '">';
                                     echo '<td>' . $row['user'] . '</td>';
-                                    echo '<td><a href="#changePasswd-modal" class="btn btn-info" data-toggle="modal" onclick=changePasswd("' . $row['user'] . '") id="' . $row['user'] . '" data-toggle="modal">修改密码</a>' . "\n";
-                                    echo '<a href="" class="btn btn-danger" data-toggle="modal" onclick = delWebUser(' . $row['user'] . ') id="' . $row['user'] . '">删除账号</a></td>';
+                                    echo '<td><a href="#changePasswd-modal" class="btn btn-info" data-toggle="modal" onclick=changePasswd("' . $row['user'] . '")  data-toggle="modal">修改密码</a>' . "\n";
+                                    echo '<a href="" class="btn btn-danger" data-toggle="modal" onclick = delWebUser("' . $row['user'] . '")>删除账号</a></td>';
                                     echo '</tr>';
                                 }
                                 ?>
@@ -84,7 +82,6 @@ include("config.php");
         <fieldset>
             <div class="control-group">
                 <label class="control-label">用户名</label>
-
                 <div class="controls">
                     <input class="input-medium disabled" id="name" type="text" value="test1" disabled="">
                 </div>
@@ -92,22 +89,54 @@ include("config.php");
         </fieldset>
         <div class="control-group">
             <label class="control-label" for="newpasswd">新密码</label>
-
             <div class="controls">
-                <input class="input-xlarge" type="password" id="newpasswd1" value="">
+                <input class="input-medium" type="password" id="newpasswd1" value="">
             </div>
         </div>
         <div class="control-group">
             <label class="control-label" for="newpasswd2">新密码确认</label>
 
             <div class="controls">
-                <input class="input-xlarge" type="password" id="newpasswd2" value="">
+                <input class="input-medium" type="password" id="newpasswd2" value="">
             </div>
         </div>
     </div>
     <div class="modal-footer">
         <a href="#" class="btn" data-dismiss="modal">关闭</a>
         <button type="submit" class="btn btn-primary" id="modal-sub">保存</button>
+    </div>
+</div>
+
+<div class="modal hide" id="addUser-modal">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">×</button>
+        <h3>添加网站管理员</h3>
+    </div>
+    <div class="modal-body table-striped form-horizontal">
+        <fieldset>
+            <div class="control-group">
+                <label class="control-label">用户名</label>
+                <div class="controls">
+                    <input class="input-medium disabled" id="name" type="text" value="">
+                </div>
+            </div>
+        </fieldset>
+        <div class="control-group">
+            <label class="control-label" for="newpasswd">密码</label>
+            <div class="controls">
+                <input class="input-medium" type="password" id="newpasswd1" value="">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="newpasswd2">密码确认</label>
+            <div class="controls">
+                <input class="input-medium" type="password" id="newpasswd2" value="">
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a href="#" class="btn" data-dismiss="modal">关闭</a>
+        <button type="submit" class="btn btn-primary" id="modal-sub">提交</button>
     </div>
 </div>
 <!--/.fluid-container-->
@@ -120,7 +149,29 @@ include("config.php");
         $('#changePasswd-modal').find('#newpasswd1').val("");
         $('#changePasswd-modal').find('#newpasswd2').val("");
     }
-    $("#modal-sub").click(function () {
+    function delWebUser(user) {
+        $.post("delUser.php",
+            {
+                type: 1,
+                user: user
+            },
+            function (data, status) {
+                if (status == 'success') {
+                    if (data == 'ok') {
+                        $('.index').noty({"text":"删除成功","layout":"topLeft","type":"success"});
+                        $('#'+user).remove();
+                    }
+                    else {
+                        $('.index').noty({"text":"error:" + data,"layout":"topLeft","type":"error"});
+                    }
+                }
+                else {
+                    $('.index').noty({"text":"js post error0!'","layout":"topLeft","type":"error"});
+                }
+            }
+        )
+    }
+    $("#changePasswd-modal").find("#modal-sub").click(function () {
         var user = $('#changePasswd-modal').find('#name').val();
         var newpasswd1 = $('#changePasswd-modal').find('#newpasswd1').val();
         var newpasswd2 = $('#changePasswd-modal').find('#newpasswd2').val();
@@ -142,8 +193,41 @@ include("config.php");
                 function (data, status) {
                     if (status == 'success') {
                         if (data == 'ok') {
-                            alert("成功修改密码！");
+                            $('.index').noty({"text":"成功修改密码","layout":"topLeft","type":"success"});
                             $('#changePasswd-modal').modal('hide');
+                        }
+                        else alert(data);
+                    }
+                    else alert('js post error0!');
+                }
+        )
+        }
+    });
+    $("#addUser-modal").find("#modal-sub").click(function () {
+        var user = $('#addUser-modal').find('#name').val();
+        var newpasswd1 = $('#addUser-modal').find('#newpasswd1').val();
+        var newpasswd2 = $('#addUser-modal').find('#newpasswd2').val();
+        if (newpasswd1 != newpasswd2) {
+            alert("两次输入的密码不同，请重新输入!");
+            $('#changePasswd-modal').find('#newpasswd1').val("");
+            $('#changePasswd-modal').find('#newpasswd2').val("");
+        }
+        else if (newpasswd1 === "") {
+            alert("密码不能为空！");
+        }
+        else {
+            $.post("addUser.php",
+                {
+                    type: 1,
+                    user: user,
+                    passwd: newpasswd1
+                },
+                function (data, status) {
+                    if (status == 'success') {
+                        if (data == 'ok') {
+                            $('#addUser-modal').modal('hide');
+                            $('.index').noty({"text":"成功添加账户","layout":"topLeft","type":"success"});
+                            location.reload();
                         }
                         else alert(data);
                     }
