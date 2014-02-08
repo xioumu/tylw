@@ -8,18 +8,32 @@ include("config.php");
     <meta charset="utf-8">
     <title>武汉体育学院学位管理系统</title>
     <?php include('css.php'); ?>
-
 </head>
 <body class="index">
 <!-- topbar starts -->
 <?php include('header.php'); ?>
 <!-- topbar ends -->
+<!-- loading -->
+<!-- loading -->
 <div class="container-fluid">
     <div class="row-fluid">
         <!-- left menu starts -->
         <?php include('sys-admin-left.php'); ?>
         <!-- left menu ends -->
+
         <div id="content" class="span10">
+            <!-- road -->
+            <div>
+                <ul class="breadcrumb">
+                    <li>
+                        <a href="sys-admin-manage.php">系统管理员</a> <span class="divider">/</span>
+                    </li>
+                    <li>
+                        <a href="sys-admin-manage.php">管理网站管理员</a>
+                    </li>
+                </ul>
+            </div>
+
             <!-- content starts -->
             <div class="row-fluid sortable">
                 <div class="box span12">
@@ -103,6 +117,8 @@ include("config.php");
 <script>
     function changePasswd(user) {
         $('#changePasswd-modal').find('#name').val(user);
+        $('#changePasswd-modal').find('#newpasswd1').val("");
+        $('#changePasswd-modal').find('#newpasswd2').val("");
     }
     $("#modal-sub").click(function () {
         var user = $('#changePasswd-modal').find('#name').val();
@@ -117,13 +133,21 @@ include("config.php");
             alert("密码不能为空！");
         }
         else {
-            $.post("changePasswd,",
+            $.post("changePasswd.php",
                 {
+                    type: 1,
                     user: user,
                     passwd: newpasswd1
                 },
                 function (data, status) {
-                    alert(data + ":test:" + status);
+                    if (status == 'success') {
+                        if (data == 'ok') {
+                            alert("成功修改密码！");
+                            $('#changePasswd-modal').modal('hide');
+                        }
+                        else alert(data);
+                    }
+                    else alert('js post error0!');
                 }
             )
         }
