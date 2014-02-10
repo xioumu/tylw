@@ -1,25 +1,7 @@
 <?php
 header("Content-Type: text/html;charset=utf-8");
 include("config.php");
-function loginCheck($username, $passwd) {
-    $result = mysql_query("SELECT * FROM user WHERE user = '{$username}' ");
-    if ($row = mysql_fetch_array($result)) {
-        if ($row['passwd'] === $passwd) {
-            return true;
-        }
-        else return false;
-    }
-    else return false;
-}
-
-function getUserType($username) {
-    $result = mysql_query("SELECT * FROM user WHERE user = '{$username}' ");
-    if ($row = mysql_fetch_array($result)) {
-        return $row['uType'];
-    }
-    else  echo "错误的用户名";
-}
-
+include("myFunction.php");
 if (isset($_POST['username']) or isset($_POST['passwd']) or isset($_POST['yzm']) or isset($_SESSION['is_login'])) {
     if (isset($_POST['username']) or isset($_POST['passwd']) or isset($_POST['yzm'])) {
         $username = $_POST['username'];
@@ -38,8 +20,8 @@ if (isset($_POST['username']) or isset($_POST['passwd']) or isset($_POST['yzm'])
     if (isset($_SESSION['is_login'])) {
         $type = getUserType($_SESSION['is_login']);
         if ($type === "stu") echo "<script>window.location.href='student-info.php';</script>";
-        else if ($type === "sys") echo "<script>window.location.href='web-admin-student-manage.php'</script>";
-        else if ($type === "web") echo "<script>window.location.href='sys-admin-manage.php';</script>";
+        else if ($type === "sys") echo "<script>window.location.href='sys-admin-manage.php'</script>";
+        else if ($type === "web") echo "<script>window.location.href='web-admin-student-manage.php';</script>";
     }
 }
 ?>

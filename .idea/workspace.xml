@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34d18521-e249-4fc3-bdb9-27c44b4484ba" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changePasswd.php" afterPath="$PROJECT_DIR$/changePasswd.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.php" afterPath="$PROJECT_DIR$/config.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/header.php" afterPath="$PROJECT_DIR$/header.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login.php" afterPath="$PROJECT_DIR$/login.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/verification/showimg.php" afterPath="$PROJECT_DIR$/verification/showimg.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sys-admin-left.php" afterPath="$PROJECT_DIR$/sys-admin-left.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sys-admin-manage.php" afterPath="$PROJECT_DIR$/sys-admin-manage.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-admin-left.php" afterPath="$PROJECT_DIR$/web-admin-left.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="tylw.iws" />
@@ -32,23 +39,67 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="web-admin-passwd.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web-admin-passwd.php">
+      <file leaf-file-name="sys-admin-manage.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sys-admin-manage.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="40" selection-start="1975" selection-end="1975" vertical-scroll-proportion="0.0" vertical-offset="1159" max-vertical-offset="3534">
+            <state line="10" column="4" selection-start="217" selection-end="217" vertical-scroll-proportion="-6.785714" vertical-offset="0" max-vertical-offset="5035">
+              <folding>
+                <marker date="1392072284936" expanded="true" signature="1924:1962" placeholder="SELECT * FRO..user..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="changePasswd.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/changePasswd.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="67" selection-start="698" selection-end="698" vertical-scroll-proportion="-11.535714" vertical-offset="0" max-vertical-offset="646">
+              <folding>
+                <marker date="1392072534887" expanded="true" signature="253:288" placeholder="UPDATE user ..." />
+                <marker date="1392072534887" expanded="true" signature="253:285" placeholder="UPDATE user ..." />
+                <marker date="1392072534887" expanded="true" signature="253:280" placeholder="UPDATE user ..." />
+                <marker date="1392072534887" expanded="true" signature="253:330" placeholder="UPDATE user ..." />
+                <marker date="1392072534887" expanded="true" signature="660:740" placeholder="UPDATE user ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="myFunction.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/myFunction.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="18" selection-start="24" selection-end="24" vertical-scroll-proportion="-0.6785714" vertical-offset="0" max-vertical-offset="475">
+              <folding>
+                <marker date="1391940499592" expanded="true" signature="75:120" placeholder="SELECT * FRO..user..." />
+                <marker date="1391940499592" expanded="true" signature="367:412" placeholder="SELECT * FRO..user..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="web-admin-left.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web-admin-left.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="26" selection-start="265" selection-end="265" vertical-scroll-proportion="-6.107143" vertical-offset="0" max-vertical-offset="703">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sys-admin-manage.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sys-admin-manage.php">
+      <file leaf-file-name="header.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="228" column="28" selection-start="8908" selection-end="8908" vertical-scroll-proportion="0.5103093" vertical-offset="4035" max-vertical-offset="4731">
-              <folding>
-                <marker date="1391887062087" expanded="true" signature="1887:1925" placeholder="SELECT * FRO..user..." />
-                <marker date="1391887062087" expanded="true" signature="2562:9298" placeholder="..." />
-              </folding>
+            <state line="43" column="21" selection-start="1656" selection-end="1656" vertical-scroll-proportion="0.5103093" vertical-offset="520" max-vertical-offset="2337">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sys-admin-left.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sys-admin-left.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="6" selection-start="13" selection-end="13" vertical-scroll-proportion="0.0" vertical-offset="19" max-vertical-offset="551">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -64,29 +115,6 @@
                 <marker date="1391865725357" expanded="true" signature="202:286" placeholder="INSERT INTO ..." />
                 <marker date="1391865725357" expanded="true" signature="202:287" placeholder="INSERT INTO ..." />
                 <marker date="1391865725357" expanded="true" signature="202:297" placeholder="INSERT INTO ..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="changePasswd.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/changePasswd.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="10" selection-start="16" selection-end="16" vertical-scroll-proportion="0.0" vertical-offset="19" max-vertical-offset="361">
-              <folding>
-                <marker date="1391849383377" expanded="true" signature="202:237" placeholder="UPDATE user ..." />
-                <marker date="1391849383377" expanded="true" signature="202:234" placeholder="UPDATE user ..." />
-                <marker date="1391849383377" expanded="true" signature="202:229" placeholder="UPDATE user ..." />
-                <marker date="1391849383377" expanded="true" signature="202:393" placeholder="UPDATE user ..." />
-                <marker date="1391849383377" expanded="true" signature="202:244" placeholder="UPDATE user ..." />
-                <marker date="1391849383377" expanded="true" signature="202:236" placeholder="UPDATE user ..." />
-                <marker date="1391849383377" expanded="true" signature="202:243" placeholder="UPDATE user ..." />
-                <marker date="1391849383377" expanded="true" signature="202:271" placeholder="UPDATE user ..." />
-                <marker date="1391849383377" expanded="true" signature="202:268" placeholder="UPDATE user ..." />
-                <marker date="1391849383377" expanded="true" signature="202:263" placeholder="UPDATE user ..." />
-                <marker date="1391849383377" expanded="true" signature="202:275" placeholder="UPDATE user ..." />
-                <marker date="1391849383377" expanded="true" signature="202:276" placeholder="UPDATE user ..." />
-                <marker date="1391849383377" expanded="true" signature="202:279" placeholder="UPDATE user ..." />
               </folding>
             </state>
           </provider>
@@ -135,28 +163,30 @@
         <option value="$PROJECT_DIR$/web-admin-finish-info.php.php" />
         <option value="$PROJECT_DIR$/web-admin-student-manage.php" />
         <option value="$PROJECT_DIR$/web-admin-finish-info.php" />
-        <option value="$PROJECT_DIR$/web-admin-left.php" />
         <option value="$PROJECT_DIR$/web-admin-type-manage.php" />
         <option value="$PROJECT_DIR$/out-teacher-check.php" />
         <option value="$PROJECT_DIR$/on-teacher-check.php" />
         <option value="$PROJECT_DIR$/web-admin-judge-manage.php" />
         <option value="$PROJECT_DIR$/secretary-left.php" />
-        <option value="$PROJECT_DIR$/header.php" />
         <option value="$PROJECT_DIR$/login.html" />
         <option value="$PROJECT_DIR$/test.php" />
         <option value="$PROJECT_DIR$/student-info.php" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/verification/showimg.php" />
-        <option value="$PROJECT_DIR$/login.php" />
         <option value="$PROJECT_DIR$/secretary-student-manage.php" />
-        <option value="$PROJECT_DIR$/sys-admin-left.php" />
         <option value="$PROJECT_DIR$/web-admin-OnTeacher-manage.php" />
         <option value="$PROJECT_DIR$/web-admin-passwd.php" />
         <option value="$PROJECT_DIR$/css/my.css" />
-        <option value="$PROJECT_DIR$/changePasswd.php" />
         <option value="$PROJECT_DIR$/delUser.php" />
         <option value="$PROJECT_DIR$/addUser.php" />
+        <option value="$PROJECT_DIR$/config.php" />
+        <option value="$PROJECT_DIR$/myFunction.php" />
+        <option value="$PROJECT_DIR$/sys-admin-left.php" />
+        <option value="$PROJECT_DIR$/web-admin-left.php" />
+        <option value="$PROJECT_DIR$/login.php" />
         <option value="$PROJECT_DIR$/sys-admin-manage.php" />
+        <option value="$PROJECT_DIR$/changePasswd.php" />
+        <option value="$PROJECT_DIR$/header.php" />
       </list>
     </option>
   </component>
@@ -336,11 +366,11 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -379,21 +409,6 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web-admin-finish-info.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="294" column="26" selection-start="13323" selection-end="13323" vertical-scroll-proportion="0.0" vertical-offset="5206" max-vertical-offset="8702" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web-admin-left.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="117" selection-start="1229" selection-end="1236" vertical-scroll-proportion="0.0" vertical-offset="304" max-vertical-offset="684" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/my.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="97" selection-end="97" vertical-scroll-proportion="0.0" vertical-offset="76" max-vertical-offset="741" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/demo/charisma/form.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="392" column="103" selection-start="16830" selection-end="16830" vertical-scroll-proportion="0.0" vertical-offset="7049" max-vertical-offset="11305" />
@@ -519,11 +534,6 @@
         <state line="294" column="26" selection-start="13323" selection-end="13323" vertical-scroll-proportion="-29.857143" vertical-offset="4750" max-vertical-offset="8702" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web-admin-left.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="21" selection-start="1616" selection-end="1616" vertical-scroll-proportion="-11.964286" vertical-offset="102" max-vertical-offset="703" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web-admin-type-manage.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="130" column="26" selection-start="4994" selection-end="4994" vertical-scroll-proportion="-16.964285" vertical-offset="1995" max-vertical-offset="4465" />
@@ -574,24 +584,9 @@
         <state line="85" column="83" selection-start="2994" selection-end="2994" vertical-scroll-proportion="0.9467354" vertical-offset="1064" max-vertical-offset="5871" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="53" selection-start="621" selection-end="621" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="608" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="63" column="55" selection-start="1981" selection-end="1981" vertical-scroll-proportion="0.0" vertical-offset="912" max-vertical-offset="3211" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sys-admin-left.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="435" selection-end="435" vertical-scroll-proportion="0.0" vertical-offset="209" max-vertical-offset="551" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="375" selection-end="375" vertical-scroll-proportion="0.0" vertical-offset="114" max-vertical-offset="2356" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web-admin-OnTeacher-manage.php">
@@ -606,27 +601,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/changePasswd.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="10" selection-start="16" selection-end="16" vertical-scroll-proportion="0.0" vertical-offset="19" max-vertical-offset="361">
-          <folding>
-            <marker date="1391849383377" expanded="true" signature="202:237" placeholder="UPDATE user ..." />
-            <marker date="1391849383377" expanded="true" signature="202:234" placeholder="UPDATE user ..." />
-            <marker date="1391849383377" expanded="true" signature="202:229" placeholder="UPDATE user ..." />
-            <marker date="1391849383377" expanded="true" signature="202:393" placeholder="UPDATE user ..." />
-            <marker date="1391849383377" expanded="true" signature="202:244" placeholder="UPDATE user ..." />
-            <marker date="1391849383377" expanded="true" signature="202:236" placeholder="UPDATE user ..." />
-            <marker date="1391849383377" expanded="true" signature="202:243" placeholder="UPDATE user ..." />
-            <marker date="1391849383377" expanded="true" signature="202:271" placeholder="UPDATE user ..." />
-            <marker date="1391849383377" expanded="true" signature="202:268" placeholder="UPDATE user ..." />
-            <marker date="1391849383377" expanded="true" signature="202:263" placeholder="UPDATE user ..." />
-            <marker date="1391849383377" expanded="true" signature="202:275" placeholder="UPDATE user ..." />
-            <marker date="1391849383377" expanded="true" signature="202:276" placeholder="UPDATE user ..." />
-            <marker date="1391849383377" expanded="true" signature="202:279" placeholder="UPDATE user ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/on-teacher-check.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="92" column="65" selection-start="3513" selection-end="3513" vertical-scroll-proportion="1.1099657" vertical-offset="1102" max-vertical-offset="13414">
@@ -636,7 +610,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web-admin-passwd.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="40" selection-start="1975" selection-end="1975" vertical-scroll-proportion="0.0" vertical-offset="1159" max-vertical-offset="3534">
+        <state line="62" column="40" selection-start="1975" selection-end="1975" vertical-scroll-proportion="-0.6785714" vertical-offset="1159" max-vertical-offset="3534">
           <folding />
         </state>
       </provider>
@@ -644,6 +618,23 @@
     <entry file="file://$PROJECT_DIR$/delUser.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="5" selection-start="5" selection-end="5" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="380" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="1" selection-start="422" selection-end="422" vertical-scroll-proportion="0.42439863" vertical-offset="0" max-vertical-offset="582" />
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_4.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="622" column="9" selection-start="20986" selection-end="20986" vertical-scroll-proportion="1.0343642" vertical-offset="11216" max-vertical-offset="20672">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="43" selection-start="458" selection-end="458" vertical-scroll-proportion="-4.071429" vertical-offset="57" max-vertical-offset="2014" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/addUser.php">
@@ -660,13 +651,56 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sys-admin-left.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="6" selection-start="13" selection-end="13" vertical-scroll-proportion="0.0" vertical-offset="19" max-vertical-offset="551">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myFunction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="18" selection-start="24" selection-end="24" vertical-scroll-proportion="-0.6785714" vertical-offset="0" max-vertical-offset="475">
+          <folding>
+            <marker date="1391940499592" expanded="true" signature="75:120" placeholder="SELECT * FRO..user..." />
+            <marker date="1391940499592" expanded="true" signature="367:412" placeholder="SELECT * FRO..user..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/sys-admin-manage.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="228" column="28" selection-start="8908" selection-end="8908" vertical-scroll-proportion="0.5103093" vertical-offset="4035" max-vertical-offset="4731">
+        <state line="10" column="4" selection-start="217" selection-end="217" vertical-scroll-proportion="-6.785714" vertical-offset="0" max-vertical-offset="5035">
           <folding>
-            <marker date="1391887062087" expanded="true" signature="1887:1925" placeholder="SELECT * FRO..user..." />
-            <marker date="1391887062087" expanded="true" signature="2562:9298" placeholder="..." />
+            <marker date="1392072284936" expanded="true" signature="1924:1962" placeholder="SELECT * FRO..user..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-admin-left.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="26" selection-start="265" selection-end="265" vertical-scroll-proportion="-6.107143" vertical-offset="0" max-vertical-offset="703">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changePasswd.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="67" selection-start="698" selection-end="698" vertical-scroll-proportion="-11.535714" vertical-offset="0" max-vertical-offset="646">
+          <folding>
+            <marker date="1392072534887" expanded="true" signature="253:288" placeholder="UPDATE user ..." />
+            <marker date="1392072534887" expanded="true" signature="253:285" placeholder="UPDATE user ..." />
+            <marker date="1392072534887" expanded="true" signature="253:280" placeholder="UPDATE user ..." />
+            <marker date="1392072534887" expanded="true" signature="253:330" placeholder="UPDATE user ..." />
+            <marker date="1392072534887" expanded="true" signature="660:740" placeholder="UPDATE user ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="21" selection-start="1656" selection-end="1656" vertical-scroll-proportion="0.5103093" vertical-offset="520" max-vertical-offset="2337">
+          <folding />
         </state>
       </provider>
     </entry>

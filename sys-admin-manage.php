@@ -8,6 +8,7 @@ include("config.php");
     <meta charset="utf-8">
     <title>武汉体育学院学位管理系统</title>
     <?php include('css.php'); ?>
+    <?php include('script.php'); ?>
 </head>
 <body class="index">
 <!-- topbar starts -->
@@ -38,6 +39,7 @@ include("config.php");
                 <div class="box span12">
                     <div class="box-header well" data-original-title>
                         <h2>管理网站管理员</h2>
+
                         <div class="box-icon">
                             <button href="#addUser-modal" class="btn btn-success" data-toggle="modal">添加网站管理员</button>
                         </div>
@@ -82,6 +84,7 @@ include("config.php");
         <fieldset>
             <div class="control-group">
                 <label class="control-label">用户名</label>
+
                 <div class="controls">
                     <input class="input-medium disabled" id="name" type="text" value="test1" disabled="">
                 </div>
@@ -89,6 +92,7 @@ include("config.php");
         </fieldset>
         <div class="control-group">
             <label class="control-label" for="newpasswd">新密码</label>
+
             <div class="controls">
                 <input class="input-medium" type="password" id="newpasswd1" value="">
             </div>
@@ -116,6 +120,7 @@ include("config.php");
         <fieldset>
             <div class="control-group">
                 <label class="control-label">用户名</label>
+
                 <div class="controls">
                     <input class="input-medium disabled" id="name" type="text" value="">
                 </div>
@@ -123,12 +128,14 @@ include("config.php");
         </fieldset>
         <div class="control-group">
             <label class="control-label" for="newpasswd">密码</label>
+
             <div class="controls">
                 <input class="input-medium" type="password" id="newpasswd1" value="">
             </div>
         </div>
         <div class="control-group">
             <label class="control-label" for="newpasswd2">密码确认</label>
+
             <div class="controls">
                 <input class="input-medium" type="password" id="newpasswd2" value="">
             </div>
@@ -142,7 +149,6 @@ include("config.php");
 <!--/.fluid-container-->
 <!-- external javascript
 ================================================== -->
-<?php include('script.php'); ?>
 <script>
     function changePasswd(user) {
         $('#changePasswd-modal').find('#name').val(user);
@@ -150,38 +156,41 @@ include("config.php");
         $('#changePasswd-modal').find('#newpasswd2').val("");
     }
     function delWebUser(user) {
-        $.post("delUser.php",
-            {
-                type: 1,
-                user: user
-            },
-            function (data, status) {
-                if (status == 'success') {
-                    if (data == 'ok') {
-                        $('.index').noty({"text":"删除成功","layout":"topLeft","type":"success"});
-                        $('#'+user).remove();
+        var r = confirm('确认删除账号"' + user + '"?');
+        if (r == true) {
+            $.post("delUser.php",
+                {
+                    type: 1,
+                    user: user
+                },
+                function (data, status) {
+                    if (status == 'success') {
+                        if (data == 'ok') {
+                            $('.index').noty({"text": "删除成功", "layout": "topLeft", "type": "success"});
+                            $('#' + user).remove();
+                        }
+                        else {
+                            $('.index').noty({"text": "error:" + data, "layout": "topLeft", "type": "error"});
+                        }
                     }
                     else {
-                        $('.index').noty({"text":"error:" + data,"layout":"topLeft","type":"error"});
+                        $('.index').noty({"text": "js post error0!'", "layout": "topLeft", "type": "error"});
                     }
                 }
-                else {
-                    $('.index').noty({"text":"js post error0!'","layout":"topLeft","type":"error"});
-                }
-            }
-        )
+            )
+        }
     }
     $("#changePasswd-modal").find("#modal-sub").click(function () {
         var user = $('#changePasswd-modal').find('#name').val();
         var newpasswd1 = $('#changePasswd-modal').find('#newpasswd1').val();
         var newpasswd2 = $('#changePasswd-modal').find('#newpasswd2').val();
         if (newpasswd1 != newpasswd2) {
-            alert("两次输入的密码不同，请重新输入!");
+            $('.index').noty({"text": "两次输入的密码不同，请重新输入!", "layout": "topLeft", "type": "error"});
             $('#changePasswd-modal').find('#newpasswd1').val("");
             $('#changePasswd-modal').find('#newpasswd2').val("");
         }
         else if (newpasswd1 === "") {
-            alert("密码不能为空！");
+            $('.index').noty({"text": "密码不能为空", "layout": "topLeft", "type": "error"});
         }
         else {
             $.post("changePasswd.php",
@@ -193,14 +202,18 @@ include("config.php");
                 function (data, status) {
                     if (status == 'success') {
                         if (data == 'ok') {
-                            $('.index').noty({"text":"成功修改密码","layout":"topLeft","type":"success"});
+                            $('.index').noty({"text": "成功修改密码", "layout": "topLeft", "type": "success"});
                             $('#changePasswd-modal').modal('hide');
                         }
-                        else alert(data);
+                        else {
+                            $('.index').noty({"text": "error:" + data, "layout": "topLeft", "type": "error"});
+                        }
                     }
-                    else alert('js post error0!');
+                    else {
+                        $('.index').noty({"text": "js post error0!", "layout": "topLeft", "type": "error"});
+                    }
                 }
-        )
+            )
         }
     });
     $("#addUser-modal").find("#modal-sub").click(function () {
@@ -208,12 +221,12 @@ include("config.php");
         var newpasswd1 = $('#addUser-modal').find('#newpasswd1').val();
         var newpasswd2 = $('#addUser-modal').find('#newpasswd2').val();
         if (newpasswd1 != newpasswd2) {
-            alert("两次输入的密码不同，请重新输入!");
-            $('#changePasswd-modal').find('#newpasswd1').val("");
-            $('#changePasswd-modal').find('#newpasswd2').val("");
+            $('.index').noty({"text": "两次输入的密码不同，请重新输入!", "layout": "topLeft", "type": "error"});
+            $('#addUser-modal').find('#newpasswd1').val("");
+            $('#addUser-modal').find('#newpasswd2').val("");
         }
         else if (newpasswd1 === "") {
-            alert("密码不能为空！");
+            $('.index').noty({"text": "密码不能为空", "layout": "topLeft", "type": "error"});
         }
         else {
             $.post("addUser.php",
@@ -226,18 +239,21 @@ include("config.php");
                     if (status == 'success') {
                         if (data == 'ok') {
                             $('#addUser-modal').modal('hide');
-                            $('.index').noty({"text":"成功添加账户","layout":"topLeft","type":"success"});
+                            $('.index').noty({"text": "成功添加账户", "layout": "topLeft", "type": "success"});
                             location.reload();
                         }
-                        else alert(data);
+                        else {
+                            $('.index').noty({"text": "error:" + data, "layout": "topLeft", "type": "error"});
+                        }
                     }
-                    else alert('js post error0!');
+                    else {
+                        $('.index').noty({"text": "js post error0!", "layout": "topLeft", "type": "error"});
+                    }
                 }
             )
         }
     });
 </script>
 <!-- Placed at the end of the document so the pages load faster -->
-
 </body>
 </html>

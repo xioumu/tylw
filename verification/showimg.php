@@ -1,4 +1,7 @@
 <?php
+    if (!isset($_SESSION)) {
+        session_start();
+    }
    /*   网站验证码程序
     *   运行环境： PHP5.0.18 下调试通过
     *   需要 gd2 图形库支持（PHP.INI中 php_gd2.dll开启）
