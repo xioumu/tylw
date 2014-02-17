@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<?php 
+<?php
     header("Content-Type: text/html;charset=utf-8");
+    include("config.php");
 ?>
 <html lang="en">
 <head>
@@ -47,9 +48,7 @@
 
 <body>
 	<!-- topbar starts -->
-	<?php
-		include('header.php');
-	?>	
+	<?php include('header.php'); ?>
 	<!-- topbar ends -->
 		<div class="container-fluid">
 		<div class="row-fluid">

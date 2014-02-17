@@ -9,6 +9,9 @@ margin: 70px 0 0 -400px;
 .modal.fade.in {
 top: 0;
 }
+.box-icon a {
+    width: auto;
+}
 /*my css*/
 .mybox{
 	width: 800px;
@@ -29,4 +32,7 @@ top: 0;
 }
 .MainHead .title{
     width : 270px;
+}
+.myInvisible{
+    display: none;
 }
