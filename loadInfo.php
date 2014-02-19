@@ -11,8 +11,6 @@ function getRand() {
     return $res;
 }
 
-
-
 function addStuInfo($row) {
     $typeId = getStuTypeId($row['F']);
     $nowJudgeYear = getJudgeYear();
@@ -37,7 +35,7 @@ if (isset($_POST['type']) && isset($_POST['file'])) {
                 echo "add student error!";
             }
             //记得删除临时EXL文件
-            echo "ok!";
+            header("Location: web-admin-student-manage.php");
         }
     }
 }

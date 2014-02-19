@@ -9,8 +9,8 @@ function loginCheck($username, $passwd) {
     }
     else return false;
 }
-
-function getStuTypeId($type) { //根据名字得到学生类型的ID
+//根据名字得到学生类型的ID
+function getStuTypeId($type) {
     str_replace($type, ' ', '');
     $res = 0;
     $query = mysql_query("SELECT * FROM studenttype WHERE typeName = '{$type}'");
@@ -20,24 +20,24 @@ function getStuTypeId($type) { //根据名字得到学生类型的ID
     else echo "get TypeId error!<br/>";
     return $res;
 }
-
-function getUserType($username) { //得到用户的类型名
+//得到用户的类型名
+function getUserType($username) {
     $result = mysql_query("SELECT * FROM user WHERE user = '{$username}' ");
     if ($row = mysql_fetch_array($result)) {
         return $row['uType'];
     }
     else  echo "错误的用户名";
 }
-
-function mySerialize( $obj ) { //序列化数组，便于传输
+//序列化数组，便于传输
+function mySerialize( $obj ) {
     return base64_encode(gzcompress(serialize($obj)));
 }
-
-function myUnserialize($txt) { //反序列化
+//反序列化
+function myUnserialize($txt) {
     return unserialize(gzuncompress(base64_decode($txt)));
 }
-
-function getExl($filePath) { //获取EXL信息
+//获取EXL信息
+function getExl($filePath) {
     $res = array();
     require_once 'PHPExcel\PHPExcel.php';
     require_once 'PHPExcel\PHPExcel\IOFactory.php';
@@ -55,15 +55,15 @@ function getExl($filePath) { //获取EXL信息
     }
     return $res;
 }
-
-function addUser($name, $passwd, $type) { //添加用户账户密码
+//添加用户账户密码
+function addUser($name, $passwd, $type) {
     if (mysql_query("INSERT INTO user (user, passwd, uType) VALUES ('{$name}', '{$passwd}', '{$type}')")) {
         return true;
     }
     else return false;
 }
-
-function getAllUser($uType) {  //获取指定类型所有用户
+//获取指定类型所有用户
+function getAllUser($uType) {
     $res = array();
     $result = mysql_query("SELECT user FROM user WHERE uType = '{$uType}' ");
     while ($row = mysql_fetch_array($result)) {
@@ -71,18 +71,19 @@ function getAllUser($uType) {  //获取指定类型所有用户
     }
     return $res;
 }
-
-function getStuInfo($user) { //获取学生所有信息
+//获取学生所有信息
+function getStuInfo($user) {
     $res = array();
-    $result = mysql_query("SELECT * FROM student WHERE studentID = '{$user}'");
+    $JudgeYear = getJudgeYear();
+    $result = mysql_query("SELECT * FROM student WHERE studentID = '{$user}' AND judgeDate = '{$JudgeYear}'");
     if ($row = mysql_fetch_array($result)) {
         $res = $row;
     }
     $res['type'] = getStuType($res['typeID']);
     return $res;
 }
-
-function getStuType($id) { //得到学生的信息
+//得到学生的信息
+function getStuType($id) {
     $res = "错误";
     $result = mysql_query("SELECT * FROM studenttype WHERE sid = '{$id}'");
     if ($row = mysql_fetch_array($result)) {
@@ -128,7 +129,7 @@ function myDecode($string = '', $skey = 'whtylw') {
     return base64_decode(join('', $strArr));
 }
 
-function getJudgeYear() {
+function getJudgeYear() { //获取当前学年
     $res = -1;
     $query = mysql_query("SELECT * FROM other");
     if ($row = mysql_fetch_array($query)) {
@@ -137,4 +138,13 @@ function getJudgeYear() {
     else echo "get judgeYear error!<br/>";
     return $res;
 }
-?>
+
+function changeData($old){ //转换日期的格式
+    if ($old == null) return 'null';
+    $res = explode("/", $old);
+    if (count($res) == 1) return $old;
+    $month = $res[0];
+    $day = $res[1];
+    $year = $res[2];
+    return $year . "-" . $month . "-" . $day;
+}?>

@@ -60,8 +60,8 @@ include("config.php");
                                 <?php
                                 $allStuUser = getAllUser("stu");
                                 foreach ($allStuUser as $user) {
-                                    echo "<tr>";
                                     $info = getStuInfo($user);
+                                    echo "<tr id = \"{$info['studentID']}\">";
                                     echo "<td>" . $info['grade'] . "</td>";
                                     echo "<td>" . $info['sName'] . "</td>";;
                                     echo "<td>" . $info['studentID'] . "</td>";
@@ -72,7 +72,7 @@ include("config.php");
                                     echo '
                                     <td>
                                         <a href = "#changeInfo-modal" class = "btn btn-info btn-setting" data-toggle = "modal" onclick="changeInfo(\'' . $user . '\')">查看/修改信息</a>
-                                        <a href = "" class = "btn btn-info btn-danger" onclick="delStu(\'' . $user . '\')">删除</a>
+                                        <a href = "#" class = "btn btn-info btn-danger" onclick="delStuUser(\'' . $user . '\')">删除</a>
                                     </td> ';
                                     echo "</tr>";
                                 }
@@ -287,6 +287,31 @@ include("config.php");
                         $('.index').noty({"text": "js post error0!", "layout": "topLeft", "type": "error"});
                     }
                 });
+        }
+    }
+    function delStuUser(user) {
+        var r = confirm('确认删除账号"' + user + '"?');
+        if (r == true) {
+            $.post("delUser.php",
+                {
+                    type: "web-admin",
+                    user: user
+                },
+                function (data, status) {
+                    if (status == 'success') {
+                        if (data == 'ok') {
+                            $('.index').noty({"text": "删除成功", "layout": "topLeft", "type": "success"});
+                            $('#' + user).remove();
+                        }
+                        else {
+                            $('.index').noty({"text": "error:" + data, "layout": "topLeft", "type": "error"});
+                        }
+                    }
+                    else {
+                        $('.index').noty({"text": "js post error0!'", "layout": "topLeft", "type": "error"});
+                    }
+                }
+            )
         }
     }
 </script>
