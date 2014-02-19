@@ -36,3 +36,9 @@ top: 0;
 .myInvisible{
     display: none;
 }
+.load-img {
+    z-index: -1;
+    left:50%;
+    top:50%;
+    position:fixed;
+}

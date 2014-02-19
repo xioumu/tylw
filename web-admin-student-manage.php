@@ -94,7 +94,7 @@ include("config.php");
 <div class = "modal hide" id = "changeInfo-modal">
     <div class = "modal-header">
         <button type = "button" class = "close" data-dismiss = "modal">×</button>
-        <h3>修改学生信息</h3>
+        <h3>修改/查看学生信息</h3>
     </div>
     <div class = "modal-body table-striped form-horizontal">
         <div class = "">
@@ -131,7 +131,7 @@ include("config.php");
                 <div class = "control-group">
                     <label class = "control-label" for = "changeInfo-type">类别</label>
                     <div class = "controls">
-                        <select id = "changeInfo-type" class = "input-medium" data-value = "体育硕士">
+                        <select id = "changeInfo-type" class = "input-medium" >
                             <option value = "硕士研究生" id = "硕士研究生" >硕士研究生</option>
                             <option value = "博士研究生" id = "博士研究生" >博士研究生</option>
                             <option value = "体育硕士" id = "体育硕士" >体育硕士</option>
@@ -161,10 +161,10 @@ include("config.php");
                     </div>
                 </div>
                 <div class = "control-group">
-                    <label class = "control-label  " for = "changeInfo-state">状态</label>
+                    <label class = "control-label  " for = "changeInfo-status">状态</label>
                     <div class = "controls">
-                        <select id = "changeInfo-state" class = "input-medium">
-                            <option id = "还未提交论文" value = "还未提交论文">未提交论文</option>
+                        <select id = "changeInfo-status" class = "input-medium">
+                            <option id = "未提交论文" value = "未提交论文">未提交论文</option>
                             <option id = "已提交论文-等待评审" value = "已提交论文-等待评审">已提交论文-等待评审</option>
                             <option id = "评审完毕-通过" value = "评审完毕-通过">评审完毕-通过</option>
                             <option id = "评审完毕-未通过" value = "评审完毕-未通过">评审完毕-未通过</option>
@@ -172,23 +172,23 @@ include("config.php");
                     </div>
                 </div>
                 <div class = "control-group">
-                    <label class = "control-label" for = "changeInfo-judgeDate">提交截止日期</label>
+                    <label class = "control-label" for = "changeInfo-deadLine">提交截止日期</label>
                     <div class = "controls">
-                        <input type = "text" class = "input-medium datepicker" id = "changeInfo-judgeDate" value = "">
+                        <input type = "text" class = "input-medium datepicker" id = "changeInfo-deadLine" value = "">
                     </div>
                 </div>
                 <div class = "control-group">
                     <label class = "control-label" for = "changeInfo-paper">论文</label>
                     <div class = "controls">
-                        <a href = "upFile/paper/test.docx" target = "view_window" id = "changeInfo-paper"
-                           class = "btn btn-success btn-small">下载</a>
+                        <a href = "#" target = "view_window" id = "changeInfo-paper"
+                           class = "btn btn-success btn-small">还未上传</a>
                     </div>
                 </div>
                 <div class = "control-group">
                     <label class = "control-label" for = "changeInfo-report">开题报告</label>
                     <div class = "controls">
-                        <a href = "upFile/report/test.docx" target = "view_window" id = "changeInfo-report"
-                           class = "btn btn-success btn-small">下载</a>
+                        <a href = "#" target = "view_window" id = "changeInfo-report"
+                           class = "btn btn-success btn-small">还未上传</a>
                     </div>
                 </div>
             </fieldset>
@@ -202,6 +202,7 @@ include("config.php");
 </div>
 </body>
 <script>
+
     function setUploadBtn(btn, info) { //切换下载按钮
         if (info != null) {
             btn.attr("href", info);
@@ -212,7 +213,19 @@ include("config.php");
             btn.text("还未上传");
         }
     }
+    function clearPage(page) {
+        page.find('#changeInfo-name').val("");
+        page.find('#changeInfo-studentID').val("");
+        page.find('#changeInfo-grade').val("");
+        page.find('#changeInfo-subject').val("");
+        page.find('#changeInfo-tutor').val("");
+        page.find('#changeInfo-IDcard').val("");
+        page.find('#changeInfo-judgeDate').val("");
+        setUploadBtn(page.find('#changeInfo-paper'), null);
+        setUploadBtn(page.find('#changeInfo-report'), null);
+    }
     function changeInfo(user) {
+        clearPage($('#changeInfo-modal'));
         $.post("getInfo.PHP",
             {
                 type: "stu",
@@ -222,8 +235,6 @@ include("config.php");
                 if (status == 'success') {
                     var stuInfo = eval("(" + data + ")");
                     var page = $('#changeInfo-modal');
-                   // clearSelect(page.find('#changeInfo-sex').find('#' + stuInfo.sex));
-                   // clearSelect(page.find('#changeInfo-type').find('#' + stuInfo.type));
                     page.find('#changeInfo-name').val(stuInfo.sName);
                     page.find('#changeInfo-studentID').val(stuInfo.studentID);
                     page.find('#changeInfo-grade').val(stuInfo.grade);
@@ -232,7 +243,8 @@ include("config.php");
                     page.find('#changeInfo-subject').val(stuInfo.subject);
                     page.find('#changeInfo-tutor').val(stuInfo.tutor);
                     page.find('#changeInfo-IDcard').val(stuInfo.IDcard);
-                    page.find('#changeInfo-judgeDate').val(stuInfo.judgeDate);
+                    page.find('#changeInfo-deadLine').val(stuInfo.deadLine);
+                    page.find('#changeInfo-status').find('#' + stuInfo.status).attr("selected", "selected");
                     setUploadBtn(page.find('#changeInfo-paper'), stuInfo.paperAdd);
                     setUploadBtn(page.find('#changeInfo-report'), stuInfo.reportAdd);
                 }
