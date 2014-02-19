@@ -18,11 +18,11 @@ function getUserType($username) {
     else  echo "错误的用户名";
 }
 
-function mySerialize( $obj ) { //格式化数组，便于传输
+function mySerialize( $obj ) { //序列化数组，便于传输
     return base64_encode(gzcompress(serialize($obj)));
 }
 
-function myUnserialize($txt) {
+function myUnserialize($txt) { //反序列化
     return unserialize(gzuncompress(base64_decode($txt)));
 }
 
@@ -45,10 +45,76 @@ function getExl($filePath) { //获取EXL信息
     return $res;
 }
 
-function addUser($name, $passwd, $type) {
+function addUser($name, $passwd, $type) { //添加用户账户密码
     if (mysql_query("INSERT INTO user (user, passwd, uType) VALUES ('{$name}', '{$passwd}', '{$type}')")) {
         return true;
     }
     else return false;
 }
+
+function getAllUser($uType) {  //获取指定类型所有用户
+    $res = array();
+    $result = mysql_query("SELECT user FROM user WHERE uType = '{$uType}' ");
+    while ($row = mysql_fetch_array($result)) {
+        array_push($res, $row['user']);
+    }
+    return $res;
+}
+
+function getStuInfo($user) { //获取学生所有信息
+    $res = array();
+    $result = mysql_query("SELECT * FROM student WHERE studentID = '{$user}'");
+    if ($row = mysql_fetch_array($result)) {
+        $res = $row;
+    }
+    $res['type'] = getStuType($res['typeID']);
+    return $res;
+}
+
+function getStuType($id) {
+    $res = "错误";
+    $result = mysql_query("SELECT * FROM studenttype WHERE sid = '{$id}'");
+    if ($row = mysql_fetch_array($result)) {
+        $res = $row['typeName'];
+    }
+    return $res;
+}
+
+/**
+ * 简单对称加密算法之加密
+ * @param String $string 需要加密的字串
+ * @param String $skey 加密EKY
+ * @author Anyon Zou <cxphp@qq.com>
+ * @date 2013-08-13 19:30
+ * @update 2014-01-21 28:28
+ * @return String
+ */
+function nyEncode($string = '', $skey = 'whtylw') {
+    $skey = str_split(base64_encode($skey));
+    $strArr = str_split(base64_encode($string));
+    $strCount = count($strArr);
+    foreach ($skey as $key => $value) {
+        $key < $strCount && $strArr[$key].=$value;
+    }
+    return str_replace('=', 'O0O0O', join('', $strArr));
+}
+/**
+ * 简单对称加密算法之解密
+ * @param String $string 需要解密的字串
+ * @param String $skey 解密KEY
+ * @author Anyon Zou <cxphp@qq.com>
+ * @date 2013-08-13 19:30
+ * @update 2014-01-21 28:28
+ * @return String
+ */
+function myDecode($string = '', $skey = 'whtylw') {
+    $skey = str_split(base64_encode($skey));
+    $strArr = str_split(str_replace('O0O0O', '=', $string), 2);
+    $strCount = count($strArr);
+    foreach ($skey as $key => $value) {
+        $key < $strCount && $strArr[$key][1] === $value && $strArr[$key] = $strArr[$key][0];
+    }
+    return base64_decode(join('', $strArr));
+}
+
 ?>

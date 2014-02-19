@@ -56,7 +56,7 @@ include("config.php");
                                 while ($row = mysql_fetch_array($result)) {
                                     echo '<tr id="' . $row['user'] . '">';
                                     echo '<td>' . $row['user'] . '</td>';
-                                    echo '<td><a href="#changePasswd-modal" class="btn btn-info" data-toggle="modal" onclick=changePasswd("' . $row['user'] . '")  data-toggle="modal">修改密码</a>' . "\n";
+                                    echo '<td><a href="#changePasswd-modal" class="btn btn-info" data-toggle="modal" onclick=changePasswd("' . $row['user'] . '") >修改密码</a>' . "\n";
                                     echo '<a href="" class="btn btn-danger" data-toggle="modal" onclick = delWebUser("' . $row['user'] . '")>删除账号</a></td>';
                                     echo '</tr>';
                                 }

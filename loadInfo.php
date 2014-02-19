@@ -35,7 +35,7 @@ function getJudgeYear() {
 function addStuInfo($row) {
     $typeId = getTypeId($row['F']);
     $nowJudgeYear = getJudgeYear();
-    if (mysql_query("INSERT INTO student (grade, studentID, sName, sex, subject, typeID, tutor, IDcard, judgeDate, status)
+    if (mysql_query("INSERT INTO student (grade, studentID, sName, sex, subject, typeID, IDcard,tutor, judgeDate, status)
                       VALUES ('{$row['A']}', '{$row['B']}', '{$row['C']}', '{$row['D']}', '{$row['E']}', '{$typeId}', '{$row['G']}','{$row['H']}', '{$nowJudgeYear}', '未提交论文')")
     ) {
         return true;

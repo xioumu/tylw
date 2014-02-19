@@ -3,117 +3,82 @@
 header("Content-Type: text/html;charset=utf-8");
 include("config.php");
 ?>
-<html lang="en">
+<html lang = "en">
 <head>
-    <meta charset="utf-8">
+    <meta charset = "utf-8">
     <title>武汉体育学院学位管理系统</title>
     <?php include('css.php'); ?>
     <?php include('script.php'); ?>
+    <?php include('myFunction.php'); ?>
 </head>
 
-<body class="index">
+<body class = "index">
 <!-- topbar starts -->
 <?php include('header.php'); ?>
 <!-- topbar ends -->
-<div class="container-fluid">
-    <div class="row-fluid">
+<div class = "container-fluid">
+    <div class = "row-fluid">
         <!-- left menu starts -->
         <?php include('web-admin-left.php'); ?>
         <!-- left menu ends -->
-
-        <div id="content" class="span10">
+        <div id = "content" class = "span10">
             <!-- content starts -->
             <!-- road -->
             <div>
-                <ul class="breadcrumb">
+                <ul class = "breadcrumb">
                     <li>
-                        <a href="web-admin-student-manage.php">网站管理员</a> <span class="divider">/</span>
+                        <a href = "web-admin-student-manage.php">网站管理员</a> <span class = "divider">/</span>
                     </li>
                     <li>
-                        <a href="web-admin-student-manage.php">管理学生账号</a>
+                        <a href = "web-admin-student-manage.php">管理学生账号</a>
                     </li>
                 </ul>
             </div>
-
-            <div class="row-fluid sortable">
-                <div class="box span12">
-                    <div class="box-header well" data-original-title>
+            <div class = "row-fluid sortable">
+                <div class = "box span12">
+                    <div class = "box-header well" data-original-title>
                         <h2>管理学生账号</h2>
-
-                        <div class="box-icon">
-                            <a href="web-admin-add-student.php" class="btn btn-success">导入学生账户</a>
-                            <button type="submit" class="btn btn-primary left">导出学生账户</button>
-                            <button type="submit" class="btn btn-danger left">删除全部学生账户</button>
+                        <div class = "box-icon">
+                            <a href = "web-admin-add-student.php" class = "btn btn-success">导入学生账户</a>
+                            <button type = "submit" class = "btn btn-primary left">导出学生账户密码</button>
+                            <button type = "submit" class = "btn btn-danger left">删除全部学生账户</button>
                         </div>
                     </div>
-                    <div class="box-content">
-                        <form class="form-horizontal">
-                            <table class="table table-striped table-bordered bootstrap-datatable datatable">
+                    <div class = "box-content">
+                        <form class = "form-horizontal">
+                            <table class = "table table-striped table-bordered bootstrap-datatable datatable">
                                 <thead>
                                 <th>年级</th>
                                 <th>姓名</th>
                                 <th>学号</th>
                                 <th>类别</th>
-                                <th>专业</th>
+                                <th>校内方向</th>
                                 <th>提交截止日期</th>
                                 <th>状态</th>
                                 <th>操作</th>
                                 </thead>
-                                <tr>
-                                    <td>2011</td>
-                                    <td>张三</td>
-                                    <td>123455678</td>
-                                    <td>硕士研究生</td>
-                                    <td>竞技体育</td>
-                                    <td>2013/12/27</td>
-                                    <td><span class="label label-important">还未提交论文</span></td>
+                                <?php
+                                $allStuUser = getAllUser("stu");
+                                foreach ($allStuUser as $user) {
+                                    echo "<tr>";
+                                    $info = getStuInfo($user);
+                                    echo "<td>" . $info['grade'] . "</td>";
+                                    echo "<td>" . $info['sName'] . "</td>";;
+                                    echo "<td>" . $info['studentID'] . "</td>";
+                                    echo "<td>" . $info['type'] . "</td>";
+                                    echo "<td>" . $info['subject'] . "</td>";
+                                    echo "<td>" . $info['SdeadLine'] . "</td>";
+                                    echo '<td><span class = "label label-important">' . $info['status'] . '</span></td>';
+                                    echo '
                                     <td>
-                                        <a href="#myBox1" class="btn btn-info btn-setting" data-toggle="modal">修改信息</a>
-                                        <a href="" class="btn btn-info btn-danger">删除</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>2011</td>
-                                    <td>王五</td>
-                                    <td>12455678</td>
-                                    <td>博士研究生</td>
-                                    <td>运动学</td>
-                                    <td>2013/12/29</td>
-                                    <td><span class="label label-warning">已提交论文-等待评审</span></td>
-                                    <td>
-                                        <a href="#myBox1" class="btn btn-info btn-setting" data-toggle="modal">修改信息</a>
-                                        <a href="" class="btn btn-info btn-danger">删除</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>2011</td>
-                                    <td>王五</td>
-                                    <td>12455678</td>
-                                    <td>博士研究生</td>
-                                    <td>运动学</td>
-                                    <td>2013/10/27</td>
-                                    <td><span class="label label-success">评审完毕-通过</span></td>
-                                    <td>
-                                        <a href="#myBox1" class="btn btn-info btn-setting" data-toggle="modal">修改信息</a>
-                                        <a href="" class="btn btn-info btn-danger">删除</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>2011</td>
-                                    <td>王五</td>
-                                    <td>12455678</td>
-                                    <td>博士研究生</td>
-                                    <td>运动学</td>
-                                    <td>2013/10/27</td>
-                                    <td><span class="label label-inverse">评审完毕-未通过</span></td>
-                                    <td>
-                                        <a href="#myBox1" class="btn btn-info btn-setting" data-toggle="modal">修改信息</a>
-                                        <a href="" class="btn btn-info btn-danger">删除</a>
-                                    </td>
-                                </tr>
+                                        <a href = "#changeInfo-modal" class = "btn btn-info btn-setting" data-toggle = "modal" onclick="changeInfo(\'' . $user . '\')">查看/修改信息</a>
+                                        <a href = "" class = "btn btn-info btn-danger" onclick="delStu(\'' . $user . '\')">删除</a>
+                                    </td> ';
+                                    echo "</tr>";
+                                }
+                                ?>
                             </table>
                         </form>
-
                     </div>
                 </div>
                 <!--/span-->
@@ -125,93 +90,156 @@ include("config.php");
     </div>
     <!--/fluid-row-->
 </div>
-
-<!-- box -->
-<div class="modal hide" id="myBox1">
-    <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">×</button>
+<!-- modal-->
+<div class = "modal hide" id = "changeInfo-modal">
+    <div class = "modal-header">
+        <button type = "button" class = "close" data-dismiss = "modal">×</button>
         <h3>修改学生信息</h3>
     </div>
-    <div class="modal-body table-striped form-horizontal">
-        <div class="">
+    <div class = "modal-body table-striped form-horizontal">
+        <div class = "">
             <fieldset>
-                <div class="control-group">
-                    <label class="control-label">姓名</label>
-
-                    <div class="controls">
-                        <input class="input-medium disabled" id="name" type="text" value="张三" disabled="">
+                <div class = "control-group">
+                    <label class = "control-label" for = "changeInfo-name">姓名</label>
+                    <div class = "controls">
+                        <input class = "input-medium disabled" id = "changeInfo-name" type = "text" value = ""
+                               disabled = "">
                     </div>
                 </div>
-                <div class="control-group">
-                    <label class="control-label">学号</label>
-
-                    <div class="controls">
-                        <input class="input-medium disabled" id="stdentID" type="text" value="12345678" disabled="">
+                <div class = "control-group">
+                    <label class = "control-label" for = "changeInfo-studentID">学号</label>
+                    <div class = "controls">
+                        <input class = "input-medium disabled" id = "changeInfo-studentID" type = "text" value = ""
+                               disabled = "">
                     </div>
                 </div>
-                <div class="control-group">
-                    <label class="control-label" for="grade">年级</label>
-
-                    <div class="controls">
-                        <input class="input-medium" type="text" id="grade" value="2011级">
+                <div class = "control-group">
+                    <label class = "control-label" for = "changeInfo-grade">年级</label>
+                    <div class = "controls">
+                        <input class = "input-medium" type = "text" id = "changeInfo-grade" value = "">
                     </div>
                 </div>
-                <div class="control-group">
-                    <label class="control-label  " for="sex">性别</label>
-
-                    <div class="controls">
-                        <select id="sex" class="input-xlarge">
-                            <option>男</option>
-                            <option>女</option>
-                            <option>未知</option>
+                <div class = "control-group">
+                    <label class = "control-label  " for = "changeInfo-sex">性别</label>
+                    <div class = "controls">
+                        <select id = "changeInfo-sex" class = "input-medium">
+                            <option value = "男" id = "男">男</option>
+                            <option value = "女" id = "女">女</option>
                         </select>
                     </div>
                 </div>
-                <div class="control-group">
-                    <label class="control-label" for="type">类别</label>
-
-                    <div class="controls">
-                        <select id="type" class="input-medium">
-                            <option>硕士研究生</option>
-                            <option>博士研究生</option>
-                            <option>体育研究生</option>
+                <div class = "control-group">
+                    <label class = "control-label" for = "changeInfo-type">类别</label>
+                    <div class = "controls">
+                        <select id = "changeInfo-type" class = "input-medium" data-value = "体育硕士">
+                            <option value = "硕士研究生" id = "硕士研究生" >硕士研究生</option>
+                            <option value = "博士研究生" id = "博士研究生" >博士研究生</option>
+                            <option value = "体育硕士" id = "体育硕士" >体育硕士</option>
+                            <option value = "港澳台硕士" id = "港澳台硕士" >港澳台硕士</option>
+                            <option value = "港澳台博士" id = "港澳台博士" >港澳台博士</option>
+                            <option value = "留学生硕士" id = "留学生硕士" >留学生硕士</option>
+                            <option value = "留学生博士" id = "留学生博士" >留学生博士</option>
                         </select>
                     </div>
                 </div>
-                <div class="control-group">
-                    <label class="control-label" for="subject">专业</label>
-
-                    <div class="controls">
-                        <input class="input-medium" type="text" id="subject" value="足球">
+                <div class = "control-group">
+                    <label class = "control-label" for = "changeInfo-subject">校内方向</label>
+                    <div class = "controls">
+                        <input class = "input-medium" type = "text" id = "changeInfo-subject" value = "">
                     </div>
                 </div>
-
-                <div class="control-group">
-                    <label class="control-label" for="date01">提交截止日期</label>
-
-                    <div class="controls">
-                        <input type="text" class="input-medium datepicker" id="date01" value="12/27/13">
+                <div class = "control-group">
+                    <label class = "control-label" for = "changeInfo-tutor">导师</label>
+                    <div class = "controls">
+                        <input class = "input-medium" type = "text" id = "changeInfo-tutor" value = "">
                     </div>
                 </div>
-
-                <div class="control-group">
-                    <label class="control-label  " for="state">状态</label>
-
-                    <div class="controls">
-                        <select id="state" class="input-xlarge">
-                            <option>还未提交论文</option>
-                            <option>已提交论文-等待评审</option>
-                            <option>评审完毕-通过</option>
-                            <option>评审完毕-未通过</option>
+                <div class = "control-group">
+                    <label class = "control-label" for = "changeInfo-IDcard">身份证号</label>
+                    <div class = "controls">
+                        <input class = "input-medium" type = "text" id = "changeInfo-IDcard" value = "">
+                    </div>
+                </div>
+                <div class = "control-group">
+                    <label class = "control-label  " for = "changeInfo-state">状态</label>
+                    <div class = "controls">
+                        <select id = "changeInfo-state" class = "input-medium">
+                            <option id = "还未提交论文" value = "还未提交论文">未提交论文</option>
+                            <option id = "已提交论文-等待评审" value = "已提交论文-等待评审">已提交论文-等待评审</option>
+                            <option id = "评审完毕-通过" value = "评审完毕-通过">评审完毕-通过</option>
+                            <option id = "评审完毕-未通过" value = "评审完毕-未通过">评审完毕-未通过</option>
                         </select>
+                    </div>
+                </div>
+                <div class = "control-group">
+                    <label class = "control-label" for = "changeInfo-judgeDate">提交截止日期</label>
+                    <div class = "controls">
+                        <input type = "text" class = "input-medium datepicker" id = "changeInfo-judgeDate" value = "">
+                    </div>
+                </div>
+                <div class = "control-group">
+                    <label class = "control-label" for = "changeInfo-paper">论文</label>
+                    <div class = "controls">
+                        <a href = "upFile/paper/test.docx" target = "view_window" id = "changeInfo-paper"
+                           class = "btn btn-success btn-small">下载</a>
+                    </div>
+                </div>
+                <div class = "control-group">
+                    <label class = "control-label" for = "changeInfo-report">开题报告</label>
+                    <div class = "controls">
+                        <a href = "upFile/report/test.docx" target = "view_window" id = "changeInfo-report"
+                           class = "btn btn-success btn-small">下载</a>
                     </div>
                 </div>
             </fieldset>
         </div>
-        <div class="modal-footer">
-            <a href="#" class="btn" data-dismiss="modal">关闭</a>
-            <button type="submit" class="btn btn-primary">保存</button>
-        </div>
+
     </div>
+    <div class = "modal-footer">
+        <a href = "#" class = "btn" data-dismiss = "modal">关闭</a>
+        <button type = "submit" class = "btn btn-primary">保存</button>
+    </div>
+</div>
 </body>
+<script>
+    function setUploadBtn(btn, info) { //切换下载按钮
+        if (info != null) {
+            btn.attr("href", info);
+            btn.text("点击下载");
+        }
+        else {
+            btn.attr("href", "#");
+            btn.text("还未上传");
+        }
+    }
+    function changeInfo(user) {
+        $.post("getInfo.PHP",
+            {
+                type: "stu",
+                user: user
+            },
+            function (data, status) {
+                if (status == 'success') {
+                    var stuInfo = eval("(" + data + ")");
+                    var page = $('#changeInfo-modal');
+                   // clearSelect(page.find('#changeInfo-sex').find('#' + stuInfo.sex));
+                   // clearSelect(page.find('#changeInfo-type').find('#' + stuInfo.type));
+                    page.find('#changeInfo-name').val(stuInfo.sName);
+                    page.find('#changeInfo-studentID').val(stuInfo.studentID);
+                    page.find('#changeInfo-grade').val(stuInfo.grade);
+                    page.find('#changeInfo-sex').find('#' + stuInfo.sex).attr("selected", "selected");
+                    page.find('#changeInfo-type').find('#' + stuInfo.type).attr("selected", "selected");
+                    page.find('#changeInfo-subject').val(stuInfo.subject);
+                    page.find('#changeInfo-tutor').val(stuInfo.tutor);
+                    page.find('#changeInfo-IDcard').val(stuInfo.IDcard);
+                    page.find('#changeInfo-judgeDate').val(stuInfo.judgeDate);
+                    setUploadBtn(page.find('#changeInfo-paper'), stuInfo.paperAdd);
+                    setUploadBtn(page.find('#changeInfo-report'), stuInfo.reportAdd);
+                }
+                else {
+                    $('.index').noty({"text": "js post error0!", "layout": "topLeft", "type": "error"});
+                }
+            });
+    }
+</script>
 </html>

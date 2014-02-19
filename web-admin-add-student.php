@@ -66,7 +66,7 @@ include("config.php");
                     </div> ';
             }
 
-            function uploadExl($tmpFilePath) {
+            function uploadExl($tmpFilePath) { //上传EXL文件，返回文件名
                 $filePath = 'upFile/exl/';
                 $filename = date("y-m-d-H-i-s") . ".xlsx"; //去当前上传的时间
                 $uploadfile = $filePath . $filename; //上传后的文件名地址

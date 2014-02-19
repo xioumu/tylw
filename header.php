@@ -70,10 +70,10 @@ include("config.php");
     </div>
     <div class="modal-footer">
         <a href="#" class="btn" data-dismiss="modal">关闭</a>
-        <button type="submit" class="btn btn-primary" id="modal-sub">提交</button>
+        <button type="submit" class="btn btn-primary" id="myChangePasswd-modal-sub">提交</button>
     </div>
     <script>
-        $("#myChangePasswd-modal").find("#modal-sub").click(function () {
+        $("#myChangePasswd-modal").find("#myChangePasswd-modal-sub").click(function () {
             var user = $('#myChangePasswd-modal').find('#name').val();
             var newpasswd1 = $('#myChangePasswd-modal').find('#newpasswd1').val();
             var newpasswd2 = $('#myChangePasswd-modal').find('#newpasswd2').val();
