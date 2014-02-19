@@ -130,7 +130,6 @@ include("config.php");
                             <fieldset>
                                 <div class="control-group">
                                     <label class="control-label" for="fileInput">下载样例EXCEL表格</label>
-
                                     <div class="controls">
                                         <a href="doc/student.xlsx" target="view_window" class="btn btn-success btn-small">样例表格下载</a>
                                     </div>

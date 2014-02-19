@@ -11,29 +11,10 @@ function getRand() {
     return $res;
 }
 
-function getTypeId($type) {
-    str_replace($type, ' ', '');
-    $res = 0;
-    $query = mysql_query("SELECT * FROM studenttype WHERE typeName = '{$type}'");
-    if ($row = mysql_fetch_array($query)) {
-        $res = $row['sid'];
-    }
-    else echo "get TypeId error!<br/>";
-    return $res;
-}
 
-function getJudgeYear() {
-    $res = -1;
-    $query = mysql_query("SELECT * FROM other");
-    if ($row = mysql_fetch_array($query)) {
-        $res = $row['NowJudgeYear'];
-    }
-    else echo "get judgeYear error!<br/>";
-    return $res;
-}
 
 function addStuInfo($row) {
-    $typeId = getTypeId($row['F']);
+    $typeId = getStuTypeId($row['F']);
     $nowJudgeYear = getJudgeYear();
     if (mysql_query("INSERT INTO student (grade, studentID, sName, sex, subject, typeID, IDcard,tutor, judgeDate, status)
                       VALUES ('{$row['A']}', '{$row['B']}', '{$row['C']}', '{$row['D']}', '{$row['E']}', '{$typeId}', '{$row['G']}','{$row['H']}', '{$nowJudgeYear}', '未提交论文')")

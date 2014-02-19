@@ -10,7 +10,18 @@ function loginCheck($username, $passwd) {
     else return false;
 }
 
-function getUserType($username) {
+function getStuTypeId($type) { //根据名字得到学生类型的ID
+    str_replace($type, ' ', '');
+    $res = 0;
+    $query = mysql_query("SELECT * FROM studenttype WHERE typeName = '{$type}'");
+    if ($row = mysql_fetch_array($query)) {
+        $res = $row['sid'];
+    }
+    else echo "get TypeId error!<br/>";
+    return $res;
+}
+
+function getUserType($username) { //得到用户的类型名
     $result = mysql_query("SELECT * FROM user WHERE user = '{$username}' ");
     if ($row = mysql_fetch_array($result)) {
         return $row['uType'];
@@ -71,7 +82,7 @@ function getStuInfo($user) { //获取学生所有信息
     return $res;
 }
 
-function getStuType($id) {
+function getStuType($id) { //得到学生的信息
     $res = "错误";
     $result = mysql_query("SELECT * FROM studenttype WHERE sid = '{$id}'");
     if ($row = mysql_fetch_array($result)) {
@@ -117,4 +128,13 @@ function myDecode($string = '', $skey = 'whtylw') {
     return base64_decode(join('', $strArr));
 }
 
+function getJudgeYear() {
+    $res = -1;
+    $query = mysql_query("SELECT * FROM other");
+    if ($row = mysql_fetch_array($query)) {
+        $res = $row['NowJudgeYear'];
+    }
+    else echo "get judgeYear error!<br/>";
+    return $res;
+}
 ?>

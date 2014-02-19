@@ -95,6 +95,7 @@ include("config.php");
     <div class = "modal-header">
         <button type = "button" class = "close" data-dismiss = "modal">×</button>
         <h3>修改/查看学生信息</h3>
+        <h5>(修改信息后需刷新页面才能看见更新信息)</h5>
     </div>
     <div class = "modal-body table-striped form-horizontal">
         <div class = "">
@@ -102,8 +103,7 @@ include("config.php");
                 <div class = "control-group">
                     <label class = "control-label" for = "changeInfo-name">姓名</label>
                     <div class = "controls">
-                        <input class = "input-medium disabled" id = "changeInfo-name" type = "text" value = ""
-                               disabled = "">
+                        <input class = "input-medium disabled" id = "changeInfo-name" type = "text" value = "" disabled>
                     </div>
                 </div>
                 <div class = "control-group">
@@ -131,14 +131,13 @@ include("config.php");
                 <div class = "control-group">
                     <label class = "control-label" for = "changeInfo-type">类别</label>
                     <div class = "controls">
-                        <select id = "changeInfo-type" class = "input-medium" >
-                            <option value = "硕士研究生" id = "硕士研究生" >硕士研究生</option>
-                            <option value = "博士研究生" id = "博士研究生" >博士研究生</option>
-                            <option value = "体育硕士" id = "体育硕士" >体育硕士</option>
-                            <option value = "港澳台硕士" id = "港澳台硕士" >港澳台硕士</option>
-                            <option value = "港澳台博士" id = "港澳台博士" >港澳台博士</option>
-                            <option value = "留学生硕士" id = "留学生硕士" >留学生硕士</option>
-                            <option value = "留学生博士" id = "留学生博士" >留学生博士</option>
+                        <select id = "changeInfo-type" class = "input-medium">
+                            <?php
+                            $result = mysql_query("SELECT * FROM studenttype");
+                            while ($row = mysql_fetch_array($result)) {
+                                echo "<option value = \"{$row['sid']}\" id = \"{$row['typeName']}\">{$row['typeName']}</option>";
+                            }
+                            ?>
                         </select>
                     </div>
                 </div>
@@ -197,12 +196,11 @@ include("config.php");
     </div>
     <div class = "modal-footer">
         <a href = "#" class = "btn" data-dismiss = "modal">关闭</a>
-        <button type = "submit" class = "btn btn-primary">保存</button>
+        <a class = "btn btn-primary" onclick = "subChangeInfo()">保存</a>
     </div>
 </div>
 </body>
 <script>
-
     function setUploadBtn(btn, info) { //切换下载按钮
         if (info != null) {
             btn.attr("href", info);
@@ -243,7 +241,7 @@ include("config.php");
                     page.find('#changeInfo-subject').val(stuInfo.subject);
                     page.find('#changeInfo-tutor').val(stuInfo.tutor);
                     page.find('#changeInfo-IDcard').val(stuInfo.IDcard);
-                    page.find('#changeInfo-deadLine').val(stuInfo.deadLine);
+                    page.find('#changeInfo-deadLine').val(stuInfo.SdeadLine);
                     page.find('#changeInfo-status').find('#' + stuInfo.status).attr("selected", "selected");
                     setUploadBtn(page.find('#changeInfo-paper'), stuInfo.paperAdd);
                     setUploadBtn(page.find('#changeInfo-report'), stuInfo.reportAdd);
@@ -252,6 +250,44 @@ include("config.php");
                     $('.index').noty({"text": "js post error0!", "layout": "topLeft", "type": "error"});
                 }
             });
+    }
+    function subChangeInfo() {
+        var page = $('#changeInfo-modal');
+        if (page.find('#changeInfo-name').val() == "") {
+            $('.index').noty({"text": "姓名不能为空", "layout": "topLeft", "type": "error"});
+        }
+        else {
+            $.post("changeInfo.php",
+                {
+                    role: "web-admin",
+                    type: "stu",
+                    sName: page.find('#changeInfo-name').val(),
+                    studentID: page.find('#changeInfo-studentID').val(),
+                    grade: page.find('#changeInfo-grade').val(),
+                    sex: page.find('#changeInfo-sex').val(),
+                    sType: page.find('#changeInfo-type').val(),
+                    subject: page.find('#changeInfo-subject').val(),
+                    tutor: page.find('#changeInfo-tutor').val(),
+                    IDcard: page.find('#changeInfo-IDcard').val(),
+                    deadLine: page.find('#changeInfo-deadLine').val(),
+                    status: page.find('#changeInfo-status').val()
+                },
+                function (data, status) {
+                    if (status == 'success') {
+                        if (data == 'ok') {
+                            $('#addUser-modal').modal('hide');
+                            $('.index').noty({"text": "成功修改信息", "layout": "topLeft", "type": "success"});
+                            page.modal('hide');
+                        }
+                        else {
+                            $('.index').noty({"text": "error:" + data, "layout": "topLeft", "type": "error"});
+                        }
+                    }
+                    else {
+                        $('.index').noty({"text": "js post error0!", "layout": "topLeft", "type": "error"});
+                    }
+                });
+        }
     }
 </script>
 </html>
