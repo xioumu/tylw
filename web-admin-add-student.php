@@ -66,18 +66,7 @@ include("config.php");
                     </div> ';
             }
 
-            function uploadExl($tmpFilePath) { //上传EXL文件，返回文件名
-                $filePath = 'upFile/exl/';
-                $filename = date("y-m-d-H-i-s") . ".xlsx"; //去当前上传的时间
-                $uploadfile = $filePath . $filename; //上传后的文件名地址
-                $result = move_uploaded_file($tmpFilePath, $uploadfile);
-                if (!$result) {
-                    echo "move file error!<br>";
-                }
-                $res['name'] = $filename;
-                $res['path'] = $uploadfile;
-                return $res;
-            }
+
 
             if (isset($_FILES["exlFile"])) {
                 echo '<div class="row-fluid sortable">
@@ -89,7 +78,7 @@ include("config.php");
                         <form class="form-horizontal" action="loadInfo.php" method="post" >
                     ';
 
-                if ($_FILES["exlFile"]["type"] == "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" && $_FILES["exlFile"]["size"] < 20000) {
+                if ($_FILES["exlFile"]["type"] == "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" && $_FILES["exlFile"]["size"] < 1024 * 1024 * 1024) {
                     if ($_FILES["exlFile"]["error"] > 0) {
                         echo "Error: " . $_FILES["exlFile"]["error"] . "<br />";
                     }
@@ -136,7 +125,6 @@ include("config.php");
                                 </div>
                                 <div class="control-group">
                                     <label class="control-label" for="fileInput">选择表格文件(只支持excel2007文件)</label>
-
                                     <div class="controls">
                                         <input class="uniform_off" id="fileInput" type="file" name="exlFile">
                                     </div>

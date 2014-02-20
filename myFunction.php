@@ -36,6 +36,19 @@ function mySerialize( $obj ) {
 function myUnserialize($txt) {
     return unserialize(gzuncompress(base64_decode($txt)));
 }
+//上传EXL文件，返回文件名
+function uploadExl($tmpFilePath) {
+    $filePath = 'upFile/exl/';
+    $filename = date("y-m-d-H-i-s") . ".xlsx"; //去当前上传的时间
+    $uploadfile = $filePath . $filename; //上传后的文件名地址
+    $result = move_uploaded_file($tmpFilePath, $uploadfile);
+    if (!$result) {
+        echo "move file error!<br>";
+    }
+    $res['name'] = $filename;
+    $res['path'] = $uploadfile;
+    return $res;
+}
 //获取EXL信息
 function getExl($filePath) {
     $res = array();
@@ -110,7 +123,7 @@ function getStuType($id) {
  * @update 2014-01-21 28:28
  * @return String
  */
-function nyEncode($string = '', $skey = 'whtylw') {
+function myEncode($string = '', $skey = 'whtylw') {
     $skey = str_split(base64_encode($skey));
     $strArr = str_split(base64_encode($string));
     $strCount = count($strArr);
