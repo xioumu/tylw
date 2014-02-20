@@ -1,14 +1,13 @@
 <?php
 include("config.php");
 include("myFunction.php");
-function leadOutExl($allData) { //把数据输出至EXLX文件
+function leadOutExl($allData, $type) { //把数据输出至EXLX文件
     error_reporting(E_ALL);
     ini_set('display_errors', TRUE);
     ini_set('display_startup_errors', TRUE);
     date_default_timezone_set('Europe/London');
 
-    if (PHP_SAPI == 'cli')
-        die('This example should only be run from a Web Browser');
+    if (PHP_SAPI == 'cli') die('This example should only be run from a Web Browser');
 
     /** Include PHPExcel */
     require_once 'PHPExcel/PHPExcel.php';
@@ -16,32 +15,45 @@ function leadOutExl($allData) { //把数据输出至EXLX文件
     $objPHPExcel = new PHPExcel();
 
     // Set document properties
-    $objPHPExcel->getProperties()->setCreator("Maarten Balliauw")
-        ->setLastModifiedBy("Maarten Balliauw")
-        ->setTitle("Office 2007 XLSX Test Document")
-        ->setSubject("Office 2007 XLSX Test Document")
-        ->setDescription("Test document for Office 2007 XLSX, generated using PHP classes.")
-        ->setKeywords("office 2007 openxml php")
-        ->setCategory("Test result file");
+    $objPHPExcel->getProperties()->setCreator("Maarten Balliauw")->setLastModifiedBy("Maarten Balliauw")->setTitle("Office 2007 XLSX Test Document")->setSubject("Office 2007 XLSX Test Document")->setDescription("Test document for Office 2007 XLSX, generated using PHP classes.")->setKeywords("office 2007 openxml php")->setCategory("Test result file");
 
-    // Add some data
-    $objPHPExcel->setActiveSheetIndex(0)
-        ->setCellValue('A1', '学号')
-        ->setCellValue('B1', '密码')
-        ->setCellValue('C1', '姓名')
-        ->setCellValue('D1', '校内方向')
-        ->setCellValue('E1', '类别')
-        ->setCellValue('F1', '导师');
-    $i = 2;
-    foreach($allData as $person) {
+    if ($type == 'stu') {
         $objPHPExcel->setActiveSheetIndex(0)
-            ->setCellValue('A' . $i , $person['studentID'])
-            ->setCellValue('B' . $i , $person['passwd'])
-            ->setCellValue('C' . $i , $person['sName'])
-            ->setCellValue('D' . $i , $person['subject'])
-            ->setCellValue('E' . $i , $person['type'])
-            ->setCellValue('F' . $i , $person['tutor']);
-        $i++;
+                    ->setCellValue('A1', '学号')
+                    ->setCellValue('B1', '密码')
+                    ->setCellValue('C1', '姓名')
+                    ->setCellValue('D1', '校内方向')
+                    ->setCellValue('E1', '类别')
+                    ->setCellValue('F1', '导师');
+        $i = 2;
+        foreach ($allData as $person) {
+            $objPHPExcel->setActiveSheetIndex(0)
+                        ->setCellValue('A' . $i, $person['studentID'])
+                        ->setCellValue('B' . $i, $person['passwd'])
+                        ->setCellValue('C' . $i, $person['sName'])
+                        ->setCellValue('D' . $i, $person['subject'])
+                        ->setCellValue('E' . $i, $person['type'])
+                        ->setCellValue('F' . $i, $person['tutor']);
+            $i++;
+        }
+    }
+    else if($type == 'onTea') {
+        $objPHPExcel->setActiveSheetIndex(0)
+            ->setCellValue('A1', '学号')
+            ->setCellValue('B1', '密码')
+            ->setCellValue('C1', '姓名')
+            ->setCellValue('D1', '校内方向')
+            ->setCellValue('E1', '研究方向');
+        $i = 2;
+        foreach ($allData as $person) {
+            $objPHPExcel->setActiveSheetIndex(0)
+                ->setCellValue('A' . $i, $person['teacherID'])
+                ->setCellValue('B' . $i, $person['passwd'])
+                ->setCellValue('C' . $i, $person['tName'])
+                ->setCellValue('D' . $i, $person['subject'])
+                ->setCellValue('E' . $i, $person['research']);
+            $i++;
+        }
     }
     // Rename worksheet
     $objPHPExcel->getActiveSheet()->setTitle('passwd');
@@ -61,13 +73,24 @@ if (isset($_GET['type'])) {
     if ($_GET['type'] == 'stu') {
         $allData = array();
         $allUser = getAllUserPasswd('stu');
-        foreach($allUser as $user){
+        foreach ($allUser as $user) {
             $res = getStuInfo($user['user']);
             $res['user'] = $user['user'];
             $res['passwd'] = $user['passwd'];
             array_push($allData, $res);
         }
-        leadOutExl($allData);
+        leadOutExl($allData, 'stu');
+    }
+    else if($_GET['type'] == 'onTea') {
+        $allData = array();
+        $allUser = getAllUserPasswd('onTea');
+        foreach ($allUser as $user) {
+            $res = getOnTeaInfo($user['user']);
+            $res['user'] = $user['user'];
+            $res['passwd'] = $user['passwd'];
+            array_push($allData, $res);
+        }
+        leadOutExl($allData, 'onTea');
     }
 }
 ?>

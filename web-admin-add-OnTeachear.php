@@ -29,12 +29,12 @@ include("config.php");
             <div>
                 <ul class = "breadcrumb">
                     <li><a href = "web-admin-student-manage.php">网站管理员</a> <span class = "divider">/</span> </li>
-                    <li><a href = "web-admin-student-manage.php">管理校内专家账户</a></li>
+                    <li><a href = "web-admin-student-manage.php">管理校内专家账户</a><span class = "divider">/</span></li>
                     <li><a href = "web-admin-add-OnTeachear.php">导入校内专家账户</a></li>
                 </ul>
             </div>
             <?php
-            function putStuExl($data) {
+            function putOnTeaExl($data) {
                 echo '
                  <div class="box-content">
                             <table class="table table-striped table-bordered bootstrap-datatable datatable">
@@ -47,7 +47,7 @@ include("config.php");
                                 </thead>';
                 foreach ($data as $row) {
                     echo '<tr>';
-                    for ($i = 'A'; $i <= 'H'; $i++) {
+                    for ($i = 'A'; $i <= 'E'; $i++) {
                         echo '<td>' . $row[$i] . '</td>';
                     }
                     echo '</tr>';
@@ -102,7 +102,7 @@ include("config.php");
                         <h2>导入学生账户</h2>
                     </div>
                     <div class="box-content">
-                        <form class="form-horizontal" action="web-admin-add-student.php" method="post"
+                        <form class="form-horizontal" action="web-admin-add-OnTeachear.php" method="post"
                               enctype="multipart/form-data">
                             <fieldset>
                                 <div class="control-group">

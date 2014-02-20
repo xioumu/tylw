@@ -96,8 +96,7 @@ function getAllUserPasswd($uType) {
 //获取学生所有信息
 function getStuInfo($user) {
     $res = array();
-    $JudgeYear = getJudgeYear();
-    $result = mysql_query("SELECT * FROM student WHERE studentID = '{$user}' AND judgeDate = '{$JudgeYear}'");
+    $result = mysql_query("SELECT * FROM student WHERE studentID = '{$user}'");
     if ($row = mysql_fetch_array($result)) {
         $res = $row;
     }
@@ -171,4 +170,20 @@ function changeData($old){ //转换日期的格式
     $day = $res[1];
     $year = $res[2];
     return $year . "-" . $month . "-" . $day;
-}?>
+}
+
+function getOnTeaStatus($user) {
+    return "还未评审完毕";
+}
+
+function getOnTeaInfo($user) {
+    $res = array();
+    $status = getOnTeaStatus($user);
+    $result = mysql_query("SELECT * FROM teacheronside WHERE teacherID = '{$user}'");
+    if ($row = mysql_fetch_array($result)) {
+        $res = $row;
+    }
+    $res['status'] = $status;
+    return $res;
+}
+?>
