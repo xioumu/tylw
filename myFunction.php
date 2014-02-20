@@ -149,7 +149,9 @@ function getJudgeYear() { //获取当前学年
 }
 
 function changeData($old){ //转换日期的格式
-    if ($old == null) return 'null';
+    if ($old == null) {
+        return 'null';
+    }
     $res = explode("/", $old);
     if (count($res) == 1) return $old;
     $month = $res[0];

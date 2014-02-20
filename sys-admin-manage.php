@@ -14,8 +14,6 @@ include("config.php");
 <!-- topbar starts -->
 <?php include('header.php'); ?>
 <!-- topbar ends -->
-<!-- loading -->
-<!-- loading -->
 <div class="container-fluid">
     <div class="row-fluid">
         <!-- left menu starts -->

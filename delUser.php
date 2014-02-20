@@ -33,5 +33,21 @@ else if ($_POST['type'] == 'web-admin') {
         else if (!delUser($user)) echo "delete user error!";
         else echo "ok";
     }
+    else if (isset($_POST['object']) && $_POST['object'] == 'allStu') {
+        $flag = true;
+        $allStuUser = getAllUser('stu');
+        foreach($allStuUser as $user) {
+            if (!delStuInfo($user)) {
+                echo $user . "delete student info error! <br/>";
+                $flag = false;
+            }
+            else if (!delUser($user)) {
+                echo $user . "delete user error! <br/>";
+                $flag = false;
+            }
+        }
+        if ($flag) echo "ok";
+        else echo "error1";
+    }
 }
 ?>

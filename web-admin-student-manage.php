@@ -41,7 +41,7 @@ include("config.php");
                         <div class = "box-icon">
                             <a href = "web-admin-add-student.php" class = "btn btn-success">导入学生账户</a>
                             <a href = "leadOutPasswd.php?type=stu" class = "btn btn-primary left" target = "view_window">导出学生账户密码</a>
-                            <button type = "submit" class = "btn btn-danger left">删除全部学生账户</button>
+                            <button type = "submit" class = "btn btn-danger left" onclick="delAllStuUser()">删除全部学生账户</button>
                         </div>
                     </div>
                     <div class = "box-content">
@@ -192,7 +192,6 @@ include("config.php");
                 </div>
             </fieldset>
         </div>
-
     </div>
     <div class = "modal-footer">
         <a href = "#" class = "btn" data-dismiss = "modal">关闭</a>
@@ -201,7 +200,8 @@ include("config.php");
 </div>
 </body>
 <script>
-    function setUploadBtn(btn, info) { //切换下载按钮
+    //切换下载按钮
+    function setUploadBtn(btn, info) {
         if (info != null) {
             btn.attr("href", info);
             btn.text("点击下载");
@@ -211,6 +211,7 @@ include("config.php");
             btn.text("还未上传");
         }
     }
+    //清空modal页面
     function clearPage(page) {
         page.find('#changeInfo-name').val("");
         page.find('#changeInfo-studentID').val("");
@@ -302,6 +303,31 @@ include("config.php");
                         if (data == 'ok') {
                             $('.index').noty({"text": "删除成功", "layout": "topLeft", "type": "success"});
                             $('#' + user).remove();
+                        }
+                        else {
+                            $('.index').noty({"text": "error:" + data, "layout": "topLeft", "type": "error"});
+                        }
+                    }
+                    else {
+                        $('.index').noty({"text": "js post error0!'", "layout": "topLeft", "type": "error"});
+                    }
+                }
+            )
+        }
+    }
+    function delAllStuUser() {
+        var r = confirm('确认删除全部账号?');
+        if (r == true) {
+            $.post("delUser.php",
+                {
+                    type: "web-admin",
+                    object: "allStu"
+                },
+                function (data, status) {
+                    if (status == 'success') {
+                        if (data == 'ok') {
+                            $('.index').noty({"text": "删除成功", "layout": "topLeft", "type": "success"});
+                            location.reload();
                         }
                         else {
                             $('.index').noty({"text": "error:" + data, "layout": "topLeft", "type": "error"});

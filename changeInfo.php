@@ -2,8 +2,6 @@
 include("config.php");
 include("myFunction.php");
 
-
-
 if (isset($_POST['role']) && isset($_POST['type'])) {
     if ($_POST['role'] == 'web-admin') {
         $judgeYear = getJudgeYear();
@@ -15,6 +13,9 @@ if (isset($_POST['role']) && isset($_POST['type'])) {
                               tutor='{$_POST['tutor']}', IDcard='{$_POST['IDcard']}', SdeadLine='{$deadLine}',
                                status='{$_POST['status']}'
                                WHERE studentID = '{$_POST['studentID']}' AND judgeDate='{$judgeYear}'")) {
+                if ($deadLine == 'null') {
+                    mysql_query("UPDATE student SET  SdeadLine={$deadLine} WHERE studentID = '{$_POST['studentID']}' AND judgeDate='{$judgeYear}'");
+                }
                 echo "ok";
             }
             else echo "database error!";
