@@ -22,6 +22,18 @@ function addStuInfo($row) {
     else return false;
 }
 
+//添加校内专家描述
+function addOnTeaInfo($row) {
+    $nowJudgeYear = getJudgeYear();
+    
+    if (mysql_query("INSERT INTO student (grade, studentID, sName, sex, subject, typeID, IDcard,tutor, judgeDate, status)
+                      VALUES ('{$row['A']}', '{$row['B']}', '{$row['C']}', '{$row['D']}', '{$row['E']}', '{$typeId}', '{$row['G']}','{$row['H']}', '{$nowJudgeYear}', '未提交论文')")
+    ) {
+        return true;
+    }
+    else return false;
+}
+
 if (isset($_POST['type']) && isset($_POST['file'])) {
     if ($_POST['type'] == 'stu') {
         $filePath = 'upFile/exl/' . $_POST['file'];
@@ -36,6 +48,21 @@ if (isset($_POST['type']) && isset($_POST['file'])) {
             }
             //记得删除临时EXL文件
             header("Location: web-admin-student-manage.php");
+        }
+    }
+    else if ($_POST['type'] == 'onTea') {
+        $filePath = 'upFile/exl/' . $_POST['file'];
+        $data = getExl($filePath);
+        foreach ($data as $row) {
+            $passwd = getRand();
+            if (!addUser($row['B'], $passwd, "onTea")) {
+                echo "add user error!";
+            }
+            if (!addOnTeaInfo($row)) {
+                echo "add student error!";
+            }
+            //记得删除临时EXL文件
+            header("Location: web-admin-OnTeacher-manage.php");
         }
     }
 }

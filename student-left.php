@@ -10,7 +10,6 @@
 						<li><a class="ajax-link" href="student-info.php"><span class="hidden-tablet">个人信息</span></a></li>
                         <li><a class="ajax-link" href="student-submit.php"><span class="hidden-tablet">提交论文/开题报告</span></a></li>
 						<li><a class="ajax-link" href="student-result.php"><span class="hidden-tablet">查看结果</span></a></li>
-                        <li><a class="ajax-link" href="student-passwd.php"><span class="hidden-tablet">修改密码</span></a></li>
 					</ul>
 				</div><!--/.well -->
 			</div><!--/span-->
