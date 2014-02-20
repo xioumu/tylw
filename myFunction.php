@@ -71,6 +71,15 @@ function getAllUser($uType) {
     }
     return $res;
 }
+//获取指定类型所有用户密码
+function getAllUserPasswd($uType) {
+    $res = array();
+    $result = mysql_query("SELECT * FROM user WHERE uType = '{$uType}' ");
+    while ($row = mysql_fetch_array($result)) {
+        array_push($res, $row);
+    }
+    return $res;
+}
 //获取学生所有信息
 function getStuInfo($user) {
     $res = array();

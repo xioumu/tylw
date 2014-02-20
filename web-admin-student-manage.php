@@ -40,7 +40,7 @@ include("config.php");
                         <h2>管理学生账号</h2>
                         <div class = "box-icon">
                             <a href = "web-admin-add-student.php" class = "btn btn-success">导入学生账户</a>
-                            <button type = "submit" class = "btn btn-primary left">导出学生账户密码</button>
+                            <a href = "leadOutPasswd.php?type=stu" class = "btn btn-primary left" target = "view_window">导出学生账户密码</a>
                             <button type = "submit" class = "btn btn-danger left">删除全部学生账户</button>
                         </div>
                     </div>

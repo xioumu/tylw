@@ -10,7 +10,7 @@ function getRand() {
     }
     return $res;
 }
-
+//添加学生描述
 function addStuInfo($row) {
     $typeId = getStuTypeId($row['F']);
     $nowJudgeYear = getJudgeYear();
