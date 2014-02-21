@@ -3,13 +3,7 @@
 include("config.php");
 include("myFunction.php");
 
-function getRand() {
-    $res = "";
-    for ($i = 0; $i < 8; $i++) {
-        $res .= rand(0, 9);
-    }
-    return $res;
-}
+
 //添加学生描述
 function addStuInfo($row) {
     $typeId = getStuTypeId($row['F']);

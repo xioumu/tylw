@@ -100,15 +100,17 @@ function getStuInfo($user) {
     if ($row = mysql_fetch_array($result)) {
         $res = $row;
     }
-    $res['type'] = getStuType($res['typeID']);
+    $typeInfo = getStuType($res['typeID']);
+    $res['type'] = $typeInfo['typeName'];
+    $res['degree'] = $typeInfo['degree'];
     return $res;
 }
-//得到学生的信息
+//得到学生的类型
 function getStuType($id) {
-    $res = "错误";
+    $res['typeName'] = "错误";
     $result = mysql_query("SELECT * FROM studenttype WHERE sid = '{$id}'");
     if ($row = mysql_fetch_array($result)) {
-        $res = $row['typeName'];
+        $res = $row;
     }
     return $res;
 }
@@ -175,7 +177,7 @@ function changeData($old){ //转换日期的格式
 function getOnTeaStatus($user) {
     return "还未评审完毕";
 }
-
+//获取校内专家信息
 function getOnTeaInfo($user) {
     $res = array();
     $status = getOnTeaStatus($user);
@@ -185,5 +187,34 @@ function getOnTeaInfo($user) {
     }
     $res['status'] = $status;
     return $res;
+}
+//生成随机密码
+function getRand() {
+    $res = "";
+    for ($i = 0; $i < 8; $i++) {
+        $res .= rand(0, 9);
+    }
+    return $res;
+}
+//得到所有未参加评审的学生的ID
+function getAllFreeUser($type) {
+    if ($type == 'stu') {
+        $res = array();
+        $que = mysql_query("SELECT studentID
+                            FROM student
+                            WHERE studentID NOT  IN (
+                                SELECT DISTINCT studentID
+                                FROM evaluating)
+                            Order By Rand()");
+        while($user = mysql_fetch_array($que)) {
+            array_push($res, $user['studentID']);
+        }
+        return $res;
+    }
+}
+//弹出信息，并跳转地址
+function goBack($info, $add) {
+    echo "<script>alert(\"{$info}\"); self.location='{$add}';</script>";
+    exit;
 }
 ?>
