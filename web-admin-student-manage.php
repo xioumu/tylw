@@ -277,7 +277,7 @@ include("config.php");
                     if (status == 'success') {
                         if (data == 'ok') {
                             $('#addUser-modal').modal('hide');
-                            $('.index').noty({"text": "成功修改信息", "layout": "topLeft", "type": "success"});
+                            $('.index').noty({"text": "成功修改信息,需刷新页面才能看见更新信息", "layout": "topLeft", "type": "success"});
                             page.modal('hide');
                         }
                         else {

@@ -31,7 +31,7 @@ include('header.php');
                         <a href = "web-admin-student-manage.php">网站管理员</a> <span class = "divider">/</span>
                     </li>
                     <li>
-                        <a href = "web-admin-student-manage.php">管理校内专家账户</a>
+                        <a href = "web-admin-OnTeacher-manage.php">管理校内专家账户</a>
                     </li>
                 </ul>
             </div>
@@ -174,6 +174,7 @@ include('header.php');
         page.find('#changeInfo-status').val("");
         page.find('#changeInfo-deadLine').val("");
     }
+    //变换MODAL页面
     function changeInfo(user) {
         clearPage($('#changeInfo-modal'));
         $.post("getInfo.PHP",
@@ -183,7 +184,7 @@ include('header.php');
             },
             function (data, status) {
                 if (status == 'success') {
-                    alert (data);
+                    var teaInfo = eval("(" + data + ")");
                     var page = $('#changeInfo-modal');
                     page.find('#changeInfo-name').val(teaInfo.tName);
                     page.find('#changeInfo-teacherID').val(teaInfo.teacherID);
@@ -207,23 +208,19 @@ include('header.php');
             $.post("changeInfo.php",
                 {
                     role: "web-admin",
-                    type: "stu",
-                    sName: page.find('#changeInfo-name').val(),
-                    studentID: page.find('#changeInfo-studentID').val(),
-                    grade: page.find('#changeInfo-grade').val(),
+                    type: "onTea",
+                    tName: page.find('#changeInfo-name').val(),
+                    teacherID: page.find('#changeInfo-teacherID').val(),
                     sex: page.find('#changeInfo-sex').val(),
-                    sType: page.find('#changeInfo-type').val(),
                     subject: page.find('#changeInfo-subject').val(),
-                    tutor: page.find('#changeInfo-tutor').val(),
-                    IDcard: page.find('#changeInfo-IDcard').val(),
-                    deadLine: page.find('#changeInfo-deadLine').val(),
-                    status: page.find('#changeInfo-status').val()
+                    research: page.find('#changeInfo-research').val(),
+                    deadLine: page.find('#changeInfo-deadLine').val()
                 },
                 function (data, status) {
                     if (status == 'success') {
                         if (data == 'ok') {
                             $('#addUser-modal').modal('hide');
-                            $('.index').noty({"text": "成功修改信息", "layout": "topLeft", "type": "success"});
+                            $('.index').noty({"text": "成功修改信息,需刷新页面才能看见更新信息", "layout": "topLeft", "type": "success"});
                             page.modal('hide');
                         }
                         else {
@@ -288,4 +285,4 @@ include('header.php');
     }
 </script>
 </body >
-</html >
+</html>

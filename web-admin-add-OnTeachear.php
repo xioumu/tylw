@@ -29,7 +29,7 @@ include("config.php");
             <div>
                 <ul class = "breadcrumb">
                     <li><a href = "web-admin-student-manage.php">网站管理员</a> <span class = "divider">/</span> </li>
-                    <li><a href = "web-admin-student-manage.php">管理校内专家账户</a><span class = "divider">/</span></li>
+                    <li><a href = "web-admin-OnTeacher-manage.php">管理校内专家账户</a><span class = "divider">/</span></li>
                     <li><a href = "web-admin-add-OnTeachear.php">导入校内专家账户</a></li>
                 </ul>
             </div>
