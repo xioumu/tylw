@@ -32,73 +32,99 @@
                     </li>
                 </ul>
             </div>
+            <?php
+            if (isset($_GET['status'])) {
+                if ($_GET['status'] == 'ture') {
+                    echo ' <script>
+                            $(\'.index\').noty({"text": "上传成功", "layout": "topLeft", "type": "success"});
+                            </script> ';
+                }
+                else if ($_GET['status'] == 'error4') {
+                    echo '<script>
+                           $(\'.index\').noty({"text": "未选择文件", "layout": "topLeft", "type": "error"}); </script>';
+                }
+            }
+            $self = $_SESSION['is_login'];
+            $info = getStuInfo($self);
+            ?>
             <!-- content starts -->
             <div class = "row-fluid sortable">
                 <div class = "box span12">
                     <div class = "box-header well" data-original-title>
-                        <h2>提交论文/开题报告</h2>
+                        <h2>提交开题报告</h2>
                     </div>
-                    <?php
-                    if (isset($_GET['status'])) {
-                        if ($_GET['status'] == 'ture') {
-                            echo ' <script>
-                            $(\'.index\').noty({"text": "上传成功", "layout": "topLeft", "type": "success"});
-                            </script> ';
-                        }
-                        else if ($_GET['status'] == 'error4') {
-                            echo '<script>
-                           $(\'.index\').noty({"text": "未选择文件", "layout": "topLeft", "type": "error"}); </script>';
-                        }
-                    }
-                    $self = $_SESSION['is_login'];
-                    $info = getStuInfo($self);
-                    ?>
+
                     <div class = "box-content form-horizontal">
-                        <fieldset>
-                            <div class = "control-group">
-                                <label class = "control-label">提交截止时间:</label>
-                                <div class = "controls">
-                                    <input class = "input-xlarge disabled" id = "name" type = "text"
-                                           value = "<?php echo $info['SdeadLine'] ?>" disabled = "">
+                        <form action = "upLoadPaper.php?type=report" method = "post" enctype = "multipart/form-data">
+                            <fieldset>
+                                <div class = "control-group">
+                                    <label class = "control-label">提交截止时间:</label>
+                                    <div class = "controls">
+                                        <input class = "input-xlarge disabled" type = "text"
+                                               value = "<?php echo $info['SdeadLine'] ?>" disabled = "">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class = "control-group">
-                                <form action = "upLoadPaper.php?type=report" method = "post"
-                                      enctype = "multipart/form-data">
+                                <div class = "control-group">
                                     <label class = "control-label" for = "report">提交开题报告:</label>
                                     <div class = "controls">
                                         <input class = "uniform_off" id = "report" type = "file" name = "paperFile">
-                                        <button type = "submit" class = "btn btn-success">上传开题报告</button>
                                     </div>
-                                </form>
-                            </div>
-                            <div class = "control-group">
-                                <form action = "upLoadPaper.php?type=paper" method = "post"
-                                      enctype = "multipart/form-data">
+                                </div>
+                                <div class = "form-actions">
+                                    <button type = "submit" class = "btn btn-success">上传开题报告</button>
+                                    <?php
+                                    if ($info['reportAdd'] != null) echo "<a type = \"submit\" class = \"btn btn-primary\" href=\"{$info['reportAdd']}\">下载最后提交的开题报告</a> ";
+                                    ?>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+                <!--/span-->
+            </div>
+            <div class = "row-fluid sortable">
+                <div class = "box span12">
+                    <div class = "box-header well" data-original-title>
+                        <h2>提交论文</h2>
+                    </div>
+
+                    <div class = "box-content form-horizontal">
+                        <form action = "upLoadPaper.php?type=paper" method = "post" enctype = "multipart/form-data">
+                            <fieldset>
+                                <div class = "control-group">
+                                    <label class = "control-label">提交截止时间:</label>
+                                    <div class = "controls">
+                                        <input class = "input-xlarge disabled" type = "text" value = "<?php echo $info['SdeadLine'] ?>" disabled = "">
+                                    </div>
+                                </div>
+                                <div class = "control-group">
                                     <label class = "control-label" for = "paper">提交论文:</label>
                                     <div class = "controls">
                                         <input class = "uniform_off" id = "paper" type = "file" name = "paperFile">
-                                        <?php
-                                        if ($info['reportAdd'] != null) {
-                                            echo '<button type = "submit" class = "btn btn-success" >上传论文</button >';
-                                        }
-                                        else {
-                                            echo
-                                            '<a href="#" class="btn btn-danger" data-rel="popover" data-content="需要先上传开题报告" disabled >上传论文</a>';
-                                        }
-                                        ?>
                                     </div>
-                                </form>
-                            </div>
-                            <div class = "form-actions">
-                                <?php
-                                    if ($info['reportAdd'] != null)  echo "<a type = \"submit\" class = \"btn btn-primary\" href=\"{$info['reportAdd']}\">下载最后提交的开题报告</a> ";
+                                </div>
+                                <div class="control-group">
+                                    <lable class = "control-label" for = "paperName">论文题目</lable>
+                                    <div class = "controls">
+                                        <input class = "input-xlarge" id = "paperName" type = "text" name = "paperName" value="<?php echo $info['paperName']?>">
+                                    </div>
+                                </div>
+                                <div class = "form-actions">
+                                    <?php
+                                    if ($info['reportAdd'] != null) {
+                                        echo '<button type = "submit" class = "btn btn-success" >上传论文</button > ';
+                                    }
+                                    else {
+                                        echo '<a href="#" class="btn btn-danger" data-rel="popover" data-content="需要先上传开题报告" disabled >上传论文</a> ';
+                                    }
                                     if ($info['paperAdd'] != null) echo "<a type = \"submit\" class = \"btn btn-primary\" href=\"{$info['paperAdd']}\">下载最后提交的论文</a>";
-                                 ?>
-                            </div>
-                        </fieldset>
+                                    ?>
+                                </div>
+                            </fieldset>
+                        </form>
                     </div>
                 </div>
+
                 <!--/span-->
 
             </div>

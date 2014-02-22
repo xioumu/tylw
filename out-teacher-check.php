@@ -9,7 +9,6 @@
     <?php include('script.php'); ?>
     <?php include('myFunction.php'); ?>
 </head>
-
 <body>
 <!-- topbar starts -->
 <?php include('header.php'); ?>
@@ -19,7 +18,6 @@
         <!-- left menu starts -->
         <?php include('out-teacher-left.php'); ?>
         <!-- left menu ends -->
-
         <div id = "content" class = "span10">
             <!-- content starts -->
             <div>
@@ -41,7 +39,7 @@
                     <div class = "box-header well" data-original-title>
                         <h2>查看论文</h2>
                         <div class = "box-icon">
-                            <h3>评审截止时间：<?php echo $info['TdeadLine'];?></h3>
+                            <h3>评审截止时间：<?php echo $info['TdeadLine']; ?></h3>
                         </div>
                     </div>
                     <div class = "box-content">
