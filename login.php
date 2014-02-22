@@ -22,6 +22,8 @@ if (isset($_POST['username']) or isset($_POST['passwd']) or isset($_POST['yzm'])
         if ($type === "stu") echo "<script>window.location.href='student-info.php';</script>";
         else if ($type === "sys") echo "<script>window.location.href='sys-admin-manage.php'</script>";
         else if ($type === "web") echo "<script>window.location.href='web-admin-student-manage.php';</script>";
+        else if ($type === "onTea") echo "<script>window.location.href='on-teacher-info.php';</script>";
+        else if ($type === "outTea") echo "<script>window.location.href='out-teacher-info.php';</script>";
     }
 }
 ?>

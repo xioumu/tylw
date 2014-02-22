@@ -2,14 +2,14 @@
 include('config.php');
 include('myFunction.php');
 function updataStuFile($user, $file, $type) {
+    $judgeYear = getJudgeYear();
     $fileType = substr(strrchr($file['name'],"."),1);
     $fileName = myEncode($user) . "." . $fileType;
-    $address = 'upFile/' . $type . "/" . $fileName;
+    $address = 'upFile/' . $type . "/" . $judgeYear . "/" . $fileName;
     //echo $address . "<br/>";
     $moveInfo = move_uploaded_file($file['tmp_name'], $address);
     $typeName = $type . "Add";
-    $judgeYear = getJudgeYear();
-    if (!mysql_query("UPDATE student SET {$typeName} = '{$address}' WHERE studentID = '{$user}' AND judgeDate = '{$judgeYear}'")) {
+    if (!mysql_query("UPDATE student SET {$typeName} = '{$address}' WHERE studentID = '{$user}'")) {
         echo "sql error!<br>";
         return false;
     }

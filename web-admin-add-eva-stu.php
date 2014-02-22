@@ -10,7 +10,6 @@ include("config.php");
     <?php include('css.php'); ?>
     <?php include('script.php'); ?>
     <?php include('myFunction.php'); ?>
-
 </head>
 
 <body class = "index">

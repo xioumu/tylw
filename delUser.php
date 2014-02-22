@@ -8,7 +8,6 @@ function delUser($user) {
     }
     else return false;
 }
-
 //删除学生信息
 function delStuInfo($user) {
     if (mysql_query("DELETE FROM student WHERE studentID = '{$user}'")) {
@@ -16,7 +15,6 @@ function delStuInfo($user) {
     }
     else return false;
 }
-
 //删除校内专家信息
 function delOnTeaInfo($user) {
     if (mysql_query("DELETE FROM teacheronside WHERE teacherID = '{$user}'")) {
@@ -24,7 +22,7 @@ function delOnTeaInfo($user) {
     }
     else return false;
 }
-
+//删除校内专家信息
 function delOutTeaInfo($user){
     if (mysql_query("DELETE FROM teacheroutside WHERE userID = '{$user}'")) {
         return true;
