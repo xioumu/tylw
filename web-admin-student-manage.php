@@ -91,7 +91,7 @@ include("config.php");
     <!--/fluid-row-->
 </div>
 <!-- modal-->
-<div class = "modal hide" id = "changeInfo-modal">
+<div class = " modal hide" id = "changeInfo-modal">
     <div class = "modal-header">
         <button type = "button" class = "close" data-dismiss = "modal">×</button>
         <h3>修改/查看学生信息</h3>

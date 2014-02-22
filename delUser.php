@@ -25,6 +25,13 @@ function delOnTeaInfo($user) {
     else return false;
 }
 
+function delOutTeaInfo($user){
+    if (mysql_query("DELETE FROM teacheroutside WHERE userID = '{$user}'")) {
+        return true;
+    }
+    else return false;
+}
+
 if (!isset($_POST['type'])) echo "no type!";
 else if ($_POST['type'] == 1) { //系统管理员删除网络管理员账号
     if (isset($_POST['user'])) {
@@ -35,18 +42,25 @@ else if ($_POST['type'] == 1) { //系统管理员删除网络管理员账号
     }
     else echo "post error!";
 }
-//网络管理员部分
-else if ($_POST['type'] == 'web-admin') {
+else if ($_POST['type'] == 'web-admin') { //网络管理员部分
     if (isset($_POST['user'])) {
         $user = $_POST['user'];
         $uType = getUserType($user);
         if ($uType == 'stu') {
-            if (!delStuInfo($user)) echo "delete student info error!";
+            if (!delEva($user, 'studentID')) echo 'delete evaluating error!';
+            else if (!delStuInfo($user)) echo "delete student info error!";
             else if (!delUser($user)) echo "delete user error!";
             else echo "ok";
         }
         else if ($uType == 'onTea') {
-            if (!delOnTeaInfo($user)) echo "delete onTeacher info error!";
+            if (!delEva($user, 'teacherID')) echo 'delete evaluating error!';
+            else if (!delOnTeaInfo($user)) echo "delete onTeacher info error!";
+            else if (!delUser($user)) echo "delete user error!";
+            else echo "ok";
+        }
+        else if ($uType == 'outTea') {
+            if (!delEva($user, 'teacherID')) echo 'delete evaluating error!';
+            else if (!delOutTeaInfo($user)) echo $user . "delete out teacher info error! <br/>";
             else if (!delUser($user)) echo "delete user error!";
             else echo "ok";
         }
@@ -56,6 +70,10 @@ else if ($_POST['type'] == 'web-admin') {
         $flag = true;
         $allStuUser = getAllUser('stu');
         foreach ($allStuUser as $user) {
+            if (!delEva($user, 'studentID')) {
+                echo 'delete evaluating error!';
+                $flag = false;
+            }
             if (!delStuInfo($user)) {
                 echo $user . "delete student info error! <br/>";
                 $flag = false;
@@ -73,8 +91,32 @@ else if ($_POST['type'] == 'web-admin') {
         $flag = true;
         $allOnTeaUser = getAllUser('onTea');
         foreach ($allOnTeaUser as $user) {
+            if (!delEva($user, 'teacherID')) {
+                echo 'delete evaluating error!';
+                $flag = false;
+            }
             if (!delOnTeaInfo($user)) {
                 echo $user . "delete on teacher info error! <br/>";
+                $flag = false;
+            }
+            else if (!delUser($user)) {
+                echo $user . "delete user error! <br/>";
+                $flag = false;
+            }
+        }
+        if ($flag) echo "ok";
+        else echo "error1";
+    }
+    else if (isset($_POST['object']) && $_POST['object'] == 'allOutTea') {
+        $flag = true;
+        $allOnTeaUser = getAllUser('outTea');
+        foreach ($allOnTeaUser as $user) {
+            if (!delEva($user, 'teacherID')) {
+                echo 'delete evaluating error!';
+                $flag = false;
+            }
+            else if (!delOutTeaInfo($user)) {
+                echo $user . "delete out teacher info error! <br/>";
                 $flag = false;
             }
             else if (!delUser($user)) {

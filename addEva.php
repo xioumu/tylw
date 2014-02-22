@@ -2,6 +2,15 @@
 include("config.php");
 include("myFunction.php");
 
+//添加校外专家账号信息
+function addOUtTeaUser($user) {
+    if (mysql_query("INSERT INTO teacheroutside (userID) VALUES ('{$user}')")) {
+        return true;
+    }
+    else return false;
+}
+
+//添加校外专家
 function addOutTea() {
     $que = mysql_query("SELECT lastOutTea FROM other");
     if ($res = mysql_fetch_array($que)) {
@@ -14,6 +23,7 @@ function addOutTea() {
     }
     $passwd = getRand();
     addUser($username, $passwd, 'outTea');
+    addOutTeaUser($username);
     return $username;
 }
 
@@ -56,7 +66,7 @@ if (isset($_GET['type']) && $_GET['type'] == 'mul') {
         for ($i = 0; $i < $sum; $i++) {
             addStuEva($allUser[$i]);
         }
-        goBack("成功分配评审学生", "web-admin-judge-manage.php");
+        goBack("成功分配评审学生", "web-admin-eva-manage.php");
     }
 }
 echo '</body></html>';

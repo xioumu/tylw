@@ -27,12 +27,9 @@ include("config.php");
             <!-- road -->
             <div>
                 <ul class = "breadcrumb">
-                    <li>
-                        <a href = "web-admin-student-manage.php">网站管理员</a> <span class = "divider">/</span>
-                    </li>
-                    <li>
-                        <a href = "web-admin-setEvalutingInfo.php">管理学生账号</a>
-                    </li>
+                    <li> <a href = "web-admin-student-manage.php">网站管理员</a> <span class = "divider">/</span> </li>
+                    <li> <a href = "web-admin-eva-manage.php">管理审评信息</a> <span class = "divider">/</span> </li>
+                    <li> <a href = "web-admin-eva-stu.php">选择指定学生参与审评</a> <span class = "divider">/</span> </li>
                 </ul>
             </div>
             <?php
@@ -45,7 +42,7 @@ include("config.php");
             <div class = "row-fluid sortable">
                 <div class = "box span12">
                     <div class = "box-header well" data-original-title>
-                        <h2>指定学生必须参与评测</h2>
+                        <h2>指定学生必须参与审评</h2>
                     </div>
                     <div class = "box-content">
                         <form class = "form-horizontal" action = "addEva.php?type=mul&needNum=<?php echo $_POST['needNum'] ?>" method="post">
@@ -60,7 +57,6 @@ include("config.php");
                                 <th>导师</th>
                                 </thead>
                                 <?php
-
                                 foreach ($allUser as $user) {
                                     $info = getStuInfo($user);
                                     echo "<tr id = \"{$info['studentID']}\">";

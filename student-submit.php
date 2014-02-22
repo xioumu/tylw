@@ -109,8 +109,6 @@
         <!--/#content.span10-->
     </div>
     <!--/fluid-row-->
-
-</div>
 </div>
 
 </div><!--/.fluid-container-->

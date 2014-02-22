@@ -173,14 +173,18 @@ function changeData($old){ //转换日期的格式
     $year = $res[2];
     return $year . "-" . $month . "-" . $day;
 }
-
-function getOnTeaStatus($user) {
+//获取评审状态
+function getEvaStatus($eid) {
+    return "还未评审";
+}
+//获取老师状态
+function getTeaStatus($user) {
     return "还未评审完毕";
 }
 //获取校内专家信息
 function getOnTeaInfo($user) {
     $res = array();
-    $status = getOnTeaStatus($user);
+    $status = getTeaStatus($user);
     $result = mysql_query("SELECT * FROM teacheronside WHERE teacherID = '{$user}'");
     if ($row = mysql_fetch_array($result)) {
         $res = $row;
@@ -216,5 +220,44 @@ function getAllFreeUser($type) {
 function goBack($info, $add) {
     echo "<script>alert(\"{$info}\"); self.location='{$add}';</script>";
     exit;
+}
+
+//获取全部审评ID
+function getAllEva() {
+    $res = array();
+    $result = mysql_query("SELECT * FROM evaluating");
+    while ($row = mysql_fetch_array($result)) {
+        array_push($res, $row['eid']);
+    }
+    return $res;
+}
+
+//获取指定审评信息
+function getEvaInfo($eid) {
+    $res = array();
+    $result = mysql_query("SELECT * FROM evaluating WHERE eid = '{$eid}'");
+    if ($row = mysql_fetch_array($result)) {
+        $res = $row;
+    }
+    $stuInfo = getStuInfo($res['studentID']);
+    $res['sName'] = $stuInfo['sName'];
+    $res['Ssubject'] = $stuInfo['subject'];
+    $res['Stype'] = $stuInfo['type'];
+    $tType = getUserType($res['teacherID']);
+    if ($tType == 'onTea') {
+        $teaInfo = getOnTeaInfo($res['teacherID']);
+        $res['tName'] = $teaInfo['tName'];
+    }
+    else $res['tName'] = '';
+    $res['status'] = getEvaStatus($eid);
+    return $res;
+}
+
+//删除审评
+function delEva($user, $type) {
+    if (mysql_query("DELETE FROM evaluating WHERE {$type} = '{$user}'")) {
+        return true;
+    }
+    else return false;
 }
 ?>

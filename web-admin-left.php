@@ -11,7 +11,7 @@
                         <li><a class="ajax-link" href="web-admin-student-manage.php"><span class="hidden-tablet">管理学生账号</span></a></li>
                         <li><a class="ajax-link" href="web-admin-OnTeacher-manage.php"><span class="hidden-tablet">管理校内专家账号</span></a></li>
                         <li><a class="ajax-link" href="web-admin-OutTeacher-manage.php"><span class="hidden-tablet">管理校外专家账号 </span></a></li>
-                        <li><a class="ajax-link" href="web-admin-judge-manage.php"><span class="hidden-tablet">管理当前评审信息</span></a></li>
+                        <li><a class="ajax-link" href="web-admin-eva-manage.php"><span class="hidden-tablet">管理当前评审信息</span></a></li>
                         <li><a class="ajax-link" href="web-admin-add-eva.php"><span class="hidden-tablet">添加参与评测的学生</span></a></li>
                         <li><a class="ajax-link" href="web-admin-deadline.php"><span class="hidden-tablet">设置截止日期</span></a></li>
                         <li><a class="ajax-link" href="web-admin-finish.php"><span class="hidden-tablet">结束评测并归档</span></a></li>

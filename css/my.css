@@ -13,10 +13,17 @@ top: 0;
     width: auto;
 }
 /*my css*/
+.evaModal {
+    width: 1000px;
+    top: 0;
+    margin: 70px 0 0 -500px;
+    /* height: 100 */
+}
+
 .mybox{
 	width: 800px;
 	/* height: 100 */
-}	
+}
 
 .mybox .title{
 	width: 130px
