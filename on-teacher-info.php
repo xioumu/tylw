@@ -21,7 +21,7 @@
         <!-- left menu ends -->
 
         <div id = "content" class = "span10">
-        <!--    road -->
+            <!--    road -->
             <div>
                 <ul class = "breadcrumb">
                     <li>
@@ -48,34 +48,37 @@
                                 <div class = "control-group">
                                     <label class = "control-label">姓名</label>
                                     <div class = "controls">
-                                        <input class = "input-xlarge disabled" id = "name" type = "text" value = "<?php echo $info['tName'];?>" disabled>
+                                        <input class = "input-xlarge disabled" id = "name" type = "text"
+                                               value = "<?php echo $info['tName']; ?>" disabled>
                                     </div>
                                 </div>
                                 <div class = "control-group">
                                     <label class = "control-label">工号</label>
                                     <div class = "controls">
-                                        <input class = "input-xlarge disabled"  type = "text"
-                                               value = "<?php echo $info['teacherID']?>" disabled = "">
+                                        <input class = "input-xlarge disabled" type = "text"
+                                               value = "<?php echo $info['teacherID'] ?>" disabled = "">
                                     </div>
                                 </div>
                                 <div class = "control-group">
-                                    <label class = "control-label" >性别</label>
+                                    <label class = "control-label">性别</label>
                                     <div class = "controls">
-                                        <input class = "input-xlarge disabled"  type = "text"
-                                               value = "<?php echo $info['sex']?>" disabled = "">
+                                        <input class = "input-xlarge disabled" type = "text"
+                                               value = "<?php echo $info['sex'] ?>" disabled = "">
                                     </div>
                                 </div>
                                 <div class = "control-group">
                                     <label class = "control-label" for = "subject">校内方向</label>
                                     <div class = "controls">
-                                        <input class = "input-xlarge" type = "text" id = "subject" disabled value = "<?php echo $info['subject'] ?>">
+                                        <input class = "input-xlarge" type = "text" id = "subject" disabled
+                                               value = "<?php echo $info['subject'] ?>">
                                     </div>
                                 </div>
 
                                 <div class = "control-group">
                                     <label class = "control-label" for = "research">研究方向</label>
                                     <div class = "controls">
-                                        <input class = "input-xlarge" type = "text" id = "research" disabled value = "<?php echo $info['research'] ?>">
+                                        <input class = "input-xlarge" type = "text" id = "research" disabled
+                                               value = "<?php echo $info['research'] ?>">
                                     </div>
                                 </div>
                             </fieldset>
