@@ -3,7 +3,14 @@ header("Content-Type: text/html;charset=utf-8");
 include("config.php");
 include("myFunction.php");
 //这里session是OnStu和OutStu都行
-
+if (!isset($_SESSION['is_login'])) {
+    errorUser();
+}
+$self = $_SESSION['is_login'];
+$utype = getUserType($self);
+if ($utype != "onTea" && $utype != "outTea") {
+    errorUser();
+}
 
 $haveAll = true;
 for ($i = 1; $i <=11; $i++) {
@@ -30,5 +37,7 @@ for ($i = 1; $i <= 11; $i++){
 }
 updateEvaInfo($eid, 'time', changeData($_POST['time']));
 updateEvaInfo($eid, 'summary', changeData($_POST['summary']));
-goBack("审评成功", 'on-teacher-check.php');
+
+if ($utype == 'onTea') goBack("审评成功", 'on-teacher-check.php');
+else if ($utype == 'outTea') goBack("审评成功", 'out-teacher-check.php');
 ?>

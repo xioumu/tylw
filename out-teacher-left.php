@@ -8,7 +8,6 @@
 					<ul class="nav nav-tabs nav-stacked main-menu">
 						<li class="nav-header hidden-tablet">菜单</li>
                         <li><a class="ajax-link" href="out-teacher-check.php"><span class="hidden-tablet">查看论文</span></a></li>
-                        <li><a class="ajax-link" href="out-teacher-passwd.php"><span class="hidden-tablet">修改密码</span></a></li>
 					</ul>
 				</div><!--/.well -->
 			</div><!--/span-->

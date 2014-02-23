@@ -224,7 +224,17 @@ function getTeaStatus($user) {
     }
     if (!$flag)  return "还未评审完毕";
     else return "评审完毕";
-
+}
+//获取校外专家信息
+function getOutTeaInfo($user) {
+    $res = array();
+    $status = getTeaStatus($user);
+    $result = mysql_query("SELECT * FROM teacheroutside WHERE userID = '{$user}'");
+    if ($row = mysql_fetch_array($result)) {
+        $res = $row;
+    }
+    $res['status'] = $status;
+    return $res;
 }
 //获取校内专家信息
 function getOnTeaInfo($user) {
@@ -329,5 +339,19 @@ function updateEvaInfo($eid, $lineName, $val) {
         return true;
     }
     else return false;
+}
+
+//判断是否超过期限，true=超过
+function overDeadline($time) {
+    $time .= "23:59:59";
+    if (strtotime($time) < strtotime("now")) {
+        return true;
+    }
+    else return false;
+}
+
+function errorUser() {
+    echo "<script>alert(\"权限不足\"); self.location='login.php'';</script>";
+    exit;
 }
 ?>

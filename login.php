@@ -23,7 +23,7 @@ if (isset($_POST['username']) or isset($_POST['passwd']) or isset($_POST['yzm'])
         else if ($type === "sys") echo "<script>window.location.href='sys-admin-manage.php'</script>";
         else if ($type === "web") echo "<script>window.location.href='web-admin-student-manage.php';</script>";
         else if ($type === "onTea") echo "<script>window.location.href='on-teacher-info.php';</script>";
-        else if ($type === "outTea") echo "<script>window.location.href='out-teacher-info.php';</script>";
+        else if ($type === "outTea") echo "<script>window.location.href='out-teacher-check.php';</script>";
     }
 }
 ?>
@@ -78,9 +78,6 @@ if (isset($_POST['username']) or isset($_POST['passwd']) or isset($_POST['yzm'])
                         <p class="center span5">
                             <button type="submit" class="btn btn-primary">登陆</button>
                         </p>
-                        <div class="input-prepend">
-                            <label class="remember" for="remember"><input type="checkbox" id="remember"/>记住密码</label>
-                        </div>
                         <?php
                         if (isset($rep_note)) {
                             echo '<div class="alert alert-error">' . $rep_note . '</div>';

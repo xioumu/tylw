@@ -182,14 +182,14 @@ include("config.php");
                 <div class = "control-group">
                     <label class = "control-label" for = "changeInfo-paper">论文</label>
                     <div class = "controls">
-                        <a href = "#" target = "_blank" id = "changeInfo-paper"
+                        <a href = "" target = "_blank" id = "changeInfo-paper"
                            class = "btn btn-success btn-small">还未上传</a>
                     </div>
                 </div>
                 <div class = "control-group">
                     <label class = "control-label" for = "changeInfo-report">开题报告</label>
                     <div class = "controls">
-                        <a href = "#" target = "_blank" id = "changeInfo-report"
+                        <a href = "" target = "_blank" id = "changeInfo-report"
                            class = "btn btn-success btn-small">还未上传</a>
                     </div>
                 </div>
@@ -210,7 +210,7 @@ include("config.php");
             btn.text("点击下载");
         }
         else {
-            btn.attr("href", "#");
+            btn.attr("href", "");
             btn.text("还未上传");
         }
     }

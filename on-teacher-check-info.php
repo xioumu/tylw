@@ -25,19 +25,10 @@
     <ul class = "breadcrumb">
         <li><a href = "on-teacher-info.php">校内专家</a> <span class = "divider">/</span></li>
         <li><a href = "on-teacher-check.php">查看个人信息</a><span class = "divider">/</span></li>
-        <li><a href = "on-teacher-check.php">审评论文</a>
+        <li><a href = "on-teacher-check-info.php">审评论文</a>
     </ul>
 </div>
 <?php
-//判断是否超过期限，true=超过
-function overDeadline($time) {
-    $time .= "23:59:59";
-    if (strtotime($time) < strtotime("now")) {
-        return true;
-    }
-    else return false;
-}
-
 if (!isset($_GET['id'])) {
     exit;
 }
