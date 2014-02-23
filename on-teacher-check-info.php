@@ -29,22 +29,35 @@
     </ul>
 </div>
 <?php
+//判断是否超过期限，true=超过
+function overDeadline($time) {
+    $time .= "23:59:59";
+    if (strtotime($time) < strtotime("now")) {
+        return true;
+    }
+    else return false;
+}
+
 if (!isset($_GET['id'])) {
-    //exit; //记得加上
+    exit;
 }
 $self = $_SESSION['is_login'];
 $eid = $_GET['id'];
 $evaInfo = getEvaInfo($eid);
 $stuInfo = getStuInfo($evaInfo['studentID']);
+$teaInfo = getOnTeaInfo($self);
+if (overDeadline($teaInfo['TdeadLine'])) {
+    goHis("已经超过截止日期");
+}
 ?>
 <!-- content starts -->
 <div class = "row-fluid sortable">
 <div class = "box span12">
 <div class = "box-header well" data-original-title>
-    <h2>评审论文</h2>
+    <h2>评审论文</h2><h3>(所有表格都必须填写或选择，否则将提交失败)</h3>
 </div>
 <div class = "box-content">
-<form class = "form-horizontal" action = "submitEvaInfo.php?<?php echo $eid; ?>" method = "post">
+<form class = "form-horizontal" action = "submitEvaInfo.php?id=<?php echo $eid; ?>" method = "post">
 <table class = "table table-bordered">
 <tr>
     <th class = "boxContent title" colspan = "1">论文编号</th>

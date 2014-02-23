@@ -93,6 +93,25 @@ function getAllUserPasswd($uType) {
     }
     return $res;
 }
+//获取学生状态
+function getStuStatus($user) {
+    $cnt = 0;
+    $result = mysql_query("SELECT * FROM student WHERE studentID = '{$user}'");
+    if ($row = mysql_fetch_array($result)) {
+        if ($row['paperAdd'] == null) return "未上传论文";
+    }
+    $allEva = getAllUserEva($user, "studentID");
+    if (count($allEva) == 0) return "未参与审评";
+    else {
+        foreach($allEva as $evaID) {
+            $evaStatus = getEvaStatusID($evaID);
+            if ($evaStatus == 3) return "正在评审";
+            else if ($evaStatus == 1) $cnt++;
+        }
+        if ($cnt >= 2) return "通过评审";
+        else return "未通过审评";
+    }
+}
 //获取学生所有信息
 function getStuInfo($user) {
     $res = array();
@@ -103,6 +122,7 @@ function getStuInfo($user) {
     $typeInfo = getStuType($res['typeID']);
     $res['type'] = $typeInfo['typeName'];
     $res['degree'] = $typeInfo['degree'];
+    $res['status'] = getStuStatus($user);
     return $res;
 }
 //得到学生的类型
@@ -175,11 +195,36 @@ function changeData($old){ //转换日期的格式
 }
 //获取评审状态
 function getEvaStatus($eid) {
-    return "还未评审";
+    $id = getEvaStatusID($eid);
+    if ($id == 1) return "通过审评";
+    else if ($id == 2) return "未通过审评";
+    else return "还未审评";
+}
+//获取审评状态ID
+function getEvaStatusID($eid) {
+    $info = array();
+    $result = mysql_query("SELECT * FROM evaluating WHERE eid = '{$eid}'");
+    if ($row = mysql_fetch_array($result)) {
+        $info = $row;
+    }
+    if ($info['c10'] == null) return 3; //未审评
+    else if ($info['c10'] <= 2) return 1; //通过
+    else return 2; //未通过
 }
 //获取老师状态
 function getTeaStatus($user) {
-    return "还未评审完毕";
+    $allEva = getAllUserEva($user, "teacherID");
+    $flag = true;
+    foreach ($allEva as $evaID) {
+        $status = getEvaStatusID($evaID);
+        if ($status == 3) {
+            $flag = false;
+            break;
+        }
+    }
+    if (!$flag)  return "还未评审完毕";
+    else return "评审完毕";
+
 }
 //获取校内专家信息
 function getOnTeaInfo($user) {
@@ -221,7 +266,6 @@ function goBack($info, $add) {
     echo "<script>alert(\"{$info}\"); self.location='{$add}';</script>";
     exit;
 }
-
 //获取全部审评ID
 function getAllEva() {
     $res = array();
@@ -256,6 +300,32 @@ function getEvaInfo($eid) {
 //删除审评
 function delEva($user, $type) {
     if (mysql_query("DELETE FROM evaluating WHERE {$type} = '{$user}'")) {
+        return true;
+    }
+    else return false;
+}
+//通过老师或学生ID获取所有审评
+function getAllUserEva($user, $type) {
+    $res = array();
+    $que = mysql_query("SELECT * FROM evaluating WHERE {$type} = '{$user}'");
+    while ($row = mysql_fetch_array($que)) {
+        array_push($res, $row['eid']);
+    }
+    return $res;
+}
+
+function getLabel($info, $type) {
+    return "<td><span class = \"label label-{$type}\">{$info}</span></td>";
+}
+
+//弹出信息返回上一层
+function goHis($info) {
+    echo "<script>alert(\"{$info}\"); history.go(-1);</script>";
+    exit;
+}
+//更新审批信息
+function updateEvaInfo($eid, $lineName, $val) {
+    if  (mysql_query("UPDATE evaluating SET {$lineName} = '{$val}' WHERE eid = '{$eid}'")) {
         return true;
     }
     else return false;

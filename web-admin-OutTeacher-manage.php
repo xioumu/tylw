@@ -59,7 +59,9 @@ include('header.php');
                                     echo "<tr id = \"{$user['user']}\">";
                                     echo "<td>" . $user['user'] . "</td>";
                                     echo "<td>" . $user['passwd'] . "</td>";
-                                    echo '<td><span class = "label label-important">'. $status . '</span></td>';
+                                    $labelType = "success";
+                                    if ($status == "还未评审完毕") $labelType = "important";
+                                    echo getLabel($status, $labelType);
                                     echo '
                                     <td>
                                         <a href = "#" class = "btn btn-info btn-danger" onclick="delUser(\'' . $user['user'] . '\')">删除</a>

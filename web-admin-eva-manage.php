@@ -30,7 +30,7 @@ include("config.php");
                         <a href = "web-admin-student-manage.php">网站管理员</a> <span class = "divider">/</span>
                     </li>
                     <li>
-                        <a href = "web-admin-admin-eva-manage.php">管理审评信息</a>
+                        <a href = "web-admin-eva-manage.php">管理审评信息</a>
                     </li>
                 </ul>
             </div>
@@ -67,7 +67,9 @@ include("config.php");
                                     echo "<td>" . $info['Stype'] . "</td>";
                                     echo "<td>" . $info['teacherID'] . "</td>";
                                     echo "<td>" . $info['tName'] . "</td>";
-                                    echo '<td><span class = "label label-important">' . $info['status'] . '</span></td>';
+                                    $labelType = "success";
+                                    if ($info['status'] == "还未审评") $labelType = "important";
+                                    echo getLabel($info['status'], $labelType);
                                     echo '
                                     <td>
                                         <a href = "web-admin-eva-changeInfo.php?id='. $eid .'" class = "btn btn-info">修改</a>

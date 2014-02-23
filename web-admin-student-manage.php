@@ -58,6 +58,7 @@ include("config.php");
                                 <th>操作</th>
                                 </thead>
                                 <?php
+
                                 $allStuUser = getAllUser("stu");
                                 foreach ($allStuUser as $user) {
                                     $info = getStuInfo($user);
@@ -68,7 +69,9 @@ include("config.php");
                                     echo "<td>" . $info['type'] . "</td>";
                                     echo "<td>" . $info['subject'] . "</td>";
                                     echo "<td>" . $info['SdeadLine'] . "</td>";
-                                    echo '<td><span class = "label label-important">' . $info['status'] . '</span></td>';
+                                    $labelType = "success";
+                                    if ($info['status'] == "未上传论文") $labelType = "important";
+                                    echo getLabel($info['status'], $labelType);
                                     echo '
                                     <td>
                                         <a href = "#changeInfo-modal" class = "btn btn-info btn-setting" data-toggle = "modal" onclick="changeInfo(\'' . $user . '\')">查看/修改信息</a>
@@ -179,14 +182,14 @@ include("config.php");
                 <div class = "control-group">
                     <label class = "control-label" for = "changeInfo-paper">论文</label>
                     <div class = "controls">
-                        <a href = "#" target = "view_window" id = "changeInfo-paper"
+                        <a href = "#" target = "_blank" id = "changeInfo-paper"
                            class = "btn btn-success btn-small">还未上传</a>
                     </div>
                 </div>
                 <div class = "control-group">
                     <label class = "control-label" for = "changeInfo-report">开题报告</label>
                     <div class = "controls">
-                        <a href = "#" target = "view_window" id = "changeInfo-report"
+                        <a href = "#" target = "_blank" id = "changeInfo-report"
                            class = "btn btn-success btn-small">还未上传</a>
                     </div>
                 </div>

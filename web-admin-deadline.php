@@ -21,7 +21,7 @@
         <!-- left menu ends -->
         <div id = "content" class = "span10">
             <?php
-            if (isset($_POST['studentDate'])) {
+            if (isset($_POST['studentDate']) && $_POST['studentDate'] != "") {
                 $deadLine = changeData($_POST['studentDate']);
                 if (!mysql_query("UPDATE student SET SdeadLine = '{$deadLine}'")) {
                     echo ' <script>$(\'.index\').noty({"text": "设置学生截止日期错误", "layout": "topLeft", "type": "error"});</script>';
@@ -30,7 +30,7 @@
                     echo '<script>$(\'.index\').noty({"text": "设置学生截止日期成功", "layout": "topLeft", "type": "success"});</script>';
                 }
             }
-            if (isset($_POST['teacherDate'])) {
+            if (isset($_POST['teacherDate']) && $_POST['teacherDate'] != ""){
                 $deadLine = changeData($_POST['teacherDate']);
                 if (!mysql_query("UPDATE teacheronside SET TdeadLine = '{$deadLine}'")) {
                     echo ' <script>$(\'.index\').noty({"text": "设置校内专家截止日期错误", "layout": "topLeft", "type": "error"});</script>';

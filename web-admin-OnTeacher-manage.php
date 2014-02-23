@@ -73,7 +73,9 @@ include('header.php');
                                     echo "<td>" . $info['subject'] . "</td>";
                                     echo "<td>" . $info['research'] . "</td>";
                                     echo "<td>" . $info['TdeadLine'] . "</td>";
-                                    echo '<td><span class = "label label-important">' . $info['status'] . '</span></td>';
+                                    $labelType = "success";
+                                    if ($info['status'] == "还未评审完毕") $labelType = "important";
+                                    echo getLabel($info['status'], $labelType);
                                     echo '
                                     <td>
                                         <a href = "#changeInfo-modal" class = "btn btn-info btn-setting" data-toggle = "modal" onclick="changeInfo(\'' . $user . '\')">查看/修改信息</a>
