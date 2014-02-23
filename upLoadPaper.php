@@ -1,10 +1,7 @@
 <?php
 include('config.php');
 include('myFunction.php');
-function errorUser() {
-    echo "error user!";
-    exit;
-}
+
 function getOtherInfo() {
     $res = array();
     $que = mysql_query("SELECT * FROM other");

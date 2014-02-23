@@ -12,7 +12,7 @@ include("config.php");
     <?php include('myFunction.php'); ?>
 </head>
 
-<body class="info">
+<body class="index">
 <!-- topbar starts -->
 <?php include('header.php'); ?>
 <!-- topbar ends -->
