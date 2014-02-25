@@ -1,15 +1,12 @@
 <?php
-//SQL注入未防护
 include("config.php");
 include("myFunction.php");
-
-
+judgeUser(array('web'));
 //添加学生描述
 function addStuInfo($row) {
     $typeId = getStuTypeId($row['F']);
-    $nowJudgeYear = getJudgeYear();
-    if (mysql_query("INSERT INTO student (grade, studentID, sName, sex, subject, typeID, IDcard,tutor, judgeDate, status)
-                      VALUES ('{$row['A']}', '{$row['B']}', '{$row['C']}', '{$row['D']}', '{$row['E']}', '{$typeId}', '{$row['G']}','{$row['H']}', '{$nowJudgeYear}', '未提交论文')")
+    if (mysql_query("INSERT INTO student (grade, studentID, sName, sex, subject, typeID, IDcard,tutor)
+                      VALUES ('{$row['A']}', '{$row['B']}', '{$row['C']}', '{$row['D']}', '{$row['E']}', '{$typeId}', '{$row['G']}','{$row['H']}')")
     ) {
         return true;
     }
@@ -38,8 +35,9 @@ if (isset($_POST['type']) && isset($_POST['file'])) {
             if (!addStuInfo($row)) {
                 echo "add student error!";
             }
+            unlink($filePath);
             //记得删除临时EXL文件
-            echo "<script>alert('导入成功!'); self.location='web-admin-OnTeacher-manage.php';</script>";
+            echo "<script>alert('导入成功!'); self.location='web-admin-student-manage.php';</script>";
         }
     }
     else if ($_POST['type'] == 'onTea') {
@@ -54,6 +52,7 @@ if (isset($_POST['type']) && isset($_POST['file'])) {
                 echo "add OnTeacher error!";
             }
         }
+        unlink($filePath);
         //记得删除临时EXL文件
         echo "<script>alert('导入成功!'); self.location='web-admin-OnTeacher-manage.php';</script>";
     }

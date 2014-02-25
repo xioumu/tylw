@@ -1,6 +1,4 @@
-<?php 
-    header("Content-Type: text/html;charset=utf-8");
-?>
+<?php judgeUser(array('sec')); ?>
 <html>
     <body>
         	<!-- left menu starts -->

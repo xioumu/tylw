@@ -292,6 +292,9 @@ if (overDeadline($teaInfo['TdeadLine'])) {
                 <label class = "radio">
                     <input type = "radio" name = "C11" id = "C" value = "3">合格
                 </label>
+                <label class = "radio">
+                    <input type = "radio" name = "C11" id = "D" value = "4">不合格
+                </label>
             </div>
         </div>
     </th>

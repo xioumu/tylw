@@ -1,6 +1,4 @@
-<?php
-
-?>
+<?php judgeUser(array('onTea')); ?>
 <html>
     <body>
         	<!-- left menu starts -->

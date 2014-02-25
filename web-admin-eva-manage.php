@@ -39,8 +39,8 @@ include("config.php");
                     <div class = "box-header well" data-original-title>
                         <h2>管理学生账号</h2>
                         <div class = "box-icon">
-                            <button type = "submit" class = "btn btn-danger left" onclick = "delAllEva()">删除全部评审信息
-                            </button>
+                            <a href = "web-admin-add-one-eva.php" class = "btn btn-success">添加审评</a>
+                            <button type = "submit" class = "btn btn-danger left" onclick = "delAllEva()">删除全部审评信息 </button>
                         </div>
                     </div>
                     <div class = "box-content">

@@ -1,4 +1,6 @@
 <?php
+filter_input_array(INPUT_POST, FILTER_SANITIZE_SPECIAL_CHARS);
+filter_input_array(INPUT_GET, FILTER_SANITIZE_SPECIAL_CHARS);
 function loginCheck($username, $passwd) {
     $result = mysql_query("SELECT * FROM user WHERE user = '{$username}' ");
     if ($row = mysql_fetch_array($result)) {
@@ -9,6 +11,7 @@ function loginCheck($username, $passwd) {
     }
     else return false;
 }
+
 //根据名字得到学生类型的ID
 function getStuTypeId($type) {
     str_replace($type, ' ', '');
@@ -20,6 +23,7 @@ function getStuTypeId($type) {
     else echo "get TypeId error!<br/>";
     return $res;
 }
+
 //得到用户的类型名
 function getUserType($username) {
     $result = mysql_query("SELECT * FROM user WHERE user = '{$username}' ");
@@ -28,14 +32,17 @@ function getUserType($username) {
     }
     else  echo "错误的用户名";
 }
+
 //序列化数组，便于传输
-function mySerialize( $obj ) {
+function mySerialize($obj) {
     return base64_encode(gzcompress(serialize($obj)));
 }
+
 //反序列化
 function myUnserialize($txt) {
     return unserialize(gzuncompress(base64_decode($txt)));
 }
+
 //上传EXL文件，返回文件名
 function uploadExl($tmpFilePath) {
     $filePath = 'upFile/exl/';
@@ -49,6 +56,7 @@ function uploadExl($tmpFilePath) {
     $res['path'] = $uploadfile;
     return $res;
 }
+
 //获取EXL信息
 function getExl($filePath) {
     $res = array();
@@ -68,6 +76,7 @@ function getExl($filePath) {
     }
     return $res;
 }
+
 //添加用户账户密码
 function addUser($name, $passwd, $type) {
     if (mysql_query("INSERT INTO user (user, passwd, uType) VALUES ('{$name}', '{$passwd}', '{$type}')")) {
@@ -75,6 +84,7 @@ function addUser($name, $passwd, $type) {
     }
     else return false;
 }
+
 //获取指定类型所有用户
 function getAllUser($uType) {
     $res = array();
@@ -84,6 +94,7 @@ function getAllUser($uType) {
     }
     return $res;
 }
+
 //获取指定类型所有用户密码
 function getAllUserPasswd($uType) {
     $res = array();
@@ -93,17 +104,27 @@ function getAllUserPasswd($uType) {
     }
     return $res;
 }
+
 //获取学生状态
 function getStuStatus($user) {
+    $info = array();
     $cnt = 0;
     $result = mysql_query("SELECT * FROM student WHERE studentID = '{$user}'");
+    $otherInfo = getOtherInfo();
     if ($row = mysql_fetch_array($result)) {
+        $info = $row;
         if ($row['paperAdd'] == null) return "未上传论文";
     }
+    if ($info['repeatRate'] == "") return "未填写论文重复率";
+    $stuType = getStuType($user);
+    if ($stuType == 'mas') $rateType = 'masRepeatRate';
+    else $rateType = 'docRepeatRate';
+    if ($info['repeatRate'] == "") return "未填写论文重复率";
+    else if ($info['repeatRate'] > $otherInfo[$rateType]) return "论文重复率超过限制";
     $allEva = getAllUserEva($user, "studentID");
     if (count($allEva) == 0) return "未参与审评";
     else {
-        foreach($allEva as $evaID) {
+        foreach ($allEva as $evaID) {
             $evaStatus = getEvaStatusID($evaID);
             if ($evaStatus == 3) return "正在评审";
             else if ($evaStatus == 1) $cnt++;
@@ -112,6 +133,7 @@ function getStuStatus($user) {
         else return "未通过审评";
     }
 }
+
 //获取学生所有信息
 function getStuInfo($user) {
     $res = array();
@@ -125,6 +147,7 @@ function getStuInfo($user) {
     $res['status'] = getStuStatus($user);
     return $res;
 }
+
 //得到学生的类型
 function getStuType($id) {
     $res['typeName'] = "错误";
@@ -149,10 +172,11 @@ function myEncode($string = '', $skey = 'whtylw') {
     $strArr = str_split(base64_encode($string));
     $strCount = count($strArr);
     foreach ($skey as $key => $value) {
-        $key < $strCount && $strArr[$key].=$value;
+        $key < $strCount && $strArr[$key] .= $value;
     }
     return str_replace('=', 'O0O0O', join('', $strArr));
 }
+
 /**
  * 简单对称加密算法之解密
  * @param String $string 需要解密的字串
@@ -182,7 +206,7 @@ function getJudgeYear() { //获取当前学年
     return $res;
 }
 
-function changeData($old){ //转换日期的格式
+function changeData($old) { //转换日期的格式
     if ($old == null) {
         return 'null';
     }
@@ -193,6 +217,7 @@ function changeData($old){ //转换日期的格式
     $year = $res[2];
     return $year . "-" . $month . "-" . $day;
 }
+
 //获取评审状态
 function getEvaStatus($eid) {
     $id = getEvaStatusID($eid);
@@ -200,6 +225,7 @@ function getEvaStatus($eid) {
     else if ($id == 2) return "未通过审评";
     else return "还未审评";
 }
+
 //获取审评状态ID
 function getEvaStatusID($eid) {
     $info = array();
@@ -211,6 +237,7 @@ function getEvaStatusID($eid) {
     else if ($info['c10'] <= 2) return 1; //通过
     else return 2; //未通过
 }
+
 //获取老师状态
 function getTeaStatus($user) {
     $allEva = getAllUserEva($user, "teacherID");
@@ -222,9 +249,10 @@ function getTeaStatus($user) {
             break;
         }
     }
-    if (!$flag)  return "还未评审完毕";
+    if (!$flag) return "还未评审完毕";
     else return "评审完毕";
 }
+
 //获取校外专家信息
 function getOutTeaInfo($user) {
     $res = array();
@@ -236,6 +264,7 @@ function getOutTeaInfo($user) {
     $res['status'] = $status;
     return $res;
 }
+
 //获取校内专家信息
 function getOnTeaInfo($user) {
     $res = array();
@@ -247,6 +276,7 @@ function getOnTeaInfo($user) {
     $res['status'] = $status;
     return $res;
 }
+
 //生成随机密码
 function getRand() {
     $res = "";
@@ -255,6 +285,7 @@ function getRand() {
     }
     return $res;
 }
+
 //得到所有未参加评审的学生的ID
 function getAllFreeUser($type) {
     if ($type == 'stu') {
@@ -265,17 +296,19 @@ function getAllFreeUser($type) {
                                 SELECT DISTINCT studentID
                                 FROM evaluating)
                             Order By Rand()");
-        while($user = mysql_fetch_array($que)) {
+        while ($user = mysql_fetch_array($que)) {
             array_push($res, $user['studentID']);
         }
         return $res;
     }
 }
+
 //弹出信息，并跳转地址
 function goBack($info, $add) {
     echo "<script>alert(\"{$info}\"); self.location='{$add}';</script>";
     exit;
 }
+
 //获取全部审评ID
 function getAllEva() {
     $res = array();
@@ -314,6 +347,7 @@ function delEva($user, $type) {
     }
     else return false;
 }
+
 //通过老师或学生ID获取所有审评
 function getAllUserEva($user, $type) {
     $res = array();
@@ -324,6 +358,7 @@ function getAllUserEva($user, $type) {
     return $res;
 }
 
+//输出状态
 function getLabel($info, $type) {
     return "<td><span class = \"label label-{$type}\">{$info}</span></td>";
 }
@@ -333,9 +368,10 @@ function goHis($info) {
     echo "<script>alert(\"{$info}\"); history.go(-1);</script>";
     exit;
 }
+
 //更新审批信息
 function updateEvaInfo($eid, $lineName, $val) {
-    if  (mysql_query("UPDATE evaluating SET {$lineName} = '{$val}' WHERE eid = '{$eid}'")) {
+    if (mysql_query("UPDATE evaluating SET {$lineName} = '{$val}' WHERE eid = '{$eid}'")) {
         return true;
     }
     else return false;
@@ -350,8 +386,117 @@ function overDeadline($time) {
     else return false;
 }
 
+//遇到错误用户，跳转
 function errorUser() {
-    echo "<script>alert(\"权限不足\"); self.location='login.php'';</script>";
+    echo "<script>alert(\"权限不足\"); self.location='login.php';</script>";
     exit;
+}
+
+//得到other表所有信息
+function getOtherInfo() {
+    $res = array();
+    $que = mysql_query("SELECT * FROM other");
+    if ($row = mysql_fetch_array($que)) {
+        $res = $row;
+    }
+    return $res;
+}
+
+//删除全部学生
+function delAllStu() {
+    $flag = true;
+    $allStuUser = getAllUser('stu');
+    foreach ($allStuUser as $user) {
+        if (!delEva($user, 'studentID')) {
+            echo 'delete evaluating error!';
+            $flag = false;
+        }
+        if (!delStuInfo($user)) {
+            echo $user . "delete student info error! <br/>";
+            $flag = false;
+        }
+        else if (!delUser($user)) {
+            echo $user . "delete user error! <br/>";
+            $flag = false;
+        }
+    }
+    return $flag;
+}
+
+//删除全部审评
+function delAllEva() {
+    $allEva = getAllEva();
+    foreach ($allEva as $eid) {
+        if (!delEva($eid, 'eid')) {
+            echo "delete evaluating error!";
+            return false;
+        }
+    }
+    return true;
+}
+
+//删除用户
+function delUser($user) {
+    if (mysql_query("DELETE FROM user WHERE user = '{$user}'")) {
+        return true;
+    }
+    else return false;
+}
+
+//删除学生信息
+function delStuInfo($user) {
+    if (mysql_query("DELETE FROM student WHERE studentID = '{$user}'")) {
+        return true;
+    }
+    else return false;
+}
+
+//删除校内专家信息
+function delOnTeaInfo($user) {
+    if (mysql_query("DELETE FROM teacheronside WHERE teacherID = '{$user}'")) {
+        return true;
+    }
+    else return false;
+}
+
+//删除校内专家信息
+function delOutTeaInfo($user) {
+    if (mysql_query("DELETE FROM teacheroutside WHERE userID = '{$user}'")) {
+        return true;
+    }
+    else return false;
+}
+
+//跳转页面
+function jumpTo($url, $flag = true) {
+    echo "<script>alert(\"权限不足.\"); self.location='{$url}';</script>";
+    if ($flag) exit;
+}
+//判断非法用户
+function judgeUser($allow) {
+    $flag = false;
+    if (isset($_SESSION['is_login'])) {
+        $uType = getUserType($_SESSION['is_login']);
+        foreach ($allow as $allowType) {
+            if ($uType == $allowType) {
+                $flag = true;
+            }
+        }
+    }
+    if (!$flag) jumpTo("testLogin.php");
+}
+//过滤
+function filter(&$url) {
+    $url = filter_var($url,FILTER_SANITIZE_SPECIAL_CHARS);
+}
+
+//获取所有类别
+function getAllStuType() {
+    $res = array();
+    $result = mysql_query("SELECT * FROM studenttype");
+    while ($row = mysql_fetch_array($result)) {
+        array_push($res, $row);
+    }
+    return $res;
 }
 ?>

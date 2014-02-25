@@ -10,6 +10,7 @@ include("config.php");
     <?php include('css.php'); ?>
     <?php include('script.php'); ?>
     <?php include('myFunction.php'); ?>
+    <?php judgeUser(array("stu")); ?>
 </head>
 
 <body class="index">
@@ -102,22 +103,13 @@ include("config.php");
                                                value = "<?php echo $info['IDcard'] ?>">
                                     </div>
                                 </div>
-                                <div class = "control-group">
-                                    <label class = "control-label" for = "status">状态</label>
-                                    <div class = "controls">
-                                        <input class = "input-xlarge" type = "text" id = "status" disabled
-                                               value = "<?php echo $info['status'] ?>">
-                                    </div>
-                                </div>
                             </fieldset>
                         </form>
                     </div>
                 </div>
                 <!--/span-->
-
             </div>
             <!--/row-->
-
             <!-- content ends -->
         </div>
         <!--/#content.span10-->

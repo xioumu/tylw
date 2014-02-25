@@ -19,7 +19,6 @@ include("config.php");
         <!-- left menu starts -->
         <?php include('student-left.php'); ?>
         <!-- left menu ends -->
-
         <div id = "content" class = "span10">
             <div>
                 <ul class = "breadcrumb">
@@ -52,6 +51,14 @@ include("config.php");
                                                disabled = "">
                                     </div>
                                 </div>
+                                <div class = "control-group">
+                                    <label class = "control-label">论文重复率(百分比)</label>
+                                    <div class = "controls">
+                                        <input class = "input-xlarge disabled" id = "name" type = "text"
+                                               value = "<?php echo $info['repeatRate']; ?>"
+                                               disabled = "">
+                                    </div>
+                                </div>
                             </fieldset>
                         </form>
 
@@ -81,7 +88,7 @@ include("config.php");
                                             <a href = \"student-view-eva.php?id={$eid}\" class = \"btn btn-primary\">查看细节</a>
                                         </td> ";
                                         else echo " <td>
-                                            <a href = \"\" class = \"btn btn-primary disabled\">还未审评</a>
+                                            <a href = \"#\" class = \"btn btn-primary \" disabled>还未审评</a>
                                         </td> ";
                                         echo "</tr>";
                                     }

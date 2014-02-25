@@ -53,7 +53,6 @@
                     <div class = "box-header well" data-original-title>
                         <h2>提交开题报告</h2>
                     </div>
-
                     <div class = "box-content form-horizontal">
                         <form action = "upLoadPaper.php?type=report" method = "post" enctype = "multipart/form-data">
                             <fieldset>
@@ -87,7 +86,6 @@
                     <div class = "box-header well" data-original-title>
                         <h2>提交论文</h2>
                     </div>
-
                     <div class = "box-content form-horizontal">
                         <form action = "upLoadPaper.php?type=paper" method = "post" enctype = "multipart/form-data">
                             <fieldset>

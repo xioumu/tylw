@@ -2,33 +2,8 @@
 //SQL注入未防护
 include("config.php");
 include("myFunction.php");
-function delUser($user) {
-    if (mysql_query("DELETE FROM user WHERE user = '{$user}'")) {
-        return true;
-    }
-    else return false;
-}
-//删除学生信息
-function delStuInfo($user) {
-    if (mysql_query("DELETE FROM student WHERE studentID = '{$user}'")) {
-        return true;
-    }
-    else return false;
-}
-//删除校内专家信息
-function delOnTeaInfo($user) {
-    if (mysql_query("DELETE FROM teacheronside WHERE teacherID = '{$user}'")) {
-        return true;
-    }
-    else return false;
-}
-//删除校内专家信息
-function delOutTeaInfo($user){
-    if (mysql_query("DELETE FROM teacheroutside WHERE userID = '{$user}'")) {
-        return true;
-    }
-    else return false;
-}
+
+
 
 if (!isset($_POST['type'])) echo "no type!";
 else if ($_POST['type'] == 1) { //系统管理员删除网络管理员账号
@@ -65,22 +40,7 @@ else if ($_POST['type'] == 'web-admin') { //网络管理员部分
     }
     //删除全部学生用户
     else if (isset($_POST['object']) && $_POST['object'] == 'allStu') {
-        $flag = true;
-        $allStuUser = getAllUser('stu');
-        foreach ($allStuUser as $user) {
-            if (!delEva($user, 'studentID')) {
-                echo 'delete evaluating error!';
-                $flag = false;
-            }
-            if (!delStuInfo($user)) {
-                echo $user . "delete student info error! <br/>";
-                $flag = false;
-            }
-            else if (!delUser($user)) {
-                echo $user . "delete user error! <br/>";
-                $flag = false;
-            }
-        }
+        $flag = delAllStu();
         if ($flag) echo "ok";
         else echo "error1";
     }

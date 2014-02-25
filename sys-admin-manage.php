@@ -9,6 +9,7 @@ include("config.php");
     <title>武汉体育学院学位管理系统</title>
     <?php include('css.php'); ?>
     <?php include('script.php'); ?>
+    <?php include('myFunction.php'); ?>
 </head>
 <body class="index">
 <!-- topbar starts -->
@@ -31,13 +32,11 @@ include("config.php");
                     </li>
                 </ul>
             </div>
-
             <!-- content starts -->
             <div class="row-fluid sortable">
                 <div class="box span12">
                     <div class="box-header well" data-original-title>
                         <h2>管理网站管理员</h2>
-
                         <div class="box-icon">
                             <button href="#addUser-modal" class="btn btn-success" data-toggle="modal">添加网站管理员</button>
                         </div>
@@ -82,7 +81,6 @@ include("config.php");
         <fieldset>
             <div class="control-group">
                 <label class="control-label">用户名</label>
-
                 <div class="controls">
                     <input class="input-medium disabled" id="name" type="text" value="test1" disabled="">
                 </div>
@@ -90,14 +88,12 @@ include("config.php");
         </fieldset>
         <div class="control-group">
             <label class="control-label" for="newpasswd">新密码</label>
-
             <div class="controls">
                 <input class="input-medium" type="password" id="newpasswd1" value="">
             </div>
         </div>
         <div class="control-group">
             <label class="control-label" for="newpasswd2">新密码确认</label>
-
             <div class="controls">
                 <input class="input-medium" type="password" id="newpasswd2" value="">
             </div>

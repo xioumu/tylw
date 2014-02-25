@@ -1,5 +1,4 @@
-<?php 
-?>
+<?php judgeUser(array('stu')); ?>
 <html>
     <body>
         	<!-- left menu starts -->

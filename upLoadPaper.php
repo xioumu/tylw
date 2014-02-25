@@ -2,15 +2,7 @@
 include('config.php');
 include('myFunction.php');
 
-function getOtherInfo() {
-    $res = array();
-    $que = mysql_query("SELECT * FROM other");
-    if ($row = mysql_fetch_array($que)) {
-        $res = $row;
-    }
-    return $res;
-}
-
+//更新论文名称
 function updataPaperName($user, $paperName) {
     if (!mysql_query("UPDATE student SET paperName = '{$paperName}' WHERE studentID = '{$user}'")) {
         echo "updata paper name error!<br>";
@@ -50,13 +42,14 @@ function updataStuFile($user, $file, $type) {
 
 if (isset($_SESSION['is_login'])) {
     $user = $_SESSION['is_login'];
+    judgeUser(array('stu'));
     $userTyper = getUserType($user);
     if ($userTyper != 'stu') {
         errorUser();
     }
     else {
         if (isset($_GET['type']) && isset($_FILES['paperFile'])) {
-            if ($_FILES["paperFile"]["size"] < 1024 * 1024 * 1024) { //记得限制文件格式
+            if ($_FILES["paperFile"]["size"] < 100 * 1024 * 1024) { //记得限制文件格式, (大小最大100M)
                 if ($_FILES["paperFile"]["error"] > 0) {
                     echo "Error: " . $_FILES["paperFile"]["error"] . "<br />";
                     if ($_FILES["paperFile"]["error"] == 4) {
@@ -75,7 +68,7 @@ if (isset($_SESSION['is_login'])) {
                 }
             }
             else {
-                if ($_FILES["exlFile"]["size"] >= 1024 * 1024 * 1024) echo "文件超过大小限制!<br/>";
+                if ($_FILES["exlFile"]["size"] >= 100 * 1024 * 1024) echo "文件超过大小限制!<br/>";
             }
         }
     }

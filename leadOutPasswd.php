@@ -1,14 +1,13 @@
 <?php
 include("config.php");
 include("myFunction.php");
+judgeUser(array('web'));
 function leadOutExl($allData, $type) { //把数据输出至EXLX文件
     error_reporting(E_ALL);
     ini_set('display_errors', TRUE);
     ini_set('display_startup_errors', TRUE);
     date_default_timezone_set('Europe/London');
-
     if (PHP_SAPI == 'cli') die('This example should only be run from a Web Browser');
-
     /** Include PHPExcel */
     require_once 'PHPExcel/PHPExcel.php';
     // Create new PHPExcel object
@@ -55,6 +54,18 @@ function leadOutExl($allData, $type) { //把数据输出至EXLX文件
             $i++;
         }
     }
+    else if($type == 'outTea') {
+        $objPHPExcel->setActiveSheetIndex(0)
+            ->setCellValue('A1', '账号')
+            ->setCellValue('B1', '密码');
+        $i = 2;
+        foreach ($allData as $person) {
+            $objPHPExcel->setActiveSheetIndex(0)
+                ->setCellValue('A' . $i, $person['user'])
+                ->setCellValue('B' . $i, $person['passwd']);
+            $i++;
+        }
+    }
     // Rename worksheet
     $objPHPExcel->getActiveSheet()->setTitle('passwd');
 
@@ -91,6 +102,16 @@ if (isset($_GET['type'])) {
             array_push($allData, $res);
         }
         leadOutExl($allData, 'onTea');
+    }
+    else if($_GET['type'] == 'outTea') {
+        $allData = array();
+        $allUser = getAllUserPasswd('outTea');
+        foreach ($allUser as $user) {
+            $res['user'] = $user['user'];
+            $res['passwd'] = $user['passwd'];
+            array_push($allData, $res);
+        }
+        leadOutExl($allData, 'outTea');
     }
 }
 ?>

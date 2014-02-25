@@ -165,12 +165,7 @@ include("config.php");
                 <div class = "control-group">
                     <label class = "control-label  " for = "changeInfo-status">状态</label>
                     <div class = "controls">
-                        <select id = "changeInfo-status" class = "input-medium">
-                            <option id = "未提交论文" value = "未提交论文">未提交论文</option>
-                            <option id = "已提交论文-等待评审" value = "已提交论文-等待评审">已提交论文-等待评审</option>
-                            <option id = "评审完毕-通过" value = "评审完毕-通过">评审完毕-通过</option>
-                            <option id = "评审完毕-未通过" value = "评审完毕-未通过">评审完毕-未通过</option>
-                        </select>
+                        <input type = "text" class = "input-medium datepicker" id = "changeInfo-status" value = "" disabled>
                     </div>
                 </div>
                 <div class = "control-group">
@@ -191,6 +186,12 @@ include("config.php");
                     <div class = "controls">
                         <a href = "" target = "_blank" id = "changeInfo-report"
                            class = "btn btn-success btn-small">还未上传</a>
+                    </div>
+                </div>
+                <div class = "control-group">
+                    <label class = "control-label" for = "changeInfo-repeatRate">重复率(百分比)</label>
+                    <div class = "controls">
+                        <input type = "text" class = "input-medium " id = "changeInfo-repeatRate" value = "">
                     </div>
                 </div>
             </fieldset>
@@ -222,7 +223,9 @@ include("config.php");
         page.find('#changeInfo-subject').val("");
         page.find('#changeInfo-tutor').val("");
         page.find('#changeInfo-IDcard').val("");
+        page.find('#changeInfo-status').val("");
         page.find('#changeInfo-judgeDate').val("");
+        page.find('#changeInfo-repeatRate').val("");
         setUploadBtn(page.find('#changeInfo-paper'), null);
         setUploadBtn(page.find('#changeInfo-report'), null);
     }
@@ -246,7 +249,8 @@ include("config.php");
                     page.find('#changeInfo-tutor').val(stuInfo.tutor);
                     page.find('#changeInfo-IDcard').val(stuInfo.IDcard);
                     page.find('#changeInfo-deadLine').val(stuInfo.SdeadLine);
-                    page.find('#changeInfo-status').find('#' + stuInfo.status).attr("selected", "selected");
+                    page.find('#changeInfo-status').val(stuInfo.status);
+                    page.find('#changeInfo-repeatRate').val(stuInfo.repeatRate);
                     setUploadBtn(page.find('#changeInfo-paper'), stuInfo.paperAdd);
                     setUploadBtn(page.find('#changeInfo-report'), stuInfo.reportAdd);
                 }
@@ -274,12 +278,11 @@ include("config.php");
                     tutor: page.find('#changeInfo-tutor').val(),
                     IDcard: page.find('#changeInfo-IDcard').val(),
                     deadLine: page.find('#changeInfo-deadLine').val(),
-                    status: page.find('#changeInfo-status').val()
+                    repeatRate: page.find('#changeInfo-repeatRate').val()
                 },
                 function (data, status) {
                     if (status == 'success') {
                         if (data == 'ok') {
-                            $('#addUser-modal').modal('hide');
                             $('.index').noty({"text": "成功修改信息,需刷新页面才能看见更新信息", "layout": "topLeft", "type": "success"});
                             page.modal('hide');
                         }

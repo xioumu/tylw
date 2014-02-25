@@ -1,166 +1,168 @@
 <!DOCTYPE html>
-<?php header("Content-Type: text/html;charset=utf-8");?>
-<html lang="en">
+<?php header("Content-Type: text/html;charset=utf-8"); ?>
+<?php include("config.php"); ?>
+<html lang = "en">
 <head>
-    <meta charset="utf-8">
-	<title>武汉体育学院学位管理系统</title>
-	<!-- The styles -->
-	<link id="bs-css" href="css/bootstrap-cerulean.css" rel="stylesheet">
-	<style type="text/css">
-	  body {
-		padding-bottom: 40px;
-	  }
-	  .sidebar-nav {
-		padding: 9px 0;
-	  }
-	  #fileInput{
-		
-	  }
-	</style>
-	<link href="css/bootstrap-responsive.css" rel="stylesheet">
-	<link href="css/charisma-app.css" rel="stylesheet">
-	<link href="css/jquery-ui-1.8.21.custom.css" rel="stylesheet">
-	<link href='css/fullcalendar.css' rel='stylesheet'>
-	<link href='css/fullcalendar.print.css' rel='stylesheet'  media='print'>
-	<link href='css/chosen.css' rel='stylesheet'>
-	<link href='css/uniform.default.css' rel='stylesheet'>
-	<link href='css/colorbox.css' rel='stylesheet'>
-	<link href='css/jquery.cleditor.css' rel='stylesheet'>
-	<link href='css/jquery.noty.css' rel='stylesheet'>
-	<link href='css/noty_theme_default.css' rel='stylesheet'>
-	<link href='css/elfinder.min.css' rel='stylesheet'>
-	<link href='css/elfinder.theme.css' rel='stylesheet'>
-	<link href='css/jquery.iphone.toggle.css' rel='stylesheet'>
-	<link href='css/opa-icons.css' rel='stylesheet'>
-	<link href='css/uploadify.css' rel='stylesheet'>
-
-    <link href='css/my.css' rel='stylesheet'>
-
-	<!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
-	<!--[if lt IE 9]>
-	  <script src="js/html5.js"></script>
-	<![endif]-->
-
-	<!-- The fav icon -->
-	<link rel="shortcut icon" href="img/favicon.ico">
-		
+    <meta charset = "utf-8">
+    <title>武汉体育学院学位管理系统</title>
+    <?php include('css.php'); ?>
+    <?php include('script.php'); ?>
+    <?php include('myFunction.php'); ?>
 </head>
 
-<body>
-	<!-- topbar starts -->
-	<?php include('header.php');?>	
-	<!-- topbar ends -->
-		<div class="container-fluid">
-		<div class="row-fluid">
-			<!-- left menu starts -->
-				<?php include('web-admin-left.php');?>	
-			<!-- left menu ends -->
+<body class = "index">
+<!-- topbar starts -->
+<?php include('header.php'); ?>
+<!-- topbar ends -->
+<div class = "container-fluid">
+    <div class = "row-fluid">
+        <!-- left menu starts -->
+        <?php include('web-admin-left.php'); ?>
+        <!-- left menu ends -->
+        <?php
+        //将现有的审评归档
+        function moveEvaFinish() {
+            $allEva = getAllEva();
+            $judgeYear = getJudgeYear();
+            foreach ($allEva as $eid) {
+                $info = getEvaInfo($eid);
+                if (!mysql_query("INSERT INTO record_evaluating (eid,teacherID,studentID,c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11,t1,t2,t3,t4,t5,time,summary,judgeYear,tName,status)
+                                      VALUE ('{$info['eid']}','{$info['teacherID']}','{$info['studentID']}','{$info['c1']}','{$info['c2']}','{$info['c3']}','{$info['c4']}'
+                                      ,'{$info['c5']}','{$info['c6']}','{$info['c7']}','{$info['c8']}','{$info['c9']}','{$info['c10']}','{$info['c11']}',
+                                      '{$info['t1']}','{$info['t2']}','{$info['t3']}','{$info['t4']}','{$info['t5']}','{$info['time']}','{$info['summary']}','{$judgeYear}'
+                                      ,'{$info['tName']}','{$info['status']}')")
+                ) {
+                    echo "<br> moveEvaFinish error!";
+                    return false;
+                }
+            }
+            return true;
+        }
 
-            <div id="content" class="span10">
+        function moveStuFinish() {
+            $allStu = getAllUser('stu');
+            $judgeYear = getJudgeYear();
+            foreach ($allStu as $user) {
+                $info = getStuInfo($user);
+                if (!mysql_query("INSERT INTO record_student (studentID, sName, sex, subject, grade, status,IDcard,tutor, type, judgeYear, paperAdd, reportAdd, repeatRate)
+                                      VALUE ('{$info['studentID']}','{$info['sName']}','{$info['sex']}','{$info['subject']}','{$info['grade']}','{$info['status']}',
+                                      '{$info['IDcard']}','{$info['tutor']}','{$info['type']}','{$judgeYear}','{$info['paperAdd']}','{$info['reportAdd']}',
+                                      '{$info['repeatRate']}' )")
+                ) {
+                   /* echo "INSERT INTO record_student (studentID, sName, sex, subject, grade, status,IDcard,tutor, type, judgeYear, paperAdd, reportAdd, repeatRate)
+                                      VALUE ('{$info['studentID']}','{$info['sName']}','{$info['sex']}','{$info['subject']}','{$info['grade']}','{$info['status']}',
+                                      '{$info['IDcard']}','{$info['tutor']}','{$info['type']}','{$judgeYear}','{$info['paperAdd']}','{$info['reportAdd']}',
+                                      '{$info['repeatRate']}' )";
+                   */
+                    echo "<br> moveStuFinish error!";
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        function setJudgeYear($val) {
+            if (mysql_query("UPDATE other SET NowJudgeYear = '{$val}'")) {
+                $paperDir="upFile/paper/".$val;
+                $reportDir="upFile/report/".$val;
+                echo $paperDir;
+                if (!file_exists($paperDir)) mkdir($paperDir, 0777);
+                if (!file_exists($reportDir)) mkdir($reportDir, 0777);
+                return true;
+            }
+            else return false;
+        }
+        //删除所有通过审评的学生
+        function delAllPassStu() {
+            $flag = true;
+            $allStuUser = getAllUser('stu');
+            foreach ($allStuUser as $user) {
+                $status = getStuStatus($user);
+                if ($status != "通过评审") continue;
+                if (!delEva($user, 'studentID')) {
+                    echo 'delete evaluating error!';
+                    $flag = false;
+                }
+                if (!delStuInfo($user)) {
+                    echo $user . "delete student info error! <br/>";
+                    $flag = false;
+                }
+                else if (!delUser($user)) {
+                    echo $user . "delete user error! <br/>";
+                    $flag = false;
+                }
+            }
+            return $flag;
+        }
+        if (isset($_POST['judgeYear']) && $_POST['judgeYear'] != "") {
+            echo "test";
+            $flag = true;
+            if (!moveEvaFinish()) {
+                $flag = false;
+            }
+            if (!moveStuFinish()) {
+                $flag = false;
+            }
+            if ($flag) {
+                if (!delAllEva()) $flag = false;
+                else if (!delAllPassStu()) $flag = false;
+                else if (!setJudgeYear($_POST['judgeYear'])) $flag = false;
+            }
+            if ($flag) {
+                echo '<script> $(\'.index\').noty({"text": "归档成功", "layout": "topLeft", "type": "success"});</script>';
+            }
+            else {
+                echo '<script> $(\'.index\').noty({"text": "归档失败", "layout": "topLeft", "type": "error"});</script>';
+            }
+        }
+        $otherInfo = getOtherInfo();
+        ?>
+        <div id = "content" class = "span10">
+            <!-- road -->
+            <div>
+                <ul class="breadcrumb">
+                    <li>
+                        <a href="web-admin-student-manage.php">网站管理员</a> <span class="divider">/</span>
+                    </li>
+                    <li>
+                        <a href="web-admin-finish.php">结束测评并归档</a>
+                    </li>
+                </ul>
+            </div>
             <!-- content starts -->
-			
-            <div class="row-fluid sortable">
-                <div class="box span12">
-                    <div class="box-header well" data-original-title>
-                        <h2>结束评测并归档</h2>
+            <div class = "row-fluid sortable">
+                <div class = "box span12">
+                    <div class = "box-header well" data-original-title>
+                        <h2>结束测评并归档<h3>(当前学年是<?php echo $otherInfo['NowJudgeYear']; ?>)</h3></h2>
                     </div>
-                    <div class="box-content">
-                        <form class="form-horizontal">
+                    <div class = "box-content">
+                        <form class = "form-horizontal" action = "web-admin-finish.php" method = "post">
                             <fieldset>
-                                <div class="form-actions">
-                                    <button type="submit" class="btn btn-primary">结束今年评测并归档</button>
+                                <div class = "control-group">
+                                    <label class = "control-label">请填写下一学年</label>
+                                    <div class = "controls">
+                                        <input class = "input-xlarge disabled" id = "stdentID" type = "text" value = ""
+                                               name = "judgeYear">
+                                    </div>
+                                </div>
+                                <div class = "form-actions">
+                                    <button type = "submit" class = "btn btn-primary ">结束测评并归档</button>
                                 </div>
                             </fieldset>
                         </form>
-
                     </div>
-                </div><!--/span-->
+                </div>
+                <!--/span-->
 
-            </div><!--/row-->
+            </div>
+            <!--/row-->
 
             <!-- content ends -->
-            </div><!--/#content.span10-->
-        </div><!--/fluid-row-->
-
         </div>
-        </div>
-		
-	</div><!--/.fluid-container-->
-
-	<!-- external javascript
-	================================================== -->
-	<!-- Placed at the end of the document so the pages load faster -->
-
-	<!-- jQuery -->
-	<script src="js/jquery-1.7.2.min.js"></script>
-	<!-- jQuery UI -->
-	<script src="js/jquery-ui-1.8.21.custom.min.js"></script>
-	<!-- transition / effect library -->
-	<script src="js/bootstrap-transition.js"></script>
-	<!-- alert enhancer library -->
-	<script src="js/bootstrap-alert.js"></script>
-	<!-- modal / dialog library -->
-	<script src="js/bootstrap-modal.js"></script>
-	<!-- custom dropdown library -->
-	<script src="js/bootstrap-dropdown.js"></script>
-	<!-- scrolspy library -->
-	<script src="js/bootstrap-scrollspy.js"></script>
-	<!-- library for creating tabs -->
-	<script src="js/bootstrap-tab.js"></script>
-	<!-- library for advanced tooltip -->
-	<script src="js/bootstrap-tooltip.js"></script>
-	<!-- popover effect library -->
-	<script src="js/bootstrap-popover.js"></script>
-	<!-- button enhancer library -->
-	<script src="js/bootstrap-button.js"></script>
-	<!-- accordion library (optional, not used in demo) -->
-	<script src="js/bootstrap-collapse.js"></script>
-	<!-- carousel slideshow library (optional, not used in demo) -->
-	<script src="js/bootstrap-carousel.js"></script>
-	<!-- autocomplete library -->
-	<script src="js/bootstrap-typeahead.js"></script>
-	<!-- tour library -->
-	<script src="js/bootstrap-tour.js"></script>
-	<!-- library for cookie management -->
-	<script src="js/jquery.cookie.js"></script>
-	<!-- calander plugin -->
-	<script src='js/fullcalendar.min.js'></script>
-	<!-- data table plugin -->
-	<script src='js/jquery.dataTables.min.js'></script>
-
-	<!-- chart libraries start -->
-	<script src="js/excanvas.js"></script>
-	<script src="js/jquery.flot.min.js"></script>
-	<script src="js/jquery.flot.pie.min.js"></script>
-	<script src="js/jquery.flot.stack.js"></script>
-	<script src="js/jquery.flot.resize.min.js"></script>
-	<!-- chart libraries end -->
-
-	<!-- select or dropdown enhancer -->
-	<script src="js/jquery.chosen.min.js"></script>
-	<!-- checkbox, radio, and file input styler -->
-	<script src="js/jquery.uniform.min.js"></script>
-	<!-- plugin for gallery image view -->
-	<script src="js/jquery.colorbox.min.js"></script>
-	<!-- rich text editor library -->
-	<script src="js/jquery.cleditor.min.js"></script>
-	<!-- notification plugin -->
-	<script src="js/jquery.noty.js"></script>
-	<!-- file manager library -->
-	<script src="js/jquery.elfinder.min.js"></script>
-	<!-- star rating plugin -->
-	<script src="js/jquery.raty.min.js"></script>
-	<!-- for iOS style toggle switch -->
-	<script src="js/jquery.iphone.toggle.js"></script>
-	<!-- autogrowing textarea plugin -->
-	<script src="js/jquery.autogrow-textarea.js"></script>
-	<!-- multiple file upload plugin -->
-	<script src="js/jquery.uploadify-3.1.min.js"></script>
-	<!-- history.js for cross-browser state change on ajax -->
-	<script src="js/jquery.history.js"></script>
-	<!-- application script for Charisma demo -->
-	<script src="js/charisma.js"></script>
-	
-		
+        <!--/#content.span10-->
+    </div>
+    <!--/fluid-row-->
+</div>
+<!--/.fluid-container-->
 </body>
 </html>

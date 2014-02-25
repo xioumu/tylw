@@ -4,12 +4,12 @@ include("myFunction.php");
 
 //添加校外专家账号信息
 function addOUtTeaUser($user) {
+    filter($user);
     if (mysql_query("INSERT INTO teacheroutside (userID) VALUES ('{$user}')")) {
         return true;
     }
     else return false;
 }
-
 //添加校外专家
 function addOutTea() {
     $que = mysql_query("SELECT lastOutTea FROM other");
@@ -26,14 +26,16 @@ function addOutTea() {
     addOutTeaUser($username);
     return $username;
 }
-
+//添加指定学生和专家的审评
 function addEva($stu, $tea) {
+    filter($stu);
+    fllter($tea);
     if (mysql_query("INSERT INTO evaluating (studentID, teacherID) VALUES ('{$stu}', '{$tea}')")) {
         return true;
     }
     else return false;
 }
-
+//指定学生添加对应类别的审评
 function addStuEva($user) {
     $info = getStuInfo($user);
     for ($i = 0; $i < 2; $i++) {
@@ -46,8 +48,9 @@ function addStuEva($user) {
     }
     return true;
 }
-
+header("Content-Type: text/html;charset=utf-8");
 echo '<html><body>';
+judgeUser(array('web'));
 if (isset($_GET['type']) && $_GET['type'] == 'mul') {
     if (isset($_GET['needNum'])) {
         $sum = intval($_GET['needNum']);
@@ -68,6 +71,17 @@ if (isset($_GET['type']) && $_GET['type'] == 'mul') {
         }
         goBack("成功分配评审学生", "web-admin-eva-manage.php");
     }
+}
+else if (isset($_GET['type']) && $_GET['type'] == 'one') {
+    if ($_POST['studentID'] == "")  goHis("学生不能为空");
+    if ($_POST['teacherID'] == "newOutTea") {
+        $outTea = addOutTea();
+        addEva($_POST['studentID'], $outTea);
+    }
+    else {
+        addEva($_POST['studentID'], $_POST['teacherID']);
+    }
+    goBack("成功添加审评", "web-admin-eva-manage.php");
 }
 echo '</body></html>';
 ?>

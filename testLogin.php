@@ -3,22 +3,7 @@ header("Content-Type: text/html;charset=utf-8");
 include("config.php");
 include("myFunction.php");
 if (isset($_POST['username']) or isset($_POST['passwd']) or isset($_POST['yzm'])) {
-    //or isset($_SESSION['is_login']);
-    $_SESSION['is_login'] = "";
-    if (isset($_POST['username']) or isset($_POST['passwd']) or isset($_POST['yzm'])) {
-        $username = $_POST['username'];
-        $passwd = $_POST['passwd'];
-        $yzm = $_POST['yzm'];
-        if ($yzm != $_SESSION['Checknum']) {
-            $rep_note = "验证码错误";
-        }
-        else if (!loginCheck($username, $passwd)) {
-            $rep_note = "用户名或密码错误";
-        }
-        else {
-            $_SESSION['is_login'] = $username;
-        }
-    }
+    $_SESSION['is_login'] = $_POST['username']; 
     if (isset($_SESSION['is_login'])) {
         $type = getUserType($_SESSION['is_login']);
         if ($type === "stu") echo "<script>window.location.href='student-info.php';</script>";
@@ -47,33 +32,18 @@ if (isset($_POST['username']) or isset($_POST['passwd']) or isset($_POST['yzm'])
             <!--/span-->
         </div>
         <!--/row-->
-
         <div class="row-fluid">
             <div class="well span5 center login-box">
                 <div class="alert alert-info color">
                     请输入用户名和密码
                 </div>
-                <form class="form-horizontal" action="login.php" method="post">
+                <form class="form-horizontal" action="testLogin.php" method="post">
                     <fieldset>
                         <div class="input-prepend" title="Username" data-rel="tooltip">
                             <span class="add-on"><i class="icon-user"></i></span><input autofocus
                                                                                         class="input-large span10"
                                                                                         name="username" id="username"
                                                                                         type="text" placeholder="用户名"/>
-                        </div>
-                        <div class="clearfix"></div>
-
-                        <div class="input-prepend" title="Password" data-rel="tooltip">
-                            <span class="add-on"><i class="icon-lock"></i></span><input class="input-large span10"
-                                                                                        name="passwd" id="passwd"
-                                                                                        type="password"
-                                                                                        placeholder="密码"/>
-                        </div>
-                        <div class="clearfix"></div>
-                        <div class="input-prepend" data-rel="tooltip">
-                            <input class="input-large span3" name="yzm" id="yzm" type="test" placeholder="验证码"/>
-                            <img src="verification/showimg.php">
-                            <a> 换一张</a>
                         </div>
                         <div class="clearfix"></div>
 

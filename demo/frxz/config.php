@@ -11,8 +11,7 @@
  mysql_query("SET NAMES 'UTF8'"); 
  mysql_query("SET CHARACTER SET UTF8"); 
  mysql_query("SET CHARACTER_SET_RESULTS=UTF8'");
- function filter($url)
- {
+ function filter($url) {
 	return filter_var($url,FILTER_SANITIZE_SPECIAL_CHARS);
  }
 

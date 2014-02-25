@@ -1,4 +1,5 @@
-<?php 
+<?php
+judgeUser(array('onTea'));
 ?>
 <html>
     <body>
