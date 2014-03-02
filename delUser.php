@@ -4,7 +4,6 @@ include("config.php");
 include("myFunction.php");
 
 
-
 if (!isset($_POST['type'])) echo "no type!";
 else if ($_POST['type'] == 1) { //系统管理员删除网络管理员账号
     if (isset($_POST['user'])) {
@@ -34,6 +33,11 @@ else if ($_POST['type'] == 'web-admin') { //网络管理员部分
         else if ($uType == 'outTea') {
             if (!delEva($user, 'teacherID')) echo 'delete evaluating error!';
             else if (!delOutTeaInfo($user)) echo $user . "delete out teacher info error! <br/>";
+            else if (!delUser($user)) echo "delete user error!";
+            else echo "ok";
+        }
+        else if ($uType == 'sec') {
+            if (!delSec($user)) echo $user . "delete out teacher info error! <br/>";
             else if (!delUser($user)) echo "delete user error!";
             else echo "ok";
         }

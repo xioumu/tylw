@@ -29,7 +29,7 @@ function addOutTea() {
 //添加指定学生和专家的审评
 function addEva($stu, $tea) {
     filter($stu);
-    fllter($tea);
+    filter($tea);
     if (mysql_query("INSERT INTO evaluating (studentID, teacherID) VALUES ('{$stu}', '{$tea}')")) {
         return true;
     }

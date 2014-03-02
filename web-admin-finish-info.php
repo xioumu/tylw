@@ -35,24 +35,29 @@ include("config.php");
                         <a href = "web-admin-student-manage.php">网站管理员</a> <span class = "divider">/</span>
                     </li>
                     <li>
-                        <a href = "web-admin-student-manage.php">管理学生账号</a>
+                        <a href = "web-admin-finish-info-select.php">查看归档数据</a>
                     </li>
                 </ul>
             </div>
+            <?php
+            if (empty($_GET['judgeInfo'])) {
+                exit;
+            }
+            ?>
             <div class = "row-fluid sortable">
                 <div class = "box span12">
                     <div class = "box-header well" data-original-title>
                         <h2>查看归档学生信息</h2>
-                        <div class="box-icon">
-                            <a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
-                            <a href="#" class="btn btn-close btn-round"><i class="icon-remove"></i></a>
+                        <div class = "box-icon">
+                            <a href = "#" class = "btn btn-minimize btn-round"><i class = "icon-chevron-up"></i></a>
+                            <a href = "#" class = "btn btn-close btn-round"><i class = "icon-remove"></i></a>
                         </div>
                     </div>
                     <div class = "box-content">
                         <form class = "form-horizontal">
                             <table class = "table table-striped table-bordered bootstrap-datatable datatable">
                                 <thead>
-                                <th>测评年份</th>
+                                <th>归档信息</th>
                                 <th>年级</th>
                                 <th>姓名</th>
                                 <th>学号</th>
@@ -67,15 +72,19 @@ include("config.php");
                                 <th>文件</th>
                                 </thead>
                                 <?php
-                                function getAllRecStuInfo() {
+                                //获取所有归档学生信息
+                                function getAllRecStuInfo($judgeInfo) {
+                                    $que = "SELECT * FROM record_student";
+                                    if ($judgeInfo != 'all') $que .= " WHERE judgeYear = '{$judgeInfo}'";
                                     $res = array();
-                                    $result = mysql_query("SELECT * FROM record_student");
+                                    $result = mysql_query($que) or die("Error in query:  " . mysql_error());;
                                     while ($row = mysql_fetch_array($result)) {
                                         array_push($res, $row);
                                     }
                                     return $res;
                                 }
-                                 $allStuInfo = getAllRecStuInfo();
+
+                                $allStuInfo = getAllRecStuInfo($_GET['judgeInfo']);
                                 foreach ($allStuInfo as $info) {
                                     if ($info['reportAdd'] == '') {
                                         $info['reportAdd'] = "#";
@@ -94,14 +103,105 @@ include("config.php");
                                     echo "<td>" . $info['tutor'] . "</td>";
                                     echo "<td>" . $info['paperNum'] . "</td>";
                                     echo "<td>" . $info['paperName'] . "</td>";
-                                    echo "<td>" . $info['repeatRate']. "</td>";
+                                    echo "<td>" . $info['repeatRate'] . "</td>";
                                     $labelType = "success";
                                     if ($info['status'] == "未上传论文") $labelType = "important";
                                     echo getLabel($info['status'], $labelType);
+                                    $pepSta = $repSta = "";
+                                    if ($info['reportAdd'] == "#") $repSta = 'disabled';
+                                    if ($info['paperAdd'] == "#") $pepSta = 'disabled';
                                     echo '
                                     <td>
-                                        <a href = "' . $info['reportAdd'] . '" target = "_blank" class = "btn btn-success btn-small">开题报告</a>
-                                        <a href = "'. $info['paperAdd'] . '" target = "_blank"  class = "btn btn-success btn-small">论文</a>
+                                        <a href = "' . $info['reportAdd'] . '" target = "_blank" class = "btn btn-success btn-small"' . $pepSta . '>开题报告</a>
+                                        <a href = "' . $info['paperAdd'] . '" target = "_blank"  class = "btn btn-success btn-small"' . $repSta . '>论文</a>
+                                    </td> ';
+                                    echo "</tr>";
+                                }
+                                ?>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+                <!--/span-->
+            </div>
+            <div class = "row-fluid sortable">
+                <div class = "box span12">
+                    <div class = "box-header well" data-original-title>
+                        <h2>查看归档审评信息</h2>
+                        <div class = "box-icon">
+                            <a href = "#" class = "btn btn-minimize btn-round"><i class = "icon-chevron-up"></i></a>
+                            <a href = "#" class = "btn btn-close btn-round"><i class = "icon-remove"></i></a>
+                        </div>
+                    </div>
+                    <div class = "box-content">
+                        <form class = "form-horizontal">
+                            <table class = "table table-striped table-bordered bootstrap-datatable datatable">
+                                <thead>
+                                <th>归档信息</th>
+                                <th>学生学号</th>
+                                <th>学生姓名</th>
+                                <th>专业</th>
+                                <th>校内方向</th>
+                                <th>类别</th>
+                                <th>导师</th>
+                                <th>专家账号</th>
+                                <th>专家姓名</th>
+                                <th>状态</th>
+                                <th>操作</th>
+                                </thead>
+                                <?php
+                                //获取指定归档学生信息
+                                function getRecStuInfo($user, $judgeInfo) {
+                                    $que = mysql_query("SELECT * FROM record_student WHERE studentID = '{$user}' AND judgeYear = '{$judgeInfo}'")  or die("Error in query:  " . mysql_error());
+                                    if ($row = mysql_fetch_array($que)) {
+                                        return $row;
+                                    }
+                                    else return array();
+                                }
+
+                                //获取所有归档审评信息
+                                function getAllRecEvaInfo($judgeInfo) {
+                                    $que = "SELECT * FROM record_evaluating";
+                                    if ($judgeInfo != 'all') $que .= " WHERE judgeYear = '{$judgeInfo}'";
+                                    $res = array();
+                                    $result = mysql_query($que) or die("Error in query:  " . mysql_error());;
+                                    while ($row = mysql_fetch_array($result)) {
+                                        $stuInfo = getRecStuInfo($row['studentID'], $row['judgeYear']);
+                                        $row['studentID'] = $stuInfo['studentID'];
+                                        $row['sName'] = $stuInfo['sName'];
+                                        $row['major'] = $stuInfo['major'];
+                                        $row['subject'] = $stuInfo['subject'];
+                                        $row['type'] = $stuInfo['type'];
+                                        $row['tutor'] = $stuInfo['tutor'];
+                                        array_push($res, $row);
+                                    }
+                                    return $res;
+                                }
+
+                                $allStuInfo = getAllRecEvaInfo($_GET['judgeInfo']);
+                                foreach ($allStuInfo as $info) {
+                                    echo "<tr id = \"{$info['judgeYear']}{$info['eid']}\">";
+                                    echo "<td>" . $info['judgeYear'] . "</td>";
+                                    echo "<td>" . $info['studentID'] . "</td>";
+                                    echo "<td>" . $info['sName'] . "</td>";;
+                                    echo "<td>" . $info['major'] . "</td>";
+                                    echo "<td>" . $info['subject'] . "</td>";
+                                    echo "<td>" . $info['type'] . "</td>";
+                                    echo "<td>" . $info['tutor'] . "</td>";
+                                    echo "<td>" . $info['teacherID'] . "</td>";
+                                    echo "<td>" . $info['tName'] . "</td>";
+                                    $btnType = "";
+                                    $labelType = "success";
+                                    $eidUrl = "web-admin-view-rec-eva?id=" . $info['eid'];
+                                    if ($info['status'] == "还未审评") {
+                                        $labelType = "important";
+                                        $btnType = "disabled";
+                                        $eidUrl = '#';
+                                    }
+                                    echo getLabel($info['status'], $labelType);
+                                    echo '
+                                    <td>
+                                        <a href = "' . $eidUrl . '" class = "btn btn-success btn-small"' . $btnType . '>查看细节</a>
                                     </td> ';
                                     echo "</tr>";
                                 }
@@ -120,114 +220,6 @@ include("config.php");
     <!--/fluid-row-->
 </div>
 <!-- modal-->
-<div class = " modal hide" id = "changeInfo-modal">
-    <div class = "modal-header">
-        <button type = "button" class = "close" data-dismiss = "modal">×</button>
-        <h3>修改/查看学生信息</h3>
-        <h5>(修改信息后需刷新页面才能看见更新信息)</h5>
-    </div>
-    <div class = "modal-body table-striped form-horizontal">
-        <div class = "">
-            <fieldset>
-                <div class = "control-group">
-                    <label class = "control-label" for = "changeInfo-name">姓名</label>
-                    <div class = "controls">
-                        <input class = "input-medium disabled" id = "changeInfo-name" type = "text" value = "" disabled>
-                    </div>
-                </div>
-                <div class = "control-group">
-                    <label class = "control-label" for = "changeInfo-studentID">学号</label>
-                    <div class = "controls">
-                        <input class = "input-medium disabled" id = "changeInfo-studentID" type = "text" value = ""
-                               disabled = "">
-                    </div>
-                </div>
-                <div class = "control-group">
-                    <label class = "control-label" for = "changeInfo-grade">年级</label>
-                    <div class = "controls">
-                        <input class = "input-medium" type = "text" id = "changeInfo-grade" value = "">
-                    </div>
-                </div>
-                <div class = "control-group">
-                    <label class = "control-label  " for = "changeInfo-sex">性别</label>
-                    <div class = "controls">
-                        <select id = "changeInfo-sex" class = "input-medium">
-                            <option value = "男" id = "男">男</option>
-                            <option value = "女" id = "女">女</option>
-                        </select>
-                    </div>
-                </div>
-                <div class = "control-group">
-                    <label class = "control-label" for = "changeInfo-type">类别</label>
-                    <div class = "controls">
-                        <select id = "changeInfo-type" class = "input-medium">
-                            <?php
-                            $result = mysql_query("SELECT * FROM studenttype");
-                            while ($row = mysql_fetch_array($result)) {
-                                echo "<option value = \"{$row['sid']}\" id = \"{$row['typeName']}\">{$row['typeName']}</option>";
-                            }
-                            ?>
-                        </select>
-                    </div>
-                </div>
-                <div class = "control-group">
-                    <label class = "control-label" for = "changeInfo-subject">校内方向</label>
-                    <div class = "controls">
-                        <input class = "input-medium" type = "text" id = "changeInfo-subject" value = "">
-                    </div>
-                </div>
-                <div class = "control-group">
-                    <label class = "control-label" for = "changeInfo-tutor">导师</label>
-                    <div class = "controls">
-                        <input class = "input-medium" type = "text" id = "changeInfo-tutor" value = "">
-                    </div>
-                </div>
-                <div class = "control-group">
-                    <label class = "control-label" for = "changeInfo-IDcard">身份证号</label>
-                    <div class = "controls">
-                        <input class = "input-medium" type = "text" id = "changeInfo-IDcard" value = "">
-                    </div>
-                </div>
-                <div class = "control-group">
-                    <label class = "control-label  " for = "changeInfo-status">状态</label>
-                    <div class = "controls">
-                        <input type = "text" class = "input-medium datepicker" id = "changeInfo-status" value = "" disabled>
-                    </div>
-                </div>
-                <div class = "control-group">
-                    <label class = "control-label" for = "changeInfo-deadLine">提交截止日期</label>
-                    <div class = "controls">
-                        <input type = "text" class = "input-medium datepicker" id = "changeInfo-deadLine" value = "">
-                    </div>
-                </div>
-                <div class = "control-group">
-                    <label class = "control-label" for = "changeInfo-paper">论文</label>
-                    <div class = "controls">
-                        <a href = "" target = "_blank" id = "changeInfo-paper"
-                           class = "btn btn-success btn-small">还未上传</a>
-                    </div>
-                </div>
-                <div class = "control-group">
-                    <label class = "control-label" for = "changeInfo-report">开题报告</label>
-                    <div class = "controls">
-                        <a href = "" target = "_blank" id = "changeInfo-report"
-                           class = "btn btn-success btn-small">还未上传</a>
-                    </div>
-                </div>
-                <div class = "control-group">
-                    <label class = "control-label" for = "changeInfo-repeatRate">重复率(百分比)</label>
-                    <div class = "controls">
-                        <input type = "text" class = "input-medium " id = "changeInfo-repeatRate" value = "">
-                    </div>
-                </div>
-            </fieldset>
-        </div>
-    </div>
-    <div class = "modal-footer">
-        <a href = "#" class = "btn" data-dismiss = "modal">关闭</a>
-        <a class = "btn btn-primary" onclick = "subChangeInfo()">保存</a>
-    </div>
-</div>
 </body>
 <script>
     //切换下载按钮

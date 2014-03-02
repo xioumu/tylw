@@ -7,7 +7,7 @@ include("config.php");
 <div class="navbar MainHead">
     <div class="navbar-inner">
         <div class="container-fluid">
-            <span class="brand title">武汉体育学院学位管理系统</span>
+            <span class="brand title">武汉体育学院研究生学位管理系统</span>
             <!-- user dropdown starts -->
             <div class="btn-group pull-right">
                 <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
@@ -21,8 +21,9 @@ include("config.php");
                     <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a href="logout.php">注销</a></li>
                     <li><a href="#myChangePasswd-modal" data-toggle="modal" >修改密码</a></li>
+                    <li class="divider"></li>
+                    <li><a href="logout.php">注销</a></li>
                 </ul>
             </div>
             <!-- user dropdown ends -->

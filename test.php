@@ -3,9 +3,7 @@ include("myFunction.php");
 if (isset($_GET['vehicle'])) {
     print_r($_GET['vehicle']);
 }
-$s = '\\ /  <smart> & funny? <b>Bill Gates<b> <script> alert("test"); </script>';
-filter($s);
-echo $s;
+echo time();;
 ?>
 <html>
 <body>

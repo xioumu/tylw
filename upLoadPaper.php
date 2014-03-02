@@ -24,7 +24,7 @@ function updataPaperName($user, $paperName) {
 //上传论文
 function updataStuFile($user, $file, $type) {
     $judgeYear = getJudgeYear();
-    $fileType = substr(strrchr($file['name'],"."),1);
+    $fileType = substr(strrchr($file['name'], "."), 1);
     $fileName = myEncode($user) . "." . $fileType;
     $address = 'upFile/' . $type . "/" . $judgeYear . "/" . $fileName;
     //echo $address . "<br/>";
@@ -39,37 +39,35 @@ function updataStuFile($user, $file, $type) {
     }
     return true;
 }
-
+judgeUser(array('stu'));
 if (isset($_SESSION['is_login'])) {
     $user = $_SESSION['is_login'];
-    judgeUser(array('stu'));
+    $info = getStuInfo($user);
     $userTyper = getUserType($user);
-    if ($userTyper != 'stu') {
-        errorUser();
-    }
-    else {
-        if (isset($_GET['type']) && isset($_FILES['paperFile'])) {
-            if ($_FILES["paperFile"]["size"] < 100 * 1024 * 1024) { //记得限制文件格式, (大小最大100M)
-                if ($_FILES["paperFile"]["error"] > 0) {
-                    echo "Error: " . $_FILES["paperFile"]["error"] . "<br />";
-                    if ($_FILES["paperFile"]["error"] == 4) {
-                        header("Location: student-submit.php?status=error4");
-                    }
-                }
-                else {
-                    if ($_GET['type'] == "paper")  {
-                        updataPaperName($user, $_POST['paperName']);
-                    }
-                    if (updataStuFile($user, $_FILES['paperFile'], $_GET['type'])) {
-                        echo "ok!";
-                        header("Location: student-submit.php?status=ture");
-                    }
-                    else echo 'error';
+    if (isset($_GET['type']) && isset($_FILES['paperFile'])) {
+        if ($_FILES["paperFile"]["size"] < 100 * 1024 * 1024) { //记得限制文件格式, (大小最大100M)
+            if ($_FILES["paperFile"]["error"] > 0) {
+                echo "Error: " . $_FILES["paperFile"]["error"] . "<br />";
+                if ($_FILES["paperFile"]["error"] == 4) {
+                    header("Location: student-submit.php?status=error4");
                 }
             }
             else {
-                if ($_FILES["exlFile"]["size"] >= 100 * 1024 * 1024) echo "文件超过大小限制!<br/>";
+                if ($_GET['type'] == "paper") {
+                    if (empty($_POST['paperName'])) goBack("论文名不能为空", "student-submit.php");
+                    if (overDeadline($info['papDeadline'])) goBack("提交已经截止", "student-submit.php");
+                    updataPaperName($user, $_POST['paperName']);
+                }
+                else if(overDeadline($info['repDeadline'])) goBack("提交已经截止","student-submit.php");
+                if (updataStuFile($user, $_FILES['paperFile'], $_GET['type'])) {
+                    echo "ok!";
+                    header("Location: student-submit.php?status=ture");
+                }
+                else echo 'error';
             }
+        }
+        else {
+            if ($_FILES["exlFile"]["size"] >= 100 * 1024 * 1024) echo "文件超过大小限制!<br/>";
         }
     }
 }

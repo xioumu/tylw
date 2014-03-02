@@ -1,5 +1,5 @@
 <?php
-judgeUser(array('onTea'));
+judgeUser(array('outTea'));
 ?>
 <html>
     <body>

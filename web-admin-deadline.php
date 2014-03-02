@@ -21,16 +21,25 @@
         <!-- left menu ends -->
         <div id = "content" class = "span10">
             <?php
-            if (isset($_POST['studentDate']) && $_POST['studentDate'] != "") {
-                $deadLine = changeData($_POST['studentDate']);
-                if (!mysql_query("UPDATE student SET SdeadLine = '{$deadLine}'")) {
-                    echo ' <script>$(\'.index\').noty({"text": "设置学生截止日期错误", "layout": "topLeft", "type": "error"});</script>';
+            if (!empty($_POST['reportDate'])) {
+                $deadLine = changeData($_POST['reportDate']);
+                if (!mysql_query("UPDATE student SET papDeadline = '{$deadLine}'")) {
+                    echo ' <script>$(\'.index\').noty({"text": "设置开题报告截止日期错误", "layout": "topLeft", "type": "error"});</script>';
                 }
                 else {
-                    echo '<script>$(\'.index\').noty({"text": "设置学生截止日期成功", "layout": "topLeft", "type": "success"});</script>';
+                    echo '<script>$(\'.index\').noty({"text": "设置开题报告截止日期成功", "layout": "topLeft", "type": "success"});</script>';
                 }
             }
-            if (isset($_POST['teacherDate']) && $_POST['teacherDate'] != ""){
+            if (!empty($_POST['paperDate'])) {
+                $deadLine = changeData($_POST['paperDate']);
+                if (!mysql_query("UPDATE student SET repDeadline = '{$deadLine}'")) {
+                    echo ' <script>$(\'.index\').noty({"text": "设置论文截止日期错误", "layout": "topLeft", "type": "error"});</script>';
+                }
+                else {
+                    echo '<script>$(\'.index\').noty({"text": "设置论文报告截止日期成功", "layout": "topLeft", "type": "success"});</script>';
+                }
+            }
+            if (!empty($_POST['teacherDate'])){
                 $deadLine = changeData($_POST['teacherDate']);
                 if (!mysql_query("UPDATE teacheronside SET TdeadLine = '{$deadLine}'")) {
                     echo ' <script>$(\'.index\').noty({"text": "设置校内专家截止日期错误", "layout": "topLeft", "type": "error"});</script>';
@@ -56,10 +65,17 @@
                         <form class = "form-horizontal" action = "web-admin-deadline.php" method = "post">
                             <fieldset>
                                 <div class = "control-group">
+                                    <label class = "control-label" for = "date03">学生提交开题报告截止日期</label>
+                                    <div class = "controls">
+                                        <input type = "text" class = "input-medium datepicker" id = "date03"
+                                               name = "reportDate" value = "">
+                                    </div>
+                                </div>
+                                <div class = "control-group">
                                     <label class = "control-label" for = "date01">学生提交论文截止日期</label>
                                     <div class = "controls">
                                         <input type = "text" class = "input-medium datepicker" id = "date01"
-                                               name = "studentDate" value = "">
+                                               name = "paperDate" value = "">
                                     </div>
                                 </div>
                                 <div class = "control-group">
@@ -77,10 +93,8 @@
                     </div>
                 </div>
                 <!--/span-->
-
             </div>
             <!--/row-->
-
             <!-- content ends -->
         </div>
         <!--/#content.span10-->

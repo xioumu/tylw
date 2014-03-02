@@ -19,7 +19,6 @@
         <!-- left menu starts -->
         <?php include('student-left.php'); ?>
         <!-- left menu ends -->
-
         <div id = "content" class = "span10">
             <!-- road -->
             <div>
@@ -60,7 +59,7 @@
                                     <label class = "control-label">提交截止时间:</label>
                                     <div class = "controls">
                                         <input class = "input-xlarge disabled" type = "text"
-                                               value = "<?php echo $info['SdeadLine'] ?>" disabled = "">
+                                               value = "<?php echo $info['repDeadline'] ?>" disabled = "">
                                     </div>
                                 </div>
                                 <div class = "control-group">
@@ -92,7 +91,7 @@
                                 <div class = "control-group">
                                     <label class = "control-label">提交截止时间:</label>
                                     <div class = "controls">
-                                        <input class = "input-xlarge disabled" type = "text" value = "<?php echo $info['SdeadLine'] ?>" disabled = "">
+                                        <input class = "input-xlarge disabled" type = "text" value = "<?php echo $info['papDeadline'] ?>" disabled = "">
                                     </div>
                                 </div>
                                 <div class = "control-group">
@@ -122,12 +121,9 @@
                         </form>
                     </div>
                 </div>
-
                 <!--/span-->
-
             </div>
             <!--/row-->
-
             <!-- content ends -->
         </div>
         <!--/#content.span10-->

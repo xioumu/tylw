@@ -12,6 +12,8 @@
                         class = "hidden-tablet">管理校内专家账号</span></a></li>
             <li><a class = "ajax-link" href = "web-admin-OutTeacher-manage.php"><span
                         class = "hidden-tablet">管理校外专家账号 </span></a></li>
+            <li><a class = "ajax-link" href = "web-admin-secretary-manage.php"><span
+                        class = "hidden-tablet">管理教学秘书账号 </span></a></li>
             <li><a class = "ajax-link" href = "web-admin-eva-manage.php"><span
                         class = "hidden-tablet">管理当前评审信息</span></a></li>
             <li><a class = "ajax-link" href = "web-admin-add-eva.php"><span class = "hidden-tablet">添加参与评测的学生</span></a>
@@ -22,8 +24,8 @@
                         class = "hidden-tablet">设置合格重复率</span></a></li>
             <li><a class = "ajax-link" href = "web-admin-finish.php"><span class = "hidden-tablet">结束评测并归档</span></a>
             </li>
-            <li><a class = "ajax-link" href = "web-admin-finish-info.php"><span
-                        class = "hidden-tablet">查看归档的信息</span></a></li>
+            <li><a class = "ajax-link" href = "web-admin-finish-info-select.php"><span
+                        class = "hidden-tablet">查看归档数据</span></a></li>
             <li><a class = "ajax-link" href = "web-admin-type-manage.php"><span
                         class = "hidden-tablet">管理类别</span></a></li>
 

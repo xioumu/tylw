@@ -37,7 +37,7 @@ include("config.php");
             <div class = "row-fluid sortable">
                 <div class = "box span12">
                     <div class = "box-header well" data-original-title>
-                        <h2>管理学生账号</h2>
+                        <h2>管理审评信息</h2>
                         <div class = "box-icon">
                             <a href = "web-admin-add-one-eva.php" class = "btn btn-success">添加审评</a>
                             <button type = "submit" class = "btn btn-danger left" onclick = "delAllEva()">删除全部审评信息 </button>

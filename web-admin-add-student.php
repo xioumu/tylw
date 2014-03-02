@@ -49,6 +49,7 @@ include("config.php");
                                 <th>学号</th>
                                 <th>姓名</th>
                                 <th>性别</th>
+                                <th>专业</th>
                                 <th>校内方向</th>
                                 <th>类别</th>
                                 <th>身份证号</th>
@@ -56,7 +57,7 @@ include("config.php");
                                 </thead>';
                 foreach ($data as $row) {
                     echo '<tr>';
-                    for ($i = 'A'; $i <= 'H'; $i++) {
+                    for ($i = 'A'; $i <= 'I'; $i++) {
                         echo '<td>' . $row[$i] . '</td>';
                     }
                     echo '</tr>';

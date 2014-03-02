@@ -1,6 +1,7 @@
 <?php
 filter_input_array(INPUT_POST, FILTER_SANITIZE_SPECIAL_CHARS);
 filter_input_array(INPUT_GET, FILTER_SANITIZE_SPECIAL_CHARS);
+header("Content-Type: text/html;charset=utf-8"); 
 function loginCheck($username, $passwd) {
     $result = mysql_query("SELECT * FROM user WHERE user = '{$username}' ");
     if ($row = mysql_fetch_array($result)) {
@@ -462,6 +463,13 @@ function delOnTeaInfo($user) {
 //删除校内专家信息
 function delOutTeaInfo($user) {
     if (mysql_query("DELETE FROM teacheroutside WHERE userID = '{$user}'")) {
+        return true;
+    }
+    else return false;
+}
+
+function delSec($user) {
+    if (mysql_query("DELETE FROM secretary WHERE userID = '{$user}'")) {
         return true;
     }
     else return false;

@@ -35,11 +35,11 @@ include('header.php');
             <div class = "row-fluid sortable">
                 <div class = "box span12">
                     <div class = "box-header well" data-original-title>
-                        <h2>管理校内专家账号</h2>
+                        <h2>管理校外专家账号</h2>
                         <div class = "box-icon">
-                            <a href = "leadOutPasswd.php?type=outTea" class = "btn btn-primary left" target = "view_window">导出校内专家账户密码</a>
+                            <a href = "leadOutPasswd.php?type=outTea" class = "btn btn-primary left" target = "view_window">导出校外专家账户密码</a>
                             <button type = "submit" class = "btn btn-danger left" onclick = "delAllUser()">
-                                删除全部校内专家账户
+                                删除全部校外专家账户
                             </button>
                         </div>
                     </div>
@@ -49,6 +49,8 @@ include('header.php');
                                 <thead>
                                 <th>账号</th>
                                 <th>密码</th>
+                                <th>专业</th>
+                                <th>论文名</th>
                                 <th>状态</th>
                                 <th>操作</th>
                                 </thead>
@@ -56,9 +58,20 @@ include('header.php');
                                 $allUser = getAllUserPasswd("outTea");
                                 foreach ($allUser as $user) {
                                     $status = getTeaStatus($user['user']);
+                                    $evaID = getAllUserEva($user['user'], "teacherID");
+                                    $major = "";
+                                    $sName = "";
+                                    if (isset($evaID[0])) {
+                                        $evaInfo = getEvaInfo($evaID[0]);
+                                        $stuInfo = getStuInfo($evaInfo['studentID']);
+                                        $major = $stuInfo['major'];
+                                        $sName = $stuInfo['sName'];
+                                    }
                                     echo "<tr id = \"{$user['user']}\">";
                                     echo "<td>" . $user['user'] . "</td>";
                                     echo "<td>" . $user['passwd'] . "</td>";
+                                    echo "<td>" . $major . "</td>";
+                                    echo "<td>" . $sName . "</td>";
                                     $labelType = "success";
                                     if ($status == "还未评审完毕") $labelType = "important";
                                     echo getLabel($status, $labelType);

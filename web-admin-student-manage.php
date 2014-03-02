@@ -51,14 +51,15 @@ include("config.php");
                                 <th>年级</th>
                                 <th>姓名</th>
                                 <th>学号</th>
-                                <th>类别</th>
+                                <th>专业</th>
                                 <th>校内方向</th>
-                                <th>提交截止日期</th>
+                                <th>类别</th>
+                                <th>开题报告截止日期</th>
+                                <th>论文截止日期</th>
                                 <th>状态</th>
                                 <th>操作</th>
                                 </thead>
                                 <?php
-
                                 $allStuUser = getAllUser("stu");
                                 foreach ($allStuUser as $user) {
                                     $info = getStuInfo($user);
@@ -66,9 +67,11 @@ include("config.php");
                                     echo "<td>" . $info['grade'] . "</td>";
                                     echo "<td>" . $info['sName'] . "</td>";;
                                     echo "<td>" . $info['studentID'] . "</td>";
-                                    echo "<td>" . $info['type'] . "</td>";
+                                    echo "<td>" . $info['major'] . "</td>";
                                     echo "<td>" . $info['subject'] . "</td>";
-                                    echo "<td>" . $info['SdeadLine'] . "</td>";
+                                    echo "<td>" . $info['type'] . "</td>";
+                                    echo "<td>" . $info['repDeadline'] . "</td>";
+                                    echo "<td>" . $info['papDeadline'] . "</td>";
                                     $labelType = "success";
                                     if ($info['status'] == "未上传论文") $labelType = "important";
                                     echo getLabel($info['status'], $labelType);
@@ -132,6 +135,18 @@ include("config.php");
                     </div>
                 </div>
                 <div class = "control-group">
+                    <label class = "control-label" for = "changeInfo-major">专业</label>
+                    <div class = "controls">
+                        <input class = "input-medium" type = "text" id = "changeInfo-major" value = "">
+                    </div>
+                </div>
+                <div class = "control-group">
+                    <label class = "control-label" for = "changeInfo-subject">校内方向</label>
+                    <div class = "controls">
+                        <input class = "input-medium" type = "text" id = "changeInfo-subject" value = "">
+                    </div>
+                </div>
+                <div class = "control-group">
                     <label class = "control-label" for = "changeInfo-type">类别</label>
                     <div class = "controls">
                         <select id = "changeInfo-type" class = "input-medium">
@@ -142,12 +157,6 @@ include("config.php");
                             }
                             ?>
                         </select>
-                    </div>
-                </div>
-                <div class = "control-group">
-                    <label class = "control-label" for = "changeInfo-subject">校内方向</label>
-                    <div class = "controls">
-                        <input class = "input-medium" type = "text" id = "changeInfo-subject" value = "">
                     </div>
                 </div>
                 <div class = "control-group">
@@ -169,9 +178,15 @@ include("config.php");
                     </div>
                 </div>
                 <div class = "control-group">
-                    <label class = "control-label" for = "changeInfo-deadLine">提交截止日期</label>
+                    <label class = "control-label" for = "changeInfo-deadLine">开题报告提交截止日期</label>
                     <div class = "controls">
-                        <input type = "text" class = "input-medium datepicker" id = "changeInfo-deadLine" value = "">
+                        <input type = "text" class = "input-medium datepicker" id = "changeInfo-repDeadline" value = "">
+                    </div>
+                </div>
+                <div class = "control-group">
+                    <label class = "control-label" for = "changeInfo-deadLine">论文提交截止日期</label>
+                    <div class = "controls">
+                        <input type = "text" class = "input-medium datepicker" id = "changeInfo-papDeadline" value = "">
                     </div>
                 </div>
                 <div class = "control-group">
@@ -220,11 +235,13 @@ include("config.php");
         page.find('#changeInfo-name').val("");
         page.find('#changeInfo-studentID').val("");
         page.find('#changeInfo-grade').val("");
+        page.find('#changeInfo-major').val("");
         page.find('#changeInfo-subject').val("");
         page.find('#changeInfo-tutor').val("");
         page.find('#changeInfo-IDcard').val("");
         page.find('#changeInfo-status').val("");
-        page.find('#changeInfo-judgeDate').val("");
+        page.find('#changeInfo-repDeadline').val("");
+        page.find('#changeInfo-papDeadline').val("");
         page.find('#changeInfo-repeatRate').val("");
         setUploadBtn(page.find('#changeInfo-paper'), null);
         setUploadBtn(page.find('#changeInfo-report'), null);
@@ -245,10 +262,12 @@ include("config.php");
                     page.find('#changeInfo-grade').val(stuInfo.grade);
                     page.find('#changeInfo-sex').find('#' + stuInfo.sex).attr("selected", "selected");
                     page.find('#changeInfo-type').find('#' + stuInfo.type).attr("selected", "selected");
+                    page.find('#changeInfo-major').val(stuInfo.major);
                     page.find('#changeInfo-subject').val(stuInfo.subject);
                     page.find('#changeInfo-tutor').val(stuInfo.tutor);
                     page.find('#changeInfo-IDcard').val(stuInfo.IDcard);
-                    page.find('#changeInfo-deadLine').val(stuInfo.SdeadLine);
+                    page.find('#changeInfo-repDeadline').val(stuInfo.repDeadline);
+                    page.find('#changeInfo-papDeadline').val(stuInfo.papDeadline);
                     page.find('#changeInfo-status').val(stuInfo.status);
                     page.find('#changeInfo-repeatRate').val(stuInfo.repeatRate);
                     setUploadBtn(page.find('#changeInfo-paper'), stuInfo.paperAdd);
@@ -274,10 +293,12 @@ include("config.php");
                     grade: page.find('#changeInfo-grade').val(),
                     sex: page.find('#changeInfo-sex').val(),
                     sType: page.find('#changeInfo-type').val(),
+                    major: page.find('#changeInfo-major').val(),
                     subject: page.find('#changeInfo-subject').val(),
                     tutor: page.find('#changeInfo-tutor').val(),
                     IDcard: page.find('#changeInfo-IDcard').val(),
-                    deadLine: page.find('#changeInfo-deadLine').val(),
+                    repDeadline: page.find('#changeInfo-repDeadline').val(),
+                    papDeadline: page.find('#changeInfo-papDeadline').val(),
                     repeatRate: page.find('#changeInfo-repeatRate').val()
                 },
                 function (data, status) {

@@ -21,9 +21,9 @@
         <!-- left menu ends -->
         <?php
         //将现有的审评归档
-        function moveEvaFinish() {
+        function moveEvaFinish($judgeInfo) {
             $allEva = getAllEva();
-            $judgeYear = getJudgeYear();
+            $judgeYear = $judgeInfo;
             foreach ($allEva as $eid) {
                 $info = getEvaInfo($eid);
                 if (!mysql_query("INSERT INTO record_evaluating (eid,teacherID,studentID,c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11,t1,t2,t3,t4,t5,time,summary,judgeYear,tName,status)
@@ -38,10 +38,10 @@
             }
             return true;
         }
-
-        function moveStuFinish() {
+        //移动学生
+        function moveStuFinish($judgeInfo) {
             $allStu = getAllUser('stu');
-            $judgeYear = getJudgeYear();
+            $judgeYear = $judgeInfo;
             foreach ($allStu as $user) {
                 $info = getStuInfo($user);
                 if (!mysql_query("INSERT INTO record_student (studentID, sName, sex, subject, grade, status,IDcard,tutor, type, judgeYear, paperAdd, reportAdd, repeatRate)
@@ -77,8 +77,8 @@
             $flag = true;
             $allStuUser = getAllUser('stu');
             foreach ($allStuUser as $user) {
-                $status = getStuStatus($user);
-                if ($status != "通过评审") continue;
+                //$status = getStuStatus($user);
+                //if ($status != "通过评审") continue; //只让通过审评的人通过
                 if (!delEva($user, 'studentID')) {
                     echo 'delete evaluating error!';
                     $flag = false;
@@ -95,18 +95,18 @@
             return $flag;
         }
         if (isset($_POST['judgeYear']) && $_POST['judgeYear'] != "") {
-            echo "test";
+            //echo "test";
             $flag = true;
-            if (!moveEvaFinish()) {
+            if (!moveEvaFinish($_POST['judgeYear'])) {
                 $flag = false;
             }
-            if (!moveStuFinish()) {
+            if (!moveStuFinish($_POST['judgeYear'])) {
                 $flag = false;
             }
             if ($flag) {
                 if (!delAllEva()) $flag = false;
                 else if (!delAllPassStu()) $flag = false;
-                else if (!setJudgeYear($_POST['judgeYear'])) $flag = false;
+                else if (!setJudgeYear(time())) $flag = false;
             }
             if ($flag) {
                 echo '<script> $(\'.index\').noty({"text": "归档成功", "layout": "topLeft", "type": "success"});</script>';
@@ -133,13 +133,13 @@
             <div class = "row-fluid sortable">
                 <div class = "box span12">
                     <div class = "box-header well" data-original-title>
-                        <h2>结束测评并归档<h3>(当前学年是<?php echo $otherInfo['NowJudgeYear']; ?>)</h3></h2>
+                        <h2>结束测评并归档</h2>
                     </div>
                     <div class = "box-content">
                         <form class = "form-horizontal" action = "web-admin-finish.php" method = "post">
                             <fieldset>
                                 <div class = "control-group">
-                                    <label class = "control-label">请填写下一学年</label>
+                                    <label class = "control-label">请填本次审评归档信息</label>
                                     <div class = "controls">
                                         <input class = "input-xlarge disabled" id = "stdentID" type = "text" value = ""
                                                name = "judgeYear">

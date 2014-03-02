@@ -30,7 +30,7 @@ include("config.php");
                         <a href = "student-info.php">学生</a> <span class = "divider">/</span>
                     </li>
                     <li>
-                        <a href = "student-info.php">查看个人信息</a>
+                        <a href = "web-admin-finish-info-select.php">查看个人信息</a>
                     </li>
                 </ul>
             </div>
@@ -76,10 +76,10 @@ include("config.php");
                                     </div>
                                 </div>
                                 <div class = "control-group">
-                                    <label class = "control-label" for = "type">类别</label>
+                                    <label class = "control-label" for = "subject">专业</label>
                                     <div class = "controls">
-                                        <input class = "input-xlarge" type = "text" id = "type" disabled
-                                               value = "<?php echo $info['type'] ?>">
+                                        <input class = "input-xlarge" type = "text" id = "subject" disabled
+                                               value = "<?php echo $info['major'] ?>">
                                     </div>
                                 </div>
                                 <div class = "control-group">
@@ -89,6 +89,14 @@ include("config.php");
                                                value = "<?php echo $info['subject'] ?>">
                                     </div>
                                 </div>
+                                <div class = "control-group">
+                                    <label class = "control-label" for = "type">类别</label>
+                                    <div class = "controls">
+                                        <input class = "input-xlarge" type = "text" id = "type" disabled
+                                               value = "<?php echo $info['type'] ?>">
+                                    </div>
+                                </div>
+
                                 <div class = "control-group">
                                     <label class = "control-label" for = "tutor">导师</label>
                                     <div class = "controls">
