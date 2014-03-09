@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <?php
-header("Content-Type: text/html;charset=utf-8");
 include("config.php");
 ?>
-<html lang = "en">
+<html lang = "zh">
 <head>
     <meta charset = "utf-8">
     <title>武汉体育学院学位管理系统</title>
@@ -28,26 +27,26 @@ include("config.php");
                 <ul class = "breadcrumb">
                     <li> <a href = "web-admin-student-manage.php">网站管理员</a> <span class = "divider">/</span> </li>
                     <li> <a href = "web-admin-eva-manage.php">管理审评信息</a> <span class = "divider">/</span> </li>
-                    <li> <a href = "web-admin-eva-stu.php">选择指定学生参与审评</a> <span class = "divider">/</span> </li>
+                    <li> <a href = "web-admin-add-eva-stu.php">选择指定学生参与审评</a> </li>
                 </ul>
             </div>
             <?php
                 $allUser = getAllFreeUser("stu");
-                $sum = intval($_POST['needNum']);
-                if ($sum <= 0 || $sum > count($allUser)) {
-                    goBack("输入的数字超过最大人数，或者是负数，请重新输入", "web-admin-add-eva.php");
+                $sum = intval($_POST['needPercent']);
+                if ($sum < 0 || $sum > 100 ) {
+                    goBack("输入的数字必须是0~100之间，请重新输入", "web-admin-add-eva.php");
                 }
             ?>
             <div class = "row-fluid sortable">
                 <div class = "box span12">
                     <div class = "box-header well" data-original-title>
-                        <h2>指定学生必须参与审评</h2>
+                        <h2>指定学生必须参与审评<h3>(请勾选指定学生)</h3></h2>
                     </div>
                     <div class = "box-content">
-                        <form class = "form-horizontal" action = "addEva.php?type=mul&needNum=<?php echo $_POST['needNum'] ?>" method="post">
+                        <form class = "form-horizontal" action = "addEva.php?type=mul&needPercent=<?php echo $_POST['needPercent'] ?>" method="post">
                             <table class = "table table-striped table-bordered bootstrap-datatable datatable">
                                 <thead>
-                                <th>请勾选指定学生</th>
+                                <th></th>
                                 <th>年级</th>
                                 <th>姓名</th>
                                 <th>学号</th>
@@ -70,7 +69,8 @@ include("config.php");
                                 }
                                 ?>
                             </table>
-                            <h4>一共将添加<?php echo $_POST['needNum'] ?>位学生参与评测，您已指定<span id = "assignSum">0</span>位，剩下的将随机抽选。</h4>
+                            <!--<h4>一共将添加<?php  //echo $_POST['needNum']; ?>位学生参与评测，您已指定<span id = "assignSum">0</span>位，剩下的将随机抽选。</h4>
+                            -->
                             <div class = "form-actions">
                                 <button type = "submit" class = "btn btn-primary ">下一步</button>
                             </div>

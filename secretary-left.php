@@ -6,7 +6,7 @@
 				<div class="well nav-collapse sidebar-nav">
 					<ul class="nav nav-tabs nav-stacked main-menu">
 						<li class="nav-header hidden-tablet">菜单</li>
-						<li><a class="ajax-link" href="on-teacher-info.php"><span class="hidden-tablet">查看学生信息</span></a></li>
+						<li><a class="ajax-link" href="secretary-view-student.php"><span class="hidden-tablet">查看本专业学生信息</span></a></li>
 					</ul>
 				</div><!--/.well -->
 			</div><!--/span-->

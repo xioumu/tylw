@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<?php header("Content-Type: text/html;charset=utf-8"); ?>
 <?php include("config.php"); ?>
-<html lang = "en">
+<html lang = "zh">
 <head>
     <meta charset = "utf-8">
     <title>武汉体育学院学位管理系统</title>
@@ -55,6 +54,17 @@
                 }
             }
             ?>
+            <!-- road -->
+            <div>
+                <ul class = "breadcrumb">
+                    <li>
+                        <a href = "web-admin-student-manage.php">网站管理员</a> <span class = "divider">/</span>
+                    </li>
+                    <li>
+                        <a href = "web-admin-eva-manage.php">设置截止日期</a>
+                    </li>
+                </ul>
+            </div>
             <!-- content starts -->
             <div class = "row-fluid sortable">
                 <div class = "box span12">
@@ -65,14 +75,14 @@
                         <form class = "form-horizontal" action = "web-admin-deadline.php" method = "post">
                             <fieldset>
                                 <div class = "control-group">
-                                    <label class = "control-label" for = "date03">学生提交开题报告截止日期</label>
+                                    <label class = "control-label" for = "date03">提交开题报告截止日期</label>
                                     <div class = "controls">
                                         <input type = "text" class = "input-medium datepicker" id = "date03"
                                                name = "reportDate" value = "">
                                     </div>
                                 </div>
                                 <div class = "control-group">
-                                    <label class = "control-label" for = "date01">学生提交论文截止日期</label>
+                                    <label class = "control-label" for = "date01">提交论文截止日期</label>
                                     <div class = "controls">
                                         <input type = "text" class = "input-medium datepicker" id = "date01"
                                                name = "paperDate" value = "">

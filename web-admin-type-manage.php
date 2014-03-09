@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <?php
-header("Content-Type: text/html;charset=utf-8");
 include("config.php");
 ?>
-<html lang = "en">
+<html lang = "zh">
 <head>
     <meta charset = "utf-8">
     <title>武汉体育学院学位管理系统</title>
@@ -39,7 +38,7 @@ include("config.php");
                     <div class = "box-header well" data-original-title>
                         <h2>管理类别</h2>
                         <div class = "box-icon">
-                            <a href = "#addType-modal" type = "submit" class = "btn btn-success left" data-toggle = "modal">添加类别</a>
+                            <a href = "#addType-modal" type = "submit" class = "btn btn-primary left" data-toggle = "modal">添加类别</a>
                         </div>
                     </div>
                     <div class = "box-content">

@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <?php
-header("Content-Type: text/html;charset=utf-8");
 include("config.php");
 ?>
-<html lang = "en">
+<html lang = "zh">
 <head>
     <meta charset = "utf-8">
     <title>武汉体育学院学位管理系统</title>
@@ -41,9 +40,9 @@ include('header.php');
                     <div class = "box-header well" data-original-title>
                         <h2>管理校内专家账号</h2>
                         <div class = "box-icon">
-                            <a href = "web-admin-add-OnTeachear.php" class = "btn btn-success">导入校内专家账户</a>
-                            <a href = "leadOutPasswd.php?type=onTea" class = "btn btn-primary left"
-                               target = "view_window">导出校内专家账户密码</a>
+                            <a href = "web-admin-add-OnTeachear.php" class = "btn btn-primary">导入校内专家信息</a>
+                            <a href = "leadOutPasswd.php?type=onTea" class = "btn btn-primary left" target = "view_window">导出校内专家信息</a>
+                            <a href = "web-admin-add-rand-select.php" class = "btn btn-primary">随机抽取校内专家评审</a>
                             <button type = "submit" class = "btn btn-danger left" onclick = "delAllUser()">
                                 删除全部校内专家账户
                             </button>
@@ -78,7 +77,7 @@ include('header.php');
                                     echo getLabel($info['status'], $labelType);
                                     echo '
                                     <td>
-                                        <a href = "#changeInfo-modal" class = "btn btn-info btn-setting" data-toggle = "modal" onclick="changeInfo(\'' . $user . '\')">查看/修改信息</a>
+                                        <a href = "#changeInfo-modal" class = "btn btn-primary btn-setting" data-toggle = "modal" onclick="changeInfo(\'' . $user . '\')">查看/修改信息</a>
                                         <a href = "#" class = "btn btn-info btn-danger" onclick="delUser(\'' . $user . '\')">删除</a>
                                     </td> ';
                                     echo "</tr>";

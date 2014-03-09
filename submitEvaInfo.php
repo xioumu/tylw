@@ -1,5 +1,4 @@
 <?php
-header("Content-Type: text/html;charset=utf-8");
 include("config.php");
 include("myFunction.php");
 //这里session是OnTeau和OutTea都行
@@ -8,16 +7,16 @@ $self = $_SESSION['is_login'];
 $utype = getUserType($self);
 $haveAll = true;
 for ($i = 1; $i <=11; $i++) {
-    if (!empty($_POST['C'.$i])) {
+    if (empty($_POST['C'.$i])) {
         $haveAll = false;
     }
 }
 for ($i = 1; $i <= 5; $i++){
-    if (!empty($_POST['T' . $i])) {
+    if (empty($_POST['T' . $i])) {
         $haveAll = false;
     }
 }
-if (!empty($_POST['time']) || !empty($_POST['summary']) || !empty($_GET['id'])) {
+if (empty($_POST['time']) || empty($_POST['summary']) || empty($_GET['id'])) {
     $haveAll = false;
 }
 if (!$haveAll) {
@@ -26,7 +25,7 @@ if (!$haveAll) {
 
 $eid = $_GET['id'];
 $evaInfo = getEvaInfo($eid);
-if ($evaInfo['teacherID'] != $sel) {
+if ($evaInfo['teacherID'] != $self) {
     jumpTo('login.php');
 }
 for ($i = 1; $i <= 11; $i++){

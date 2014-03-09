@@ -1,7 +1,6 @@
 <?php
 filter_input_array(INPUT_POST, FILTER_SANITIZE_SPECIAL_CHARS);
 filter_input_array(INPUT_GET, FILTER_SANITIZE_SPECIAL_CHARS);
-header("Content-Type: text/html;charset=utf-8"); 
 function loginCheck($username, $passwd) {
     $result = mysql_query("SELECT * FROM user WHERE user = '{$username}' ");
     if ($row = mysql_fetch_array($result)) {
@@ -120,8 +119,10 @@ function getStuStatus($user) {
     $stuType = getStuType($user);
     if ($stuType == 'mas') $rateType = 'masRepeatRate';
     else $rateType = 'docRepeatRate';
+
     if ($info['repeatRate'] == "") return "未填写论文重复率";
-    else if ($info['repeatRate'] > $otherInfo[$rateType]) return "论文重复率超过限制";
+    else if ($info['repeatRate'] > $otherInfo[$rateType]) return "论文重复率不合格";
+
     $allEva = getAllUserEva($user, "studentID");
     if (count($allEva) == 0) return "未参与审评";
     else {
@@ -131,6 +132,10 @@ function getStuStatus($user) {
             else if ($evaStatus == 1) $cnt++;
         }
         if ($cnt >= 2) return "通过评审";
+        else if (count($allEva) == 2 ){
+            if ($cnt == 1) return "需要添加审评";
+            else return "未通过审评";
+        }
         else return "未通过审评";
     }
 }
@@ -288,15 +293,19 @@ function getRand() {
 }
 
 //得到所有未参加评审的学生的ID
-function getAllFreeUser($type) {
+function getAllFreeUser($type, $major = 'all') {
     if ($type == 'stu') {
         $res = array();
-        $que = mysql_query("SELECT studentID
+        $query = "SELECT studentID
                             FROM student
                             WHERE studentID NOT  IN (
                                 SELECT DISTINCT studentID
-                                FROM evaluating)
-                            Order By Rand()");
+                                FROM evaluating)";
+        if ($major != 'all') {
+            $query .=  "AND major = '{$major}'" ;
+        }
+        $query .= "Order By Rand()";
+        $que = mysql_query($query) or die(mysql_error());
         while ($user = mysql_fetch_array($que)) {
             array_push($res, $user['studentID']);
         }
@@ -460,7 +469,7 @@ function delOnTeaInfo($user) {
     else return false;
 }
 
-//删除校内专家信息
+//删除校外专家信息
 function delOutTeaInfo($user) {
     if (mysql_query("DELETE FROM teacheroutside WHERE userID = '{$user}'")) {
         return true;
@@ -480,6 +489,7 @@ function jumpTo($url, $flag = true) {
     echo "<script>alert(\"权限不足.\"); self.location='{$url}';</script>";
     if ($flag) exit;
 }
+
 //判断非法用户
 function judgeUser($allow) {
     $flag = false;
@@ -493,9 +503,10 @@ function judgeUser($allow) {
     }
     if (!$flag) jumpTo("testLogin.php");
 }
+
 //过滤
 function filter(&$url) {
-    $url = filter_var($url,FILTER_SANITIZE_SPECIAL_CHARS);
+    $url = filter_var($url, FILTER_SANITIZE_SPECIAL_CHARS);
 }
 
 //获取所有类别
@@ -504,6 +515,150 @@ function getAllStuType() {
     $result = mysql_query("SELECT * FROM studenttype");
     while ($row = mysql_fetch_array($result)) {
         array_push($res, $row);
+    }
+    return $res;
+}
+
+//获取审评表里的内容
+function getEvaInfoC($val) {
+    if ($val == 1) return '优秀';
+    else if ($val == 2) return '良好';
+    else if ($val == 3) return '合格';
+    else if ($val == 4) return '不合格';
+    else return "未审";
+}
+
+//获取审评表里C9的内容
+function getEvaInfoC9($val) {
+    if ($val == 1) return "有抄袭现象";
+    else if ($val == 2) return "无抄袭现象";
+}
+
+//获取审评表里C10的内容
+function getEvaInfoC10($val) {
+    if ($val == 1) return '同意答辩';
+    else if ($val == 2) return '同意答辩但稍作修改';
+    else if ($val == 3) return '不同意答辩';
+}
+
+//获取指定归档学生信息
+function getRecStuInfo($user, $judgeInfo) {
+    $que = mysql_query("SELECT * FROM record_student WHERE studentID = '{$user}' AND judgeYear = '{$judgeInfo}'") or die("Error in query:  " . mysql_error());
+    if ($row = mysql_fetch_array($que)) {
+        return $row;
+    }
+    else return array();
+}
+
+//获取所有归档审评信息
+function getAllRecEvaInfo($judgeInfo) {
+    $que = "SELECT * FROM record_evaluating";
+    if ($judgeInfo != 'all') $que .= " WHERE judgeYear = '{$judgeInfo}'";
+    $res = array();
+    $result = mysql_query($que) or die("Error in query:  " . mysql_error());;
+    while ($row = mysql_fetch_array($result)) {
+        $stuInfo = getRecStuInfo($row['studentID'], $row['judgeYear']);
+        $row['studentID'] = $stuInfo['studentID'];
+        $row['sName'] = $stuInfo['sName'];
+        $row['major'] = $stuInfo['major'];
+        $row['subject'] = $stuInfo['subject'];
+        $row['type'] = $stuInfo['type'];
+        $row['tutor'] = $stuInfo['tutor'];
+        array_push($res, $row);
+    }
+    return $res;
+}
+//获取指定归档审评信息
+function getRecEvaInfo($eid, $judgeInfo) {
+    $que = "SELECT * FROM record_evaluating WHERE judgeYear = '{$judgeInfo}' AND eid = '{$eid}'";
+    $res = array();
+    $result = mysql_query($que) or die("Error in query:  " . mysql_error());;
+    if ($row = mysql_fetch_array($result)) {
+        $stuInfo = getRecStuInfo($row['studentID'], $row['judgeYear']);
+        $row['studentID'] = $stuInfo['studentID'];
+        $row['sName'] = $stuInfo['sName'];
+        $row['major'] = $stuInfo['major'];
+        $row['subject'] = $stuInfo['subject'];
+        $row['type'] = $stuInfo['type'];
+        $row['tutor'] = $stuInfo['tutor'];
+        $row['paperName'] = $stuInfo['paperName'];
+        $row['paperNum'] = $stuInfo['paperNum'];
+        return $row;
+    }
+    return $res;
+}
+//删除全部校外专家
+function delAllOutTea() {
+    $flag = true;
+    $allOnTeaUser = getAllUser('outTea');
+    foreach ($allOnTeaUser as $user) {
+        if (!delEva($user, 'teacherID')) {
+            echo 'delete evaluating error!';
+            $flag = false;
+        }
+        else if (!delOutTeaInfo($user)) {
+            echo $user . "delete out teacher info error! <br/>";
+            $flag = false;
+        }
+        else if (!delUser($user)) {
+            echo $user . "delete user error! <br/>";
+            $flag = false;
+        }
+    }
+    return $flag;
+}
+//获取教学秘书信息
+function getSecInfo($user) {
+    $res = array();
+    $result = mysql_query("SELECT * FROM secretary WHERE userID = '{$user}'");
+    if ($row = mysql_fetch_array($result)) {
+        $res = $row;
+    }
+    return $res;
+}
+
+//获取指定学生所有审评信息
+function getAllEvaRes($user) {
+    $res = array();
+    $que = mysql_query("SELECT * FROM evaluating WHERE  studentID = '{$user}'") or die("databease error: " . mysql_errno());
+    while ($row = mysql_fetch_array($que)) {
+        array_push($res, $row);
+    }
+    return $res;
+}
+//获取所有专业
+function getAllMajor($type) {
+    $res = array();
+    $que = "";
+    if ($type == 'stu') {
+        $que = mysql_query("SELECT DISTINCT major FROM student") or die(mysql_error());
+    }
+    else if ($type == 'onTea') {
+        $que = mysql_query("SELECT DISTINCT subject FROM teacheronside") or die(mysql_error());
+    }
+    while ($row = mysql_fetch_array($que)) {
+        if ($type == 'stu')   array_push($res, $row['major']);
+        else if ($type == 'onTea') array_push($res, $row['subject']);
+    }
+    return $res;
+}
+//获取所有指定专业的用户名
+function getAllMajorUser($type, $major) {
+    $res = array();
+    $allUser = getAllUser($type);
+    foreach ($allUser as $user) {
+        if ($type == 'stu') {
+            $info = getStuInfo($user);
+            if ($info['major'] == $major) {
+                array_push($res, $user);
+            }
+        }
+        else if ($type == 'onTea') {
+            $info = getOnTeaInfo($user);
+            if ($info['subject'] == $major){
+                array_push($res, $user);
+            }
+        }
     }
     return $res;
 }

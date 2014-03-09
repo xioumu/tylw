@@ -1366,7 +1366,7 @@
       <column name="studentID" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
       <column name="sName" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
       <column name="sex" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
-      <column name="majoy" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="major" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
       <column name="subject" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
       <column name="grade" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
       <column name="IDcard" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<?php header("Content-Type: text/html;charset=utf-8"); ?>
 <?php include("config.php"); ?>
-<html lang = "en">
+<html lang = "zh">
 <head>
     <meta charset = "utf-8">
     <title>武汉体育学院学位管理系统</title>

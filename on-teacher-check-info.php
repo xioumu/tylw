@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<?php header("Content-Type: text/html;charset=utf-8"); ?>
 <?php include("config.php"); ?>
-<html lang = "en">
+<html lang = "zh">
 <head>
     <meta charset = "utf-8">
     <title>武汉体育学院学位管理系统</title>
@@ -59,7 +58,7 @@ if (overDeadline($teaInfo['TdeadLine'])) {
 <tr>
     <th class = "boxContent">论文下载</th>
     <?php
-    if ($stuInfo['paperAdd'] != "") echo "<td colspan = \"5\"><a href = \"{$stuInfo['paperAdd']}\" class = \"btn btn-success\" target=\"view_window\">下载</a></td>";
+    if ($stuInfo['paperAdd'] != "") echo "<td colspan = \"5\"><a href = \"{$stuInfo['paperAdd']}\" class = \"btn btn-primary\" target=\"view_window\">下载</a></td>";
     else if ($stuInfo['paperAdd'] != "") echo "<td colspan = \"5\"><a href = \"#\" class = \"btn btn-danger\">还未上传</a></td>";
     ?>
 </tr>

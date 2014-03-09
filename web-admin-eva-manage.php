@@ -1,9 +1,6 @@
 <!DOCTYPE html>
-<?php
-header("Content-Type: text/html;charset=utf-8");
-include("config.php");
-?>
-<html lang = "en">
+<?php include("config.php"); ?>
+<html lang = "zh">
 <head>
     <meta charset = "utf-8">
     <title>武汉体育学院学位管理系统</title>
@@ -22,7 +19,6 @@ include("config.php");
         <?php include('web-admin-left.php'); ?>
         <!-- left menu ends -->
         <div id = "content" class = "span10">
-            <!-- content starts -->
             <!-- road -->
             <div>
                 <ul class = "breadcrumb">
@@ -34,12 +30,13 @@ include("config.php");
                     </li>
                 </ul>
             </div>
+            <!-- content starts -->
             <div class = "row-fluid sortable">
                 <div class = "box span12">
                     <div class = "box-header well" data-original-title>
                         <h2>管理审评信息</h2>
                         <div class = "box-icon">
-                            <a href = "web-admin-add-one-eva.php" class = "btn btn-success">添加审评</a>
+                            <a href = "web-admin-add-one-eva.php" class = "btn btn-primary">添加审评</a>
                             <button type = "submit" class = "btn btn-danger left" onclick = "delAllEva()">删除全部审评信息 </button>
                         </div>
                     </div>
@@ -53,6 +50,8 @@ include("config.php");
                                 <th>类别</th>
                                 <th>专家账号</th>
                                 <th>专家姓名</th>
+                                <th>评审人</th>
+                                <th>工作单位</th>
                                 <th>状态</th>
                                 <th>操作</th>
                                 </thead>
@@ -67,14 +66,22 @@ include("config.php");
                                     echo "<td>" . $info['Stype'] . "</td>";
                                     echo "<td>" . $info['teacherID'] . "</td>";
                                     echo "<td>" . $info['tName'] . "</td>";
+                                    echo "<td>" . $info['t1'] . "</td>";
+                                    echo "<td>" . $info['t4'] . "</td>";
                                     $labelType = "success";
                                     if ($info['status'] == "还未审评") $labelType = "important";
                                     echo getLabel($info['status'], $labelType);
+                                    echo "<td>";
+                                    if ($info['status'] != "还未审评") echo "
+                                            <a href = \"web-admin-view-eva.php?id={$eid}\" class = \"btn btn-primary\">查看细节</a>
+                                    ";
+                                    else echo "
+                                            <a href = \"#\" class = \"btn btn-primary \" disabled>还未审评</a>
+                                    ";
                                     echo '
-                                    <td>
-                                        <a href = "web-admin-eva-changeInfo.php?id='. $eid .'" class = "btn btn-info">修改</a>
-                                        <a href = "#" class = "btn btn-info btn-danger" onclick="delEva(\'' . $eid . '\')">删除</a>
-                                    </td> ';
+                                        <a href = "web-admin-eva-changeInfo.php?id='. $eid .'" class = "btn btn-primary">修改</a>
+                                        <a href = "#" class = "btn btn-info btn-danger" onclick="delEva(\'' . $eid . '\')">删除</a>';
+                                    echo "</td>";
                                     echo "</tr>";
                                 }
                                 ?>

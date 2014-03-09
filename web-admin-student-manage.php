@@ -1,9 +1,6 @@
 <!DOCTYPE html>
-<?php
-header("Content-Type: text/html;charset=utf-8");
-include("config.php");
-?>
-<html lang = "en">
+<?php include("config.php"); ?>
+<html lang = "zh">
 <head>
     <meta charset = "utf-8">
     <title>武汉体育学院学位管理系统</title>
@@ -39,8 +36,8 @@ include("config.php");
                     <div class = "box-header well" data-original-title>
                         <h2>管理学生账号</h2>
                         <div class = "box-icon">
-                            <a href = "web-admin-add-student.php" class = "btn btn-success">导入学生账户</a>
-                            <a href = "leadOutPasswd.php?type=stu" class = "btn btn-primary left" target = "view_window">导出学生账户密码</a>
+                            <a href = "web-admin-add-student.php" class = "btn btn-primary">导入学生账户</a>
+                            <a href = "leadOutPasswd.php?type=stu" class = "btn btn-primary left" target = "view_window">导出学生信息</a>
                             <button type = "submit" class = "btn btn-danger left" onclick="delAllStuUser()">删除全部学生账户</button>
                         </div>
                     </div>
@@ -57,12 +54,14 @@ include("config.php");
                                 <th>开题报告截止日期</th>
                                 <th>论文截止日期</th>
                                 <th>状态</th>
+                                <th>审评结果</th>
                                 <th>操作</th>
                                 </thead>
                                 <?php
                                 $allStuUser = getAllUser("stu");
                                 foreach ($allStuUser as $user) {
                                     $info = getStuInfo($user);
+                                    $allEvaRes = getAllEvaRes($user);
                                     echo "<tr id = \"{$info['studentID']}\">";
                                     echo "<td>" . $info['grade'] . "</td>";
                                     echo "<td>" . $info['sName'] . "</td>";;
@@ -75,9 +74,14 @@ include("config.php");
                                     $labelType = "success";
                                     if ($info['status'] == "未上传论文") $labelType = "important";
                                     echo getLabel($info['status'], $labelType);
+                                    echo '<td>';
+                                    foreach($allEvaRes as $evaInfo) {
+                                        echo  "[" . getEvaInfoC($evaInfo['c11']) . "]";
+                                    }
+                                    echo '</td>';
                                     echo '
                                     <td>
-                                        <a href = "#changeInfo-modal" class = "btn btn-info btn-setting" data-toggle = "modal" onclick="changeInfo(\'' . $user . '\')">查看/修改信息</a>
+                                        <a href = "#changeInfo-modal" class = "btn btn-primary btn-setting" data-toggle = "modal" onclick="changeInfo(\'' . $user . '\')">查看/修改信息</a>
                                         <a href = "#" class = "btn btn-info btn-danger" onclick="delStuUser(\'' . $user . '\')">删除</a>
                                     </td> ';
                                     echo "</tr>";
@@ -209,6 +213,21 @@ include("config.php");
                         <input type = "text" class = "input-medium " id = "changeInfo-repeatRate" value = "">
                     </div>
                 </div>
+                <div class = "well" id = "changeInfo-com1">
+                    <h3>评语1</h3>
+                    <hr />
+                    <p id = "changeInfo-comP1">11</p>
+                </div>
+                <div class = "well" id = "changeInfo-com2">
+                    <h3>评语2</h3>
+                    <hr />
+                    <p id = "changeInfo-comP2"></p>
+                </div>
+                <div class = "well" id = "changeInfo-com3">
+                    <h3>评语3</h3>
+                    <hr />
+                    <p id = "changeInfo-comP3"></p>
+                </div>
             </fieldset>
         </div>
     </div>
@@ -245,6 +264,9 @@ include("config.php");
         page.find('#changeInfo-repeatRate').val("");
         setUploadBtn(page.find('#changeInfo-paper'), null);
         setUploadBtn(page.find('#changeInfo-report'), null);
+        for (var i = 1; i <= 3; i++) {
+            page.find('#changeInfo-com' + i).addClass('myInvisible');
+        }
     }
     function changeInfo(user) {
         clearPage($('#changeInfo-modal'));
@@ -272,6 +294,11 @@ include("config.php");
                     page.find('#changeInfo-repeatRate').val(stuInfo.repeatRate);
                     setUploadBtn(page.find('#changeInfo-paper'), stuInfo.paperAdd);
                     setUploadBtn(page.find('#changeInfo-report'), stuInfo.reportAdd);
+                    for (var i in stuInfo.com) {
+                        var j = parseInt(i) + 1;
+                        page.find('#changeInfo-comP' + j).text(stuInfo.com[i]);
+                        if (stuInfo.com[i] != null)page.find('#changeInfo-com' + j).removeClass("myInvisible");
+                    }
                 }
                 else {
                     $('.index').noty({"text": "js post error0!", "layout": "topLeft", "type": "error"});

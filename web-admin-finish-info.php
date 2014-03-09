@@ -1,14 +1,6 @@
 <!DOCTYPE html>
-<?php header("Content-Type: text/html;charset=utf-8");
-include("config.php");
-?>
-<html lang = "en">
-<head><!DOCTYPE html>
-<?php
-header("Content-Type: text/html;charset=utf-8");
-include("config.php");
-?>
-<html lang = "en">
+<?php include("config.php"); ?>
+<html lang = "zh">
 <head>
     <meta charset = "utf-8">
     <title>武汉体育学院学位管理系统</title>
@@ -61,6 +53,7 @@ include("config.php");
                                 <th>年级</th>
                                 <th>姓名</th>
                                 <th>学号</th>
+                                <th>专业</th>
                                 <th>类别</th>
                                 <th>校内方向</th>
                                 <th>身份证</th>
@@ -97,6 +90,7 @@ include("config.php");
                                     echo "<td>" . $info['grade'] . "</td>";
                                     echo "<td>" . $info['sName'] . "</td>";;
                                     echo "<td>" . $info['studentID'] . "</td>";
+                                    echo "<td>" . $info['major'] . "</td>";
                                     echo "<td>" . $info['type'] . "</td>";
                                     echo "<td>" . $info['subject'] . "</td>";
                                     echo "<td>" . $info['IDcard'] . "</td>";
@@ -150,33 +144,6 @@ include("config.php");
                                 <th>操作</th>
                                 </thead>
                                 <?php
-                                //获取指定归档学生信息
-                                function getRecStuInfo($user, $judgeInfo) {
-                                    $que = mysql_query("SELECT * FROM record_student WHERE studentID = '{$user}' AND judgeYear = '{$judgeInfo}'")  or die("Error in query:  " . mysql_error());
-                                    if ($row = mysql_fetch_array($que)) {
-                                        return $row;
-                                    }
-                                    else return array();
-                                }
-
-                                //获取所有归档审评信息
-                                function getAllRecEvaInfo($judgeInfo) {
-                                    $que = "SELECT * FROM record_evaluating";
-                                    if ($judgeInfo != 'all') $que .= " WHERE judgeYear = '{$judgeInfo}'";
-                                    $res = array();
-                                    $result = mysql_query($que) or die("Error in query:  " . mysql_error());;
-                                    while ($row = mysql_fetch_array($result)) {
-                                        $stuInfo = getRecStuInfo($row['studentID'], $row['judgeYear']);
-                                        $row['studentID'] = $stuInfo['studentID'];
-                                        $row['sName'] = $stuInfo['sName'];
-                                        $row['major'] = $stuInfo['major'];
-                                        $row['subject'] = $stuInfo['subject'];
-                                        $row['type'] = $stuInfo['type'];
-                                        $row['tutor'] = $stuInfo['tutor'];
-                                        array_push($res, $row);
-                                    }
-                                    return $res;
-                                }
 
                                 $allStuInfo = getAllRecEvaInfo($_GET['judgeInfo']);
                                 foreach ($allStuInfo as $info) {
@@ -199,10 +166,14 @@ include("config.php");
                                         $eidUrl = '#';
                                     }
                                     echo getLabel($info['status'], $labelType);
-                                    echo '
-                                    <td>
-                                        <a href = "' . $eidUrl . '" class = "btn btn-success btn-small"' . $btnType . '>查看细节</a>
-                                    </td> ';
+                                    echo "<td>";
+                                    if ($info['status'] != "还未审评") echo "
+                                            <a href = \"web-admin-view-rec-eva.php?id={$info['eid']}&judgeInfo={$info['judgeYear']}\" class = \"btn btn-primary\">查看细节</a>
+                                    ";
+                                    else echo "
+                                            <a href = \"#\" class = \"btn btn-primary \" disabled>还未审评</a>
+                                    ";
+                                    echo "</td>";
                                     echo "</tr>";
                                 }
                                 ?>

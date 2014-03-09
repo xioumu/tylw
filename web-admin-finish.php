@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<?php header("Content-Type: text/html;charset=utf-8"); ?>
 <?php include("config.php"); ?>
-<html lang = "en">
+<html lang = "zh">
 <head>
     <meta charset = "utf-8">
     <title>武汉体育学院学位管理系统</title>
@@ -44,10 +43,11 @@
             $judgeYear = $judgeInfo;
             foreach ($allStu as $user) {
                 $info = getStuInfo($user);
-                if (!mysql_query("INSERT INTO record_student (studentID, sName, sex, subject, grade, status,IDcard,tutor, type, judgeYear, paperAdd, reportAdd, repeatRate)
+                if (!mysql_query("INSERT INTO record_student (studentID, sName, sex, subject, grade, status,IDcard,tutor, type, judgeYear, paperAdd, reportAdd, repeatRate, paperName,
+                                                                paperNum, major)
                                       VALUE ('{$info['studentID']}','{$info['sName']}','{$info['sex']}','{$info['subject']}','{$info['grade']}','{$info['status']}',
                                       '{$info['IDcard']}','{$info['tutor']}','{$info['type']}','{$judgeYear}','{$info['paperAdd']}','{$info['reportAdd']}',
-                                      '{$info['repeatRate']}' )")
+                                      '{$info['repeatRate']}', '{$info['paperName']}', '{$info['paperNum']}', '{$info['major']}' )")
                 ) {
                    /* echo "INSERT INTO record_student (studentID, sName, sex, subject, grade, status,IDcard,tutor, type, judgeYear, paperAdd, reportAdd, repeatRate)
                                       VALUE ('{$info['studentID']}','{$info['sName']}','{$info['sex']}','{$info['subject']}','{$info['grade']}','{$info['status']}',
@@ -65,14 +65,14 @@
             if (mysql_query("UPDATE other SET NowJudgeYear = '{$val}'")) {
                 $paperDir="upFile/paper/".$val;
                 $reportDir="upFile/report/".$val;
-                echo $paperDir;
+                //echo $paperDir;
                 if (!file_exists($paperDir)) mkdir($paperDir, 0777);
                 if (!file_exists($reportDir)) mkdir($reportDir, 0777);
                 return true;
             }
             else return false;
         }
-        //删除所有通过审评的学生
+        //删除所有学生
         function delAllPassStu() {
             $flag = true;
             $allStuUser = getAllUser('stu');
@@ -106,6 +106,7 @@
             if ($flag) {
                 if (!delAllEva()) $flag = false;
                 else if (!delAllPassStu()) $flag = false;
+                else if (!delallOutTea()) $flag = false;
                 else if (!setJudgeYear(time())) $flag = false;
             }
             if ($flag) {

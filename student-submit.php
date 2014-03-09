@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php header("Content-Type: text/html;charset=utf-8"); ?>
 <?php include("config.php"); ?>
-<html lang = "en">
+<html lang = "zh">
 <head>
     <meta charset = "utf-8">
     <title>武汉体育学院学位管理系统</title>
@@ -50,7 +50,7 @@
             <div class = "row-fluid sortable">
                 <div class = "box span12">
                     <div class = "box-header well" data-original-title>
-                        <h2>提交开题报告</h2>
+                        <h2>提交开题报告<h3>(只接受PDF文件)</h3></h2>
                     </div>
                     <div class = "box-content form-horizontal">
                         <form action = "upLoadPaper.php?type=report" method = "post" enctype = "multipart/form-data">
@@ -69,7 +69,7 @@
                                     </div>
                                 </div>
                                 <div class = "form-actions">
-                                    <button type = "submit" class = "btn btn-success">上传开题报告</button>
+                                    <button type = "submit" class = "btn btn-primary">上传开题报告</button>
                                     <?php
                                     if ($info['reportAdd'] != null) echo "<a type = \"submit\" class = \"btn btn-primary\" href=\"{$info['reportAdd']}\">下载最后提交的开题报告</a> ";
                                     ?>
@@ -83,7 +83,7 @@
             <div class = "row-fluid sortable">
                 <div class = "box span12">
                     <div class = "box-header well" data-original-title>
-                        <h2>提交论文</h2>
+                        <h2>提交论文<h3>(只接受PDF文件)</h3></h2>
                     </div>
                     <div class = "box-content form-horizontal">
                         <form action = "upLoadPaper.php?type=paper" method = "post" enctype = "multipart/form-data">
@@ -109,7 +109,7 @@
                                 <div class = "form-actions">
                                     <?php
                                     if ($info['reportAdd'] != null) {
-                                        echo '<button type = "submit" class = "btn btn-success" >上传论文</button > ';
+                                        echo '<button type = "submit" class = "btn btn-primary" >上传论文</button > ';
                                     }
                                     else {
                                         echo '<a href="#" class="btn btn-danger" data-rel="popover" data-content="需要先上传开题报告" disabled >上传论文</a> ';

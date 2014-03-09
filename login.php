@@ -1,5 +1,4 @@
 <?php
-header("Content-Type: text/html;charset=utf-8");
 include("config.php");
 include("myFunction.php");
 if (isset($_POST['username']) or isset($_POST['passwd']) or isset($_POST['yzm'])) {
@@ -26,6 +25,7 @@ if (isset($_POST['username']) or isset($_POST['passwd']) or isset($_POST['yzm'])
         else if ($type === "web") echo "<script>window.location.href='web-admin-student-manage.php';</script>";
         else if ($type === "onTea") echo "<script>window.location.href='on-teacher-info.php';</script>";
         else if ($type === "outTea") echo "<script>window.location.href='out-teacher-check.php';</script>";
+        else if ($type === "sec") echo "<script>window.location.href='secretary-view-student.php';</script>";
     }
 }
 ?>

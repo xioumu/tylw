@@ -6,15 +6,19 @@ if (isset($_GET['vehicle'])) {
 echo time();;
 ?>
 <html>
+<head>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".btn1").click(function(){
+                $("p").text("Hello world!");
+            });
+        });
+    </script>
+</head>
 <body>
-<form action="test.php" method="get">
-    <input type="checkbox" name="vehicle[]" value="Bike" onabort=alert()"/> I have a bike<br />
-    <input type="checkbox" name="vehicle[]" value="Car" /> I have a car<br />
-    <input type="checkbox" name="vehicle[]" value="Airplane" /> I have an airplane<br />
-    <input type="submit" value="Submit" />
-</form>
-<p>请单击确认按钮，输入会发送到服务器上名为 "form_action.asp" 的页面。</p>
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+<button class="btn1">改变所有 p 元素的文本内容</button>
 </body>
 </html>
-
-?>

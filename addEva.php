@@ -10,6 +10,7 @@ function addOUtTeaUser($user) {
     }
     else return false;
 }
+
 //添加校外专家
 function addOutTea() {
     $que = mysql_query("SELECT lastOutTea FROM other");
@@ -26,6 +27,7 @@ function addOutTea() {
     addOutTeaUser($username);
     return $username;
 }
+
 //添加指定学生和专家的审评
 function addEva($stu, $tea) {
     filter($stu);
@@ -35,6 +37,7 @@ function addEva($stu, $tea) {
     }
     else return false;
 }
+
 //指定学生添加对应类别的审评
 function addStuEva($user) {
     $info = getStuInfo($user);
@@ -48,32 +51,40 @@ function addStuEva($user) {
     }
     return true;
 }
+
 header("Content-Type: text/html;charset=utf-8");
 echo '<html><body>';
 judgeUser(array('web'));
+
+
 if (isset($_GET['type']) && $_GET['type'] == 'mul') {
-    if (isset($_GET['needNum'])) {
-        $sum = intval($_GET['needNum']);
+    if (isset($_GET['needPercent'])) {
+        $allMajor = getAllMajor('stu');
+        $cnt = array();
+
+        $needPer = intval($_GET['needPercent']);
         //分配指定人选
         if (isset($_POST['choiceStu'])) {
             $choiceStu = $_POST['choiceStu'];
-            if (count($choiceStu) > $sum) {
-                goBack("失败:选取人数比参加评选人数大", "web-admin-add-eva.php");
-            }
             foreach ($choiceStu as $user) {
                 addStuEva($user);
             }
-            $sum -= count($choiceStu);
         }
-        $allUser = getAllFreeUser("stu");
-        for ($i = 0; $i < $sum; $i++) {
-            addStuEva($allUser[$i]);
+
+        foreach ($allMajor as $needMajor) {
+            $allUser = getAllMajorUser("stu", $needMajor);
+            $needNum = round(count($allUser) * doubleval($needPer) / 100);
+            $freeUser = getAllFreeUser("stu", $needMajor);
+            $cnt[$needMajor] = count($allUser) - count($freeUser);
+            for ($i = 0; $cnt[$needMajor] < $needNum; $i++, $cnt[$needMajor]++) {
+                addStuEva($freeUser[$i]);
+            }
         }
         goBack("成功分配评审学生", "web-admin-eva-manage.php");
     }
 }
 else if (isset($_GET['type']) && $_GET['type'] == 'one') {
-    if ($_POST['studentID'] == "")  goHis("学生不能为空");
+    if ($_POST['studentID'] == "") goHis("学生不能为空");
     if ($_POST['teacherID'] == "newOutTea") {
         $outTea = addOutTea();
         addEva($_POST['studentID'], $outTea);

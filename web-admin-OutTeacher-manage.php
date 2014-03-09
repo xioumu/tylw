@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <?php
-header("Content-Type: text/html;charset=utf-8");
 include("config.php");
 ?>
-<html lang = "en">
+<html lang = "zh">
 <head>
     <meta charset = "utf-8">
     <title>武汉体育学院学位管理系统</title>
@@ -37,7 +36,7 @@ include('header.php');
                     <div class = "box-header well" data-original-title>
                         <h2>管理校外专家账号</h2>
                         <div class = "box-icon">
-                            <a href = "leadOutPasswd.php?type=outTea" class = "btn btn-primary left" target = "view_window">导出校外专家账户密码</a>
+                            <a href = "leadOutPasswd.php?type=outTea" class = "btn btn-primary left" target = "view_window">导出校外专家信息</a>
                             <button type = "submit" class = "btn btn-danger left" onclick = "delAllUser()">
                                 删除全部校外专家账户
                             </button>
@@ -59,19 +58,23 @@ include('header.php');
                                 foreach ($allUser as $user) {
                                     $status = getTeaStatus($user['user']);
                                     $evaID = getAllUserEva($user['user'], "teacherID");
+                                    $type = "";
+                                    $subject = "";
                                     $major = "";
-                                    $sName = "";
+                                    $paperName = "";
                                     if (isset($evaID[0])) {
                                         $evaInfo = getEvaInfo($evaID[0]);
                                         $stuInfo = getStuInfo($evaInfo['studentID']);
                                         $major = $stuInfo['major'];
-                                        $sName = $stuInfo['sName'];
+                                        $paperName = $stuInfo['paperName'];
+                                        $type = $stuInfo['type'];
+                                        $subject = $stuInfo['subject'];
                                     }
                                     echo "<tr id = \"{$user['user']}\">";
                                     echo "<td>" . $user['user'] . "</td>";
                                     echo "<td>" . $user['passwd'] . "</td>";
                                     echo "<td>" . $major . "</td>";
-                                    echo "<td>" . $sName . "</td>";
+                                    echo "<td>" . $paperName. "</td>";
                                     $labelType = "success";
                                     if ($status == "还未评审完毕") $labelType = "important";
                                     echo getLabel($status, $labelType);

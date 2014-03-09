@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <?php
-header("Content-Type: text/html;charset=utf-8");
 include("config.php");
 ?>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="utf-8">
     <title>武汉体育学院学位管理系统</title>
@@ -121,7 +120,7 @@ include("config.php");
                                 <div class="control-group">
                                     <label class="control-label" for="fileInput">下载样例EXCEL表格</label>
                                     <div class="controls">
-                                        <a href="doc/student.xlsx" target="view_window" class="btn btn-success btn-small">样例表格下载</a>
+                                        <a href="doc/student.xlsx" target="view_window" class="btn btn-primary btn-small">样例表格下载</a>
                                     </div>
                                 </div>
                                 <div class="control-group">

@@ -1,8 +1,6 @@
 <!DOCTYPE html>
-<?php header("Content-Type: text/html;charset=utf-8");
-include("config.php");
-?>
-<html lang = "en">
+<?php include("config.php"); ?>
+<html lang = zh">
 <head>
     <meta charset = "utf-8">
     <title>武汉体育学院学位管理系统</title>
@@ -33,23 +31,7 @@ include("config.php");
             if (!isset($_SESSION['is_login']) && !isset($_GET['id'])) {
                 errorUser();
             }
-            function getEvaInfoC($val) {
-                if ($val == 1) return '优秀';
-                else if ($val == 2) return '良好';
-                else if ($val == 3) return '合格';
-                else if ($val == 4) return '不合格';
-            }
 
-            function getEvaInfoC9($val) {
-                if ($val == 1) return "有抄袭现象";
-                else if ($val == 2) return "无抄袭现象";
-            }
-
-            function getEvaInfoC10($val) {
-                if ($val == 1) return '同意答辩';
-                else if ($val == 2) return '同意答辩但稍作修改';
-                else if ($val == 3) return '不同意答辩';
-            }
 
             $self = $_SESSION['is_login'];
             $eid = $_GET['id'];

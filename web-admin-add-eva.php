@@ -1,9 +1,6 @@
 <!DOCTYPE html>
-<?php
-header("Content-Type: text/html;charset=utf-8");
-include("config.php");
-?>
-<html lang = "en">
+<?php include("config.php"); ?>
+<html lang = "zh">
 <head>
     <meta charset = "utf-8">
     <title>武汉体育学院学位管理系统</title>
@@ -34,23 +31,20 @@ include("config.php");
                     </li>
                 </ul>
             </div>
-            <?php
-            $allUser = getAllFreeUser("stu");
-            ?>
             <div class = "row-fluid sortable">
                 <div class = "box span12">
                     <div class = "box-header well" data-original-title>
-                        <h2>添加参与评测的学生(还剩未参加评测的学生一共<?php echo count($allUser); ?>人)</h2>
+                        <h2>添加参与评测的学生</h2>
                         <div class = "box-icon">
                         </div>
                     </div>
                     <div class = "box-content">
                         <form class = "form-horizontal" action = "web-admin-add-eva-stu.php" method="post">
                             <div class = "control-group">
-                                <label class = "control-label" for = "needNum">需要参与评测的学生数</label>
+                                <label class = "control-label" for = "needPercent">需要参与评测的学生百分比</label>
                                 <div class = "controls">
-                                    <input type = "text" class = "input-medium" id = "needNum" value = "0"
-                                           name = "needNum">
+                                    <input type = "text" class = "input-medium" id = "needPercent" value = "0"
+                                           name = "needPercent">
                                 </div>
                             </div>
                             <div class = "form-actions">

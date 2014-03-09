@@ -47,6 +47,13 @@ if (isset($_POST['role']) && isset($_POST['type'])) {
             }
             else echo "database error!";
         }
+        else if ($_POST['type'] == 'sec') { //修改教学秘书信息
+            if (mysql_query("UPDATE secretary SET major='{$_POST['major']}'
+                               WHERE  userID ='{$_POST['user']}'")) {
+                echo "ok";
+            }
+            else echo "database error!";
+        }
         else if ($_POST['type'] == 'eva' && isset($_POST['teacherID']) && isset($_POST['eid']) && isset($_POST['studentID'])) {
             if (mysql_query("UPDATE evaluating SET teacherID='{$_POST['teacherID']}', studentID='{$_POST['studentID']}' WHERE eid='{$_POST['eid']}'")) {
                 goBack("修改成功","web-admin-eva-manage.php");

@@ -21,28 +21,53 @@ function leadOutExl($allData, $type) { //把数据输出至EXLX文件
                     ->setCellValue('A1', '学号')
                     ->setCellValue('B1', '密码')
                     ->setCellValue('C1', '姓名')
-                    ->setCellValue('D1', '校内方向')
-                    ->setCellValue('E1', '类别')
-                    ->setCellValue('F1', '导师');
+                    ->setCellValue('D1', '性别')
+                    ->setCellValue('E1', '年级')
+                    ->setCellValue('F1', '专业')
+                    ->setCellValue('G1', '校内方向')
+                    ->setCellValue('H1', '类别')
+                    ->setCellValue('I1', '导师')
+                    ->setCellValue('J1', '身份证')
+                    ->setCellValue('K1', '论文题目')
+                    ->setCellValue('L1', '论文重复率')
+                    ->setCellValue('M1', '审评1')
+                    ->setCellValue('N1', '审评2')
+                    ->setCellValue('O1', '审评3')
+                    ->setCellValue('P1', '评审结果');
         $i = 2;
         foreach ($allData as $person) {
+            $allEvaRes = getAllEvaRes($person['studentID']);
             $objPHPExcel->setActiveSheetIndex(0)
                         ->setCellValue('A' . $i, $person['studentID'])
                         ->setCellValue('B' . $i, $person['passwd'])
                         ->setCellValue('C' . $i, $person['sName'])
-                        ->setCellValue('D' . $i, $person['subject'])
-                        ->setCellValue('E' . $i, $person['type'])
-                        ->setCellValue('F' . $i, $person['tutor']);
+                        ->setCellValue('D' . $i, $person['sex'])
+                        ->setCellValue('E' . $i, $person['grade'])
+                        ->setCellValue('F' . $i, $person['major'])
+                        ->setCellValue('G' . $i, $person['subject'])
+                        ->setCellValue('H' . $i, $person['type'])
+                        ->setCellValue('I' . $i, $person['tutor'])
+                        ->setCellValue('K' . $i, $person['paperName'])
+                        ->setCellValue('L' . $i, $person['repeatRate'])
+                        ->setCellValue('P' . $i, $person['status']);
+            $objPHPExcel->getActiveSheet()->setCellValueExplicit('J'.$i, $person['IDcard'], PHPExcel_Cell_DataType::TYPE_STRING); //设置单元格式
+            $j = ord('M');
+            foreach ($allEvaRes as $res) {
+                $objPHPExcel->setActiveSheetIndex(0)->setCellValue(chr($j) . $i, getEvaInfoC($res['c11']));
+                $j++;
+            }
             $i++;
         }
     }
     else if($type == 'onTea') {
         $objPHPExcel->setActiveSheetIndex(0)
-            ->setCellValue('A1', '学号')
+            ->setCellValue('A1', '工号')
             ->setCellValue('B1', '密码')
             ->setCellValue('C1', '姓名')
             ->setCellValue('D1', '校内方向')
-            ->setCellValue('E1', '研究方向');
+            ->setCellValue('E1', '研究方向')
+            ->setCellValue('F1', '性别')
+            ->setCellValue('G1', '状态');
         $i = 2;
         foreach ($allData as $person) {
             $objPHPExcel->setActiveSheetIndex(0)
@@ -50,19 +75,45 @@ function leadOutExl($allData, $type) { //把数据输出至EXLX文件
                 ->setCellValue('B' . $i, $person['passwd'])
                 ->setCellValue('C' . $i, $person['tName'])
                 ->setCellValue('D' . $i, $person['subject'])
-                ->setCellValue('E' . $i, $person['research']);
+                ->setCellValue('E' . $i, $person['research'])
+                ->setCellValue('F' . $i, $person['sex'])
+                ->setCellValue('G' . $i, $person['status']);
             $i++;
         }
     }
     else if($type == 'outTea') {
         $objPHPExcel->setActiveSheetIndex(0)
             ->setCellValue('A1', '账号')
-            ->setCellValue('B1', '密码');
+            ->setCellValue('B1', '密码')
+            ->setCellValue('C1', '专业')
+            ->setCellValue('D1', '校内方向')
+            ->setCellValue('E1', '类别')
+            ->setCellValue('F1', '论文名')
+            ->setCellValue('G1', '状态');
         $i = 2;
         foreach ($allData as $person) {
+            $status = getTeaStatus($person['user']);
+            $evaID = getAllUserEva($person['user'], "teacherID");
+            $type = "";
+            $subject = "";
+            $major = "";
+            $paperName = "";
+            if (isset($evaID[0])) {
+                $evaInfo = getEvaInfo($evaID[0]);
+                $stuInfo = getStuInfo($evaInfo['studentID']);
+                $major = $stuInfo['major'];
+                $paperName = $stuInfo['paperName'];
+                $type = $stuInfo['type'];
+                $subject = $stuInfo['subject'];
+            }
             $objPHPExcel->setActiveSheetIndex(0)
                 ->setCellValue('A' . $i, $person['user'])
-                ->setCellValue('B' . $i, $person['passwd']);
+                ->setCellValue('B' . $i, $person['passwd'])
+                ->setCellValue('C' . $i, $major)
+                ->setCellValue('E' . $i, $subject)
+                ->setCellValue('E' . $i, $type)
+                ->setCellValue('D' . $i, $paperName)
+                ->setCellValue('G' . $i, $status);
             $i++;
         }
     }
@@ -74,7 +125,7 @@ function leadOutExl($allData, $type) { //把数据输出至EXLX文件
 
     // Redirect output to a client’s web browser (Excel2007)
     header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
-    header('Content-Disposition: attachment;filename="password.xlsx"');
+    header('Content-Disposition: attachment;filename="information.xlsx"');
     header('Cache-Control: max-age=0');
     $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');
     $objWriter->save('php://output');

@@ -45,7 +45,7 @@ if (isset($_SESSION['is_login'])) {
     $info = getStuInfo($user);
     $userTyper = getUserType($user);
     if (isset($_GET['type']) && isset($_FILES['paperFile'])) {
-        if ($_FILES["paperFile"]["size"] < 100 * 1024 * 1024) { //记得限制文件格式, (大小最大100M)
+        if ($_FILES["paperFile"]["size"] < 100 * 1024 * 1024 && $_FILES["paperFile"]["type"] == 'application/pdf') { //记得限制文件格式, (大小最大100M)
             if ($_FILES["paperFile"]["error"] > 0) {
                 echo "Error: " . $_FILES["paperFile"]["error"] . "<br />";
                 if ($_FILES["paperFile"]["error"] == 4) {
@@ -67,7 +67,8 @@ if (isset($_SESSION['is_login'])) {
             }
         }
         else {
-            if ($_FILES["exlFile"]["size"] >= 100 * 1024 * 1024) echo "文件超过大小限制!<br/>";
+            if ($_FILES["paperFile"]["size"] >= 100 * 1024 * 1024) goHis("文件超过大小限制!");
+            if ($_FILES['paperFile']['type'] != 'application/pdf') goHis("只接受提交PDF文件");
         }
     }
 }

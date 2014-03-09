@@ -4,6 +4,7 @@ include("config.php");
 include("myFunction.php");
 
 
+
 if (!isset($_POST['type'])) echo "no type!";
 else if ($_POST['type'] == 1) { //系统管理员删除网络管理员账号
     if (isset($_POST['user'])) {
@@ -70,24 +71,10 @@ else if ($_POST['type'] == 'web-admin') { //网络管理员部分
         else echo "error1";
     }
     else if (isset($_POST['object']) && $_POST['object'] == 'allOutTea') {
-        $flag = true;
-        $allOnTeaUser = getAllUser('outTea');
-        foreach ($allOnTeaUser as $user) {
-            if (!delEva($user, 'teacherID')) {
-                echo 'delete evaluating error!';
-                $flag = false;
-            }
-            else if (!delOutTeaInfo($user)) {
-                echo $user . "delete out teacher info error! <br/>";
-                $flag = false;
-            }
-            else if (!delUser($user)) {
-                echo $user . "delete user error! <br/>";
-                $flag = false;
-            }
-        }
+        $flag = delAllOutTea();
         if ($flag) echo "ok";
         else echo "error1";
     }
 }
+
 ?>
