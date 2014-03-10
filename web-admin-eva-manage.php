@@ -46,6 +46,7 @@
                                 <thead>
                                 <th>学生学号</th>
                                 <th>学生姓名</th>
+                                <th>专业</th>
                                 <th>校内方向</th>
                                 <th>类别</th>
                                 <th>专家账号</th>
@@ -62,6 +63,7 @@
                                     echo "<tr id = \"{$eid}\">";
                                     echo "<td>" . $info['studentID'] . "</td>";
                                     echo "<td>" . $info['sName'] . "</td>";;
+                                    echo "<td>" . $info['Smajor'] . "</td>";;
                                     echo "<td>" . $info['Ssubject'] . "</td>";
                                     echo "<td>" . $info['Stype'] . "</td>";
                                     echo "<td>" . $info['teacherID'] . "</td>";

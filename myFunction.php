@@ -339,6 +339,7 @@ function getEvaInfo($eid) {
     $stuInfo = getStuInfo($res['studentID']);
     $res['sName'] = $stuInfo['sName'];
     $res['Ssubject'] = $stuInfo['subject'];
+    $res['Smajor'] = $stuInfo['major'];
     $res['Stype'] = $stuInfo['type'];
     $tType = getUserType($res['teacherID']);
     if ($tType == 'onTea') {
