@@ -33,16 +33,16 @@ if (isset($_POST['username']) or isset($_POST['passwd']) or isset($_POST['yzm'])
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>武汉体育学院学位管理系统</title>
+    <title>武汉体育学院研究生学位管理系统</title>
     <?php include('css.php'); ?>
 </head>
 
 <body background="img/bg_index_new.png">
-<div class="container-fluid">
+<div class="container-fluid" >
     <div class="row-fluid">
         <div class="row-fluid">
             <div class="span12 center login-header">
-                <h2 class="head">武汉体育学院学位管理系统</h2>
+                <h2 class="head">武汉体育学院研究生学位管理系统</h2>
             </div>
             <!--/span-->
         </div>

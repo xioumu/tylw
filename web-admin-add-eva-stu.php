@@ -50,6 +50,7 @@ include("config.php");
                                 <th>年级</th>
                                 <th>姓名</th>
                                 <th>学号</th>
+                                <th>专业</th>
                                 <th>类别</th>
                                 <th>校内方向</th>
                                 <th>导师</th>
@@ -62,6 +63,7 @@ include("config.php");
                                     echo "<td>" . $info['grade'] . "</td>";
                                     echo "<td>" . $info['sName'] . "</td>";;
                                     echo "<td>" . $info['studentID'] . "</td>";
+                                    echo "<td>" . $info['major'] . "</td>";
                                     echo "<td>" . $info['type'] . "</td>";
                                     echo "<td>" . $info['subject'] . "</td>";
                                     echo "<td>" . $info['tutor'] . "</td>";

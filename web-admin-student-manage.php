@@ -54,6 +54,7 @@
                                 <th>开题报告截止日期</th>
                                 <th>论文截止日期</th>
                                 <th>状态</th>
+                                <th>重复率</th>
                                 <th>审评结果</th>
                                 <th>操作</th>
                                 </thead>
@@ -74,6 +75,7 @@
                                     $labelType = "success";
                                     if ($info['status'] == "未上传论文") $labelType = "important";
                                     echo getLabel($info['status'], $labelType);
+                                    echo "<td>" . $info['repeatRate'] . "</td>";
                                     echo '<td>';
                                     foreach($allEvaRes as $evaInfo) {
                                         echo  "[" . getEvaInfoC($evaInfo['c11']) . "]";
