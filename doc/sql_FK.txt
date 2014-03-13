@@ -1,4 +1,0 @@
-ALTER TABLE  `student` ADD CONSTRAINT  `FK_studentID` FOREIGN KEY (  `studentID` ) REFERENCES  `tylw`.`user` (
-`user`
-) ON DELETE RESTRICT ON UPDATE RESTRICT ;
-

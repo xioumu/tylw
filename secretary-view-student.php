@@ -23,8 +23,8 @@
             <!-- road -->
             <div>
                 <ul class = "breadcrumb">
-                    <li><a href = "web-admin-student-manage.php">教学秘书</a> <span class = "divider">/</span></li>
-                    <li><a href = "web-admin-student-manage.php">查看本专业学生信息</a></li>
+                    <li><a href = "secretary-view-student.php">教学秘书</a> <span class = "divider">/</span></li>
+                    <li><a href = "secretary-view-student.php">查看本专业学生信息</a></li>
                 </ul>
             </div>
             <?php
@@ -51,6 +51,7 @@
                                 <th>类别</th>
                                 <th>开题报告截止日期</th>
                                 <th>论文截止日期</th>
+                                <th>论文重复率</th>
                                 <th>状态</th>
                                 <th>操作</th>
                                 </thead>
@@ -68,12 +69,13 @@
                                     echo "<td>" . $info['type'] . "</td>";
                                     echo "<td>" . $info['repDeadline'] . "</td>";
                                     echo "<td>" . $info['papDeadline'] . "</td>";
+                                    echo "<td>" . $info['repeatRate'] . "</td>";
                                     $labelType = "success";
                                     if ($info['status'] == "未上传论文") $labelType = "important";
                                     echo getLabel($info['status'], $labelType);
                                     echo '
                                     <td>
-                                        <a href = "#changeInfo-modal" class = "btn btn-info btn-setting" data-toggle = "modal" onclick="changeInfo(\'' . $user . '\')">查看信息</a>
+                                        <a href = "#changeInfo-modal" class = "btn btn-primary" data-toggle = "modal" onclick="changeInfo(\'' . $user . '\')">查看信息</a>
                                     </td> ';
                                     echo "</tr>";
                                 }

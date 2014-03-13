@@ -83,7 +83,7 @@
                                     echo '</td>';
                                     echo '
                                     <td>
-                                        <a href = "#changeInfo-modal" class = "btn btn-primary btn-setting" data-toggle = "modal" onclick="changeInfo(\'' . $user . '\')">查看/修改信息</a>
+                                        <a href = "#changeInfo-modal" class = "btn btn-primary " data-toggle = "modal" onclick="changeInfo(\'' . $user . '\')">查看/修改信息</a>
                                         <a href = "#" class = "btn btn-info btn-danger" onclick="delStuUser(\'' . $user . '\')">删除</a>
                                     </td> ';
                                     echo "</tr>";

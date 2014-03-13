@@ -22,7 +22,7 @@
 <!--    road -->
 <div>
     <ul class = "breadcrumb">
-        <li><a href = "out-teacher-info.php">校内专家</a> <span class = "divider">/</span></li>
+        <li><a href = "out-teacher-info.php">校外专家</a> <span class = "divider">/</span></li>
         <li><a href = "out-teacher-check.php">查看个人信息</a><span class = "divider">/</span></li>
         <li><a href = "out-teacher-check-info.php">审评论文</a>
     </ul>
@@ -36,6 +36,9 @@ $eid = $_GET['id'];
 $evaInfo = getEvaInfo($eid);
 $stuInfo = getStuInfo($evaInfo['studentID']);
 $teaInfo = getOutTeaInfo($self);
+if ($evaInfo['teacherID'] != $self) {
+    errorUser();
+}
 if (overDeadline($teaInfo['TdeadLine'])) {
     goHis("已经超过截止日期");
 }

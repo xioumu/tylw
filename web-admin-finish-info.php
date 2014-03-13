@@ -106,8 +106,8 @@
                                     if ($info['paperAdd'] == "#") $pepSta = 'disabled';
                                     echo '
                                     <td>
-                                        <a href = "' . $info['reportAdd'] . '" target = "_blank" class = "btn btn-success btn-small"' . $pepSta . '>开题报告</a>
-                                        <a href = "' . $info['paperAdd'] . '" target = "_blank"  class = "btn btn-success btn-small"' . $repSta . '>论文</a>
+                                        <a href = "' . $info['reportAdd'] . '" target = "_blank" class = "btn btn-primary btn-small"' . $pepSta . '>开题报告</a>
+                                        <a href = "' . $info['paperAdd'] . '" target = "_blank"  class = "btn btn-primary btn-small"' . $repSta . '>论文</a>
                                     </td> ';
                                     echo "</tr>";
                                 }

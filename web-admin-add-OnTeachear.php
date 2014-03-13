@@ -78,8 +78,8 @@ include("config.php");
                         <input type="test" name="file" style="display: none;" value="' . $fileInfo['name'] . '">';
                         echo '
                         <div class="form-actions">
-                                <button type="submit" class="btn btn-success">确认提交</button>
-                                <a href="web-admin-student-manage.php" class="btn btn-danger">取消</a>
+                                <button type="submit" class="btn btn-primary">确认提交</button>
+                                <a href="web-admin-student-manage.php" class="btn">取消</a>
                         </div> ';
                     }
                 }
@@ -98,7 +98,7 @@ include("config.php");
             <div class="row-fluid sortable">
                 <div class="box span12">
                     <div class="box-header well" data-original-title>
-                        <h2>导入学生账户</h2>
+                        <h2>导入校内专家账户</h2>
                     </div>
                     <div class="box-content">
                         <form class="form-horizontal" action="web-admin-add-OnTeachear.php" method="post"
@@ -107,7 +107,7 @@ include("config.php");
                                 <div class="control-group">
                                     <label class="control-label" for="fileInput">下载样例EXCEL表格</label>
                                     <div class="controls">
-                                        <a href="doc/onteacher.xlsx" target="view_window" class="btn btn-success btn-small">样例表格下载</a>
+                                        <a href="doc/onteacher.xlsx" target="view_window" class="btn btn-primary btn-small">样例表格下载</a>
                                     </div>
                                 </div>
                                 <div class="control-group">

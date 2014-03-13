@@ -661,6 +661,7 @@ function getAllMajorUser($type, $major) {
             }
         }
     }
+    shuffle($res);
     return $res;
 }
 ?>

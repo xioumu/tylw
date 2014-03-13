@@ -91,8 +91,8 @@ include("config.php");
                         <input type="test" name="file" style="display: none;" value="' . $fileInfo['name'] . '">';
                         echo '
                         <div class="form-actions">
-                                <button type="submit" class="btn btn-success">确认提交</button>
-                                <a href="web-admin-student-manage.php" class="btn btn-danger">取消</a>
+                                <button type="submit" class="btn btn-primary">确认提交</button>
+                                <a href="web-admin-student-manage.php" class="btn">取消</a>
                         </div> ';
                     }
                 }

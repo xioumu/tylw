@@ -21,7 +21,7 @@
             <!--    road -->
             <div>
                 <ul class = "breadcrumb">
-                    <li><a href = "out-teacher-check.php">校内专家</a> <span class = "divider">/</span></li>
+                    <li><a href = "out-teacher-check.php">校外专家</a> <span class = "divider">/</span></li>
                     <li><a href = "out-teacher-check.php">查看论文</a></li>
                 </ul>
             </div>

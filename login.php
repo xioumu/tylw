@@ -3,7 +3,7 @@ include("config.php");
 include("myFunction.php");
 if (isset($_POST['username']) or isset($_POST['passwd']) or isset($_POST['yzm'])) {
     //or isset($_SESSION['is_login']);
-    $_SESSION['is_login'] = "";
+    $_SESSION['is_login'] = null;
     if (isset($_POST['username']) or isset($_POST['passwd']) or isset($_POST['yzm'])) {
         $username = $_POST['username'];
         $passwd = $_POST['passwd'];
@@ -18,7 +18,7 @@ if (isset($_POST['username']) or isset($_POST['passwd']) or isset($_POST['yzm'])
             $_SESSION['is_login'] = $username;
         }
     }
-    if (isset($_SESSION['is_login'])) {
+    if (!empty($_SESSION['is_login'])) {
         $type = getUserType($_SESSION['is_login']);
         if ($type === "stu") echo "<script>window.location.href='student-info.php';</script>";
         else if ($type === "sys") echo "<script>window.location.href='sys-admin-manage.php'</script>";
@@ -85,6 +85,7 @@ if (isset($_POST['username']) or isset($_POST['passwd']) or isset($_POST['yzm'])
                             echo '<div class="alert alert-error">' . $rep_note . '</div>';
                         }
                         ?>
+
                         <div class="clearfix"></div>
                     </fieldset>
                 </form>

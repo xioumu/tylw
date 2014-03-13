@@ -16,7 +16,7 @@
                         class = "hidden-tablet">管理教学秘书账号 </span></a></li>
             <li><a class = "ajax-link" href = "web-admin-eva-manage.php"><span
                         class = "hidden-tablet">管理当前评审信息</span></a></li>
-            <li><a class = "ajax-link" href = "web-admin-add-eva.php"><span class = "hidden-tablet">添加参与评测的学生</span></a>
+            <li><a class = "ajax-link" href = "web-admin-add-eva.php"><span class = "hidden-tablet">设置参与评测的学生</span></a>
             </li>
             <li><a class = "ajax-link" href = "web-admin-deadline.php"><span class = "hidden-tablet">设置截止日期</span></a>
             </li>

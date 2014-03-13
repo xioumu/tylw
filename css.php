@@ -1,5 +1,6 @@
 	<!-- The styles -->
-	<link id="bs-css" href="css/bootstrap-cerulean.css" rel="stylesheet">
+    <meta name="renderer" content="webkit">
+    <link id="bs-css" href="css/bootstrap-cerulean.css" rel="stylesheet">
 	<style type="text/css">
 	  body {
 		padding-bottom: 40px;
