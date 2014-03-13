@@ -22,7 +22,7 @@
             <?php
             if (!empty($_POST['reportDate'])) {
                 $deadLine = changeData($_POST['reportDate']);
-                if (!mysql_query("UPDATE student SET papDeadline = '{$deadLine}'")) {
+                if (!mysql_query("UPDATE student SET repDeadline = '{$deadLine}'")) {
                     echo ' <script>$(\'.index\').noty({"text": "设置开题报告截止日期错误", "layout": "topLeft", "type": "error"});</script>';
                 }
                 else {
@@ -31,7 +31,7 @@
             }
             if (!empty($_POST['paperDate'])) {
                 $deadLine = changeData($_POST['paperDate']);
-                if (!mysql_query("UPDATE student SET repDeadline = '{$deadLine}'")) {
+                if (!mysql_query("UPDATE student SET papDeadline= '{$deadLine}'")) {
                     echo ' <script>$(\'.index\').noty({"text": "设置论文截止日期错误", "layout": "topLeft", "type": "error"});</script>';
                 }
                 else {

@@ -31,8 +31,6 @@
             if (!isset($_SESSION['is_login']) && !isset($_GET['id'])) {
                 errorUser();
             }
-
-
             $self = $_SESSION['is_login'];
             $eid = $_GET['id'];
             $evaInfo = getEvaInfo($eid);

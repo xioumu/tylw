@@ -5,609 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34d18521-e249-4fc3-bdb9-27c44b4484ba" name="Default" comment="kk">
-      <change type="DELETED" beforePath="E:\www\tylw\demo\app_frxz (1).sql" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap-3.0.3-dist.zip" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap-master.zip" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\.csscomb.json" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\.csslintrc" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\.editorconfig" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\.gitattributes" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\CNAME" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\CONTRIBUTING.md" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\DOCS-LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\Gruntfile.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\LICENSE-MIT" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\README.md" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\_config.yml" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\_includes\ads.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\_includes\footer.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\_includes\header.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\_includes\nav-about.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\_includes\nav-components.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\_includes\nav-css.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\_includes\nav-customize.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\_includes\nav-getting-started.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\_includes\nav-javascript.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\_includes\nav-main.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\_includes\old-bs-docs.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\_includes\social-buttons.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\_layouts\default.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\_layouts\home.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\about.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\bower.json" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\components.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\composer.json" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\css.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\customize.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\docs-assets\css\docs.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\docs-assets\css\pygments-manni.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\docs-assets\ico\apple-touch-icon-144-precomposed.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\docs-assets\ico\favicon.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\docs-assets\js\application.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\docs-assets\js\customize.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\docs-assets\js\customizer.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\docs-assets\js\filesaver.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\docs-assets\js\holder.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\docs-assets\js\ie8-responsive-file-warning.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\docs-assets\js\jszip.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\docs-assets\js\less.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\docs-assets\js\raw-files.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\docs-assets\js\uglify.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\examples\blog\blog.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\examples\blog\index.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\examples\carousel\carousel.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\examples\carousel\index.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\examples\cover\cover.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\examples\cover\index.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\examples\dashboard\dashboard.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\examples\dashboard\index.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\examples\grid\grid.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\examples\grid\index.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\examples\jumbotron-narrow\index.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\examples\jumbotron-narrow\jumbotron-narrow.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\examples\jumbotron\index.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\examples\jumbotron\jumbotron.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\examples\justified-nav\index.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\examples\justified-nav\justified-nav.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\examples\navbar-fixed-top\index.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\examples\navbar-fixed-top\navbar-fixed-top.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\examples\navbar-static-top\index.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\examples\navbar-static-top\navbar-static-top.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\examples\navbar\index.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\examples\navbar\navbar.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\examples\non-responsive\index.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\examples\non-responsive\non-responsive.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\examples\offcanvas\index.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\examples\offcanvas\offcanvas.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\examples\offcanvas\offcanvas.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\examples\screenshots\blog.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\examples\screenshots\carousel.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\examples\screenshots\cover.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\examples\screenshots\dashboard.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\examples\screenshots\grid.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\examples\screenshots\jumbotron-narrow.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\examples\screenshots\jumbotron.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\examples\screenshots\justified-nav.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\examples\screenshots\navbar-fixed.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\examples\screenshots\navbar-static.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\examples\screenshots\navbar.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\examples\screenshots\non-responsive.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\examples\screenshots\offcanvas.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\examples\screenshots\sign-in.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\examples\screenshots\starter-template.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\examples\screenshots\sticky-footer-navbar.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\examples\screenshots\sticky-footer.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\examples\screenshots\theme.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\examples\signin\index.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\examples\signin\signin.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\examples\starter-template\index.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\examples\starter-template\starter-template.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\examples\sticky-footer-navbar\index.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\examples\sticky-footer-navbar\sticky-footer-navbar.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\examples\sticky-footer\index.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\examples\sticky-footer\sticky-footer.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\examples\theme\index.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\examples\theme\theme.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\fonts\glyphicons-halflings-regular.eot" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\fonts\glyphicons-halflings-regular.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\fonts\glyphicons-halflings-regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\fonts\glyphicons-halflings-regular.woff" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\getting-started.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\index.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\javascript.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\js\.jscs.json" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\js\.jshintrc" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\js\affix.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\js\alert.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\js\button.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\js\carousel.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\js\collapse.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\js\dropdown.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\js\modal.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\js\popover.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\js\scrollspy.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\js\tab.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\js\tests\index.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\js\tests\unit\affix.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\js\tests\unit\alert.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\js\tests\unit\button.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\js\tests\unit\carousel.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\js\tests\unit\collapse.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\js\tests\unit\dropdown.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\js\tests\unit\modal.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\js\tests\unit\phantom.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\js\tests\unit\popover.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\js\tests\unit\scrollspy.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\js\tests\unit\tab.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\js\tests\unit\tooltip.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\js\tests\unit\transition.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\js\tests\vendor\jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\js\tests\vendor\qunit.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\js\tests\vendor\qunit.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\js\tooltip.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\js\transition.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\less\alerts.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\less\badges.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\less\bootstrap.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\less\breadcrumbs.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\less\button-groups.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\less\buttons.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\less\carousel.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\less\close.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\less\code.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\less\component-animations.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\less\dropdowns.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\less\forms.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\less\glyphicons.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\less\grid.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\less\input-groups.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\less\jumbotron.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\less\labels.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\less\list-group.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\less\media.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\less\mixins.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\less\modals.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\less\navbar.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\less\navs.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\less\normalize.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\less\pager.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\less\pagination.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\less\panels.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\less\popovers.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\less\print.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\less\progress-bars.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\less\responsive-utilities.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\less\scaffolding.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\less\tables.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\less\theme.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\less\thumbnails.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\less\tooltip.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\less\type.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\less\utilities.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\less\variables.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\less\wells.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\package.json" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\sauce_browsers.yml" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\test-infra\requirements.txt" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\bootstrap\test-infra\s3_cache.py" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma-master.zip" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\.htaccess" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\blank.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\calendar.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\chart.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\css\bootstrap-cerulean.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\css\bootstrap-classic.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\css\bootstrap-classic.min.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\css\bootstrap-cyborg.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\css\bootstrap-journal.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\css\bootstrap-redy.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\css\bootstrap-responsive.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\css\bootstrap-responsive.min.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\css\bootstrap-simplex.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\css\bootstrap-slate.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\css\bootstrap-spacelab.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\css\bootstrap-united.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\css\charisma-app.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\css\chosen.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\css\colorbox.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\css\elfinder.min.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\css\elfinder.theme.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\css\fullcalendar.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\css\fullcalendar.print.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\css\jquery-ui-1.8.21.custom.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\css\jquery.cleditor.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\css\jquery.iphone.toggle.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\css\jquery.noty.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\css\noty_theme_default.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\css\opa-icons.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\css\uniform.default.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\css\uploadify.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\doc\assets\images\html_structure.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\doc\assets\images\image_1.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\doc\css\documenter_style.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\doc\css\img\info.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\doc\css\img\pre_bg.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\doc\css\img\warning.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\doc\favicon.ico" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\doc\index.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\doc\js\jquery.1.6.4.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\doc\js\jquery.easing.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\doc\js\jquery.scrollTo-1.4.2-min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\doc\js\script.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\error.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\file-manager.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\form.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\gallery.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\grid.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\icon.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\ajax-loaders\ajax-loader-1.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\ajax-loaders\ajax-loader-2.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\ajax-loaders\ajax-loader-3.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\ajax-loaders\ajax-loader-4.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\ajax-loaders\ajax-loader-5.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\ajax-loaders\ajax-loader-6.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\ajax-loaders\ajax-loader-7.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\ajax-loaders\ajax-loader-8.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\arrows-active.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\arrows-normal.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\background.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\bg-input-focus.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\bg-input.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\bg_index.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\bg_index_new.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\border.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\buttons.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\cancel-off.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\cancel-on.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\chosen-sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\controls.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\crop.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\dialogs.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\error_bg.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\.tmb\l1_MS5qcGc1344290228.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\.tmb\l1_MTAuanBn1344290212.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\.tmb\l1_MTEuanBn1344290212.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\.tmb\l1_MTIuanBn1344290216.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\.tmb\l1_MTMuanBn1344290218.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\.tmb\l1_MTQuanBn1344290218.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\.tmb\l1_MTUuanBn1344290220.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\.tmb\l1_MTYuanBn1344290222.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\.tmb\l1_MTcuanBn1344290224.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\.tmb\l1_MTguanBn1344290226.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\.tmb\l1_MTkuanBn1344290228.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\.tmb\l1_Mi5qcGc1344290242.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\.tmb\l1_MjAuanBn1344290232.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\.tmb\l1_MjEuanBn1344290232.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\.tmb\l1_MjIuanBn1344290236.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\.tmb\l1_MjMuanBn1344290238.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\.tmb\l1_MjQuanBn1344290240.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\.tmb\l1_My5qcGc1344290244.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\.tmb\l1_NC5qcGc1344290246.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\.tmb\l1_NS5qcGc1344290246.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\.tmb\l1_Ni5qcGc1344290248.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\.tmb\l1_Ny5qcGc1344290252.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\.tmb\l1_OC5qcGc1344290254.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\.tmb\l1_OS5qcGc1344290254.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\10.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\11.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\12.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\13.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\14.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\15.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\16.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\17.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\18.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\19.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\20.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\21.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\22.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\23.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\24.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\7.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\8.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\9.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\thumbs\1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\thumbs\10.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\thumbs\11.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\thumbs\12.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\thumbs\13.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\thumbs\14.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\thumbs\15.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\thumbs\16.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\thumbs\17.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\thumbs\18.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\thumbs\19.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\thumbs\2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\thumbs\20.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\thumbs\21.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\thumbs\22.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\thumbs\23.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\thumbs\24.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\thumbs\3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\thumbs\4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\thumbs\5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\thumbs\6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\thumbs\7.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\thumbs\8.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\gallery\thumbs\9.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\glyphicons-halflings-white.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\glyphicons-halflings.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\icons-big.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\icons-small.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\iphone-style-checkboxes\off.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\iphone-style-checkboxes\on.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\iphone-style-checkboxes\slider.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\iphone-style-checkboxes\slider_center.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\iphone-style-checkboxes\slider_left.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\iphone-style-checkboxes\slider_right.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\loading_background.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\opa-icons-black16.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\opa-icons-black32.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\opa-icons-blue16.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\opa-icons-blue32.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\opa-icons-color16.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\opa-icons-color32.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\opa-icons-darkgray16.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\opa-icons-darkgray32.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\opa-icons-gray16.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\opa-icons-gray32.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\opa-icons-green16.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\opa-icons-green32.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\opa-icons-orange16.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\opa-icons-orange32.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\opa-icons-red16.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\opa-icons-red32.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\opa-icons-white16.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\opa-icons-white32.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\progress.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\qrcode.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\qrcode136.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\quicklook-bg.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\quicklook-icons.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\resize.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\spinner-mini.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\star-half.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\star-off.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\star-on.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\thumb.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\toolbar.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\toolbar.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\ui-bg_flat_0_aaaaaa_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\ui-bg_flat_75_ffffff_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\ui-bg_glass_55_fbf9ee_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\ui-bg_glass_65_ffffff_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\ui-bg_glass_75_dadada_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\ui-bg_glass_75_e6e6e6_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\ui-bg_glass_95_fef1ec_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\ui-bg_highlight-soft_75_cccccc_1x100.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\ui-icons_222222_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\ui-icons_2e83ff_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\ui-icons_454545_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\ui-icons_888888_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\ui-icons_cd0a0a_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\uploadify-cancel.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\img\whtyxy.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\index.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\js\bootstrap-alert.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\js\bootstrap-button.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\js\bootstrap-carousel.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\js\bootstrap-collapse.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\js\bootstrap-dropdown.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\js\bootstrap-modal.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\js\bootstrap-popover.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\js\bootstrap-scrollspy.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\js\bootstrap-tab.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\js\bootstrap-toggle.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\js\bootstrap-tooltip.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\js\bootstrap-tour.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\js\bootstrap-transition.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\js\bootstrap-typeahead.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\js\charisma.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\js\excanvas.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\js\fullcalendar.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\js\jquery-1.7.2.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\js\jquery-ui-1.8.21.custom.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\js\jquery.autogrow-textarea.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\js\jquery.chosen.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\js\jquery.cleditor.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\js\jquery.colorbox.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\js\jquery.cookie.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\js\jquery.dataTables.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\js\jquery.elfinder.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\js\jquery.flot.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\js\jquery.flot.pie.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\js\jquery.flot.resize.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\js\jquery.flot.stack.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\js\jquery.history.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\js\jquery.iphone.toggle.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\js\jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\js\jquery.noty.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\js\jquery.raty.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\js\jquery.uniform.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\js\jquery.uploadify-3.1.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\license.txt" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\login.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\misc\check-exists.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\misc\elfinder-connector\MySQLStorage.sql" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\misc\elfinder-connector\connector.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\misc\elfinder-connector\elFinder.class.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\misc\elfinder-connector\elFinderConnector.class.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\misc\elfinder-connector\elFinderVolumeDriver.class.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\misc\elfinder-connector\elFinderVolumeLocalFileSystem.class.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\misc\elfinder-connector\elFinderVolumeMySQL.class.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\misc\elfinder-connector\mime.types" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\misc\uploadify.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\misc\uploadify.swf" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\php-version\blank.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\php-version\calendar.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\php-version\chart.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\php-version\error.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\php-version\file-manager.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\php-version\footer.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\php-version\form.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\php-version\gallery.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\php-version\grid.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\php-version\header.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\php-version\icon.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\php-version\index.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\php-version\login.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\php-version\table.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\php-version\tour.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\php-version\typography.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\php-version\ui.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\table.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\tour.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\typography.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\charisma\ui.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\Snoopy.class.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\admin\index.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\admin\logout.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\admin\main.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\admin\voteinfo.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\config.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\config.yaml" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\cron.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\cron_off.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\cron_on.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\css\bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\css\ie9.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\css\offcanvas.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\css\signin.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\css\style.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\css\top.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\favicon.ico" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\favicon.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\images\1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\images\10.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\images\11.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\images\12.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\images\13.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\images\14.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\images\15.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\images\16.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\images\17.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\images\18.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\images\19.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\images\2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\images\20.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\images\21.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\images\22.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\images\23.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\images\24.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\images\25.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\images\26.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\images\27.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\images\28.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\images\29.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\images\3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\images\30.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\images\31.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\images\32.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\images\33.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\images\34.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\images\35.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\images\36.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\images\37.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\images\39.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\images\4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\images\40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\images\41.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\images\42.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\images\43.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\images\44.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\images\45.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\images\46.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\images\47.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\images\48.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\images\49.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\images\5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\images\50.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\images\6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\images\7.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\images\8.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\images\9.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\images\bg.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\images\bg.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\images\pic.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\index.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\index.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\js\bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\js\html5shiv.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\js\jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\js\offcanvas.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\js\respond.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\js\script.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\js\script.orl.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\login.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\logout.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\main.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\sae_app_wizard.xml" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\test.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\test.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\test2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\frxz\vote.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\light_grey.zip" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\light_grey\__MACOSX\light_grey\._light_grey.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\light_grey\__MACOSX\light_grey\._readme.txt" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\light_grey\light_grey\light_grey.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\light_grey\light_grey\light_grey_@2X.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\light_grey\light_grey\readme.txt" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\demo\芙蓉学子2013投票网站SAE.zip" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\doc\013年上半年全日制研究生学位论文答辩....doc" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\doc\1.docx" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\doc\1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\doc\2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\doc\3.pdf" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\doc\4.pdf" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\doc\5.pdf" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\doc\databaseV2.docx" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\doc\databaseV3.docx" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\doc\leadout.xlsx" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\doc\note.txt" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\doc\some_question1.txt" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\doc\some_question2.txt" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\doc\some_question3.txt" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\doc\some_question4.txt" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\doc\some_question5.txt" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\doc\sql_FK.txt" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\doc\tylw_back.sql" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\doc\功能文档.docx" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\doc\学生使用说明.docx" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\doc\文档.docx" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\doc\新建 Microsoft Word 文档.docx" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\doc\新建 Microsoft Word 文档.pdf" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\doc\武汉体育学院学位管理系统.rar" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\doc\论文评阅表.doc" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\doc\评审信息代码.txt" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\doc\需求文档.docx" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\ifram-test.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\www\tylw\secretary-student-manage.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css.php" afterPath="$PROJECT_DIR$/css.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login.php" afterPath="$PROJECT_DIR$/login.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myFunction.php" afterPath="$PROJECT_DIR$/myFunction.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/on-teacher-check-info.php" afterPath="$PROJECT_DIR$/on-teacher-check-info.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/on-teacher-check.php" afterPath="$PROJECT_DIR$/on-teacher-check.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out-teacher-check-info.php" afterPath="$PROJECT_DIR$/out-teacher-check-info.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out-teacher-check.php" afterPath="$PROJECT_DIR$/out-teacher-check.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/secretary-view-student.php" afterPath="$PROJECT_DIR$/secretary-view-student.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/student-view-eva.php" afterPath="$PROJECT_DIR$/student-view-eva.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-admin-add-OnTeachear.php" afterPath="$PROJECT_DIR$/web-admin-add-OnTeachear.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-admin-add-eva.php" afterPath="$PROJECT_DIR$/web-admin-add-eva.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-admin-add-student.php" afterPath="$PROJECT_DIR$/web-admin-add-student.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-admin-finish-info.php" afterPath="$PROJECT_DIR$/web-admin-finish-info.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-admin-left.php" afterPath="$PROJECT_DIR$/web-admin-left.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-admin-student-manage.php" afterPath="$PROJECT_DIR$/web-admin-student-manage.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-admin-deadline.php" afterPath="$PROJECT_DIR$/web-admin-deadline.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="tylw.iws" />
@@ -634,45 +36,45 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="myFunction.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="myFunction.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/myFunction.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="400" column="17" selection-start="10835" selection-end="10835" vertical-scroll-proportion="-10.178572" vertical-offset="7315" max-vertical-offset="12787">
+            <state line="511" column="9" selection-start="13450" selection-end="13450" vertical-scroll-proportion="0.45825604" vertical-offset="9462" max-vertical-offset="12958">
               <folding>
-                <marker date="1394552979165" expanded="true" signature="200:245" placeholder="SELECT * FRO..user..." />
-                <marker date="1394552979165" expanded="true" signature="551:603" placeholder="SELECT * FRO..studenttype..." />
-                <marker date="1394552979165" expanded="true" signature="817:862" placeholder="SELECT * FRO..user..." />
-                <marker date="1394552979165" expanded="true" signature="2435:2516" placeholder="INSERT INTO ..." />
-                <marker date="1394552979165" expanded="true" signature="2665:2711" placeholder="SELECT user ..user..." />
-                <marker date="1394552979165" expanded="true" signature="2928:2971" placeholder="SELECT * FRO..user..." />
-                <marker date="1394552979165" expanded="true" signature="3184:3233" placeholder="SELECT * FRO..student..." />
-                <marker date="1394552979165" expanded="true" signature="4298:4347" placeholder="SELECT * FRO..student..." />
-                <marker date="1394552979165" expanded="true" signature="4706:4751" placeholder="SELECT * FRO..studenttype..." />
-                <marker date="1394552979165" expanded="true" signature="6026:6045" placeholder="SELECT * FRO..other..." />
-                <marker date="1394552979165" expanded="true" signature="6733:6778" placeholder="SELECT * FRO..evaluating..." />
-                <marker date="1394552979165" expanded="true" signature="7434:7487" placeholder="SELECT * FRO..teacheroutside..." />
-                <marker date="1394552979165" expanded="true" signature="7737:7792" placeholder="SELECT * FRO..teacheronside..." />
-                <marker date="1394552979165" expanded="true" signature="8185:8403" placeholder="SELECT stude..student..." />
-                <marker date="1394552979165" expanded="true" signature="8329:8402" placeholder="SELECT DISTI..evaluating..." />
-                <marker date="1394552979165" expanded="true" signature="8943:8967" placeholder="SELECT * FRO..evaluating..." />
-                <marker date="1394552979165" expanded="true" signature="9170:9215" placeholder="SELECT * FRO..evaluating..." />
-                <marker date="1394552979165" expanded="true" signature="9823:9871" placeholder="DELETE FROM ..." />
-                <marker date="1394552979165" expanded="true" signature="10031:10081" placeholder="SELECT * FRO..evaluating..." />
-                <marker date="1394552979165" expanded="true" signature="10507:10572" placeholder="UPDATE evalu..." />
-                <marker date="1394552979165" expanded="true" signature="11012:11031" placeholder="SELECT * FRO..other..." />
-                <marker date="1394552979165" expanded="true" signature="11946:11985" placeholder="DELETE FROM ..." />
-                <marker date="1394552979165" expanded="true" signature="12103:12150" placeholder="DELETE FROM ..." />
-                <marker date="1394552979165" expanded="true" signature="12272:12325" placeholder="DELETE FROM ..." />
-                <marker date="1394552979165" expanded="true" signature="12448:12499" placeholder="DELETE FROM ..." />
-                <marker date="1394552979165" expanded="true" signature="12604:12650" placeholder="DELETE FROM ..." />
-                <marker date="1394552979165" expanded="true" signature="13360:13385" placeholder="SELECT * FRO..studenttype..." />
-                <marker date="1394552979165" expanded="true" signature="14075:14162" placeholder="SELECT * FRO..record_student..." />
-                <marker date="1394552979165" expanded="true" signature="14372:14403" placeholder="SELECT * FRO..record_evaluating..." />
-                <marker date="1394552979165" expanded="true" signature="15091:15174" placeholder="SELECT * FRO..record_evaluating..." />
-                <marker date="1394552979165" expanded="true" signature="16450:16498" placeholder="SELECT * FRO..secretary..." />
-                <marker date="1394552979165" expanded="true" signature="16684:16737" placeholder="SELECT * FRO..evaluating..." />
-                <marker date="1394552979165" expanded="true" signature="17015:17049" placeholder="SELECT DISTI..student..." />
-                <marker date="1394552979165" expanded="true" signature="17142:17184" placeholder="SELECT DISTI..teacheronside..." />
+                <marker date="1394688958580" expanded="true" signature="517:562" placeholder="SELECT * FRO..user..." />
+                <marker date="1394688958580" expanded="true" signature="868:920" placeholder="SELECT * FRO..studenttype..." />
+                <marker date="1394688958580" expanded="true" signature="1134:1179" placeholder="SELECT * FRO..user..." />
+                <marker date="1394688958580" expanded="true" signature="2752:2833" placeholder="INSERT INTO ..." />
+                <marker date="1394688958580" expanded="true" signature="2982:3028" placeholder="SELECT user ..user..." />
+                <marker date="1394688958580" expanded="true" signature="3245:3288" placeholder="SELECT * FRO..user..." />
+                <marker date="1394688958580" expanded="true" signature="3501:3550" placeholder="SELECT * FRO..student..." />
+                <marker date="1394688958580" expanded="true" signature="4615:4664" placeholder="SELECT * FRO..student..." />
+                <marker date="1394688958580" expanded="true" signature="5023:5068" placeholder="SELECT * FRO..studenttype..." />
+                <marker date="1394688958580" expanded="true" signature="6343:6362" placeholder="SELECT * FRO..other..." />
+                <marker date="1394688958580" expanded="true" signature="7050:7095" placeholder="SELECT * FRO..evaluating..." />
+                <marker date="1394688958580" expanded="true" signature="7751:7804" placeholder="SELECT * FRO..teacheroutside..." />
+                <marker date="1394688958580" expanded="true" signature="8054:8109" placeholder="SELECT * FRO..teacheronside..." />
+                <marker date="1394688958580" expanded="true" signature="8502:8720" placeholder="SELECT stude..student..." />
+                <marker date="1394688958580" expanded="true" signature="8646:8719" placeholder="SELECT DISTI..evaluating..." />
+                <marker date="1394688958580" expanded="true" signature="9260:9284" placeholder="SELECT * FRO..evaluating..." />
+                <marker date="1394688958580" expanded="true" signature="9487:9532" placeholder="SELECT * FRO..evaluating..." />
+                <marker date="1394688958580" expanded="true" signature="10140:10188" placeholder="DELETE FROM ..." />
+                <marker date="1394688958580" expanded="true" signature="10348:10398" placeholder="SELECT * FRO..evaluating..." />
+                <marker date="1394688958580" expanded="true" signature="10824:10889" placeholder="UPDATE evalu..." />
+                <marker date="1394688958580" expanded="true" signature="11329:11348" placeholder="SELECT * FRO..other..." />
+                <marker date="1394688958580" expanded="true" signature="12263:12302" placeholder="DELETE FROM ..." />
+                <marker date="1394688958580" expanded="true" signature="12420:12467" placeholder="DELETE FROM ..." />
+                <marker date="1394688958580" expanded="true" signature="12589:12642" placeholder="DELETE FROM ..." />
+                <marker date="1394688958580" expanded="true" signature="12765:12816" placeholder="DELETE FROM ..." />
+                <marker date="1394688958580" expanded="true" signature="12921:12967" placeholder="DELETE FROM ..." />
+                <marker date="1394688958580" expanded="true" signature="13673:13698" placeholder="SELECT * FRO..studenttype..." />
+                <marker date="1394688958580" expanded="true" signature="14388:14475" placeholder="SELECT * FRO..record_student..." />
+                <marker date="1394688958580" expanded="true" signature="14685:14716" placeholder="SELECT * FRO..record_evaluating..." />
+                <marker date="1394688958580" expanded="true" signature="15404:15487" placeholder="SELECT * FRO..record_evaluating..." />
+                <marker date="1394688958580" expanded="true" signature="16763:16811" placeholder="SELECT * FRO..secretary..." />
+                <marker date="1394688958580" expanded="true" signature="16997:17050" placeholder="SELECT * FRO..evaluating..." />
+                <marker date="1394688958580" expanded="true" signature="17328:17362" placeholder="SELECT DISTI..student..." />
+                <marker date="1394688958580" expanded="true" signature="17455:17497" placeholder="SELECT DISTI..teacheronside..." />
               </folding>
             </state>
           </provider>
@@ -687,19 +89,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="testLogin.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/testLogin.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="39" selection-start="228" selection-end="228" vertical-scroll-proportion="0.0" vertical-offset="95" max-vertical-offset="1463">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="login.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="31" selection-start="1541" selection-end="1541" vertical-scroll-proportion="-8.142858" vertical-offset="456" max-vertical-offset="2052">
+            <state line="36" column="31" selection-start="1541" selection-end="1541" vertical-scroll-proportion="-4.071429" vertical-offset="570" max-vertical-offset="2052">
               <folding />
             </state>
           </provider>
@@ -754,17 +147,31 @@
       <file leaf-file-name="out-teacher-check-info.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/out-teacher-check-info.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="0" selection-start="1060" selection-end="1060" vertical-scroll-proportion="-8.142858" vertical-offset="494" max-vertical-offset="7429">
+            <state line="39" column="16" selection-start="1114" selection-end="1114" vertical-scroll-proportion="-8.821428" vertical-offset="494" max-vertical-offset="7429">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="on-teacher-check-info.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="on-teacher-check-info.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/on-teacher-check-info.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="1" selection-start="1111" selection-end="1111" vertical-scroll-proportion="0.6697588" vertical-offset="399" max-vertical-offset="7448">
+            <state line="41" column="0" selection-start="1112" selection-end="1112" vertical-scroll-proportion="-13.571428" vertical-offset="399" max-vertical-offset="7448">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="web-admin-deadline.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web-admin-deadline.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="65" selection-start="1024" selection-end="1024" vertical-scroll-proportion="-6.107143" vertical-offset="361" max-vertical-offset="2356">
+              <folding>
+                <marker date="1394687251778" expanded="true" signature="736:782" placeholder="UPDATE stude..." />
+                <marker date="1394687251778" expanded="true" signature="1264:1309" placeholder="UPDATE stude..." />
+                <marker date="1394687251778" expanded="true" signature="1792:1842" placeholder="UPDATE teach..." />
+                <marker date="1394687251778" expanded="true" signature="2202:2253" placeholder="UPDATE teach..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -813,7 +220,6 @@
         <option value="$PROJECT_DIR$/web-admin-OutTeacher-manage.php" />
         <option value="$PROJECT_DIR$/web-admin-secretary-manage.php" />
         <option value="$PROJECT_DIR$/web-admin-type-manage.php" />
-        <option value="$PROJECT_DIR$/web-admin-deadline.php" />
         <option value="$PROJECT_DIR$/student-submit.php" />
         <option value="$PROJECT_DIR$/../bctf/web100.php" />
         <option value="$PROJECT_DIR$/web-admin-OnTeacher-manage.php" />
@@ -833,12 +239,13 @@
         <option value="$PROJECT_DIR$/web-admin-add-OnTeachear.php" />
         <option value="$PROJECT_DIR$/web-admin-finish-info.php" />
         <option value="$PROJECT_DIR$/out-teacher-check.php" />
-        <option value="$PROJECT_DIR$/myFunction.php" />
         <option value="$PROJECT_DIR$/login.php" />
         <option value="$PROJECT_DIR$/css.php" />
         <option value="$PROJECT_DIR$/student-view-eva.php" />
-        <option value="$PROJECT_DIR$/out-teacher-check-info.php" />
         <option value="$PROJECT_DIR$/on-teacher-check-info.php" />
+        <option value="$PROJECT_DIR$/web-admin-deadline.php" />
+        <option value="$PROJECT_DIR$/out-teacher-check-info.php" />
+        <option value="$PROJECT_DIR$/myFunction.php" />
       </list>
     </option>
   </component>
@@ -1190,11 +597,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2527" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web-admin-deadline.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="46" selection-start="1694" selection-end="1694" vertical-scroll-proportion="0.0" vertical-offset="760" max-vertical-offset="2356" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/student-result.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="85" column="113" selection-start="4053" selection-end="4053" vertical-scroll-proportion="0.0" vertical-offset="655" max-vertical-offset="2185" />
@@ -1355,13 +757,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="43" selection-start="64" selection-end="64" vertical-scroll-proportion="0.0" vertical-offset="19" max-vertical-offset="931">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web-admin-add-OnTeachear.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="80" column="75" selection-start="3422" selection-end="3422" vertical-scroll-proportion="-13.571428" vertical-offset="1140" max-vertical-offset="2736">
@@ -1386,55 +781,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="31" selection-start="1541" selection-end="1541" vertical-scroll-proportion="-8.142858" vertical-offset="456" max-vertical-offset="2052">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myFunction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="400" column="17" selection-start="10835" selection-end="10835" vertical-scroll-proportion="-10.178572" vertical-offset="7315" max-vertical-offset="12787">
-          <folding>
-            <marker date="1394552979165" expanded="true" signature="200:245" placeholder="SELECT * FRO..user..." />
-            <marker date="1394552979165" expanded="true" signature="551:603" placeholder="SELECT * FRO..studenttype..." />
-            <marker date="1394552979165" expanded="true" signature="817:862" placeholder="SELECT * FRO..user..." />
-            <marker date="1394552979165" expanded="true" signature="2435:2516" placeholder="INSERT INTO ..." />
-            <marker date="1394552979165" expanded="true" signature="2665:2711" placeholder="SELECT user ..user..." />
-            <marker date="1394552979165" expanded="true" signature="2928:2971" placeholder="SELECT * FRO..user..." />
-            <marker date="1394552979165" expanded="true" signature="3184:3233" placeholder="SELECT * FRO..student..." />
-            <marker date="1394552979165" expanded="true" signature="4298:4347" placeholder="SELECT * FRO..student..." />
-            <marker date="1394552979165" expanded="true" signature="4706:4751" placeholder="SELECT * FRO..studenttype..." />
-            <marker date="1394552979165" expanded="true" signature="6026:6045" placeholder="SELECT * FRO..other..." />
-            <marker date="1394552979165" expanded="true" signature="6733:6778" placeholder="SELECT * FRO..evaluating..." />
-            <marker date="1394552979165" expanded="true" signature="7434:7487" placeholder="SELECT * FRO..teacheroutside..." />
-            <marker date="1394552979165" expanded="true" signature="7737:7792" placeholder="SELECT * FRO..teacheronside..." />
-            <marker date="1394552979165" expanded="true" signature="8185:8403" placeholder="SELECT stude..student..." />
-            <marker date="1394552979165" expanded="true" signature="8329:8402" placeholder="SELECT DISTI..evaluating..." />
-            <marker date="1394552979165" expanded="true" signature="8943:8967" placeholder="SELECT * FRO..evaluating..." />
-            <marker date="1394552979165" expanded="true" signature="9170:9215" placeholder="SELECT * FRO..evaluating..." />
-            <marker date="1394552979165" expanded="true" signature="9823:9871" placeholder="DELETE FROM ..." />
-            <marker date="1394552979165" expanded="true" signature="10031:10081" placeholder="SELECT * FRO..evaluating..." />
-            <marker date="1394552979165" expanded="true" signature="10507:10572" placeholder="UPDATE evalu..." />
-            <marker date="1394552979165" expanded="true" signature="11012:11031" placeholder="SELECT * FRO..other..." />
-            <marker date="1394552979165" expanded="true" signature="11946:11985" placeholder="DELETE FROM ..." />
-            <marker date="1394552979165" expanded="true" signature="12103:12150" placeholder="DELETE FROM ..." />
-            <marker date="1394552979165" expanded="true" signature="12272:12325" placeholder="DELETE FROM ..." />
-            <marker date="1394552979165" expanded="true" signature="12448:12499" placeholder="DELETE FROM ..." />
-            <marker date="1394552979165" expanded="true" signature="12604:12650" placeholder="DELETE FROM ..." />
-            <marker date="1394552979165" expanded="true" signature="13360:13385" placeholder="SELECT * FRO..studenttype..." />
-            <marker date="1394552979165" expanded="true" signature="14075:14162" placeholder="SELECT * FRO..record_student..." />
-            <marker date="1394552979165" expanded="true" signature="14372:14403" placeholder="SELECT * FRO..record_evaluating..." />
-            <marker date="1394552979165" expanded="true" signature="15091:15174" placeholder="SELECT * FRO..record_evaluating..." />
-            <marker date="1394552979165" expanded="true" signature="16450:16498" placeholder="SELECT * FRO..secretary..." />
-            <marker date="1394552979165" expanded="true" signature="16684:16737" placeholder="SELECT * FRO..evaluating..." />
-            <marker date="1394552979165" expanded="true" signature="17015:17049" placeholder="SELECT DISTI..student..." />
-            <marker date="1394552979165" expanded="true" signature="17142:17184" placeholder="SELECT DISTI..teacheronside..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/student-view-eva.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="33" column="0" selection-start="1114" selection-end="1114" vertical-scroll-proportion="-8.142858" vertical-offset="399" max-vertical-offset="3078">
@@ -1442,17 +788,85 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/out-teacher-check-info.php">
+    <entry file="file://$PROJECT_DIR$/on-teacher-check-info.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="0" selection-start="1060" selection-end="1060" vertical-scroll-proportion="-8.142858" vertical-offset="494" max-vertical-offset="7429">
+        <state line="41" column="0" selection-start="1112" selection-end="1112" vertical-scroll-proportion="-13.571428" vertical-offset="399" max-vertical-offset="7448">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/on-teacher-check-info.php">
+    <entry file="file://$PROJECT_DIR$/web-admin-deadline.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="1" selection-start="1111" selection-end="1111" vertical-scroll-proportion="0.6697588" vertical-offset="399" max-vertical-offset="7448">
+        <state line="28" column="65" selection-start="1024" selection-end="1024" vertical-scroll-proportion="-6.107143" vertical-offset="361" max-vertical-offset="2356">
+          <folding>
+            <marker date="1394687251778" expanded="true" signature="736:782" placeholder="UPDATE stude..." />
+            <marker date="1394687251778" expanded="true" signature="1264:1309" placeholder="UPDATE stude..." />
+            <marker date="1394687251778" expanded="true" signature="1792:1842" placeholder="UPDATE teach..." />
+            <marker date="1394687251778" expanded="true" signature="2202:2253" placeholder="UPDATE teach..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="43" selection-start="64" selection-end="64" vertical-scroll-proportion="0.0" vertical-offset="19" max-vertical-offset="931">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="31" selection-start="1541" selection-end="1541" vertical-scroll-proportion="-4.071429" vertical-offset="570" max-vertical-offset="2052">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out-teacher-check-info.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="16" selection-start="1114" selection-end="1114" vertical-scroll-proportion="-8.821428" vertical-offset="494" max-vertical-offset="7429">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myFunction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="511" column="9" selection-start="13450" selection-end="13450" vertical-scroll-proportion="0.45825604" vertical-offset="9462" max-vertical-offset="12958">
+          <folding>
+            <marker date="1394688958580" expanded="true" signature="517:562" placeholder="SELECT * FRO..user..." />
+            <marker date="1394688958580" expanded="true" signature="868:920" placeholder="SELECT * FRO..studenttype..." />
+            <marker date="1394688958580" expanded="true" signature="1134:1179" placeholder="SELECT * FRO..user..." />
+            <marker date="1394688958580" expanded="true" signature="2752:2833" placeholder="INSERT INTO ..." />
+            <marker date="1394688958580" expanded="true" signature="2982:3028" placeholder="SELECT user ..user..." />
+            <marker date="1394688958580" expanded="true" signature="3245:3288" placeholder="SELECT * FRO..user..." />
+            <marker date="1394688958580" expanded="true" signature="3501:3550" placeholder="SELECT * FRO..student..." />
+            <marker date="1394688958580" expanded="true" signature="4615:4664" placeholder="SELECT * FRO..student..." />
+            <marker date="1394688958580" expanded="true" signature="5023:5068" placeholder="SELECT * FRO..studenttype..." />
+            <marker date="1394688958580" expanded="true" signature="6343:6362" placeholder="SELECT * FRO..other..." />
+            <marker date="1394688958580" expanded="true" signature="7050:7095" placeholder="SELECT * FRO..evaluating..." />
+            <marker date="1394688958580" expanded="true" signature="7751:7804" placeholder="SELECT * FRO..teacheroutside..." />
+            <marker date="1394688958580" expanded="true" signature="8054:8109" placeholder="SELECT * FRO..teacheronside..." />
+            <marker date="1394688958580" expanded="true" signature="8502:8720" placeholder="SELECT stude..student..." />
+            <marker date="1394688958580" expanded="true" signature="8646:8719" placeholder="SELECT DISTI..evaluating..." />
+            <marker date="1394688958580" expanded="true" signature="9260:9284" placeholder="SELECT * FRO..evaluating..." />
+            <marker date="1394688958580" expanded="true" signature="9487:9532" placeholder="SELECT * FRO..evaluating..." />
+            <marker date="1394688958580" expanded="true" signature="10140:10188" placeholder="DELETE FROM ..." />
+            <marker date="1394688958580" expanded="true" signature="10348:10398" placeholder="SELECT * FRO..evaluating..." />
+            <marker date="1394688958580" expanded="true" signature="10824:10889" placeholder="UPDATE evalu..." />
+            <marker date="1394688958580" expanded="true" signature="11329:11348" placeholder="SELECT * FRO..other..." />
+            <marker date="1394688958580" expanded="true" signature="12263:12302" placeholder="DELETE FROM ..." />
+            <marker date="1394688958580" expanded="true" signature="12420:12467" placeholder="DELETE FROM ..." />
+            <marker date="1394688958580" expanded="true" signature="12589:12642" placeholder="DELETE FROM ..." />
+            <marker date="1394688958580" expanded="true" signature="12765:12816" placeholder="DELETE FROM ..." />
+            <marker date="1394688958580" expanded="true" signature="12921:12967" placeholder="DELETE FROM ..." />
+            <marker date="1394688958580" expanded="true" signature="13673:13698" placeholder="SELECT * FRO..studenttype..." />
+            <marker date="1394688958580" expanded="true" signature="14388:14475" placeholder="SELECT * FRO..record_student..." />
+            <marker date="1394688958580" expanded="true" signature="14685:14716" placeholder="SELECT * FRO..record_evaluating..." />
+            <marker date="1394688958580" expanded="true" signature="15404:15487" placeholder="SELECT * FRO..record_evaluating..." />
+            <marker date="1394688958580" expanded="true" signature="16763:16811" placeholder="SELECT * FRO..secretary..." />
+            <marker date="1394688958580" expanded="true" signature="16997:17050" placeholder="SELECT * FRO..evaluating..." />
+            <marker date="1394688958580" expanded="true" signature="17328:17362" placeholder="SELECT DISTI..student..." />
+            <marker date="1394688958580" expanded="true" signature="17455:17497" placeholder="SELECT DISTI..teacheronside..." />
+          </folding>
         </state>
       </provider>
     </entry>

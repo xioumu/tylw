@@ -1,6 +1,15 @@
 <?php
 filter_input_array(INPUT_POST, FILTER_SANITIZE_SPECIAL_CHARS);
 filter_input_array(INPUT_GET, FILTER_SANITIZE_SPECIAL_CHARS);
+if (!get_magic_quotes_gpc()) {
+    function addslashesDeep($var) {
+        return is_array($var) ? array_map('addslashesDeep', $var) : addslashes($var);
+    }
+    $_GET = addslashesDeep($_GET);
+    $_POST = addslashesDeep($_POST);
+    $_COOKIE = addslashesDeep($_COOKIE);
+    $_REQUEST = addslashesDeep($_REQUEST);
+}
 function loginCheck($username, $passwd) {
     $result = mysql_query("SELECT * FROM user WHERE user = '{$username}' ");
     if ($row = mysql_fetch_array($result)) {
@@ -502,7 +511,7 @@ function judgeUser($allow) {
             }
         }
     }
-    if (!$flag) jumpTo("testLogin.php");
+    if (!$flag) jumpTo("login.php");
 }
 
 //过滤

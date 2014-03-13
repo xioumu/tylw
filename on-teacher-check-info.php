@@ -36,6 +36,9 @@ $eid = $_GET['id'];
 $evaInfo = getEvaInfo($eid);
 $stuInfo = getStuInfo($evaInfo['studentID']);
 $teaInfo = getOnTeaInfo($self);
+if ($evaInfo['teacherID'] != $self) {
+    errorUser();
+}
 if (overDeadline($teaInfo['TdeadLine'])) {
     goHis("已经超过截止日期");
 }
