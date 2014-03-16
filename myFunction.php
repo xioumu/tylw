@@ -67,13 +67,19 @@ function uploadExl($tmpFilePath) {
 }
 
 //获取EXL信息
-function getExl($filePath) {
+function getExl($filePath, $ex = '2003') {
     $res = array();
     require_once 'PHPExcel\PHPExcel.php';
     require_once 'PHPExcel\PHPExcel\IOFactory.php';
-    //require_once 'PHPExcel\PHPExcel\Reader\Excel5.php';//excel 2003
+    require_once 'PHPExcel\PHPExcel\Reader\Excel5.php';//excel 2003
     require_once 'PHPExcel\PHPExcel\Reader\Excel2007.php'; //excel 2007
-    $objReader = PHPExcel_IOFactory::createReader('Excel2007');
+    $objReader = "";
+    if ($ex = '2007') {
+        $objReader = PHPExcel_IOFactory::createReader('Excel2007');
+    }
+    else {
+        $objReader = PHPExcel_IOFactory::createReader('Excel5');
+    }
     $objPHPExcel = PHPExcel_IOFactory::load($filePath);
     $sheet = $objPHPExcel->getSheet(0);
     $highestRow = $sheet->getHighestRow(); // 取得总行数

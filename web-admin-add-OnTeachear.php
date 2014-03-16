@@ -65,7 +65,7 @@ include("config.php");
                     <div class="box-content">
                         <form class="form-horizontal" action="loadInfo.php" method="post" >
                     ';
-                if ($_FILES["exlFile"]["type"] == "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" && $_FILES["exlFile"]["size"] < 1024 * 1024 * 1024) {
+                if ($_FILES["exlFile"]["type"] == "application/vnd.ms-excel" && $_FILES["exlFile"]["size"] < 1024 * 1024 * 1024) {
                     if ($_FILES["exlFile"]["error"] > 0) {
                         echo "Error: " . $_FILES["exlFile"]["error"] . "<br />";
                     }
@@ -84,7 +84,7 @@ include("config.php");
                     }
                 }
                 else {
-                    if ($_FILES["exlFile"]["type"] != "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet") echo "文件格式不对,必须是Excel2007文件<br/>";
+                    if ($_FILES["exlFile"]["type"] != "application/vnd.ms-excel") echo "文件格式不对,必须是Excel2003文件<br/>";
                     if ($_FILES["exlFile"]["size"] >= 1024 * 1024 * 1024) echo "文件超过大小限制!";
                 }
                 echo '
@@ -107,11 +107,11 @@ include("config.php");
                                 <div class="control-group">
                                     <label class="control-label" for="fileInput">下载样例EXCEL表格</label>
                                     <div class="controls">
-                                        <a href="doc/onteacher.xlsx" target="view_window" class="btn btn-primary btn-small">样例表格下载</a>
+                                        <a href="doc/onteacher.xls" target="view_window" class="btn btn-primary btn-small">样例表格下载</a>
                                     </div>
                                 </div>
                                 <div class="control-group">
-                                    <label class="control-label" for="fileInput">选择表格文件(只支持excel2007文件)</label>
+                                    <label class="control-label" for="fileInput">选择表格文件(只支持excel2003文件)</label>
                                     <div class="controls">
                                         <input class="uniform_off" id="fileInput" type="file" name="exlFile">
                                     </div>

@@ -13,6 +13,7 @@ function addOUtTeaUser($user) {
 
 //添加校外专家
 function addOutTea() {
+    $lastOutTea = "";
     $que = mysql_query("SELECT lastOutTea FROM other");
     if ($res = mysql_fetch_array($que)) {
         $lastOutTea = $res['lastOutTea'];
@@ -60,8 +61,6 @@ judgeUser(array('web'));
 if (isset($_GET['type']) && $_GET['type'] == 'mul') {
     if (isset($_GET['needPercent'])) {
         $allMajor = getAllMajor('stu');
-        $cnt = array();
-
         $needPer = intval($_GET['needPercent']);
         //分配指定人选
         if (isset($_POST['choiceStu'])) {
@@ -70,13 +69,11 @@ if (isset($_GET['type']) && $_GET['type'] == 'mul') {
                 addStuEva($user);
             }
         }
-
         foreach ($allMajor as $needMajor) {
-            $allUser = getAllMajorUser("stu", $needMajor);
-            $needNum = round(count($allUser) * doubleval($needPer) / 100);
             $freeUser = getAllFreeUser("stu", $needMajor);
-            $cnt[$needMajor] = count($allUser) - count($freeUser);
-            for ($i = 0; $cnt[$needMajor] < $needNum; $i++, $cnt[$needMajor]++) {
+            $needNum = round(count($freeUser) * doubleval($needPer) / 100);
+            //echo $needMajor . ' ' . $needNum . ' ' . count($freeUser) . '<br/>';
+            for ($i = 0; $i < $needNum; $i++) {
                 addStuEva($freeUser[$i]);
             }
         }

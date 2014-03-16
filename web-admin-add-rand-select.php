@@ -2,7 +2,7 @@
 include("config.php");
 include("myFunction.php");
 judgeUser(array('web'));
-function leadOutExl($allData, $type) { //把数据输出至EXLX文件
+function leadOutExl($allData, $type, $ex = '2003') { //把数据输出至EXLX文件
     error_reporting(E_ALL);
     ini_set('display_errors', TRUE);
     ini_set('display_startup_errors', TRUE);
@@ -45,11 +45,21 @@ function leadOutExl($allData, $type) { //把数据输出至EXLX文件
     $objPHPExcel->setActiveSheetIndex(0);
 
     // Redirect output to a client’s web browser (Excel2007)
-    header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
-    header('Content-Disposition: attachment;filename="information.xlsx"');
-    header('Cache-Control: max-age=0');
-    $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');
-    $objWriter->save('php://output');
+    if($ex == '2007') { //导出excel2007文档
+        header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+        header('Content-Disposition: attachment;filename="information.xlsx"');
+        header('Cache-Control: max-age=0');
+        $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');
+        $objWriter->save('php://output');
+        exit;
+    } else {  //导出excel2003文档
+        header('Content-Type: application/vnd.ms-excel');
+        header('Content-Disposition: attachment;filename="information.xls"');
+        header('Cache-Control: max-age=0');
+        $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel5');
+        $objWriter->save('php://output');
+        exit;
+    }
 }
 
 $allMajor = getAllMajor('onTea');

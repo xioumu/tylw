@@ -27,14 +27,14 @@
                         <a href = "web-admin-student-manage.php">网站管理员</a> <span class = "divider">/</span>
                     </li>
                     <li>
-                        <a href = "web-admin-add-eva.php">设置参与评测的学生</a>
+                        <a href = "web-admin-add-eva.php">添加参与评测的学生</a>
                     </li>
                 </ul>
             </div>
             <div class = "row-fluid sortable">
                 <div class = "box span12">
                     <div class = "box-header well" data-original-title>
-                        <h2>设置参与评测的学生</h2>
+                        <h2>添加参与评测的学生</h2>
                         <div class = "box-icon">
                         </div>
                     </div>

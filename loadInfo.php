@@ -43,8 +43,6 @@ function addOnTeaInfo($row) {
         if (mysql_query("INSERT INTO teacheronside (teacherID, tName, sex, subject, research)
                       VALUES ('{$row['A']}', '{$row['B']}', '{$row['C']}', '{$row['D']}', '{$row['E']}')") or die(mysql_error())
         ) {
-            echo "INSERT INTO teacheronside (teacherID, tName, sex, subject, research)
-                      VALUES ('{$row['A']}', '{$row['B']}', '{$row['C']}', '{$row['D']}', '{$row['E']}')";
             return true;
         }
     }
