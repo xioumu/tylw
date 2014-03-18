@@ -22,13 +22,14 @@ function updataPaperName($user, $paperName) {
 }
 
 //上传论文
-function updataStuFile($user, $file, $type) {
+function updataStuFile($info, $file, $type) {
+    $user = $info['studentID'];
     $judgeYear = getJudgeYear();
     $fileType = substr(strrchr($file['name'], "."), 1);
-    $fileName = myEncode($user) . "." . $fileType;
+    $fileName = $info['studentID'] . "-" . $info['sName'] . '-' . myEncode($user) . "." . $fileType;
     $address = 'upFile/' . $type . "/" . $judgeYear . "/" . $fileName;
     //echo $address . "<br/>";
-    $moveInfo = move_uploaded_file($file['tmp_name'], $address);
+    $moveInfo = move_uploaded_file($file['tmp_name'], iconv("UTF-8", "GB2312//IGNORE", $address));
     $typeName = $type . "Add";
     if (!mysql_query("UPDATE student SET {$typeName} = '{$address}' WHERE studentID = '{$user}'")) {
         echo "sql error!<br>";
@@ -59,7 +60,7 @@ if (isset($_SESSION['is_login'])) {
                     updataPaperName($user, $_POST['paperName']);
                 }
                 else if(overDeadline($info['repDeadline'])) goBack("提交已经截止","student-submit.php");
-                if (updataStuFile($user, $_FILES['paperFile'], $_GET['type'])) {
+                if (updataStuFile($info, $_FILES['paperFile'], $_GET['type'])) {
                     echo "ok!";
                     header("Location: student-submit.php?status=ture");
                 }
