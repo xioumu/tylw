@@ -284,6 +284,8 @@
                     page.find('#changeInfo-name').val(stuInfo.sName);
                     page.find('#changeInfo-studentID').val(stuInfo.studentID);
                     page.find('#changeInfo-grade').val(stuInfo.grade);
+                    if (stuInfo.sex == '') stuInfo.sex = null;
+                    if (stuInfo.type == '') stuInfo.type = null;
                     page.find('#changeInfo-sex').find('#' + stuInfo.sex).attr("selected", "selected");
                     page.find('#changeInfo-type').find('#' + stuInfo.type).attr("selected", "selected");
                     page.find('#changeInfo-major').val(stuInfo.major);

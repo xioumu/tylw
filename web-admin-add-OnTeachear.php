@@ -65,7 +65,8 @@ include("config.php");
                     <div class="box-content">
                         <form class="form-horizontal" action="loadInfo.php" method="post" >
                     ';
-                if ($_FILES["exlFile"]["type"] == "application/vnd.ms-excel" && $_FILES["exlFile"]["size"] < 1024 * 1024 * 1024) {
+                $fileType = substr(strrchr($_FILES["exlFile"]['name'], "."), 1);
+                if ($fileType == 'xls' && $_FILES["exlFile"]["size"] < 1024 * 1024 * 1024) {
                     if ($_FILES["exlFile"]["error"] > 0) {
                         echo "Error: " . $_FILES["exlFile"]["error"] . "<br />";
                     }
@@ -84,7 +85,7 @@ include("config.php");
                     }
                 }
                 else {
-                    if ($_FILES["exlFile"]["type"] != "application/vnd.ms-excel") echo "文件格式不对,必须是Excel2003文件<br/>";
+                    if ($fileType != 'xls') echo "文件格式不对,必须是Excel2003文件<br/>";
                     if ($_FILES["exlFile"]["size"] >= 1024 * 1024 * 1024) echo "文件超过大小限制!";
                 }
                 echo '

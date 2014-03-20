@@ -189,6 +189,7 @@ include('header.php');
                     var page = $('#changeInfo-modal');
                     page.find('#changeInfo-name').val(teaInfo.tName);
                     page.find('#changeInfo-teacherID').val(teaInfo.teacherID);
+                    if (teaInfo.sex == '') teaInfo.sex = null;
                     page.find('#changeInfo-sex').find('#' + teaInfo.sex).attr("selected", "selected");
                     page.find('#changeInfo-subject').val(teaInfo.subject);
                     page.find('#changeInfo-research').val(teaInfo.research);

@@ -40,7 +40,7 @@
                 <div class = "box span12">
                     <div class = "box-header well" data-original-title>
                         <h2>查看归档学生信息</h2>
-                        <div class = "box-icon">
+                            <div class = "box-icon">
                             <a href = "#" class = "btn btn-minimize btn-round"><i class = "icon-chevron-up"></i></a>
                             <a href = "#" class = "btn btn-close btn-round"><i class = "icon-remove"></i></a>
                         </div>
@@ -53,6 +53,7 @@
                                 <th>年级</th>
                                 <th>姓名</th>
                                 <th>学号</th>
+                                <th>性别</th>
                                 <th>专业</th>
                                 <th>类别</th>
                                 <th>校内方向</th>
@@ -90,6 +91,7 @@
                                     echo "<td>" . $info['grade'] . "</td>";
                                     echo "<td>" . $info['sName'] . "</td>";;
                                     echo "<td>" . $info['studentID'] . "</td>";
+                                    echo "<td>" . $info['sex'] . "</td>";
                                     echo "<td>" . $info['major'] . "</td>";
                                     echo "<td>" . $info['type'] . "</td>";
                                     echo "<td>" . $info['subject'] . "</td>";
