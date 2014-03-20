@@ -34,18 +34,18 @@ int sgn(const double &x) {  return (x > eps) - (x < -eps); }
 
 FILE *fin, *fout;
 char fileName[200];
+char tmp[1000000];
 
 int main() {
     fout = fopen("all-css.css", "w");
     while (scanf("%s", &fileName) != EOF ) {
-        char tmp[10000];
         puts(fileName);
         fin = fopen(fileName, "r");
-        while (fgets(tmp, 10000, fin)) {
-            //fputs(tmp, fout);
-            int len = strlen(tmp);
-            tmp[len - 1] = ' ';
-            fprintf(fout, "%s", tmp);
+        while (fgets(tmp, 1000000, fin)) {
+            fputs(tmp, fout);
+            //int len = strlen(tmp);
+            //tmp[len - 1] = ' ';
+            //fprintf(fout, "%s", tmp);
         }
         fclose(fin);
     }
