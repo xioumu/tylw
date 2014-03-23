@@ -75,176 +75,144 @@ if (overDeadline($teaInfo['TdeadLine'])) {
     <th class = "boxContent"><p>论文选题</p></th>
     <th colspan = "4">接触学科前沿，理论或实际意义</th>
     <th colspan = "1">
-        <div class = "control-group">
-            <div class = "controls">
-                <label class = "radio">
-                    <input type = "radio" name = "C1" id = "A" value = "1">优秀
-                </label>
-                <label class = "radio">
-                    <input type = "radio" name = "C1" id = "B" value = "2">良好
-                </label>
-                <label class = "radio">
-                    <input type = "radio" name = "C1" id = "C" value = "3">合格
-                </label>
-                <label class = "radio">
-                    <input type = "radio" name = "C1" id = "D" value = "4">不合格
-                </label>
-            </div>
-        </div>
+        <label class = "radio">
+            优秀<input type = "radio" name = "C1" id = "A" value = "1">
+        </label>
+        <label class = "radio">
+            良好<input type = "radio" name = "C1" id = "B" value = "2">
+        </label>
+        <label class = "radio">
+            合格<input type = "radio" name = "C1" id = "C" value = "3">
+        </label>
+        <label class = "radio">
+            不合格<input type = "radio" name = "C1" id = "D" value = "4">
+        </label>
     </th>
 </tr>
 <tr>
     <th class = "boxContent"><p>文献综述</p></th>
     <th colspan = "4">阅读量、综合分析能力，了解本学科专业学术动态程度义</th>
     <th colspan = "1">
-        <div class = "control-group">
-            <div class = "controls">
                 <label class = "radio">
-                    <input type = "radio" name = "C2" id = "A" value = "1">优秀
+                    优秀<input type = "radio" name = "C2" id = "A" value = "1">
                 </label>
                 <label class = "radio">
-                    <input type = "radio" name = "C2" id = "B" value = "2">良好
+                    良好<input type = "radio" name = "C2" id = "B" value = "2">
                 </label>
                 <label class = "radio">
-                    <input type = "radio" name = "C2" id = "C" value = "3">合格
+                    合格<input type = "radio" name = "C2" id = "C" value = "3">
                 </label>
                 <label class = "radio">
-                    <input type = "radio" name = "C2" id = "D" value = "4">不合格
+                    不合格<input type = "radio" name = "C2" id = "D" value = "4">
                 </label>
-            </div>
-        </div>
     </th>
 </tr>
 <tr>
     <th class = "boxContent"><p>成果与创新</p></th>
     <th colspan = "4">论文成果与新见解</th>
     <th colspan = "1">
-        <div class = "control-group">
-            <div class = "controls">
                 <label class = "radio">
-                    <input type = "radio" name = "C3" id = "A" value = "1">优秀
+                    优秀<input type = "radio" name = "C3" id = "A" value = "1">
                 </label>
                 <label class = "radio">
-                    <input type = "radio" name = "C3" id = "B" value = "2">良好
+                    良好<input type = "radio" name = "C3" id = "B" value = "2">
                 </label>
                 <label class = "radio">
-                    <input type = "radio" name = "C3" id = "C" value = "3">合格
+                    合格<input type = "radio" name = "C3" id = "C" value = "3">
                 </label>
                 <label class = "radio">
-                    <input type = "radio" name = "C3" id = "D" value = "4">不合格
+                    不合格<input type = "radio" name = "C3" id = "D" value = "4">
                 </label>
-            </div>
-        </div>
     </th>
 </tr>
 <tr>
     <th class = "boxContent"><p>论基础理论与专门知识 </p></th>
     <th colspan = "4">基础理论的坚实度、专门知识的系统性</th>
     <th colspan = "1">
-        <div class = "control-group">
-            <div class = "controls">
                 <label class = "radio">
-                    <input type = "radio" name = "C4" id = "A" value = "1">优秀
+                    优秀<input type = "radio" name = "C4" id = "A" value = "1">
                 </label>
                 <label class = "radio">
-                    <input type = "radio" name = "C4" id = "B" value = "2">良好
+                    良好<input type = "radio" name = "C4" id = "B" value = "2">
                 </label>
                 <label class = "radio">
-                    <input type = "radio" name = "C4" id = "C" value = "3">合格
+                    合格<input type = "radio" name = "C4" id = "C" value = "3">
                 </label>
                 <label class = "radio">
-                    <input type = "radio" name = "C4" id = "D" value = "4">不合格
+                    不合格<input type = "radio" name = "C4" id = "D" value = "4">
                 </label>
-            </div>
-        </div>
     </th>
 </tr>
 <tr>
     <th class = "boxContent"><p>研究手段或设计能力</p></th>
     <th colspan = "4">研究方法是否恰当并加以严格论证，独立进行分析问题，解决问题的能力如何</th>
     <th colspan = "1">
-        <div class = "control-group">
-            <div class = "controls">
                 <label class = "radio">
-                    <input type = "radio" name = "C5" id = "A" value = "1">优秀
+                    优秀<input type = "radio" name = "C5" id = "A" value = "1">
                 </label>
                 <label class = "radio">
-                    <input type = "radio" name = "C5" id = "B" value = "2">良好
+                    良好<input type = "radio" name = "C5" id = "B" value = "2">
                 </label>
                 <label class = "radio">
-                    <input type = "radio" name = "C5" id = "C" value = "3">合格
+                    合格<input type = "radio" name = "C5" id = "C" value = "3">
                 </label>
                 <label class = "radio">
-                    <input type = "radio" name = "C5" id = "D" value = "4">不合格
+                    不合格<input type = "radio" name = "C5" id = "D" value = "4">
                 </label>
-            </div>
-        </div>
     </th>
 </tr>
 <tr>
     <th class = "boxContent"><p>写作能力与学风</p></th>
     <th colspan = "4">条理性、逻辑性、文笔等各方面，书写格式、图表是否规范</th>
     <th colspan = "1">
-        <div class = "control-group">
-            <div class = "controls">
                 <label class = "radio">
-                    <input type = "radio" name = "C6" id = "A" value = "1">优秀
+                    优秀<input type = "radio" name = "C6" id = "A" value = "1">
                 </label>
                 <label class = "radio">
-                    <input type = "radio" name = "C6" id = "B" value = "2">良好
+                    良好<input type = "radio" name = "C6" id = "B" value = "2">
                 </label>
                 <label class = "radio">
-                    <input type = "radio" name = "C6" id = "C" value = "3">合格
+                    合格<input type = "radio" name = "C6" id = "C" value = "3">
                 </label>
                 <label class = "radio">
-                    <input type = "radio" name = "C6" id = "D" value = "4">不合格
+                    不合格<input type = "radio" name = "C6" id = "D" value = "4">
                 </label>
-            </div>
-        </div>
     </th>
 </tr>
 <tr>
     <th class = "boxContent"><p>工作量</p></th>
     <th colspan = "4">工作量及难度</th>
     <th colspan = "1">
-        <div class = "control-group">
-            <div class = "controls">
                 <label class = "radio">
-                    <input type = "radio" name = "C7" id = "A" value = "1">优秀
+                    优秀<input type = "radio" name = "C7" id = "A" value = "1">
                 </label>
                 <label class = "radio">
-                    <input type = "radio" name = "C7" id = "B" value = "2">良好
+                    良好<input type = "radio" name = "C7" id = "B" value = "2">
                 </label>
                 <label class = "radio">
-                    <input type = "radio" name = "C7" id = "C" value = "3">合格
+                    合格<input type = "radio" name = "C7" id = "C" value = "3">
                 </label>
                 <label class = "radio">
-                    <input type = "radio" name = "C7" id = "D" value = "4">不合格
+                    不合格<input type = "radio" name = "C7" id = "D" value = "4">
                 </label>
-            </div>
-        </div>
     </th>
 </tr>
 <tr>
     <th class = "boxContent"><p>参考文献</p></th>
     <th colspan = "4">参考文献的总量；外文文献的数量；参考文献的质量等。</th>
     <th colspan = "1">
-        <div class = "control-group">
-            <div class = "controls">
                 <label class = "radio">
-                    <input type = "radio" name = "C8" id = "A" value = "1">优秀
+                    优秀<input type = "radio" name = "C8" id = "A" value = "1">
                 </label>
                 <label class = "radio">
-                    <input type = "radio" name = "C8" id = "B" value = "2">良好
+                    良好<input type = "radio" name = "C8" id = "B" value = "2">
                 </label>
                 <label class = "radio">
-                    <input type = "radio" name = "C8" id = "C" value = "3">合格
+                    合格<input type = "radio" name = "C8" id = "C" value = "3">
                 </label>
                 <label class = "radio">
-                    <input type = "radio" name = "C8" id = "D" value = "4">不合格
+                    不合格<input type = "radio" name = "C8" id = "D" value = "4">
                 </label>
-            </div>
-        </div>
     </th>
 </tr>
 <tr>
@@ -253,10 +221,10 @@ if (overDeadline($teaInfo['TdeadLine'])) {
         <div class = "control-group">
             <div class = "controls">
                 <label class = "radio">
-                    <input type = "radio" name = "C9" id = "A" value = "1">有抄袭现象
+                    有抄袭现象<input type = "radio" name = "C9" id = "A" value = "1">
                 </label>
                 <label class = "radio">
-                    <input type = "radio" name = "C9" id = "B" value = "2">无抄袭现象
+                    无抄袭现象<input type = "radio" name = "C9" id = "B" value = "2">
                 </label>
             </div>
         </div>
@@ -268,13 +236,13 @@ if (overDeadline($teaInfo['TdeadLine'])) {
         <div class = "control-group">
             <div class = "controls">
                 <label class = "radio">
-                    <input type = "radio" name = "C10" id = "A" value = "1">同意答辩
+                    同意答辩<input type = "radio" name = "C10" id = "A" value = "1">
                 </label>
                 <label class = "radio">
-                    <input type = "radio" name = "C10" id = "B" value = "2">同意答辩但稍作修改
+                    同意答辩但稍作修改<input type = "radio" name = "C10" id = "B" value = "2">
                 </label>
                 <label class = "radio">
-                    <input type = "radio" name = "C10" id = "C" value = "3">不同意答辩
+                    不同意答辩<input type = "radio" name = "C10" id = "C" value = "3">
                 </label>
             </div>
         </div>
@@ -286,16 +254,16 @@ if (overDeadline($teaInfo['TdeadLine'])) {
         <div class = "control-group">
             <div class = "controls">
                 <label class = "radio">
-                    <input type = "radio" name = "C11" id = "A" value = "1">优秀
+                    优秀<input type = "radio" name = "C11" id = "A" value = "1">
                 </label>
                 <label class = "radio">
-                    <input type = "radio" name = "C11" id = "B" value = "2">良好
+                    良好<input type = "radio" name = "C11" id = "B" value = "2">
                 </label>
                 <label class = "radio">
-                    <input type = "radio" name = "C11" id = "C" value = "3">合格
+                    合格<input type = "radio" name = "C11" id = "C" value = "3">
                 </label>
                 <label class = "radio">
-                    <input type = "radio" name = "C11" id = "D" value = "4">不合格
+                    不合格<input type = "radio" name = "C11" id = "D" value = "4">
                 </label>
             </div>
         </div>
