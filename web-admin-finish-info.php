@@ -40,7 +40,8 @@
                 <div class = "box span12">
                     <div class = "box-header well" data-original-title>
                         <h2>查看归档学生信息</h2>
-                            <div class = "box-icon">
+                        <div class = "box-icon">
+                            <a type = "submit" class = "btn btn-danger" onclick = "delAllRecStuUser()">删除此次档案全部信息</a>
                             <a href = "#" class = "btn btn-minimize btn-round"><i class = "icon-chevron-up"></i></a>
                             <a href = "#" class = "btn btn-close btn-round"><i class = "icon-remove"></i></a>
                         </div>
@@ -66,18 +67,6 @@
                                 <th>文件</th>
                                 </thead>
                                 <?php
-                                //获取所有归档学生信息
-                                function getAllRecStuInfo($judgeInfo) {
-                                    $que = "SELECT * FROM record_student";
-                                    if ($judgeInfo != 'all') $que .= " WHERE judgeYear = '{$judgeInfo}'";
-                                    $res = array();
-                                    $result = mysql_query($que) or die("Error in query:  " . mysql_error());;
-                                    while ($row = mysql_fetch_array($result)) {
-                                        array_push($res, $row);
-                                    }
-                                    return $res;
-                                }
-
                                 $allStuInfo = getAllRecStuInfo($_GET['judgeInfo']);
                                 foreach ($allStuInfo as $info) {
                                     if ($info['reportAdd'] == '') {
@@ -291,9 +280,8 @@
     function delStuUser(user) {
         var r = confirm('确认删除账号"' + user + '"?');
         if (r == true) {
-            $.post("delUser.php",
+            $.post("delRecUser.php",
                 {
-                    type: "web-admin",
                     user: user
                 },
                 function (data, status) {
@@ -313,13 +301,13 @@
             )
         }
     }
-    function delAllStuUser() {
-        var r = confirm('确认删除全部账号?');
+    function delAllRecStuUser() {
+        var r = confirm('确认删除此次审评信息?');
         if (r == true) {
-            $.post("delUser.php",
+            $.post("delRecUser.php",
                 {
                     type: "web-admin",
-                    object: "allStu"
+                    object: "<?php echo $_GET['judgeInfo'];?>"
                 },
                 function (data, status) {
                     if (status == 'success') {

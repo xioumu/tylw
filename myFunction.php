@@ -679,4 +679,15 @@ function getAllMajorUser($type, $major) {
     shuffle($res);
     return $res;
 }
+//获取所有归档学生信息
+function getAllRecStuInfo($judgeInfo) {
+    $que = "SELECT * FROM record_student";
+    if ($judgeInfo != 'all') $que .= " WHERE judgeYear = '{$judgeInfo}'";
+    $res = array();
+    $result = mysql_query($que) or die("Error in query:  " . mysql_error());;
+    while ($row = mysql_fetch_array($result)) {
+        array_push($res, $row);
+    }
+    return $res;
+}
 ?>

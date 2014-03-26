@@ -38,6 +38,7 @@
                         <div class = "box-icon">
                             <a href = "web-admin-add-student.php" class = "btn btn-primary">导入学生账户</a>
                             <a href = "leadOutPasswd.php?type=stu" class = "btn btn-primary left" target = "view_window">导出学生信息</a>
+                            <a href = "leadOutPaper.php" class = "btn btn-primary left" target = "view_window">下载学生全部论文</a>
                             <button type = "submit" class = "btn btn-danger left" onclick="delAllStuUser()">删除全部学生账户</button>
                         </div>
                     </div>

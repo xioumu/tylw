@@ -3,6 +3,10 @@ include("myFunction.php");
 if (isset($_GET['vehicle'])) {
     print_r($_GET['vehicle']);
 }
+$PHP_SELF=$_SERVER['PHP_SELF'];
+$url='http://'.$_SERVER['HTTP_HOST'].substr($PHP_SELF,0,strrpos($PHP_SELF,'/')+1);
+echo $url . "<br/>";
+echo $PHP_SELF;
 echo time();;
 ?>
 <html>

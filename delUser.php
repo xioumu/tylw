@@ -4,9 +4,9 @@ include("config.php");
 include("myFunction.php");
 
 
-
 if (!isset($_POST['type'])) echo "no type!";
 else if ($_POST['type'] == 1) { //系统管理员删除网络管理员账号
+    judgeUser(array('sys'));
     if (isset($_POST['user'])) {
         if (delUser($_POST['user'])) {
             echo "ok";
@@ -16,6 +16,7 @@ else if ($_POST['type'] == 1) { //系统管理员删除网络管理员账号
     else echo "post error!";
 }
 else if ($_POST['type'] == 'web-admin') { //网络管理员部分
+    judgeUser(array("web"));
     if (isset($_POST['user'])) {
         $user = $_POST['user'];
         $uType = getUserType($user);
