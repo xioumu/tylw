@@ -469,8 +469,23 @@ function delUser($user) {
     else return false;
 }
 
+//删除学生论文
+function delPaper($add) {
+    if ($add == null) return true;
+    $add = iconv("UTF-8", "GB2312//IGNORE", $add);
+    $add = str_replace('/', '\\', $add);
+    if (file_exists($add)) {
+        unlink($add);
+    }
+    else return false;
+    return true;
+}
+
 //删除学生信息
 function delStuInfo($user) {
+    $stuInfo = getStuInfo($user);
+    delPaper($stuInfo['paperAdd']);
+    delPaper($stuInfo['reportAdd']);
     if (mysql_query("DELETE FROM student WHERE studentID = '{$user}'")) {
         return true;
     }
