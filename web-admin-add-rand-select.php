@@ -30,11 +30,11 @@ function leadOutExl($allData, $type, $ex = '2003') { //把数据输出至EXLX文
                                             ->setCellValue('E1', '性别');
         $i = 2;
         foreach ($allData as $person) {
-            $objPHPExcel->setActiveSheetIndex(0)->setCellValue('A' . $i, $person['teacherID'])
-                                                ->setCellValue('B' . $i, $person['tName'])
-                                                ->setCellValue('C' . $i, $person['subject'])
-                                                ->setCellValue('D' . $i, $person['research'])
-                                                ->setCellValue('E' . $i, $person['sex']);
+            $objPHPExcel->getActiveSheet()->setCellValueExplicit('A'.$i, $person['teacherID'], PHPExcel_Cell_DataType::TYPE_STRING);
+            $objPHPExcel->getActiveSheet()->setCellValueExplicit('B'.$i, $person['tName'], PHPExcel_Cell_DataType::TYPE_STRING);
+            $objPHPExcel->getActiveSheet()->setCellValueExplicit('C'.$i, $person['subject'], PHPExcel_Cell_DataType::TYPE_STRING);
+            $objPHPExcel->getActiveSheet()->setCellValueExplicit('D'.$i, $person['research'], PHPExcel_Cell_DataType::TYPE_STRING);
+            $objPHPExcel->getActiveSheet()->setCellValueExplicit('E'.$i, $person['sex'], PHPExcel_Cell_DataType::TYPE_STRING);
             $i++;
         }
     }

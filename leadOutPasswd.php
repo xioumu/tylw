@@ -75,13 +75,13 @@ function leadOutExl($allData, $type, $ex = '2003') { //把数据输出至EXLX文
             ->setCellValue('G1', '状态');
         $i = 2;
         foreach ($allData as $person) {
-            $objPHPExcel->getActiveSheet()->setCellValueExplicit('A'.$i, $person['teacherID'], PHPExcel_Cell_DataType::TYPE_STRING); //设置单元格式
-            $objPHPExcel->getActiveSheet()->setCellValueExplicit('B'.$i, $person['passwd'], PHPExcel_Cell_DataType::TYPE_STRING); //设置单元格式
-            $objPHPExcel->getActiveSheet()->setCellValueExplicit('C'.$i, $person['tName'], PHPExcel_Cell_DataType::TYPE_STRING); //设置单元格式
-            $objPHPExcel->getActiveSheet()->setCellValueExplicit('D'.$i, $person['subject'], PHPExcel_Cell_DataType::TYPE_STRING); //设置单元格式
-            $objPHPExcel->getActiveSheet()->setCellValueExplicit('E'.$i, $person['research'], PHPExcel_Cell_DataType::TYPE_STRING); //设置单元格式
-            $objPHPExcel->getActiveSheet()->setCellValueExplicit('F'.$i, $person['sex'], PHPExcel_Cell_DataType::TYPE_STRING); //设置单元格式
-            $objPHPExcel->getActiveSheet()->setCellValueExplicit('G'.$i, $person['status'], PHPExcel_Cell_DataType::TYPE_STRING); //设置单元格式
+            $objPHPExcel->getActiveSheet()->setCellValueExplicit('A'.$i, $person['teacherID'], PHPExcel_Cell_DataType::TYPE_STRING);
+            $objPHPExcel->getActiveSheet()->setCellValueExplicit('B'.$i, $person['passwd'], PHPExcel_Cell_DataType::TYPE_STRING);
+            $objPHPExcel->getActiveSheet()->setCellValueExplicit('C'.$i, $person['tName'], PHPExcel_Cell_DataType::TYPE_STRING);
+            $objPHPExcel->getActiveSheet()->setCellValueExplicit('D'.$i, $person['subject'], PHPExcel_Cell_DataType::TYPE_STRING);
+            $objPHPExcel->getActiveSheet()->setCellValueExplicit('E'.$i, $person['research'], PHPExcel_Cell_DataType::TYPE_STRING);
+            $objPHPExcel->getActiveSheet()->setCellValueExplicit('F'.$i, $person['sex'], PHPExcel_Cell_DataType::TYPE_STRING);
+            $objPHPExcel->getActiveSheet()->setCellValueExplicit('G'.$i, $person['status'], PHPExcel_Cell_DataType::TYPE_STRING);
             $i++;
         }
     }
@@ -110,14 +110,13 @@ function leadOutExl($allData, $type, $ex = '2003') { //把数据输出至EXLX文
                 $type = $stuInfo['type'];
                 $subject = $stuInfo['subject'];
             }
-            $objPHPExcel->setActiveSheetIndex(0)
-                ->setCellValue('A' . $i, $person['user'])
-                ->setCellValue('B' . $i, $person['passwd'])
-                ->setCellValue('C' . $i, $major)
-                ->setCellValue('E' . $i, $subject)
-                ->setCellValue('E' . $i, $type)
-                ->setCellValue('D' . $i, $paperName)
-                ->setCellValue('G' . $i, $status);
+            $objPHPExcel->getActiveSheet()->setCellValueExplicit('A'.$i, $person['user'], PHPExcel_Cell_DataType::TYPE_STRING);
+            $objPHPExcel->getActiveSheet()->setCellValueExplicit('B'.$i, $person['passwd'], PHPExcel_Cell_DataType::TYPE_STRING);
+            $objPHPExcel->getActiveSheet()->setCellValueExplicit('C'.$i, $major, PHPExcel_Cell_DataType::TYPE_STRING);
+            $objPHPExcel->getActiveSheet()->setCellValueExplicit('D'.$i, $subject, PHPExcel_Cell_DataType::TYPE_STRING);
+            $objPHPExcel->getActiveSheet()->setCellValueExplicit('E'.$i, $type, PHPExcel_Cell_DataType::TYPE_STRING);
+            $objPHPExcel->getActiveSheet()->setCellValueExplicit('F'.$i, $paperName, PHPExcel_Cell_DataType::TYPE_STRING);
+            $objPHPExcel->getActiveSheet()->setCellValueExplicit('G'.$i, $status, PHPExcel_Cell_DataType::TYPE_STRING);
             $i++;
         }
     }
