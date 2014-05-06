@@ -263,13 +263,16 @@ function getEvaStatusID($eid) {
 function getTeaStatus($user) {
     $allEva = getAllUserEva($user, "teacherID");
     $flag = true;
+    $have = false;
     foreach ($allEva as $evaID) {
+        $have = true;
         $status = getEvaStatusID($evaID);
         if ($status == 3) {
             $flag = false;
             break;
         }
     }
+    if (!$have) return "未参与审评";
     if (!$flag) return "还未评审完毕";
     else return "评审完毕";
 }
@@ -307,8 +310,8 @@ function getRand() {
     return $res;
 }
 
-//得到所有未参加评审的学生的ID
-function getAllFreeUser($type, $major = 'all') {
+//得到所有未参加评审的学生的ID,根据校内方向
+function getAllFreeUser($type, $subject = 'all') {
     if ($type == 'stu') {
         $res = array();
         $query = "SELECT studentID
@@ -316,8 +319,8 @@ function getAllFreeUser($type, $major = 'all') {
                             WHERE studentID NOT  IN (
                                 SELECT DISTINCT studentID
                                 FROM evaluating)";
-        if ($major != 'all') {
-            $query .=  "AND major = '{$major}'" ;
+        if ($subject != 'all') {
+            $query .=  "AND subject = '{$subject}'" ;
         }
         $query .= "Order By Rand()";
         $que = mysql_query($query) or die(mysql_error());
@@ -658,29 +661,29 @@ function getAllEvaRes($user) {
     return $res;
 }
 //获取所有专业
-function getAllMajor($type) {
+function getAllSubject($type) {
     $res = array();
     $que = "";
     if ($type == 'stu') {
-        $que = mysql_query("SELECT DISTINCT major FROM student") or die(mysql_error());
+        $que = mysql_query("SELECT DISTINCT subject FROM student") or die(mysql_error());
     }
     else if ($type == 'onTea') {
         $que = mysql_query("SELECT DISTINCT subject FROM teacheronside") or die(mysql_error());
     }
     while ($row = mysql_fetch_array($que)) {
-        if ($type == 'stu')   array_push($res, $row['major']);
+        if ($type == 'stu')   array_push($res, $row['subject']);
         else if ($type == 'onTea') array_push($res, $row['subject']);
     }
     return $res;
 }
 //获取所有指定专业的用户名
-function getAllMajorUser($type, $major) {
+function getAllSubjecUser($type, $major) {
     $res = array();
     $allUser = getAllUser($type);
     foreach ($allUser as $user) {
         if ($type == 'stu') {
             $info = getStuInfo($user);
-            if ($info['major'] == $major) {
+            if ($info['subject'] == $major) {
                 array_push($res, $user);
             }
         }

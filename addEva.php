@@ -60,7 +60,7 @@ judgeUser(array('web'));
 
 if (isset($_GET['type']) && $_GET['type'] == 'mul') {
     if (isset($_GET['needPercent'])) {
-        $allMajor = getAllMajor('stu');
+        $allMajor = getAllSubject('stu');
         $needPer = intval($_GET['needPercent']);
         //分配指定人选
         if (isset($_POST['choiceStu'])) {
@@ -68,9 +68,6 @@ if (isset($_GET['type']) && $_GET['type'] == 'mul') {
             foreach ($choiceStu as $user) {
                 addStuEva($user);
             }
-        }
-        else {
-            echo "no checkBox";
         }
         foreach ($allMajor as $needMajor) {
             $freeUser = getAllFreeUser("stu", $needMajor);
