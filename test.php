@@ -1,28 +1,27 @@
-<?php
-include("myFunction.php");
-if (isset($_GET['vehicle'])) {
-    print_r($_GET['vehicle']);
-}
-$PHP_SELF=$_SERVER['PHP_SELF'];
-$url='http://'.$_SERVER['HTTP_HOST'].substr($PHP_SELF,0,strrpos($PHP_SELF,'/')+1);
-echo $url . "<br/>";
-echo $PHP_SELF;
-echo time();;
-?>
 <html>
-<head>
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $(".btn1").click(function(){
-                $("p").text("Hello world!");
+<body>
+<?php include('css.php'); ?>
+<?php include('script.php'); ?>
+<script type="text/javascript">
+    $(function() {
+        $("#checkall").click(function() {
+            $("input[name='checkname[]']").each(function() {
+                $(this).parent().addClass("checked");
             });
         });
-    </script>
-</head>
-<body>
-<p>This is a paragraph.</p>
-<p>This is another paragraph.</p>
-<button class="btn1">改变所有 p 元素的文本内容</button>
+        $("#delcheckall").click(function() {
+            $("input[name='checkname[]']").each(function() {
+                $(this).parent().removeClass("checked");
+            });
+        });
+    });
+</script>
+
+<input type='checkbox' id='id1' name='checkname[]' value='1' />value1
+<input type='checkbox' id='id2' name='checkname[]' value='2' />value2
+<input type='checkbox' id='id3' name='checkname[]' value='3' />value3
+
+<input type="button" id="checkall" name="checkall" value="1" />
+<input type="button" id="delcheckall" name="delcheckall" value="2" /
 </body>
 </html>

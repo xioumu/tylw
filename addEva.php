@@ -69,6 +69,9 @@ if (isset($_GET['type']) && $_GET['type'] == 'mul') {
                 addStuEva($user);
             }
         }
+        else {
+            echo "no checkBox";
+        }
         foreach ($allMajor as $needMajor) {
             $freeUser = getAllFreeUser("stu", $needMajor);
             $needNum = round(count($freeUser) * doubleval($needPer) / 100);
