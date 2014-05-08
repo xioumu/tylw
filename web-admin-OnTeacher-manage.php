@@ -42,7 +42,7 @@ include('header.php');
                         <div class = "box-icon">
                             <a href = "web-admin-add-OnTeachear.php" class = "btn btn-primary">导入校内专家信息</a>
                             <a href = "leadOutPasswd.php?type=onTea" class = "btn btn-primary left" target = "view_window">导出校内专家信息</a>
-                            <a href = "web-admin-add-rand-select.php" class = "btn btn-primary">随机抽取校内专家评审</a>
+                            <a href = "web-admin-add-rand-select-choice.php" class = "btn btn-primary">随机抽取校内专家评审</a>
                             <button type = "submit" class = "btn btn-danger left" onclick = "delAllUser()">
                                 删除全部校内专家账户
                             </button>

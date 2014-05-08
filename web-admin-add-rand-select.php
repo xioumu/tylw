@@ -51,23 +51,28 @@ function leadOutExl($allData, $type, $ex = '2003') { //把数据输出至EXLX文
         header('Cache-Control: max-age=0');
         $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');
         $objWriter->save('php://output');
-        exit;
     } else {  //导出excel2003文档
         header('Content-Type: application/vnd.ms-excel');
         header('Content-Disposition: attachment;filename="information.xls"');
         header('Cache-Control: max-age=0');
         $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel5');
         $objWriter->save('php://output');
-        exit;
     }
 }
 
-$allMajor = getAllMajor('onTea');
+$allMajor = getAllSubject('onTea');
 $allData = array();
+$ban = array();
+if (!empty($_POST['choiceStu'])) {
+    foreach ($_POST['choiceStu'] as $user) {
+        $ban["{$user}"] = true;
+    }
+}
 foreach ($allMajor as $major) {
-    $allUser = getAllMajorUser('onTea', $major);
+    $allUser = getAllSubjecUser('onTea', $major);
     $i = 5;
     foreach ($allUser as $user) {
+        if ( isset($ban["{$user}"]) ) continue;
         $res = getOnTeaInfo($user);
         $res['user'] = $user;
         array_push($allData, $res);
