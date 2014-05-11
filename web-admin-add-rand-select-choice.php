@@ -27,7 +27,7 @@ include("config.php");
                 <ul class = "breadcrumb">
                     <li><a href = "web-admin-student-manage.php">网站管理员</a> <span class = "divider">/</span></li>
                     <li><a href = "web-admin-OnTeacher-manage.php">管理校内专家账户</a><span class = "divider">/</span></li>
-                    <li><a href = "web-admin-add-rand-select-choice.php">随机抽取校内专家审评</a></li>
+                    <li><a href = "web-admin-add-rand-select-choice-subject.php">随机抽取校内专家审评</a></li>
                 </ul>
             </div>
             <div class = "row-fluid sortable">
@@ -40,7 +40,7 @@ include("config.php");
                         </div>
                     </div>
                     <div class = "box-content">
-                        <form class = "form-horizontal" action = "web-admin-add-rand-select.php" method = "post">
+                        <form class = "form-horizontal" action = "web-admin-add-rand-select.php?subject=<?php echo $_GET['subject'];?>" method = "post">
                             <table id = "stuChoiceTable" class = "table table-striped table-bordered bootstrap-datatable datatable">
                                 <thead>
                                 <th></th>
@@ -54,6 +54,7 @@ include("config.php");
                                 $allUser = getAllUser("onTea");
                                 foreach ($allUser as $user) {
                                     $info = getOnTeaInfo($user);
+                                    if ($info['subject'] != $_GET['subject'] && $_GET['subject'] != 'all') continue;
                                     echo "<tr id = \"{$info['teacherID']}\">";
                                     echo "<td><input class=\"stuCheckbox\" type=\"checkbox\" name=\"visibleChoiceStu[]\" value=\"{$user}\" /> </td>";
                                     echo "<td>" . $info['teacherID'] . "</td>";
@@ -68,6 +69,8 @@ include("config.php");
                             <div class = "myInvisible">
                                 <?php
                                 foreach ($allUser as $user) {
+                                    $info = getOnTeaInfo($user);
+                                    if ($info['subject'] != $_GET['subject'] && $_GET['subject'] != 'all') continue;
                                     echo "<input id = \"inVisibleCheckbox_{$user}\" type=\"checkbox\" name=\"choiceStu[]\" value=\"{$user}\" />";
                                 }
                                 ?>

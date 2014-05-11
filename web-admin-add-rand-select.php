@@ -69,7 +69,8 @@ if (!empty($_POST['choiceStu'])) {
     }
 }
 foreach ($allMajor as $major) {
-    $allUser = getAllSubjecUser('onTea', $major);
+    if ($major != $_GET['subject'] && $_GET['subject'] != 'all') continue;
+    $allUser = getAllSubjectUser('onTea', $major);
     $i = 5;
     foreach ($allUser as $user) {
         if ( isset($ban["{$user}"]) ) continue;

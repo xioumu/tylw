@@ -677,7 +677,7 @@ function getAllSubject($type) {
     return $res;
 }
 //获取所有指定专业的用户名
-function getAllSubjecUser($type, $major) {
+function getAllSubjectUser($type, $major) {
     $res = array();
     $allUser = getAllUser($type);
     foreach ($allUser as $user) {
