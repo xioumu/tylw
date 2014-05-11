@@ -23,8 +23,8 @@
             <div>
                 <ul class = "breadcrumb">
                     <li><a href = "web-admin-student-manage.php">网站管理员</a> <span class = "divider">/</span></li>
-                    <li><a href = "web-admin-eva-manage.php">管理审评信息</a> <span class = "divider">/</span></li>
-                    <li><a href = "web-admin-view-eva.php">查看审评细节</a></li>
+                    <li><a href = "web-admin-finish-info-select.php">查看归档数据</a> <span class = "divider">/</span></li>
+                    <li><a>查看审评细节</a></li>
                 </ul>
             </div>
             <?php
