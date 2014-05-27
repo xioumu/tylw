@@ -17,7 +17,6 @@
         <!-- left menu starts -->
         <?php include('web-admin-left.php'); ?>
         <!-- content starts -->
-
         <!-- road -->
         <div id = "content" class = "span10">
             <div>
