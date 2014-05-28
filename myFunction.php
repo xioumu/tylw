@@ -475,20 +475,28 @@ function delUser($user) {
 //删除学生论文
 function delPaper($add) {
     if ($add == null) return true;
-    $add = iconv("UTF-8", "GB2312//IGNORE", $add);
+    $add = iconv("UTF-8", "GBK//IGNORE", $add);
     $add = str_replace('/', '\\', $add);
     if (file_exists($add)) {
         unlink($add);
     }
-    else return false;
+    else {
+        return false;
+    }
     return true;
 }
 
 //删除学生信息
 function delStuInfo($user) {
     $stuInfo = getStuInfo($user);
-    delPaper($stuInfo['paperAdd']);
-    delPaper($stuInfo['reportAdd']);
+    if (!delPaper($stuInfo['paperAdd'])) {
+        echo "delete paper error!";
+        return false;
+    }
+    if (!delPaper($stuInfo['reportAdd']) ) {
+        echo "delete report error!";
+        return false;
+    }
     if (mysql_query("DELETE FROM student WHERE studentID = '{$user}'")) {
         return true;
     }

@@ -28,8 +28,7 @@ function updataStuFile($info, $file, $type) {
     $fileType = substr(strrchr($file['name'], "."), 1);
     $fileName = $info['studentID'] . "-" . $info['sName'] . '-' . myEncode($user) . "." . $fileType;
     $address = 'upFile/' . $type . "/" . $judgeYear . "/" . $fileName;
-    //echo $address . "<br/>";
-    $moveInfo = move_uploaded_file($file['tmp_name'], iconv("UTF-8", "GB2312//IGNORE", $address));
+    $moveInfo = move_uploaded_file($file['tmp_name'], iconv("UTF-8", "GBK//IGNORE", $address));
     $typeName = $type . "Add";
     if (!mysql_query("UPDATE student SET {$typeName} = '{$address}' WHERE studentID = '{$user}'")) {
         echo "sql error!<br>";
@@ -56,6 +55,7 @@ if (isset($_SESSION['is_login'])) {
             else {
                 if ($_GET['type'] == "paper") {
                     if (empty($_POST['paperName'])) goBack("论文名不能为空", "student-submit.php");
+                    echo $_POST['paperName'];
                     if (overDeadline($info['papDeadline'])) goBack("提交已经截止", "student-submit.php");
                     updataPaperName($user, $_POST['paperName']);
                 }
