@@ -55,7 +55,6 @@ if (isset($_SESSION['is_login'])) {
             else {
                 if ($_GET['type'] == "paper") {
                     if (empty($_POST['paperName'])) goBack("论文名不能为空", "student-submit.php");
-                    echo $_POST['paperName'];
                     if (overDeadline($info['papDeadline'])) goBack("提交已经截止", "student-submit.php");
                     updataPaperName($user, $_POST['paperName']);
                 }
