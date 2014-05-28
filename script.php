@@ -71,5 +71,6 @@
 	<script src="js/jquery.history.js"></script>
 	<!-- application script for Charisma demo -->
 	<script src="js/charisma.js"></script>
-
-    <script src="http://s19.cnzz.com/z_stat.php?id=1000446718&web_id=1000446718" language="JavaScript"></script>
+    <div class="myInvisible">
+        <script src="http://s19.cnzz.com/z_stat.php?id=1000446718&web_id=1000446718" language="JavaScript"></script>
+    </div>

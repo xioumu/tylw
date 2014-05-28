@@ -28,7 +28,7 @@
                         class = "hidden-tablet">查看归档数据</span></a></li>
             <li><a class = "ajax-link" href = "web-admin-type-manage.php"><span
                         class = "hidden-tablet">管理类别</span></a></li>
-
+            <li><a class = "ajax-link" href = "web-admin-downloadBackup.php"><span class = "hidden-tablet">备份下载</span></a></li>
             <li><a class = "ajax-link" href = "web-admin-passwd.php"><span class = "hidden-tablet">修改密码</span></a></li>
         </ul>
     </div>
