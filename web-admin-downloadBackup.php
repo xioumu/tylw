@@ -31,10 +31,20 @@
                 </ul>
             </div>
             <!-- content starts -->
+            <?php
+                function getLastBackupTime() {
+                    $que = mysql_query("SELECT * FROM other") or die(mysql_error());
+                    while ($row = mysql_fetch_array($que)) {
+                        return $row['lastBackupTime'];
+                    }
+                    return '0000-00-00';
+                }
+                $lastBackupTime = getLastBackupTime();
+            ?>
             <div class = "row-fluid sortable">
                 <div class = "box span12">
                     <div class = "box-header well" data-original-title>
-                        <h2>备份下载</h2>
+                        <h2>备份下载(最后备份日期:<?php echo $lastBackupTime;?>)</h2>
                     </div>
                     <div class = "box-content">
                         <a href="leadOutPaper.php?type=backup" class ="btn btn-primary"">备份下载</a>

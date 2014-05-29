@@ -41,7 +41,12 @@ function backupNowDoc($type) {
     exec("zip -r {$adr} {$fileAdr}", $s);
 }
 
+function updataBackupTime() {
+    mysql_query("UPDATE other SET lastBackupTime = CURDATE()") or die(mysql_error());
+}
+
 backupAll();
 backupNowDoc('paper');
 backupNowDoc('report');
+updataBackupTime();
 ?>
