@@ -213,6 +213,8 @@ pip-log.txt
 #Mr Developer
 .mr.developer.cfg
 
-/demo/
-/.idea/  
-/.backups/
+/.idea  
+backups/
+download/
+upFile/
+test.php

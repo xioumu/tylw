@@ -273,7 +273,7 @@ if (overDeadline($teaInfo['TdeadLine'])) {
     <th colspan = "6">
         <div class = "control-group">
             <label> 论文的不足之处及对论文工作的意见或建议: </label>
-            <textarea rows = "10" cols = "10" name = "summary" class = "myWitch970"> </textarea>
+            <textarea rows = "10" cols = "10" name = "summary" class = "myWitch970" id = "summary"> </textarea>
         </div>
     </th>
 </tr>
@@ -332,10 +332,11 @@ if (overDeadline($teaInfo['TdeadLine'])) {
     </th>
 </tr>
 </table>
-<div class = "form-actions">
-    <button type = "submit" class = "btn btn-primary">提交</button>
-</div>
+<button type = "submit" class = "btn btn-primary myInvisible" id = "form_submit">提交</button>
 </form>
+<div class = "form-actions">
+    <span href = "#" class = "btn btn-primary btn-large" onclick = "submit()">提交</span>
+</div>
 </div>
 </div>
 <!--/span-->
@@ -350,5 +351,31 @@ if (overDeadline($teaInfo['TdeadLine'])) {
 <!--/.fluid-container-->
 
 </div>
+<script>
+    function checkEmpty() {
+        if ($('#summary').val() =="")
+            return false;
+
+        for (var i = 1; i <= 11; i++) {
+            if (!$(':radio[name=C' + i + ']:checked'))
+                return false;
+        }
+        for (var i = 1; i <= 5; i++) {
+            if ($(':input[name=T' + i + ']').val() == '')
+                return false;
+        }
+        if ($(':input[name=time]').val() == '')
+            return false;
+        return true;
+    }
+    function submit() {
+        if (checkEmpty()) {
+            $('form').submit();
+        }
+        else {
+            alert("提交失败，有表格都未填写或选择!");
+        }
+    }
+</script>
 </body>
 </html>
