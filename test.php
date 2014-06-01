@@ -1,27 +1,20 @@
 <html>
 <body>
-<?php include('css.php'); ?>
-<?php include('script.php'); ?>
-<script type="text/javascript">
-    $(function() {
-        $("#checkall").click(function() {
-            $("input[name='checkname[]']").each(function() {
-                $(this).parent().addClass("checked");
-            });
-        });
-        $("#delcheckall").click(function() {
-            $("input[name='checkname[]']").each(function() {
-                $(this).parent().removeClass("checked");
-            });
-        });
-    });
-</script>
+<?php
+$server = 'localhost';
+$username = 'root';
+$password = '11';
+$database = 'homework';
+$conn = mysql_connect($server, $username, $password) or die("Cann't open mysql");
+mysql_query("SET NAMES 'UTF8';");
+mysql_select_db($database, $conn) or die("Cann't open database");
+header("Content-Type: text/html;charset=utf-8");
 
-<input type='checkbox' id='id1' name='checkname[]' value='1' />value1
-<input type='checkbox' id='id2' name='checkname[]' value='2' />value2
-<input type='checkbox' id='id3' name='checkname[]' value='3' />value3
-
-<input type="button" id="checkall" name="checkall" value="1" />
-<input type="button" id="delcheckall" name="delcheckall" value="2" /
+    mysql_query("UPDATE  se_member SET name = '测试11' ")  or die(mysql_error());
+    $que = mysql_query("SELECT name FROM se_member");
+    while($row = mysql_fetch_array($que) ) {
+        print_r($row);
+    }
+?>
 </body>
 </html>
