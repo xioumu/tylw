@@ -2,7 +2,7 @@
 include('config.php');
 include('myFunction.php');
 function isBackupDate($localTime) {
-    if ($localTime['mon'] == 5 || $localTime['mon'] == '2') {
+    if ($localTime['mon'] == 7 || $localTime['mon'] == 2) {
         return true;
     }
     return false;

@@ -2,7 +2,7 @@
 .mr.developer.cfg
 
 /.idea/
-/download/
+download/
 /upFile/paper/
 /upFile/report/
 /upFile/exl/
