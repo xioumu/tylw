@@ -37,7 +37,7 @@ include("config.php");
                     <div class="box-header well" data-original-title>
                         <h2>管理网站管理员</h2>
                         <div class="box-icon">
-                            <button href="#addUser-modal" class="btn btn-success" data-toggle="modal">添加网站管理员</button>
+                            <button href="#addUser-modal" class="btn btn-primary" data-toggle="modal">添加网站管理员</button>
                         </div>
                     </div>
                     <div class="box-content">
@@ -52,7 +52,7 @@ include("config.php");
                                 while ($row = mysql_fetch_array($result)) {
                                     echo '<tr id="' . $row['user'] . '">';
                                     echo '<td>' . $row['user'] . '</td>';
-                                    echo '<td><a href="#changePasswd-modal" class="btn btn-info" data-toggle="modal" onclick=changePasswd("' . $row['user'] . '") >修改密码</a>' . "\n";
+                                    echo '<td><a href="#changePasswd-modal" class="btn btn-primary" data-toggle="modal" onclick=changePasswd("' . $row['user'] . '") >修改密码</a>' . "\n";
                                     echo '<a href="" class="btn btn-danger" data-toggle="modal" onclick = delWebUser("' . $row['user'] . '")>删除账号</a></td>';
                                     echo '</tr>';
                                 }
