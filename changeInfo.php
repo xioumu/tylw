@@ -17,7 +17,9 @@ if (isset($_POST['role']) && isset($_POST['type'])) {
             $papDeadline = dealDataline($papDeadline);
             $repDeadline = dealDataline($repDeadline);
             $typeID = $_POST['sType'];
-            if (!empty($_POST['repeatRate'])) $repeatRate = '\'' . $_POST['repeatRate'] . '\'';
+            if (!empty($_POST['repeatRate']) || $_POST['repeatRate'] == '0') {
+                $repeatRate = '\'' . $_POST['repeatRate'] . '\'';
+            }
             else $repeatRate = 'null';
             if (mysql_query("UPDATE student SET sName='{$_POST['sName']}', grade='{$_POST['grade']}',
                               sex='{$_POST['sex']}', typeID='{$typeID}', subject='{$_POST['subject']}',

@@ -255,7 +255,7 @@ function getEvaStatusID($eid) {
         $info = $row;
     }
     if ($info['c10'] == null) return 3; //未审评
-    else if ($info['c10'] <= 2) return 1; //通过
+    else if ($info['c10'] <= 2 && $info['c11'] <= 3) return 1; //通过
     else return 2; //未通过
 }
 
