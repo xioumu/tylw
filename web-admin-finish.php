@@ -83,7 +83,7 @@
                     echo 'delete evaluating error!';
                     $flag = false;
                 }
-                if (!delStuInfo($user)) {
+                if (!delStuInfo($user, false)) {
                     echo $user . "delete student info error! <br/>";
                     $flag = false;
                 }

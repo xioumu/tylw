@@ -5,6 +5,7 @@ if (!get_magic_quotes_gpc()) {
     function addslashesDeep($var) {
         return is_array($var) ? array_map('addslashesDeep', $var) : addslashes($var);
     }
+
     $_GET = addslashesDeep($_GET);
     $_POST = addslashesDeep($_POST);
     $_COOKIE = addslashesDeep($_COOKIE);
@@ -71,7 +72,7 @@ function getExl($filePath, $ex = '2003') {
     $res = array();
     require_once 'PHPExcel\PHPExcel.php';
     require_once 'PHPExcel\PHPExcel\IOFactory.php';
-    require_once 'PHPExcel\PHPExcel\Reader\Excel5.php';//excel 2003
+    require_once 'PHPExcel\PHPExcel\Reader\Excel5.php'; //excel 2003
     require_once 'PHPExcel\PHPExcel\Reader\Excel2007.php'; //excel 2007
     $objReader = "";
     if ($ex = '2007') {
@@ -147,7 +148,7 @@ function getStuStatus($user) {
             else if ($evaStatus == 1) $cnt++;
         }
         if ($cnt >= 2) return "通过评审";
-        else if (count($allEva) == 2 ){
+        else if (count($allEva) == 2) {
             if ($cnt == 1) return "需要添加审评";
             else return "未通过审评";
         }
@@ -320,7 +321,7 @@ function getAllFreeUser($type, $subject = 'all') {
                                 SELECT DISTINCT studentID
                                 FROM evaluating)";
         if ($subject != 'all') {
-            $query .=  "AND subject = '{$subject}'" ;
+            $query .= "AND subject = '{$subject}'";
         }
         $query .= "Order By Rand()";
         $que = mysql_query($query) or die(mysql_error());
@@ -487,15 +488,17 @@ function delPaper($add) {
 }
 
 //删除学生信息
-function delStuInfo($user) {
+function delStuInfo($user, $delFile = true) {
     $stuInfo = getStuInfo($user);
-    if (!delPaper($stuInfo['paperAdd'])) {
-        echo "delete paper error!";
-        return false;
-    }
-    if (!delPaper($stuInfo['reportAdd']) ) {
-        echo "delete report error!";
-        return false;
+    if ($delFile) {
+        if (!delPaper($stuInfo['paperAdd'])) {
+            echo "delete paper error!";
+            return false;
+        }
+        if (!delPaper($stuInfo['reportAdd'])) {
+            echo "delete report error!";
+            return false;
+        }
     }
     if (mysql_query("DELETE FROM student WHERE studentID = '{$user}'")) {
         return true;
@@ -610,6 +613,7 @@ function getAllRecEvaInfo($judgeInfo) {
     }
     return $res;
 }
+
 //获取指定归档审评信息
 function getRecEvaInfo($eid, $judgeInfo) {
     $que = "SELECT * FROM record_evaluating WHERE judgeYear = '{$judgeInfo}' AND eid = '{$eid}'";
@@ -629,6 +633,7 @@ function getRecEvaInfo($eid, $judgeInfo) {
     }
     return $res;
 }
+
 //删除全部校外专家
 function delAllOutTea() {
     $flag = true;
@@ -649,6 +654,7 @@ function delAllOutTea() {
     }
     return $flag;
 }
+
 //获取教学秘书信息
 function getSecInfo($user) {
     $res = array();
@@ -668,6 +674,7 @@ function getAllEvaRes($user) {
     }
     return $res;
 }
+
 //获取所有专业
 function getAllSubject($type) {
     $res = array();
@@ -679,11 +686,12 @@ function getAllSubject($type) {
         $que = mysql_query("SELECT DISTINCT subject FROM teacheronside") or die(mysql_error());
     }
     while ($row = mysql_fetch_array($que)) {
-        if ($type == 'stu')   array_push($res, $row['subject']);
+        if ($type == 'stu') array_push($res, $row['subject']);
         else if ($type == 'onTea') array_push($res, $row['subject']);
     }
     return $res;
 }
+
 //获取所有指定专业的用户名
 function getAllSubjectUser($type, $major) {
     $res = array();
@@ -697,7 +705,7 @@ function getAllSubjectUser($type, $major) {
         }
         else if ($type == 'onTea') {
             $info = getOnTeaInfo($user);
-            if ($info['subject'] == $major){
+            if ($info['subject'] == $major) {
                 array_push($res, $user);
             }
         }
@@ -705,6 +713,7 @@ function getAllSubjectUser($type, $major) {
     shuffle($res);
     return $res;
 }
+
 //获取所有归档学生信息
 function getAllRecStuInfo($judgeInfo) {
     $que = "SELECT * FROM record_student";
@@ -716,4 +725,5 @@ function getAllRecStuInfo($judgeInfo) {
     }
     return $res;
 }
+
 ?>
