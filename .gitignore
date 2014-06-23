@@ -9,5 +9,6 @@ download/
 /config.php
 /test.php
 /backups
+/backups.bat
 .idea/workspace.xml
 *.xml
