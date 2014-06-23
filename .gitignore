@@ -10,3 +10,4 @@ download/
 /test.php
 /backups
 .idea/workspace.xml
+*.xml

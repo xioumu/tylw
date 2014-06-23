@@ -76,6 +76,7 @@
                                     echo "<td>";
                                     if ($info['status'] != "还未审评") echo "
                                             <a href = \"web-admin-view-eva.php?id={$eid}\" class = \"btn btn-primary\">查看细节</a>
+                                            <a href = \"print-eva.php?id={$eid}\" class = \"btn btn-primary\" target='_blank'>打印</a>
                                     ";
                                     else echo "
                                             <a href = \"#\" class = \"btn btn-primary \" disabled>还未审评</a>

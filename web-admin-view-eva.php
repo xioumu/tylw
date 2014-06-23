@@ -32,6 +32,7 @@
                 errorUser();
             }
             $eid = $_GET['id'];
+            //因为学生的论文名会修改，所以只能现用现取
             $evaInfo = getEvaInfo($eid);
             $stuInfo = getStuInfo($evaInfo['studentID']);
             ?>

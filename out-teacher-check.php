@@ -67,7 +67,9 @@
                                     else if ($statusID == 2) echo "<td><span class = \"label label-info\">{$statusName}</span></td>";
                                     else if ($statusID == 3) echo "<td><span class = \"label label-important\">{$statusName}</span></td>";
                                     if ($stuInfo['paperAdd'] == null) echo "<td><a href=\"#\" class=\"btn btn-danger disabled\" >学生还未上传论文</a></td>";
-                                    else if ($statusID != 3) echo "<td><a href=\"#\" class=\"btn btn-success disabled\" >已经审评完毕</a></td>";
+                                    else if ($statusID != 3) {
+                                        echo "<td><a href=\"print-eva.php?id={$evaID}\" class=\"btn btn-primary\" target='_blank'>打印结果</a></td>";
+                                    }
                                     else echo "<td><a href=\"out-teacher-check-info.php?id={$evaID}\" class=\"btn btn-primary\" >审评</a></td>";
                                     echo "</tr>";
                                 }

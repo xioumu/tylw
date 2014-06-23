@@ -726,4 +726,13 @@ function getAllRecStuInfo($judgeInfo) {
     return $res;
 }
 
+//判断教师是否有这个审评
+function judgeTeaEva($teacherId, $eid) {
+    $evaInfo = getEvaInfo($eid);
+    if ($evaInfo['teacherID'] != $teacherId) {
+        return false;
+    }
+    return true;
+}
+
 ?>
