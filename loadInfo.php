@@ -59,6 +59,8 @@ if (isset($_POST['type']) && isset($_POST['file'])) {
         $filePath = 'upFile/exl/' . $_POST['file'];
         $data = getExl($filePath);
         foreach ($data as $row) {
+            //删除空行
+            if (empty($row['B'])) continue;
             $passwd = $row['B']; //getRand();
             if (!addUser($row['B'], $passwd, "stu")) {
                 //echo "add user error!";
@@ -75,6 +77,8 @@ if (isset($_POST['type']) && isset($_POST['file'])) {
         $filePath = 'upFile/exl/' . $_POST['file'];
         $data = getExl($filePath);
         foreach ($data as $row) {
+            //删除空行
+            if (empty($row['A'])) continue;
             $passwd = getRand();
             if (!addUser($row['A'], $passwd, "onTea")) {
                 //echo "add user error!";
