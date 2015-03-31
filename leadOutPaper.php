@@ -25,6 +25,7 @@ function download($file_dir, $file_name) {
     readfile($file);
 }
 
+
 if (!empty($_GET['type'])) {
     if ($_GET['type'] == 'paper' || $_GET['type'] == 'report')
         download('download\\', $_GET['type'] . ".zip");
