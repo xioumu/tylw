@@ -1,6 +1,15 @@
 <?php
 include("config.php");
 include("myFunction.php");
+function saveLoginInfo($username) {
+    $ip =  $_SERVER['REMOTE_ADDR'];
+    if (!mysql_query("INSERT INTO login_history(user, login_time, ip) VALUES ('{$username}', NOW(), '{$ip}')")) {
+        echo "save login info error!";
+        return false;
+    }
+    return true;
+}
+
 if (isset($_POST['username']) or isset($_POST['passwd']) or isset($_POST['yzm'])) {
     //or isset($_SESSION['is_login']);
     $_SESSION['is_login'] = null;
@@ -15,6 +24,7 @@ if (isset($_POST['username']) or isset($_POST['passwd']) or isset($_POST['yzm'])
             $rep_note = "用户名或密码错误";
         }
         else {
+            saveLoginInfo($username);
             $_SESSION['is_login'] = $username;
         }
     }
@@ -36,7 +46,6 @@ if (isset($_POST['username']) or isset($_POST['passwd']) or isset($_POST['yzm'])
     <title>武汉体育学院研究生学位管理系统</title>
     <?php include('css.php'); ?>
 </head>
-
 <body background="img/bg_index_new.png">
 <div class="container-fluid" >
     <div class="row-fluid">

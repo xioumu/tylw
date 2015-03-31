@@ -56,7 +56,7 @@ function backupNowDoc($type) {
 }
 
 function updataBackupTime() {
-    mysql_query("UPDATE other SET lastBackupTime = CURDATE()") or die(mysql_error());
+    mysql_query("UPDATE other SET lastBackupTime = NOW()") or die(mysql_error());
 }
 
 backupAll();
