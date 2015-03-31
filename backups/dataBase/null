@@ -1,0 +1,14 @@
+#Mr Developer
+.mr.developer.cfg
+
+/.idea/
+download/
+/upFile/paper/
+/upFile/report/
+/upFile/exl/
+/config.php
+/test.php
+/backups.bat
+.idea/workspace.xml
+*.xml
+*.zip

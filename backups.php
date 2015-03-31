@@ -8,8 +8,20 @@ function isBackupDate($localTime) {
     return false;
 }
 
+function backupDataBase($oldAdr, $newAdr) {
+    if (file_exists($newAdr)) {
+        if (!unlink($newAdr)) {
+            echo "can't delete old dataBase backup!";
+        }
+    }
+    if (!copy($oldAdr, $newAdr) ){
+        echo "can't copy new backup!";
+    }
+}
+
 function backupAll() {
     $adr = 'backups\last.zip';
+    $dataBaseAdr = 'upFile\tylw.sql';
     if (file_exists($adr)) {
         if (!unlink($adr)) {
             echo "can't delete old backup!";
@@ -19,12 +31,14 @@ function backupAll() {
     exec("zip -r -9 {$adr} upFile", $s);
     $localTime = getdate();
     $newAdr = 'backups\\' . $localTime['year'] . '-' . $localTime['mon'] . ".zip";
+    $newdataBaseAdr = 'backups\\dataBase\\' . $localTime['year'] . '-' . $localTime['mon'] . '-' . $localTime['mday'] . '.sql';
     if (isBackupDate($localTime) && !file_exists($newAdr)) {
         if (!copy($adr, $newAdr)) {
             echo "can't copy new backup!";
             return false;
         }
     }
+    backupDataBase($dataBaseAdr, $newdataBaseAdr);
     return true;
 }
 
@@ -38,7 +52,7 @@ function backupNowDoc($type) {
             return false;
         }
     }
-    exec("zip -r {$adr} {$fileAdr}", $s);
+    exec("zip -r -9 {$adr} {$fileAdr}", $s);
 }
 
 function updataBackupTime() {
