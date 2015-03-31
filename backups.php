@@ -16,7 +16,7 @@ function backupAll() {
             return false;
         }
     }
-    exec("zip -r {$adr} upFile", $s);
+    exec("zip -r -9 {$adr} upFile", $s);
     $localTime = getdate();
     $newAdr = 'backups\\' . $localTime['year'] . '-' . $localTime['mon'] . ".zip";
     if (isBackupDate($localTime) && !file_exists($newAdr)) {
