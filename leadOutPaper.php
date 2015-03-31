@@ -27,10 +27,13 @@ function download($file_dir, $file_name) {
 
 
 if (!empty($_GET['type'])) {
-    if ($_GET['type'] == 'paper' || $_GET['type'] == 'report')
-        download('download\\', $_GET['type'] . ".zip");
+    if ($_GET['type'] == 'paper' || $_GET['type'] == 'report') {
+        //download('download\\', $_GET['type'] . ".zip");
+        header('Location: download\\' . $_GET['type'] . ".zip");
+    }
     else  if ($_GET['type'] == 'backup') {
-        download('backups\\', 'last.zip');
+        //download('backups\\', 'last.zip');
+        header('Location: backups\\' . "last.zip");
     }
 }
 ?>
